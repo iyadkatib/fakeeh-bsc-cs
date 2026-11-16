@@ -170,7 +170,9 @@ function showCredits() {
     for (const code of codes) {
       const course = records.get(code);
       const name = document.createDocumentFragment();
-      name.append(externalLink(`./course-specifications.html#${course.anchor}`, code), ` · ${course.name}`);
+      const spec = element("a", null, code);
+      spec.href = `./course-specifications.html#${course.anchor}`;
+      name.append(spec, ` · ${course.name}`);
       body.append(creditRow(name, course.credits, "credit-course"));
     }
   }
@@ -464,6 +466,8 @@ new ResizeObserver(() => { if (fitMap) fitWidth(); }).observe(mapViewport);
 function externalLink(url, label) {
   const link = element("a", null, label);
   link.href = url;
+  link.target = "_blank";
+  link.rel = "noopener noreferrer";
   return link;
 }
 
