@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the proposed four-year BSc Computer Science at Fakeeh College of Business, Technology &amp; Innovation in Jeddah.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#006980">
+  <title>BSc Computer Science | Fakeeh College</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./program-data.js" defer></script>
+  <script src="./site.js" defer></script>
+</head>
+<body id="top">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap masthead">
+      <a href="#top" class="brand"><img src="./assets/fakeeh-college-logo.png" alt="Fakeeh College of Business, Technology &amp; Innovation, Jeddah" width="278" height="125"></a>
+      <nav aria-label="Program navigation">
+        <a href="#study">Study plan</a>
+        <a href="#placement">Co-op and capstone</a>
+        <a href="#workplace-and-ai">Workplace skills and AI ethics</a>
+        <a href="#benchmarks">Benchmarks</a>
+        <a href="#standards">Standards</a>
+        <a href="#specification" class="nav-spec">Specification</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Proposed founding program · Jeddah</p>
+          <h1>BSc Computer<br class="desktop-break"> Science</h1>
+          <p class="hero-lead">Study how computing systems work. Apply that knowledge during a full-time co-op and a two-semester capstone.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#study">Explore the study plan <span aria-hidden="true">↓</span></a>
+            <a class="button secondary" href="#specification">View the specification</a>
+          </div>
+          <dl class="hero-stats">
+            <div><dt>4</dt><dd>Years</dd></div>
+            <div><dt>130</dt><dd>Credit hours</dd></div>
+            <div><dt>8</dt><dd>Semesters</dd></div>
+          </dl>
+        </div>
+        <div class="hero-plan" aria-label="Four-year curriculum progression">
+          <div class="hero-plan-top"><h2>Program at a glance</h2><span>Direct entry</span></div>
+          <ol class="hero-steps">
+            <li><span>Year 1</span><strong>Programming, mathematics, and science</strong></li>
+            <li><span>Year 2</span><strong>Algorithms, software, and systems</strong></li>
+            <li><span>Year 3</span><strong>Advanced CS and full-time co-op</strong><small>Semester 6 + following summer</small></li>
+            <li><span>Year 4</span><strong>Specialization and two capstone courses</strong></li>
+          </ol>
+          <div class="hero-plan-foot">Bachelor’s degree · Saudi NQF Level 6</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+      <section class="section" id="rationale">
+        <div class="section-heading">
+          <p class="eyebrow">Program rationale</p>
+          <h2>Why Computer Science at Fakeeh</h2>
+          <p id="program-mission"></p>
+        </div>
+        <div class="evidence-grid" id="evidence-grid"></div>
+      </section>
+
+      <section class="section" id="study">
+        <div class="section-heading with-action">
+          <div>
+            <p class="eyebrow">Curriculum</p>
+            <h2>Explore the four-year study plan</h2>
+            <p>Students enter Computer Science in Semester 1.</p>
+            <p id="shared-general-education"></p>
+          </div>
+          <button type="button" class="button secondary" id="credits-button" aria-haspopup="dialog">Credit breakdown</button>
+        </div>
+        <div class="year-list" id="year-list" role="group" aria-label="Select a year"></div>
+        <div class="panel journey-panel" id="journey-panel">
+          <div class="semester-list" id="semester-list" role="group" aria-label="Select a semester"></div>
+          <div class="semester-heading"><div><p class="label" id="semester-label"></p><h3 id="semester-title"></h3></div><span id="semester-credits" class="tag"></span></div>
+          <p id="semester-summary"></p>
+          <div class="course-grid" id="journey-courses"></div>
+        </div>
+        <details class="panel disclosure" id="full-plan">
+          <summary>Full semester table</summary>
+          <div class="detail-body">
+            <div class="table-scroll" tabindex="0" role="region" aria-label="Semester study plan">
+              <table><thead><tr><th scope="col">Semester</th><th scope="col">Courses</th><th scope="col">Credits</th></tr></thead><tbody id="plan-body"></tbody></table>
+            </div>
+          </div>
+        </details>
+        <details class="panel disclosure" id="electives">
+          <summary>Technical electives <span>Choose three</span></summary>
+          <div class="detail-body">
+            <p class="section-note">Take one elective in Semester 7 and two in Semester 8. Choose from <strong id="elective-count">14</strong> three-credit options.</p>
+            <div class="semester-list" id="elective-filter" role="group" aria-label="Filter elective courses"></div>
+            <div id="elective-courses" class="course-grid"></div>
+          </div>
+        </details>
+        <details class="panel disclosure" id="elective-research">
+          <summary>University references for new electives</summary>
+          <div class="detail-body">
+            <div class="table-scroll" role="region" aria-label="University references for new electives" tabindex="0">
+              <table class="elective-reference-table"><thead><tr><th scope="col">Proposed elective</th><th scope="col">University reference</th><th scope="col">Fit in the Fakeeh curriculum</th></tr></thead><tbody id="elective-reference-body"></tbody></table>
+            </div>
+            <p class="section-note elective-precedent" id="elective-local-precedent"></p>
+          </div>
+        </details>
+        <details class="panel disclosure" id="health-informatics">
+          <summary>Health Informatics course benchmarks</summary>
+          <div class="detail-body">
+            <p class="section-note" id="health-elective-fit"></p>
+            <div class="table-scroll" role="region" aria-label="Health Informatics benchmarks" tabindex="0">
+              <table class="elective-reference-table"><thead><tr><th scope="col">University course</th><th scope="col">Their model</th><th scope="col">What Fakeeh adopts</th><th scope="col">Where Fakeeh differs and why</th></tr></thead><tbody id="health-benchmark-body"></tbody></table>
+            </div>
+            <p class="section-note elective-precedent" id="health-saudi-context"></p>
+          </div>
+        </details>
+      </section>
+
+      <section class="section" id="course-map">
+        <div class="section-heading">
+          <p class="eyebrow">Prerequisites</p>
+          <h2>See how courses connect</h2>
+          <p>Arrows point from each prerequisite to the course that follows it. Select a card to see course details, or use the selector to highlight its connections.</p>
+        </div>
+        <div class="panel map-panel">
+          <div class="map-toolbar">
+            <div class="map-tools" role="group" aria-label="Course map zoom">
+              <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
+              <output id="zoom-value" aria-live="polite">100%</output>
+              <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
+              <button type="button" id="zoom-fit">Fit width</button>
+            </div>
+            <div class="map-search"><label for="map-select">Find a course</label><select id="map-select"><option value="">Choose a course</option></select></div>
+          </div>
+          <div class="map-legend" id="map-legend"></div>
+          <div id="map-viewport" class="map-viewport" role="region" aria-label="Scrollable prerequisite map" tabindex="0">
+            <div id="map-space"><div id="map-canvas"></div></div>
+          </div>
+          <div class="map-footer"><p id="map-focus" aria-live="polite">Select a course to highlight its connections.</p><button id="map-clear" type="button" class="text-button" hidden>Clear selection</button></div>
+        </div>
+      </section>
+
+      <section class="section" id="placement">
+        <div class="section-heading"><p class="eyebrow">Applied learning</p><h2>From a workplace assignment to a capstone</h2></div>
+        <div class="practice-grid">
+          <article class="practice-card coop-card">
+            <p class="label">CS 390 · 9 credits</p>
+            <h3>One full-time cooperative placement</h3>
+            <p id="coop-description"></p>
+            <p>Assessment combines supervisor appraisal, progress logs, an evidence portfolio, and a college presentation.</p>
+            <div class="inline-courses" data-courses="CS 390"></div>
+          </article>
+          <article class="practice-card">
+            <p class="label">CS 410 + CS 411 · 6 credits</p>
+            <h3>Two consecutive capstone courses</h3>
+            <p>In Semester 7, teams define a problem, apply techniques from earlier courses, and test a prototype. In Semester 8, they integrate, evaluate, and defend the completed solution.</p>
+            <p>Each student documents their own contribution and explains the project’s professional and technical decisions.</p>
+            <div class="inline-courses" data-courses="CS 410|CS 411"></div>
+          </article>
+        </div>
+        <details class="panel disclosure">
+          <summary>Example capstone · Appointment coordination</summary>
+          <div class="detail-body example-body">
+            <p>Use synthetic appointment records to design a scheduling service for a clinic. In Capstone I, interview representative users, model constraints, and prototype the workflow. In Capstone II, test the service against a baseline and report wait times, scheduling conflicts, accessibility, and data-handling decisions.</p>
+            <div class="inline-courses" data-courses="CS 220|CS 230|CS 350|CS 402|CS 453"></div>
+          </div>
+        </details>
+      </section>
+
+      <section class="section" id="workplace-and-ai">
+        <div class="section-heading">
+          <p class="eyebrow">Professional practice</p>
+          <h2>Workplace skills and AI ethics</h2>
+        </div>
+        <details class="panel disclosure">
+          <summary>Workplace soft skills</summary>
+          <div class="detail-body">
+            <div class="table-scroll" role="region" aria-label="Workplace soft skills by course" tabindex="0">
+              <table class="coverage-table"><thead><tr><th scope="col">Required courses</th><th scope="col">What students practice</th><th scope="col">How it is assessed</th></tr></thead><tbody id="workplace-skills-body"></tbody></table>
+            </div>
+          </div>
+        </details>
+        <details class="panel disclosure">
+          <summary>AI ethics</summary>
+          <div class="detail-body">
+            <div class="table-scroll" role="region" aria-label="AI ethics by course" tabindex="0">
+              <table class="coverage-table"><thead><tr><th scope="col">Required courses</th><th scope="col">What students practice</th><th scope="col">How it is assessed</th></tr></thead><tbody id="ai-ethics-body"></tbody></table>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <section class="section" id="benchmarks">
+        <div class="section-heading">
+          <p class="eyebrow">Benchmarking</p>
+          <h2>Seven programs that informed the design</h2>
+          <p>The benchmarks include three international and four Saudi programs. Effat and Dar Al-Hekma provide private university precedents for training and capstone design.</p>
+        </div>
+        <div class="panel table-scroll" role="region" aria-label="Benchmark comparison" tabindex="0">
+          <table class="benchmark-table"><thead><tr id="benchmark-header"><th scope="col">Program</th></tr></thead><tbody id="benchmark-body"></tbody></table>
+        </div>
+      </section>
+
+      <section class="section" id="standards">
+        <div class="section-heading">
+          <p class="eyebrow">Standards and assessment</p>
+          <h2>Curriculum alignment</h2>
+          <p>The draft maps courses and assessment evidence to the national Computer Science standards, ABET CAC criteria, and CS2023 guidelines.</p>
+        </div>
+        <div class="standard-grid">
+          <article><h3>Saudi ETEC</h3><p><strong>30</strong> essential knowledge credits · minimum 30</p><p><strong>67</strong> required CS core credits · minimum 40</p><a href="https://f.etec.gov.sa/j/Computer_Science.pdf">Computer Science standards</a></article>
+          <article><h3>ABET CAC</h3><p><strong>67</strong> CS core credits · minimum 40</p><p><strong>17</strong> mathematics and statistics credits · minimum 15</p><a href="https://www.abet.org/accreditation/accreditation-criteria/criteria-for-accrediting-computing-programs-2026-2027/">2026–2027 criteria</a></article>
+          <article><h3>CS2023</h3><p><strong>17</strong> knowledge areas</p><p><strong>270</strong> planned CS Core instructional hours</p><a href="https://csed.acm.org/">Curriculum guidelines</a></article>
+        </div>
+        <details class="panel disclosure">
+          <summary>CS2023 knowledge areas and planned hours</summary>
+          <div class="detail-body">
+            <p class="section-note">These planned instructional hours cover all 17 CS Core areas in required courses. The approved teaching plans will document the individual topics, skill levels, and assessment evidence. <a href="https://csed.acm.org/wp-content/uploads/2025/11/CS2023-Report.htm">CS2023 final report</a></p>
+            <div class="table-scroll" role="region" aria-label="CS2023 coverage" tabindex="0">
+              <table><thead><tr><th scope="col">Knowledge area</th><th scope="col">Core hours</th><th scope="col">Course allocation</th><th scope="col">Coverage and assessment</th></tr></thead><tbody id="cs2023-body"></tbody></table>
+            </div>
+          </div>
+        </details>
+        <details class="panel disclosure">
+          <summary>ETEC essential and general knowledge units</summary>
+          <div class="detail-body">
+            <p class="section-note">Essential Knowledge Units total 30 credits with 17 in mathematics and statistics, 6 in physics, 4 in chemistry, and 3 in project management and finance. Mathematics, physics, and chemistry reach 23 credits even when the combined probability and statistics course is excluded from that subtotal. The 67 required CS core credits are counted separately.</p>
+            <p class="section-note">The shared ethics course increases to three credits. Multivariable Calculus and Optimization moves to three credits and retains the gradient and optimization topics needed for Machine Learning. Using the 15-credit ABET mathematics minimum with the current science and project management credits would yield 28 Essential Knowledge Unit credits.</p>
+            <p class="section-note">Courses in the map below account for 51 distinct required CS core credits. Mathematics courses support the discrete structures topics and are counted in the Essential Knowledge Units.</p>
+            <div class="table-scroll" role="region" aria-label="ETEC knowledge areas" tabindex="0">
+              <table><thead><tr><th scope="col">General knowledge unit</th><th scope="col">ETEC weight</th><th scope="col">Courses</th><th scope="col">Topics</th></tr></thead><tbody id="etec-body"></tbody></table>
+            </div>
+            <h3 class="klo-heading" id="etec-klo-heading">ETEC Key Learning Outcomes course mapping</h3>
+            <p class="section-note">The table maps the ten ETEC Key Learning Outcomes to program outcomes and selected required courses. The final column shows how students are expected to demonstrate each outcome. Technical electives provide further depth for KLO 1. <a href="https://f.etec.gov.sa/j/Computer_Science.pdf#page=4">ETEC Computer Science standards (2025), pp. 4–5</a></p>
+            <div class="table-scroll" role="region" aria-labelledby="etec-klo-heading" tabindex="0">
+              <table class="klo-table"><thead><tr><th scope="col">ETEC outcome</th><th scope="col">Program outcomes</th><th scope="col">Supporting courses</th><th scope="col">Planned direct assessment</th></tr></thead><tbody id="etec-klo-body"></tbody></table>
+            </div>
+          </div>
+        </details>
+        <details class="panel disclosure">
+          <summary>ABET Computer Science curriculum requirements</summary>
+          <div class="detail-body">
+            <p class="section-note" id="abet-curriculum-scope"></p>
+            <div class="table-scroll" role="region" aria-label="ABET curriculum requirements and course evidence" tabindex="0">
+              <table><thead><tr><th scope="col">Curriculum requirement</th><th scope="col">Required courses and assessment evidence</th></tr></thead><tbody id="abet-curriculum-body"></tbody></table>
+            </div>
+          </div>
+        </details>
+        <details class="panel disclosure">
+          <summary>ABET student outcomes and assessment evidence</summary>
+          <div class="detail-body">
+            <p class="section-note"><span id="abet-outcome-scope"></span> <a href="https://www.abet.org/accreditation/accreditation-criteria/criteria-for-accrediting-computing-programs-2026-2027/">ABET CAC criteria, 2026–2027</a></p>
+            <div class="table-scroll" role="region" aria-label="ABET outcome mapping" tabindex="0">
+              <table class="abet-outcome-table"><thead><tr><th scope="col">ABET outcome</th><th scope="col">Mapped PLOs</th><th scope="col">How students demonstrate it</th><th scope="col">Planned direct assessment</th></tr></thead><tbody id="abet-body"></tbody></table>
+            </div>
+          </div>
+        </details>
+        <details class="panel disclosure">
+          <summary>Program learning outcomes and assessment points</summary>
+          <div class="detail-body">
+            <p class="section-note">Each learning outcome has two direct assessments during the degree. The program specification sets out the rubrics, reporting, and review cycle.</p>
+            <div class="table-scroll" role="region" aria-label="Program learning outcomes" tabindex="0">
+              <table><thead><tr><th scope="col">Outcome</th><th scope="col">First assessment</th><th scope="col">Second assessment</th></tr></thead><tbody id="outcomes-body"></tbody></table>
+            </div>
+          </div>
+        </details>
+      </section>
+
+      <section class="section specification" id="specification">
+        <div><p class="eyebrow">NCAAA TP-151</p><h2>Program specification</h2><p>Review the draft specification, including the curriculum, learning outcomes, admission and support, resources, staffing plan, and quality assurance.</p></div>
+        <div class="spec-actions">
+          <a class="button primary" href="./Fakeeh_BSc_Computer_Science_Program_Specification.docx" download>Download Word specification</a>
+          <a class="button secondary" href="./course-specifications.html">Browse course specifications</a>
+        </div>
+      </section>
+    </div>
+    <noscript><p class="wrap section-note">Enable JavaScript to use the interactive study plan. The Word program specification and course specifications are also available from the links above.</p></noscript>
+  </main>
+  <footer class="wrap footer"><strong>Fakeeh College of Business, Technology &amp; Innovation</strong><span>Proposed program for academic review · Jeddah, Saudi Arabia</span></footer>
+
+  <dialog id="detail-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-top"><p class="label" id="dialog-kicker"></p><form method="dialog"><button class="dialog-close" type="submit" aria-label="Close details" autofocus>×</button></form></div>
+    <h2 id="dialog-title"></h2>
+    <div id="dialog-content"></div>
+  </dialog>
+</body>
+</html>
