@@ -13,23 +13,25 @@ const curriculum = {
       ],
       [
         "College requirements",
-        33,
+        39,
         [
           "MATH 101",
           "MATH 102",
           "PHYS 101",
-          "COMM 101",
+          "ENG 101",
           "MATH 120",
           "PHYS 102",
-          "CHEM 101",
-          "MATH 220",
+          "BIO 101",
+          "COMM 101",
+          "STAT 220",
           "MATH 230",
-          "BUS 401"
+          "BUS 401",
+          "MATH 340"
         ]
       ],
       [
         "Computer Science core",
-        67,
+        61,
         []
       ],
       [
@@ -72,7 +74,7 @@ const curriculum = {
         "MATH 101",
         "MATH 102",
         "PHYS 101",
-        "COMM 101"
+        "ENG 101"
       ],
       "credits": 17
     },
@@ -85,10 +87,10 @@ const curriculum = {
         "CS 102",
         "MATH 120",
         "PHYS 102",
-        "CHEM 101",
-        "ARAB 101"
+        "BIO 101",
+        "COMM 101"
       ],
-      "credits": 17
+      "credits": 16
     },
     {
       "number": 3,
@@ -98,11 +100,11 @@ const curriculum = {
       "courses": [
         "CS 201",
         "CS 210",
-        "MATH 220",
+        "STAT 220",
         "CS 230",
-        "ISLM 101"
+        "ARAB 101"
       ],
-      "credits": 18
+      "credits": 17
     },
     {
       "number": 4,
@@ -114,23 +116,25 @@ const curriculum = {
         "CS 240",
         "CS 250",
         "MATH 230",
-        "CS 260"
+        "CS 260",
+        "ISLM 101"
       ],
-      "credits": 17
+      "credits": 18
     },
     {
       "number": 5,
       "year": 3,
       "title": "Theory, systems, and intelligent computing",
-      "summary": "Study operating systems, language design, computation, AI, and human–computer interaction before the co-op.",
+      "summary": "Study operating systems, languages, theory, AI, interaction, and research methods before the full-time placement.",
       "courses": [
         "CS 310",
         "CS 320",
         "CS 330",
         "CS 340",
-        "CS 350"
+        "CS 350",
+        "CS 360"
       ],
-      "credits": 17
+      "credits": 18
     },
     {
       "number": 6,
@@ -155,7 +159,7 @@ const curriculum = {
         "CS 410",
         "EL-1"
       ],
-      "credits": 18
+      "credits": 17
     },
     {
       "number": 8,
@@ -166,10 +170,11 @@ const curriculum = {
         "CS 411",
         "CS 420",
         "CS 430",
+        "MATH 340",
         "EL-2",
         "EL-3"
       ],
-      "credits": 17
+      "credits": 18
     }
   ],
   "categories": {
@@ -361,12 +366,14 @@ const curriculum = {
       "id": "COMM 101",
       "code": "COMM 101",
       "title": "Professional Communication & Presentation",
-      "term": 1,
+      "term": 2,
       "credits": 3,
       "category": "college",
       "lecture": 3,
       "practical": 0,
-      "prerequisites": [],
+      "prerequisites": [
+        "ENG 101"
+      ],
       "summary": "Communicate evidence and professional decisions to specialist and non-specialist audiences through writing and presentations.",
       "topics": [
         "Audience, purpose, and intercultural communication",
@@ -398,7 +405,7 @@ const curriculum = {
       "requirement": null,
       "resource": "Shared business and computing cases and a common report and presentation rubric.",
       "name": "Professional Communication & Presentation",
-      "placement": "Semester 1",
+      "placement": "Semester 2",
       "anchor": "comm-101"
     },
     "CS 102": {
@@ -406,9 +413,9 @@ const curriculum = {
       "code": "CS 102",
       "title": "Programming II",
       "term": 2,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 101"
@@ -537,55 +544,11 @@ const curriculum = {
       "placement": "Semester 2",
       "anchor": "phys-102"
     },
-    "CHEM 101": {
-      "id": "CHEM 101",
-      "code": "CHEM 101",
-      "title": "General Chemistry with Laboratory",
-      "term": 2,
-      "credits": 4,
-      "category": "college",
-      "lecture": 3,
-      "practical": 2,
-      "prerequisites": [],
-      "summary": "Use chemical principles and experiments to investigate materials and energy.",
-      "topics": [
-        "Atomic structure and bonding",
-        "Chemical reactions and stoichiometry",
-        "Solutions and acid–base chemistry",
-        "Thermochemistry and equilibrium",
-        "Electrochemistry and computing materials",
-        "Lab safety, measurement, and reporting"
-      ],
-      "clos": [
-        {
-          "plo": "K2",
-          "stage": "I",
-          "statement": "Explain chemical properties relevant to materials and energy storage."
-        },
-        {
-          "plo": "S4",
-          "stage": "P",
-          "statement": "Conduct a controlled chemical experiment and analyze its results."
-        },
-        {
-          "plo": "V1",
-          "stage": "I",
-          "statement": "Use safe procedures and maintain accurate laboratory records."
-        }
-      ],
-      "profile": "lab",
-      "group": null,
-      "requirement": null,
-      "resource": "OpenStax Chemistry 2e and the chemistry lab manual.",
-      "name": "General Chemistry with Laboratory",
-      "placement": "Semester 2",
-      "anchor": "chem-101"
-    },
     "ARAB 101": {
       "id": "ARAB 101",
       "code": "ARAB 101",
       "title": "Arabic Language",
-      "term": 2,
+      "term": 3,
       "credits": 3,
       "category": "institution",
       "lecture": 3,
@@ -622,7 +585,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Arabic Language",
-      "placement": "Semester 2",
+      "placement": "Semester 3",
       "anchor": "arab-101"
     },
     "CS 201": {
@@ -677,9 +640,9 @@ const curriculum = {
       "code": "CS 210",
       "title": "Computer Organization and Architecture",
       "term": 3,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 102"
@@ -719,9 +682,9 @@ const curriculum = {
       "placement": "Semester 3",
       "anchor": "cs-210"
     },
-    "MATH 220": {
-      "id": "MATH 220",
-      "code": "MATH 220",
+    "STAT 220": {
+      "id": "STAT 220",
+      "code": "STAT 220",
       "title": "Probability and Statistics",
       "term": 3,
       "credits": 4,
@@ -764,7 +727,7 @@ const curriculum = {
       "resource": "OpenStax Introductory Statistics and computing-focused problem sets.",
       "name": "Probability and Statistics",
       "placement": "Semester 3",
-      "anchor": "math-220"
+      "anchor": "stat-220"
     },
     "CS 230": {
       "id": "CS 230",
@@ -818,7 +781,7 @@ const curriculum = {
       "id": "ISLM 101",
       "code": "ISLM 101",
       "title": "Islamic Culture and Professional Values",
-      "term": 3,
+      "term": 4,
       "credits": 3,
       "category": "institution",
       "lecture": 3,
@@ -850,7 +813,7 @@ const curriculum = {
       "requirement": null,
       "resource": "Instructor-selected Islamic culture and ethics readings, discipline-specific professional codes, and case materials.",
       "name": "Islamic Culture and Professional Values",
-      "placement": "Semester 3",
+      "placement": "Semester 4",
       "anchor": "islm-101"
     },
     "CS 220": {
@@ -904,9 +867,9 @@ const curriculum = {
       "code": "CS 240",
       "title": "Systems Programming",
       "term": 4,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 201",
@@ -952,9 +915,9 @@ const curriculum = {
       "code": "CS 250",
       "title": "Software Engineering",
       "term": 4,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 201",
@@ -1100,9 +1063,9 @@ const curriculum = {
       "code": "CS 310",
       "title": "Operating Systems",
       "term": 5,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 240"
@@ -1240,13 +1203,13 @@ const curriculum = {
       "code": "CS 340",
       "title": "Artificial Intelligence",
       "term": 5,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 220",
-        "MATH 220",
+        "STAT 220",
         "MATH 120"
       ],
       "summary": "Build intelligent problem solvers and evaluate their performance and limitations.",
@@ -1397,9 +1360,9 @@ const curriculum = {
       "code": "CS 401",
       "title": "Parallel and Distributed Computing",
       "term": 7,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 310",
@@ -1592,7 +1555,8 @@ const curriculum = {
       "prerequisites": [
         "CS 390",
         "CS 340",
-        "CS 350"
+        "CS 350",
+        "CS 360"
       ],
       "summary": "Define a substantial computing problem, develop a design, and defend a tested prototype and evaluation plan.",
       "topics": [
@@ -1720,9 +1684,9 @@ const curriculum = {
       "code": "CS 420",
       "title": "Software Deployment and Operations",
       "term": 8,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 250",
@@ -1769,9 +1733,9 @@ const curriculum = {
       "code": "CS 430",
       "title": "Machine Learning",
       "term": 8,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 340",
@@ -1917,7 +1881,7 @@ const curriculum = {
       "practical": 2,
       "prerequisites": [
         "CS 230",
-        "MATH 220"
+        "STAT 220"
       ],
       "summary": "Analyze a domain dataset and communicate evidence for a decision.",
       "topics": [
@@ -1964,7 +1928,7 @@ const curriculum = {
       "practical": 2,
       "prerequisites": [
         "CS 230",
-        "MATH 220",
+        "STAT 220",
         "CS 350"
       ],
       "summary": "Build and evaluate a small interoperable health application for a hospital workflow using synthetic data.",
@@ -2521,6 +2485,261 @@ const curriculum = {
       "name": "Generative AI and Large Language Models",
       "placement": "Technical elective",
       "anchor": "cs-464"
+    },
+    "ENG 101": {
+      "id": "ENG 101",
+      "code": "ENG 101",
+      "title": "Technical English for Computing",
+      "term": 1,
+      "credits": 3,
+      "category": "college",
+      "lecture": 3,
+      "practical": 0,
+      "prerequisites": [],
+      "summary": "Develop the English language skills needed to read computing materials, understand technical teaching, and explain simple computing processes.",
+      "topics": [
+        "Diagnostic assessment and strategies for learning technical vocabulary",
+        "Reading computing textbooks, instructions, error messages, and documentation",
+        "Word formation, grammar, definitions, comparison, and cause and effect",
+        "Listening to short technical explanations and taking useful notes",
+        "Writing explanations of algorithms, processes, diagrams, and simple results",
+        "Asking questions, explaining a solution, and giving a short computing demonstration"
+      ],
+      "clos": [
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Explain the main ideas and instructions in an introductory computing text using accurate technical vocabulary."
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Follow a short technical explanation and ask relevant clarification questions."
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Write a coherent explanation of a computing process and present it in clear spoken English."
+        },
+        {
+          "plo": "V3",
+          "stage": "I",
+          "statement": "Use feedback and a vocabulary learning record to improve independent language learning."
+        }
+      ],
+      "profile": "project",
+      "group": null,
+      "requirement": null,
+      "resource": "Computing documentation, recorded introductory explanations, and a diagnostic vocabulary portfolio.",
+      "name": "Technical English for Computing",
+      "placement": "Semester 1",
+      "anchor": "eng-101"
+    },
+    "BIO 101": {
+      "id": "BIO 101",
+      "code": "BIO 101",
+      "title": "Biology for Digital Health with Laboratory",
+      "term": 2,
+      "credits": 4,
+      "category": "college",
+      "lecture": 3,
+      "practical": 2,
+      "prerequisites": [],
+      "summary": "Study biological systems and apply the scientific method through controlled laboratory investigations relevant to health.",
+      "topics": [
+        "Scientific questions, controls, reproducibility, measurement, and laboratory safety",
+        "Cells, biological molecules, microscopy, and quantitative observation",
+        "Membranes, diffusion, osmosis, and controlled laboratory experiments",
+        "Enzymes, metabolism, homeostasis, and experimental uncertainty",
+        "Genetics, variation, and interpretation of biological evidence",
+        "Human organ systems, physiological measurements, and limits of inference"
+      ],
+      "clos": [
+        {
+          "plo": "S4",
+          "stage": "I",
+          "statement": "Use cellular processes and homeostasis to explain a testable biological model and its predicted measurements."
+        },
+        {
+          "plo": "S4",
+          "stage": "I",
+          "statement": "Formulate a testable biological hypothesis and conduct a controlled experiment with safe procedures."
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Interpret biological measurements, uncertainty, and limitations using a reproducible laboratory report."
+        },
+        {
+          "plo": "V1",
+          "stage": "I",
+          "statement": "Apply laboratory safety, research integrity, and responsible handling of biological materials."
+        }
+      ],
+      "profile": "lab",
+      "group": null,
+      "requirement": null,
+      "resource": "Supervised microscopy, osmosis and enzyme experiments, biological models, a laboratory manual, and safe physiological measurements.",
+      "name": "Biology for Digital Health with Laboratory",
+      "placement": "Semester 2",
+      "anchor": "bio-101"
+    },
+    "CS 360": {
+      "id": "CS 360",
+      "code": "CS 360",
+      "title": "Research Methods in Computing",
+      "term": 5,
+      "credits": 3,
+      "category": "core",
+      "lecture": 2,
+      "practical": 2,
+      "prerequisites": [
+        "CS 201",
+        "STAT 220",
+        "COMM 101"
+      ],
+      "summary": "Formulate a computing research question, evaluate literature, design a defensible investigation, and report a small reproducible study.",
+      "topics": [
+        "Research questions, novelty, feasibility, and computing research contributions",
+        "Search strategies, source appraisal, literature synthesis, and research gaps",
+        "Experimental, design science, case study, and user study methods",
+        "Hypotheses, baselines, sampling, metrics, uncertainty, and validity threats",
+        "Reproducible code, datasets, experiment logs, research ethics, and AI disclosure",
+        "Pilot investigation, proposal, paper structure, poster, and individual defense"
+      ],
+      "clos": [
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Formulate a focused computing research question supported by a critical synthesis of relevant literature."
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Design and conduct a feasible pilot study with suitable baselines, measures, and reproducible artifacts."
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Interpret results and limitations with appropriate statistical reasoning and validity analysis."
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Present a research proposal and report and defend methodological choices."
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Apply research integrity, ethical participant handling, source attribution, and transparent AI disclosure."
+        }
+      ],
+      "profile": "project",
+      "group": null,
+      "requirement": null,
+      "resource": "ACM Digital Library and IEEE Xplore access, Zotero, a version-controlled experiment repository, and a research ethics protocol.",
+      "name": "Research Methods in Computing",
+      "placement": "Semester 5",
+      "anchor": "cs-360"
+    },
+    "MATH 340": {
+      "id": "MATH 340",
+      "code": "MATH 340",
+      "title": "Numerical Methods",
+      "term": 8,
+      "credits": 3,
+      "category": "college",
+      "lecture": 3,
+      "practical": 0,
+      "prerequisites": [
+        "MATH 101",
+        "MATH 120",
+        "MATH 230"
+      ],
+      "summary": "Analyze numerical methods and their accuracy, stability, and convergence for scientific problems.",
+      "topics": [
+        "Floating-point arithmetic, truncation error, conditioning, and stability",
+        "Root finding, convergence, and stopping criteria",
+        "Linear systems, least squares, and numerical conditioning",
+        "Interpolation, approximation, and error bounds",
+        "Numerical differentiation, integration, and initial value problems",
+        "Comparison of numerical solutions and interpretation of scientific uncertainty"
+      ],
+      "clos": [
+        {
+          "plo": "K1",
+          "stage": "P",
+          "statement": "Explain convergence, stability, and error in representative numerical methods."
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Select and analyze a numerical method for a mathematical model."
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Compare numerical results with an analytical solution or convergence study and interpret limitations."
+        }
+      ],
+      "profile": "lecture",
+      "group": null,
+      "requirement": null,
+      "resource": "Instructor-supplied mathematical problem sets and Python or MATLAB demonstrations with error and convergence analyses.",
+      "name": "Numerical Methods",
+      "placement": "Semester 8",
+      "anchor": "math-340"
+    },
+    "CS 465": {
+      "id": "CS 465",
+      "code": "CS 465",
+      "title": "Selected Topics",
+      "term": null,
+      "credits": 3,
+      "category": "elective",
+      "lecture": 2,
+      "practical": 2,
+      "prerequisites": [
+        "CS 201"
+      ],
+      "summary": "Investigate an announced emerging computing topic through critical reading, an applied prototype or experiment, and evidence-based evaluation.",
+      "topics": [
+        "Current research and professional context for the announced topic",
+        "Key concepts, architectures, and relevant computing foundations",
+        "Tools, methods, and comparison with established approaches",
+        "Prototype or experimental investigation of a focused problem",
+        "Evaluation, reproducibility, security, ethics, and societal implications",
+        "Technical report, demonstration, and individual defense"
+      ],
+      "clos": [
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Explain the foundations and limitations of the announced computing topic."
+        },
+        {
+          "plo": "S2",
+          "stage": "M",
+          "statement": "Build a prototype or experimental artifact that applies the topic to a defined problem."
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Evaluate the artifact against a suitable baseline and report reproducible evidence."
+        },
+        {
+          "plo": "V3",
+          "stage": "P",
+          "statement": "Identify learning needs and critically assess an emerging technology using reliable sources."
+        }
+      ],
+      "profile": "project",
+      "group": "Selected topics",
+      "requirement": "The department publishes the topic, additional prerequisites, learning outcomes, assessment, and primary textbook before registration. One 3-credit Selected Topics course may count within the nine elective credits.",
+      "resource": "Topic-specific textbook, recent peer-reviewed papers, official documentation, and a reproducible project environment.",
+      "name": "Selected Topics",
+      "placement": "Technical elective",
+      "anchor": "cs-465"
     }
   },
   "textbooks": {
@@ -2564,11 +2783,6 @@ const curriculum = {
       "citation": "Hugh D. Young and Roger A. Freedman · Pearson · 16th ed. · © 2027 (released 2026)",
       "url": "https://www.pearson.com/en-us/subject-catalog/p/university-physics-with-modern-physics/P200000012703"
     },
-    "CHEM 101": {
-      "title": "Chemistry: The Central Science",
-      "citation": "Theodore E. Brown et al. · Pearson · 15th ed. · © 2023",
-      "url": "https://www.pearson.com/en-us/subject-catalog/p/chemistry-the-central-science/P200000006933/9780137542970"
-    },
     "ARAB 101": {
       "title": "الكتابة الوظيفية والإبداعية",
       "citation": "ماهر شعبان عبدالباري · دار المسيرة · الطبعة الرابعة · طباعة ٢٠٢٥",
@@ -2584,7 +2798,7 @@ const curriculum = {
       "citation": "Linda Null · Jones & Bartlett Learning · 6th ed. · © 2024",
       "url": "https://www.jblearning.com/science-technology/computing/computer-architecture/productdetails/9781284259438"
     },
-    "MATH 220": {
+    "STAT 220": {
       "title": "Probability and Statistics for Engineering and the Sciences",
       "citation": "Leif Ellingson and Anna Panorska · Cengage · 10th ed. · © 2027 (released 2026)",
       "url": "https://www.cengage.com/c/probability-and-statistics-for-engineering-and-the-sciences-10e-ellingson-panorska/9798214023823"
@@ -2763,6 +2977,31 @@ const curriculum = {
       "title": "Hands-On Large Language Models: Language Understanding and Generation",
       "citation": "Jay Alammar and Maarten Grootendorst · O’Reilly · 1st ed. · 2024",
       "url": "https://www.oreilly.com/library/view/hands-on-large-language/9781098150952/"
+    },
+    "ENG 101": {
+      "title": "Technical English 2",
+      "citation": "David Bonamy · Pearson · 2nd ed. · 2022",
+      "url": "https://www.pearson.com/nl/en_NL/english-language-teaching/business-english-courses/technical-english.html"
+    },
+    "BIO 101": {
+      "title": "Campbell Biology",
+      "citation": "Lisa A. Urry, Peter V. Minorsky, Kerry L. Hull and Rebecca B. Orr · Pearson · 13th ed. · 2026 copyright",
+      "url": "https://www.pearson.com/en-us/subject-catalog/p/campbell-s-biology/P200000014184/9780135455890"
+    },
+    "CS 360": {
+      "title": "Researching Information Systems and Computing",
+      "citation": "Briony J. Oates, Marie Griffiths and Rachel McLean · Sage · 2nd ed. · 2026 publisher release",
+      "url": "https://www.sagepub.com/shop/buy-a-book/researching-information-systems-and-computing-2-272083"
+    },
+    "MATH 340": {
+      "title": "Applied Numerical Methods with MATLAB for Engineers and Scientists",
+      "citation": "Steven C. Chapra · McGraw Hill · 5th ed. · 2023",
+      "url": "https://www.mheducation.com/highered/product/applied-numerical-methods-with-matlab-for-engineers-and-scientists-chapra"
+    },
+    "CS 465": {
+      "title": "AI Engineering: Building Applications with Foundation Models",
+      "citation": "Chip Huyen · O'Reilly · 1st ed. · 2025 · Illustrative offering on agentic computing and evaluation",
+      "url": "https://www.oreilly.com/library/view/ai-engineering/9781098166298/"
     }
   },
   "electiveAreas": {
@@ -2789,6 +3028,9 @@ const curriculum = {
     "Algorithms and quantum": [
       "CS 461",
       "CS 462"
+    ],
+    "Selected topics": [
+      "CS 465"
     ]
   },
   "electiveReferences": {
@@ -2834,7 +3076,7 @@ const curriculum = {
     }
   },
   "electiveLocalPrecedent": "KAU’s 2026 FCIT Computer Science Program Guide also lists robotics, generative and agentic AI, quantum computing, and Internet of Things among its elective options.",
-  "healthElectiveFit": "CS 453 Health Informatics uses one of the three existing 3-credit elective slots in Semester 7 or 8. Semester 7 allows students to apply the course to a related capstone. CS 230, MATH 220, and CS 350 prepare students to model clinical data, evaluate evidence, and test usability.",
+  "healthElectiveFit": "CS 453 Health Informatics uses one of the three existing 3-credit elective slots in Semester 7 or 8. Semester 7 allows students to apply the course to a related capstone. CS 230, STAT 220, and CS 350 prepare students to model clinical data, evaluate evidence, and test usability.",
   "healthBenchmarks": [
     {
       "label": "University of Washington · BIME 300",
@@ -2913,13 +3155,32 @@ const curriculum = {
       "url": "https://www.effatuniversity.edu.sa/English/academics/Undergraduate/CoE/Pages/cs.aspx"
     },
     {
-      "name": "Dar Al-Hekma University",
-      "program": "BSc in Computer Science · General track",
-      "region": "Saudi Arabia · Private",
-      "model": "The general track uses client needs to frame Capstone I and requires implementation, validation, and demonstration in Capstone II. Its published plan includes an internship in the final semester alongside Capstone II.",
-      "adopted": "Fakeeh requires teams to define stakeholder needs, verify a solution, and demonstrate the result in CS 410 and CS 411.",
-      "difference": "Fakeeh gives the full-time placement a dedicated semester and summer before the capstone. This protects time for workplace responsibilities and gives teams a chance to use that experience in project design.",
-      "url": "https://www.dah.edu.sa/en/academics/hsec/programs/Pages/Computer-Science.aspx"
+      "name": "Alfaisal University",
+      "program": "Bachelor of Software Engineering · Related computing comparator",
+      "region": "Saudi Arabia · Private · Riyadh",
+      "model": "The published 130-credit Software Engineering degree combines university writing, technical writing, software design, testing, electives, and an internship. The catalogue also offers undergraduate research and special topics electives.",
+      "adopted": "CS 250 and CS 420 develop software construction and delivery. CS 360 makes research preparation explicit, and CS 465 provides a controlled route for emerging topics.",
+      "difference": "The proposed CS degree requires algorithms, computation theory, programming languages, and parallel computing, followed by a 24-week co-op and two capstone courses. These choices support the broader CS award and the hospital partnership.",
+      "url": "https://catalog.alfaisal.edu/college-of-engineering-and-advanced-computing/bachelor-major-minor-track/bachelor-of-software"
+    },
+    {
+      "name": "University of Business and Technology",
+      "program": "BSc Software Engineering · Related computing comparator",
+      "region": "Saudi Arabia · Private · Jeddah",
+      "model": "UBT's engineering offering includes Software Engineering. Its published catalogue combines programming, software processes, requirements, data, networks, and security with a three-credit Technical English course.",
+      "adopted": "ENG 101 follows the subject-specific English model with computing reading, listening, vocabulary, and explanations. CS 250 develops assessed software teamwork and quality practices.",
+      "difference": "The CS plan adds explicit research preparation and a required theory and systems sequence. Health applications appear through CS 453 and hospital-informed projects within a 130-credit plan.",
+      "url": "https://www.ubt.edu.sa/college/ubtce",
+      "note": "The software and English course descriptions are published in UBT's OPERA course catalogue."
+    },
+    {
+      "name": "Prince Sultan University",
+      "program": "BSc Computer Science",
+      "region": "Saudi Arabia · Private · Riyadh",
+      "model": "The published CS structure totals 134 credits and includes English writing, research writing, probability and statistics, computing ethics, and a ten-credit co-op.",
+      "adopted": "ENG 101 and COMM 101 provide staged language and communication development. STAT 220 uses the statistics discipline code, and CS 360 assesses computing research methods.",
+      "difference": "The degree totals 130 credits with one Arabic and one Islamic culture course, a nine-credit placement across Semester 6 and summer, and two final-year capstone courses. A dedicated research methods course prepares students before placement.",
+      "url": "https://psu.edu.sa/en/CCIS/cs-program-structure"
     }
   ],
   "benchmarkSections": [
@@ -2966,6 +3227,14 @@ const curriculum = {
   "workplaceSkills": [
     [
       [
+        "ENG 101",
+        "COMM 101"
+      ],
+      "Read and explain computing instructions in English, listen for technical meaning, and communicate evidence and questions.",
+      "Technical reading and listening tasks, short computing explanations, a professional report, and a presentation."
+    ],
+    [
+      [
         "COMM 101",
         "ARAB 101"
       ],
@@ -3008,6 +3277,13 @@ const curriculum = {
       ],
       "Coordinating team responsibilities, responding to stakeholder feedback, defending decisions, and handing over a solution.",
       "Milestone reviews, individual contribution records, technical reports, and panel defenses."
+    ],
+    [
+      [
+        "CS 360"
+      ],
+      "Search critically, manage a small investigation, document uncertainty, and defend methodological choices.",
+      "Literature synthesis, pilot artifacts, research report, and individual defense."
     ]
   ],
   "aiEthics": [
@@ -3186,7 +3462,7 @@ const curriculum = {
           29
         ],
         [
-          "MATH 220",
+          "STAT 220",
           21
         ],
         [
@@ -3378,7 +3654,7 @@ const curriculum = {
       "17%",
       [
         "MATH 102",
-        "MATH 220",
+        "STAT 220",
         "CS 201",
         "CS 220"
       ],
@@ -3469,14 +3745,15 @@ const curriculum = {
         "S4"
       ],
       [
-        "MATH 220",
+        "STAT 220",
         "CS 220",
-        "CS 410"
+        "CS 410",
+        "CS 360"
       ],
       [
         [
-          "CS 401",
-          "Controlled scalability experiment and analysis."
+          "CS 360",
+          "Pilot study with literature synthesis, baselines, validity analysis, and reproducible evidence."
         ],
         [
           "CS 411",
@@ -3780,11 +4057,11 @@ const curriculum = {
   "abetCurriculum": [
     [
       "General Criterion 5",
-      "The required CS core provides 67 credits of fundamental and advanced computing. CS 250 and CS 420 assess professional tools and development practices. CS 402 covers security and privacy. ISLM 101, CS 430, and CS 411 assess ethical reasoning, the effects of computing, and professional judgment. The capstone integrates prior technical work and professional practice."
+      "The required CS core provides 61 credits of fundamental and advanced computing. CS 250 and CS 420 assess professional tools and development practices. CS 402 covers security and privacy. ISLM 101, CS 430, and CS 411 assess ethical reasoning, the effects of computing, and professional judgment. The capstone integrates prior technical work and professional practice."
     ],
     [
       "CS coursework · 40-credit minimum",
-      "The required CS core alone provides 67 semester credit hours."
+      "The required CS core provides 61 credits, including CS 360. The remaining required CS courses provide 58 credits before research methods, capstone, training, or electives are counted."
     ],
     [
       "Depth in algorithms, theory, language concepts, and software development",
@@ -3792,7 +4069,7 @@ const curriculum = {
     ],
     [
       "Depth in a general-purpose language",
-      "CS 101 and CS 102 provide eight credits of sustained Python practice. Students design and test modular and object-oriented programs in supervised labs and applied assessments. CS 240 adds systems programming in C."
+      "CS 101 and CS 102 provide seven credits of sustained Python practice. Students design and test modular and object-oriented programs in supervised labs and applied assessments. CS 240 adds systems programming in C."
     ],
     [
       "Exposure to the required systems topics",
@@ -3808,11 +4085,11 @@ const curriculum = {
     ],
     [
       "Mathematics and statistics · 15-credit minimum",
-      "The plan requires 17 credits. MATH 101 Calculus I (4), MATH 102 Discrete Mathematics (3), MATH 120 Linear Algebra (3), MATH 220 Probability and Statistics (4), MATH 230 Multivariable Calculus and Optimization (3) cover the required topics and reach beyond introductory calculus."
+      "The plan requires 20 credits. MATH 101 (4), MATH 102 (3), MATH 120 (3), STAT 220 (4), MATH 230 (3), and MATH 340 (3) cover discrete mathematics, probability, statistics, linear algebra, calculus, optimization, and numerical analysis."
     ],
     [
       "Scientific method in non-computing coursework",
-      "PHYS 101, PHYS 102, and CHEM 101 provide 10 credits in laboratory science. Students test predictions in mechanics and circuits and conduct controlled chemical experiments. Laboratory reports assess experimental design, measurements, analysis, and conclusions."
+      "PHYS 101, PHYS 102, and BIO 101 provide 10 credits of non-computing laboratory science. Students formulate hypotheses, control variables, analyze measurements and uncertainty, and report conclusions."
     ]
   ],
   "abetCurriculumScope": "The Computer Science program criteria apply alongside General Criterion 5. The topic and credit requirements below are the same in the 2025–2026 and 2026–2027 CAC editions. The college selects the courses that deliver this coverage.",
@@ -3896,8 +4173,8 @@ const curriculum = {
       "Final report and panel defense"
     ],
     "S4": [
-      "CS 401",
-      "Scalability experiment",
+      "CS 360",
+      "Reproducible pilot study and validity analysis",
       "CS 430",
       "Reproducible model evaluation"
     ],
@@ -3921,5 +4198,101 @@ const curriculum = {
     ]
   },
   "mission": "Prepare graduates to apply the theory and practice of computer science to develop reliable, secure, and useful digital systems. The program integrates scientific inquiry, professional responsibility, and supervised workplace experience, with opportunities to address business, healthcare, and community needs in Saudi Arabia.",
-  "coopDescription": "CS 390 is the sole Semester 6 registration. The 9-credit placement begins in Semester 6 and continues through the following summer under the same registration. The proposed 24-week calendar allocates sixteen regular-semester weeks followed by eight summer weeks, including final assessment. The college posts the final grade before Semester 7 to confirm eligibility for Capstone Project I."
+  "coopDescription": "CS 390 is the sole Semester 6 registration. The 9-credit placement begins in Semester 6 and continues through the following summer under the same registration. The proposed 24-week calendar allocates sixteen regular-semester weeks followed by eight summer weeks, including final assessment. The college posts the final grade before Semester 7 to confirm eligibility for Capstone Project I.",
+  "courseDecisions": [
+    {
+      "course": "ENG 101",
+      "title": "Technical English for Computing",
+      "decision": "Semester 1 develops the language needed for introductory CS study. Students read instructions and documentation, listen and take notes, explain processes, and use computing vocabulary. COMM 101 follows in Semester 2 with professional reporting and presentations.",
+      "sources": [
+        {
+          "label": "UBT ESP 101 Technical English",
+          "url": "https://opera.ubt.edu.sa/sub/catalogue/"
+        },
+        {
+          "label": "Almaarefa University English for Computing",
+          "url": "https://www.um.edu.sa/engineering/en/"
+        }
+      ]
+    },
+    {
+      "course": "CS 360",
+      "title": "Research Methods in Computing",
+      "decision": "Semester 5 combines literature appraisal, research questions, experimental and design methods, validity, ethics, and a small reproducible pilot. The undergraduate scope culminates in a proposal, evidence repository, and individual defense. The co-op and capstone provide later opportunities to apply the methods.",
+      "sources": [
+        {
+          "label": "Carnegie Mellon 07-300 Research and Innovation in Computer Science",
+          "url": "https://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/courses/"
+        },
+        {
+          "label": "NUS CS2309 CS Research Methodology in the Turing programme",
+          "url": "https://www.comp.nus.edu.sg/cug/per-cohort/cs/tp-26-27/"
+        }
+      ]
+    },
+    {
+      "course": "BIO 101",
+      "title": "Science choice for the hospital context",
+      "decision": "Chemistry is not named as a compulsory course by the current ETEC or ABET CS criteria. ETEC 2025 version 2.1 specifies 30 credits in mathematics, statistics and basic sciences. The proposed four-credit biology course retains non-computing science and controlled laboratory investigation while supporting later understanding of health workflows and biological measurements. Delivery requires a supervised biology laboratory.",
+      "sources": [
+        {
+          "label": "ETEC CS standards version 2.1, pp. 5–6",
+          "url": "https://f.etec.gov.sa/j/Computer_Science.pdf"
+        },
+        {
+          "label": "ABET CAC scientific method requirement",
+          "url": "https://www.abet.org/accreditation/accreditation-criteria/criteria-for-accrediting-computing-programs-2026-2027/"
+        }
+      ]
+    },
+    {
+      "course": "MATH 340",
+      "title": "Essential Knowledge Unit credit allocation",
+      "decision": "Numerical Methods adds three mathematics credits. Mathematics and statistics total 20, and physics and biology total 10. These 30 credits satisfy the current ETEC threshold. Computing Project Management and Finance has its own three-credit allocation.",
+      "sources": [
+        {
+          "label": "ETEC CS standards version 2.1",
+          "url": "https://f.etec.gov.sa/j/Computer_Science.pdf"
+        }
+      ]
+    },
+    {
+      "course": "CS 465",
+      "title": "Selected Topics",
+      "decision": "This three-credit option uses an existing technical elective slot. Each offering has an announced topic, suitable additional prerequisites, a current primary textbook, and assessed technical work. An illustrative first offering covers agentic computing and evaluation using AI Engineering.",
+      "sources": [
+        {
+          "label": "Alfaisal special topics elective precedent",
+          "url": "https://catalog.alfaisal.edu/college-of-engineering-and-advanced-computing/bachelor-major-minor-track/bachelor-of-software"
+        }
+      ]
+    }
+  ],
+  "revision": {
+    "date": "19 November 2026",
+    "college": "College of Business, Technology & Innovation",
+    "university": "Soliman Fakeeh University",
+    "collegeArabic": "كلية الأعمال والتقنية والابتكار",
+    "universityArabic": "جامعة سليمان فقيه",
+    "mathStatisticsCredits": 20,
+    "basicScienceCredits": 10,
+    "etecEssentialCredits": 30,
+    "etecVersion": "2.1",
+    "reducedCourses": [
+      "CS 102",
+      "CS 210",
+      "CS 240",
+      "CS 250",
+      "CS 310",
+      "CS 340",
+      "CS 401",
+      "CS 420",
+      "CS 430"
+    ],
+    "scienceReplacement": [
+      "CHEM 101",
+      "BIO 101"
+    ],
+    "etecMappedCsCredits": 44
+  }
 };

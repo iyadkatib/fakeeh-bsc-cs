@@ -2,7 +2,7 @@
 
 const {
   program, years, semesters, courses, textbooks, categories, electiveAreas, electiveReferences, electiveLocalPrecedent,
-  healthElectiveFit, healthBenchmarks, healthSaudi,
+  healthElectiveFit, healthBenchmarks, healthSaudi, courseDecisions,
   benchmarks, benchmarkSections, benchmarkCourses, workplaceSkills, aiEthics,
   evidence, cs2023, etec, etecOutcomes, abet, abetOutcomeScope, abetCurriculum, abetCurriculumScope,
   outcomes, assessmentPlan, mission, coopDescription
@@ -78,6 +78,7 @@ function requirementList(title, items) {
 }
 
 function showCourse(id) {
+  if (id === "MATH 220") id = "STAT 220";
   const course = records.get(id);
   const meta = element("dl", "dialog-facts");
   if (!course) {
@@ -605,3 +606,17 @@ for (const [id, [area, description]] of Object.entries(outcomes)) {
 
 const requestedBenchmarkCourse = new URLSearchParams(window.location.search).get("benchmarkCourse");
 if (requestedBenchmarkCourse) showCourse(requestedBenchmarkCourse);
+
+for (const entry of courseDecisions) {
+  const section = element("section", "course-decision");
+  const heading = element("h3");
+  heading.append(courseLink(entry.course, entry.course), " · ", entry.title);
+  section.append(heading, element("p", "section-note", entry.decision));
+  const sources = element("p", "section-note");
+  entry.sources.forEach((source, index) => {
+    if (index) sources.append(" · ");
+    sources.append(externalLink(source.url, source.label));
+  });
+  section.append(sources);
+  byId("course-decision-content").append(section);
+}
