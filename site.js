@@ -78,7 +78,7 @@ function requirementList(title, items) {
 }
 
 function showCourse(id) {
-  if (id === "MATH 220") id = "STAT 220";
+  id = ({"MATH 220": "STAT 220", "MATH 102": "CS 103", "CS 420": "CS 370"})[id] || id;
   const course = records.get(id);
   const meta = element("dl", "dialog-facts");
   if (!course) {
@@ -89,7 +89,7 @@ function showCourse(id) {
     source.className = "dialog-link";
     showDetails(id, peerCourse.title, [
       element("p", null, peerCourse.summary), meta,
-      element("h3", null, "Training sequence"),
+      element("h3", null, peerCourse.detailHeading || "Training sequence"),
       element("p", null, peerCourse.detail),
       element("p", "dialog-note", peerCourse.source),
       source
@@ -106,6 +106,7 @@ function showCourse(id) {
   }
   const content = [element("p", null, course.summary), meta];
   if (course.prerequisites.length) content.push(requirementList("Prerequisites", course.prerequisites));
+  if (course.corequisites?.length) content.push(requirementList("Prior or concurrent study", course.corequisites));
   if (course.requirement) content.push(element("p", "dialog-note", course.requirement));
   if (course.topics.length) {
     const list = element("ul");

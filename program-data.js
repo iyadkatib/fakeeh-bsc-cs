@@ -16,7 +16,7 @@ const curriculum = {
         39,
         [
           "MATH 101",
-          "MATH 102",
+          "CS 103",
           "PHYS 101",
           "ENG 101",
           "MATH 120",
@@ -25,8 +25,8 @@ const curriculum = {
           "COMM 101",
           "STAT 220",
           "MATH 230",
-          "BUS 401",
-          "MATH 340"
+          "MATH 340",
+          "BUS 401"
         ]
       ],
       [
@@ -50,7 +50,7 @@ const curriculum = {
         []
       ]
     ],
-    "creditNote": "The 130 credits include one 9-credit co-op registration across Semester 6 and the following summer.",
+    "creditNote": "The 130 credits include one 9-credit co-op registration across Semester 6 and the following summer. CS 103 Discrete Structures is included in mathematics/statistics and college requirements, not in the CS core, despite its CS prefix.",
     "sharedCourses": [
       "ARAB 101",
       "COMM 101",
@@ -68,11 +68,11 @@ const curriculum = {
       "number": 1,
       "year": 1,
       "title": "Programming and scientific foundations",
-      "summary": "Learn to translate problems into programs and make evidence-based arguments with mathematics and experiment.",
+      "summary": "Connect the main ideas of computing with programming, discrete reasoning, calculus and scientific investigation.",
       "courses": [
         "CS 101",
         "MATH 101",
-        "MATH 102",
+        "CS 103",
         "PHYS 101",
         "ENG 101"
       ],
@@ -95,8 +95,8 @@ const curriculum = {
     {
       "number": 3,
       "year": 2,
-      "title": "Data, architecture, and ethics",
-      "summary": "Study how information is organized, how computers represent it, and what professional responsibilities arise when using it.",
+      "title": "Data, digital logic and computer organization",
+      "summary": "Develop data structures, database skills, digital circuits and computer organization alongside probability, statistics and Arabic.",
       "courses": [
         "CS 201",
         "CS 210",
@@ -124,12 +124,12 @@ const curriculum = {
     {
       "number": 5,
       "year": 3,
-      "title": "Theory, systems, and intelligent computing",
-      "summary": "Study operating systems, languages, theory, AI, interaction, and research methods before the full-time placement.",
+      "title": "Systems, applications and research",
+      "summary": "Build web and mobile applications while studying operating systems, programming languages, AI, interaction and research before the full-time placement.",
       "courses": [
         "CS 310",
         "CS 320",
-        "CS 330",
+        "CS 370",
         "CS 340",
         "CS 350",
         "CS 360"
@@ -149,32 +149,32 @@ const curriculum = {
     {
       "number": 7,
       "year": 4,
-      "title": "Advanced systems and Capstone I",
-      "summary": "Study distributed systems, security, and graphics, then define and prototype a substantial computing project.",
+      "title": "Theory, advanced systems and Capstone I",
+      "summary": "Deepen theory, distributed computing and security, apply numerical methods, and define and prototype the capstone project.",
       "courses": [
         "CS 401",
         "CS 402",
-        "CS 403",
+        "MATH 340",
         "BUS 401",
         "CS 410",
-        "EL-1"
+        "CS 330"
       ],
-      "credits": 17
+      "credits": 18
     },
     {
       "number": 8,
       "year": 4,
       "title": "Capstone II and technical depth",
-      "summary": "Complete and evaluate the capstone while developing further depth through machine learning, deployment, and electives.",
+      "summary": "Complete and evaluate the capstone while developing further depth in machine learning, graphics and three technical electives.",
       "courses": [
         "CS 411",
-        "CS 420",
+        "EL-1",
         "CS 430",
-        "MATH 340",
+        "CS 403",
         "EL-2",
         "EL-3"
       ],
-      "credits": 18
+      "credits": 17
     }
   ],
   "categories": {
@@ -196,20 +196,26 @@ const curriculum = {
       "lecture": 3,
       "practical": 2,
       "prerequisites": [],
-      "summary": "Learn to design, trace, test, and document programs in Python.",
+      "summary": "Understand the main ideas and layers of computing, then design, trace, test and document programs in Python.",
       "topics": [
-        "Problem decomposition and representations",
-        "Types, expressions, and input/output",
+        "Computing as a discipline: algorithms, abstraction, data and information; relationships among CS, IS, IT and cybersecurity",
+        "Hardware, software, operating systems, networks and databases; an introductory map of AI and emerging computing technologies",
+        "Problem decomposition, representations, types, expressions and input/output",
         "Selection and iteration",
-        "Functions, recursion, and scope",
-        "Strings, collections, and file input/output",
-        "Program readability, IDE debugging, test case design, and version control"
+        "Functions, recursion and scope",
+        "Strings, collections and file input/output",
+        "Program readability, debugging, test design and version control; responsible use and disclosure of AI assistance"
       ],
       "clos": [
         {
+          "plo": "K2",
+          "stage": "I",
+          "statement": "Explain how data, hardware, operating systems, networks and applications interact in a familiar computing system."
+        },
+        {
           "plo": "K3",
           "stage": "I",
-          "statement": "Explain how control flow and data representations affect a program."
+          "statement": "Explain how control flow, abstraction and data representations affect a program."
         },
         {
           "plo": "S1",
@@ -219,16 +225,25 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "I",
-          "statement": "Implement and test a modular Python program from a written specification."
+          "statement": "Implement, test and document a modular Python program from a written specification."
         }
       ],
       "profile": "lab",
       "group": null,
       "requirement": null,
-      "resource": "Python Tutorial and laboratory exercises in the college LMS.",
+      "resource": "Computing foundations readings, MIT introductory computing materials, the Python Tutorial, and supervised programming exercises. The first two units orient students to the discipline; later required courses develop their technical depth.",
       "name": "Programming I",
       "placement": "Semester 1",
-      "anchor": "cs-101"
+      "anchor": "cs-101",
+      "topicHours": [
+        6,
+        6,
+        12,
+        12,
+        15,
+        12,
+        12
+      ]
     },
     "MATH 101": {
       "id": "MATH 101",
@@ -274,17 +289,17 @@ const curriculum = {
       "placement": "Semester 1",
       "anchor": "math-101"
     },
-    "MATH 102": {
-      "id": "MATH 102",
-      "code": "MATH 102",
-      "title": "Discrete Mathematics",
+    "CS 103": {
+      "id": "CS 103",
+      "code": "CS 103",
+      "title": "Discrete Structures",
       "term": 1,
       "credits": 3,
       "category": "college",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [],
-      "summary": "Develop the discrete reasoning needed for algorithms, proofs, and data structures.",
+      "summary": "Use logic, proof, sets, relations, counting, graphs and trees to model and reason about computing problems.",
       "topics": [
         "Sets, relations, functions, and cardinality",
         "Propositional and predicate logic, inference, and normal forms",
@@ -312,11 +327,12 @@ const curriculum = {
       ],
       "profile": "lecture",
       "group": null,
-      "requirement": null,
-      "resource": "Mathematics for Computer Science, MIT OpenCourseWare, and problem sets.",
-      "name": "Discrete Mathematics",
+      "requirement": "These three credits are classified as mathematics and statistics in the ABET and ETEC allocations. The CS prefix identifies academic ownership; the credits are not also counted in the CS core.",
+      "resource": "Rosen problem sets and MIT Mathematics for Computer Science materials. Formal reasoning and proof remain central to assessment.",
+      "name": "Discrete Structures",
       "placement": "Semester 1",
-      "anchor": "math-102"
+      "anchor": "cs-103",
+      "creditClassification": "Mathematics and statistics"
     },
     "PHYS 101": {
       "id": "PHYS 101",
@@ -422,28 +438,29 @@ const curriculum = {
       ],
       "summary": "Design and test object-oriented programs in Python and explore alternative programming styles.",
       "topics": [
-        "Abstract data types, classes, and objects",
-        "Encapsulation, interfaces, and composition",
-        "Inheritance, polymorphism, and dynamic dispatch",
-        "Exceptions, test design, and debugging",
-        "Recursion, higher-order functions, and basic functional patterns",
-        "Team development and review in a shared repository"
+        "Abstract data types, classes, objects and modular interfaces",
+        "Encapsulation, contracts, composition and reusable components",
+        "Inheritance, polymorphism and dynamic dispatch",
+        "Exceptions, debugging, unit tests, test boundaries and coverage",
+        "Typed collections, iterators, Python type annotations and introductory generic abstractions",
+        "Recursion, higher-order functions, immutability and functional patterns",
+        "Team development, individual code review and refactoring in a shared repository"
       ],
       "clos": [
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain composition, dynamic dispatch, and functional abstraction."
+          "statement": "Explain composition, dynamic dispatch, typed collections and functional abstraction."
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Build and test an object-oriented program using interfaces."
+          "statement": "Build, document and test a modular object-oriented program with reusable interfaces and type annotations."
         },
         {
           "plo": "V2",
           "stage": "I",
-          "statement": "Review a peer contribution and resolve documented defects."
+          "statement": "Review a peer contribution, explain individual code and resolve documented defects."
         }
       ],
       "profile": "lab",
@@ -599,7 +616,7 @@ const curriculum = {
       "practical": 2,
       "prerequisites": [
         "CS 102",
-        "MATH 102"
+        "CS 103"
       ],
       "summary": "Implement data structures and analyze trade-offs among their operations.",
       "topics": [
@@ -638,49 +655,70 @@ const curriculum = {
     "CS 210": {
       "id": "CS 210",
       "code": "CS 210",
-      "title": "Computer Organization and Architecture",
+      "title": "Digital Logic and Computer Organization",
       "term": 3,
       "credits": 3,
       "category": "core",
       "lecture": 2,
       "practical": 2,
       "prerequisites": [
-        "CS 102"
+        "CS 102",
+        "CS 103"
       ],
-      "summary": "Connect hardware organization and instruction execution to the behavior of software.",
+      "summary": "Design and test digital building blocks, connect them into a simple processor, and relate instruction execution and memory organization to software behavior.",
       "topics": [
-        "Evolution of computers and their uses",
-        "Binary representation, compression, and Boolean logic",
-        "Combinational and sequential circuits",
-        "Stored-program architecture, instruction sets, and assembly",
-        "Processors, datapaths, and performance",
-        "Memory hierarchy, caching, and interconnection",
-        "Input/output, interrupts, and laboratory simulation"
+        "Evolution of computers, system layers, stored-program organization and digital versus analog systems",
+        "Binary and hexadecimal numbers, signed integers, floating-point data, character encoding and data conversion",
+        "Logic gates, truth tables, Boolean algebra, simplification and sum-of-products representations",
+        "Combinational design: adders, multiplexers, decoders, comparators and the ALU",
+        "Sequential design: clocks, flip-flops, registers, counters and finite-state control",
+        "Construction and verification of a small processor using datapath, control, registers and memory",
+        "Instruction sets, addressing, assembly programming, subroutines and high-level-to-machine execution",
+        "Memory hierarchy, caching, buses and data layout",
+        "Processor performance, introductory pipelining, multi-core comparison and performance measurement",
+        "Input/output, interrupts, hardware-software interfaces and integrated simulator experiments"
       ],
       "clos": [
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain instruction execution and the memory hierarchy."
+          "statement": "Explain how digital building blocks, processor organization, instruction execution and memory support software."
         },
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Analyze a processor or cache performance trade-off."
+          "statement": "Analyze data representations and processor or cache performance using justified calculations."
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Design and prototype combinational and sequential circuits and a small processor using a logic simulator."
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Use a simulator to test a hardware–software performance hypothesis."
+          "statement": "Verify component and processor correctness with test benches and investigate hardware-software performance experimentally."
         }
       ],
       "profile": "lab",
       "group": null,
       "requirement": null,
-      "resource": null,
-      "name": "Computer Organization and Architecture",
+      "resource": "Logic-circuit and instruction-set simulators, supplied test benches, assembly exercises, and component construction laboratories. Students prototype an ALU, registers, memory and a small processor in simulation.",
+      "name": "Digital Logic and Computer Organization",
       "placement": "Semester 3",
-      "anchor": "cs-210"
+      "anchor": "cs-210",
+      "topicHours": [
+        2,
+        6,
+        6,
+        6,
+        6,
+        8,
+        8,
+        6,
+        6,
+        6
+      ]
     },
     "STAT 220": {
       "id": "STAT 220",
@@ -693,7 +731,7 @@ const curriculum = {
       "practical": 2,
       "prerequisites": [
         "MATH 101",
-        "MATH 102"
+        "CS 103"
       ],
       "summary": "Use probability and statistical inference to reason about uncertainty and data.",
       "topics": [
@@ -882,7 +920,7 @@ const curriculum = {
         "Unix shell and tooling",
         "Processes, signals, and system calls",
         "File input/output and inter-process communication",
-        "Debugging, memory safety, and performance",
+        "Debugging, test harnesses, memory safety, profiling and performance measurement",
         "Resource measurement, system failures, and defensive design"
       ],
       "clos": [
@@ -928,8 +966,8 @@ const curriculum = {
         "Requirements and stakeholder analysis",
         "Software process, agile planning, and estimation",
         "Team roles, constructive feedback, and conflict resolution",
-        "Architecture, modular design, and version control",
-        "Construction, code review, and continuous integration",
+        "Architecture, modular design, selected design patterns, contracts and version control",
+        "Construction, refactoring, individual code review, automated tests and continuous integration",
         "Verification, validation, and security by design",
         "Maintenance and accessible technical documentation",
         "Professional codes, software licensing, accountability, and escalation of concerns"
@@ -943,7 +981,7 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Deliver and evaluate a tested team software increment."
+          "statement": "Deliver, refactor and evaluate a tested team software increment using modular design and documented interfaces."
         },
         {
           "plo": "V1",
@@ -1121,6 +1159,7 @@ const curriculum = {
       "topics": [
         "Syntax, grammars, and abstract syntax trees",
         "Binding, scope, types, and inference",
+        "Typed generic collections, subtyping, iterators and aggregate operations across Python and a statically typed language such as Java or C#",
         "Semantics, lambda expressions, and runtime representation",
         "Functional, imperative, object-oriented, and logic paradigms",
         "Exceptions, event-driven programming, and reactive execution",
@@ -1141,7 +1180,7 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement a small interpreter or semantic evaluator."
+          "statement": "Implement a small interpreter or semantic evaluator and compare type-safe abstractions across programming languages."
         }
       ],
       "profile": "project",
@@ -1156,7 +1195,7 @@ const curriculum = {
       "id": "CS 330",
       "code": "CS 330",
       "title": "Theory of Computation",
-      "term": 5,
+      "term": 7,
       "credits": 3,
       "category": "core",
       "lecture": 3,
@@ -1195,7 +1234,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Theory of Computation",
-      "placement": "Semester 5",
+      "placement": "Semester 7",
       "anchor": "cs-330"
     },
     "CS 340": {
@@ -1375,7 +1414,8 @@ const curriculum = {
         "Shared memory and message passing",
         "Communication, replication, and consistency",
         "Failures, safety and liveness, and distributed coordination",
-        "Scalability, energy use, and resource efficiency"
+        "Scalability, energy use, and resource efficiency",
+        "Service observability, reliability, failure recovery and operational resource trade-offs"
       ],
       "clos": [
         {
@@ -1454,7 +1494,7 @@ const curriculum = {
       "id": "CS 403",
       "code": "CS 403",
       "title": "Graphics and Interactive Techniques",
-      "term": 7,
+      "term": 8,
       "credits": 2,
       "category": "core",
       "lecture": 1,
@@ -1494,7 +1534,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Graphics and Interactive Techniques",
-      "placement": "Semester 7",
+      "placement": "Semester 8",
       "anchor": "cs-403"
     },
     "BUS 401": {
@@ -1601,7 +1641,7 @@ const curriculum = {
       "id": "EL-1",
       "code": "",
       "title": "Technical Elective I",
-      "term": 7,
+      "term": 8,
       "credits": 3,
       "category": "elective",
       "lecture": 0,
@@ -1615,7 +1655,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Technical Elective I",
-      "placement": "Semester 7",
+      "placement": "Semester 8",
       "anchor": "el-1"
     },
     "CS 411": {
@@ -1635,7 +1675,7 @@ const curriculum = {
         "Implementation using earlier coursework, integration, and project tracking",
         "Integration testing and reproducible evaluation",
         "Security, privacy, sustainability, accessibility, and AI safeguards where applicable",
-        "Deployment or a demonstrable release",
+        "Deployment, release automation, observability, recovery checks and handover of a demonstrable release",
         "Technical documentation and reflection",
         "Individual and team defense and handover"
       ],
@@ -1679,54 +1719,78 @@ const curriculum = {
       "placement": "Semester 8",
       "anchor": "cs-411"
     },
-    "CS 420": {
-      "id": "CS 420",
-      "code": "CS 420",
-      "title": "Software Deployment and Operations",
-      "term": 8,
+    "CS 370": {
+      "id": "CS 370",
+      "code": "CS 370",
+      "title": "Web and Mobile Application Development",
+      "term": 5,
       "credits": 3,
       "category": "core",
       "lecture": 2,
       "practical": 2,
       "prerequisites": [
-        "CS 250",
-        "CS 310",
-        "CS 260"
+        "CS 201",
+        "CS 230",
+        "CS 250"
       ],
-      "summary": "Package, deploy, observe, and improve computing services on general-purpose and specialized platforms.",
+      "summary": "Build and evaluate a secure web client and a cross-platform mobile client using a shared API and database-backed service.",
       "topics": [
-        "Release engineering, environments, and automation",
-        "Containers, deployment, and configuration",
-        "Observability, reliability, and incident review",
-        "Platform APIs, scripting, three-tier web architecture, and application state",
-        "Mobile, embedded, game, and robotic platform constraints",
-        "Privacy, security, and sustainable operation",
-        "Recovery, cost, and service-level evaluation"
+        "Web and mobile application architecture, HTTP, platform APIs and a shared client-server project",
+        "JavaScript and TypeScript for reusable components, typed interfaces, events and asynchronous programming",
+        "Responsive and accessible web interfaces, application state, forms and navigation",
+        "REST APIs, server-side validation, database integration, authentication and authorization",
+        "Cross-platform mobile interfaces, device and network constraints, API access and application lifecycle",
+        "Individual unit, API and integration tests, secure coding, privacy and accessibility checks",
+        "Version control, basic release automation, deployment, logging, recovery and responsible operation",
+        "Team delivery, usability feedback, individual demonstration and explanation of the implemented solution"
       ],
       "clos": [
         {
-          "plo": "K2",
+          "plo": "K3",
           "stage": "P",
-          "statement": "Explain deployment and operational choices across target platforms."
+          "statement": "Explain web and mobile architectures, API contracts, application state and platform constraints."
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Deploy and verify a service with an automated release process."
+          "statement": "Implement a web client and a cross-platform mobile client connected to a shared API and database-backed service."
         },
         {
           "plo": "S4",
-          "stage": "M",
-          "statement": "Evaluate reliability, resource use, and operational trade-offs."
+          "stage": "P",
+          "statement": "Test and deploy an application and evaluate correctness, accessibility, security and operational behavior."
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify privacy, authorization and responsible data-use choices in an application."
+        },
+        {
+          "plo": "V2",
+          "stage": "P",
+          "statement": "Collaborate using version control and demonstrate and explain individual contributions."
         }
       ],
       "profile": "lab",
       "group": null,
-      "requirement": null,
-      "resource": null,
-      "name": "Software Deployment and Operations",
-      "placement": "Semester 8",
-      "anchor": "cs-420"
+      "requirement": "CS 350 Human–Computer Interaction must be completed previously or taken concurrently. The course uses one bounded application and a shared backend; advanced native mobile development and extensive cloud operations remain specialist study.",
+      "resource": "Current React, React Native, TypeScript and server-framework documentation; API and database exercises; individual coding tasks and a team application using synthetic data.",
+      "name": "Web and Mobile Application Development",
+      "placement": "Semester 5",
+      "anchor": "cs-370",
+      "corequisites": [
+        "CS 350"
+      ],
+      "topicHours": [
+        4,
+        8,
+        8,
+        10,
+        10,
+        8,
+        6,
+        6
+      ]
     },
     "CS 430": {
       "id": "CS 430",
@@ -1867,7 +1931,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Data Engineering",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-451"
     },
     "CS 452": {
@@ -1914,7 +1978,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Applied Data Analytics",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-452"
     },
     "CS 453": {
@@ -1967,7 +2031,7 @@ const curriculum = {
       "requirement": null,
       "resource": "HL7 FHIR specification, the Saudi NPHIES FHIR implementation guide, and synthetic health records for classroom use.",
       "name": "Health Informatics",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-453"
     },
     "CS 454": {
@@ -2014,7 +2078,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Digital Product Engineering",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-454"
     },
     "CS 455": {
@@ -2061,7 +2125,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Cloud and Distributed Applications",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-455"
     },
     "CS 456": {
@@ -2108,7 +2172,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Secure Software Engineering",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-456"
     },
     "CS 457": {
@@ -2155,7 +2219,7 @@ const curriculum = {
       "requirement": null,
       "resource": "Distributed-ledger protocol documentation, a local ledger simulator, and instructor-provided contract test cases.",
       "name": "Blockchain and Cryptocurrencies",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-457"
     },
     "CS 458": {
@@ -2202,7 +2266,7 @@ const curriculum = {
       "requirement": null,
       "resource": "A robotics simulator, sample maps and sensor recordings, and an accessible computing laboratory.",
       "name": "Robotics and Autonomous Systems",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-458"
     },
     "CS 459": {
@@ -2249,7 +2313,7 @@ const curriculum = {
       "requirement": null,
       "resource": "A software flight simulator, synthetic telemetry, and instructor-provided inspection and survey scenarios.",
       "name": "Aerial Robotics and Drones",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-459"
     },
     "CS 460": {
@@ -2296,7 +2360,7 @@ const curriculum = {
       "requirement": null,
       "resource": "Public or synthetic security logs, a supervised analysis environment, and instructor-provided AI assurance cases.",
       "name": "AI for Cybersecurity and AI Assurance",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-460"
     },
     "CS 461": {
@@ -2342,7 +2406,7 @@ const curriculum = {
       "requirement": null,
       "resource": "An online judge or local judging system, curated public problem sets, and code review tools.",
       "name": "Competitive Programming",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-461"
     },
     "CS 462": {
@@ -2389,7 +2453,7 @@ const curriculum = {
       "requirement": null,
       "resource": "A quantum circuit simulator, linear-algebra exercises, and reproducible circuit notebooks.",
       "name": "Quantum Computing",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-462"
     },
     "CS 463": {
@@ -2436,7 +2500,7 @@ const curriculum = {
       "requirement": null,
       "resource": "Simulated or teaching-board sensors, a local messaging broker, and an accessible computing laboratory.",
       "name": "Internet of Things and Edge Computing",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-463"
     },
     "CS 464": {
@@ -2483,7 +2547,7 @@ const curriculum = {
       "requirement": null,
       "resource": "Small language models, public or synthetic text collections, and evaluation notebooks that can run in a teaching lab.",
       "name": "Generative AI and Large Language Models",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-464"
     },
     "ENG 101": {
@@ -2646,7 +2710,7 @@ const curriculum = {
       "id": "MATH 340",
       "code": "MATH 340",
       "title": "Numerical Methods",
-      "term": 8,
+      "term": 7,
       "credits": 3,
       "category": "college",
       "lecture": 3,
@@ -2687,7 +2751,7 @@ const curriculum = {
       "requirement": null,
       "resource": "Instructor-supplied mathematical problem sets and Python or MATLAB demonstrations with error and convergence analyses.",
       "name": "Numerical Methods",
-      "placement": "Semester 8",
+      "placement": "Semester 7",
       "anchor": "math-340"
     },
     "CS 465": {
@@ -2738,7 +2802,7 @@ const curriculum = {
       "requirement": "The department publishes the topic, additional prerequisites, learning outcomes, assessment, and primary textbook before registration. One 3-credit Selected Topics course may count within the nine elective credits.",
       "resource": "Topic-specific textbook, recent peer-reviewed papers, official documentation, and a reproducible project environment.",
       "name": "Selected Topics",
-      "placement": "Technical elective",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-465"
     }
   },
@@ -2753,7 +2817,7 @@ const curriculum = {
       "citation": "Joel Hass, Christopher Heil, and Maurice D. Weir · Pearson · 15th ed. · 2024",
       "url": "https://www.pearson.com/en-gb/subject-catalog/p/thomas-calculus-early-transcendentals/P200000010771/9781292725901"
     },
-    "MATH 102": {
+    "CS 103": {
       "title": "Discrete Mathematics and Its Applications",
       "citation": "Kenneth H. Rosen · McGraw Hill · 2025 release",
       "url": "https://www.mheducation.com/highered/product/discrete-mathematics-and-its-applications-rosen.html"
@@ -2839,9 +2903,9 @@ const curriculum = {
       "url": "https://www.pearson.com/en-us/subject-catalog/p/computer-networking-a-top-down-approach/P200000013385/9780135429334"
     },
     "CS 310": {
-      "title": "Modern Operating Systems",
-      "citation": "Andrew S. Tanenbaum and Herbert Bos · Pearson · 5th ed. · © 2023",
-      "url": "https://www.pearson.com/en-us/subject-catalog/p/modern-operating-systems/P200000003295/9780137618873"
+      "title": "Operating System Concepts",
+      "citation": "Abraham Silberschatz, Peter B. Galvin, and Greg Gagne · Wiley · 10th ed. · 2018",
+      "url": "https://www.wiley.com/en-us/operating-system-concepts-10th-edition-p-9781119320913"
     },
     "CS 320": {
       "title": "Programming Language Pragmatics",
@@ -2898,10 +2962,10 @@ const curriculum = {
       "citation": "David Farley · Addison-Wesley Professional · 1st ed. · © 2022",
       "url": "https://www.pearson.com/en-us/subject-catalog/p/Farley-Modern-Software-Engineering-Doing-What-Really-Works-to-Build-Better-Software-Faster/P200000009466"
     },
-    "CS 420": {
-      "title": "Cloud Native DevOps with Kubernetes",
-      "citation": "Justin Domingus and John Arundel · O’Reilly · 2nd ed. · 2022",
-      "url": "https://www.oreilly.com/library/view/cloud-native-devops/9781098116811/"
+    "CS 370": {
+      "title": "Fundamentals of Web Development",
+      "citation": "Randy Connolly and Ricardo Hoar · Pearson · 3rd ed. · © 2022",
+      "url": "https://www.pearson.com/en-us/subject-catalog/p/fundamentals-of-web-development/P200000003214/9780136792857"
     },
     "CS 430": {
       "title": "An Introduction to Statistical Learning: with Applications in Python",
@@ -3075,8 +3139,8 @@ const curriculum = {
       "rationale": "Adapts the language-model lifecycle to small models, retrieval, and evidence-based evaluation in an undergraduate lab."
     }
   },
-  "electiveLocalPrecedent": "KAU’s 2026 FCIT Computer Science Program Guide also lists robotics, generative and agentic AI, quantum computing, and Internet of Things among its elective options.",
-  "healthElectiveFit": "CS 453 Health Informatics uses one of the three existing 3-credit elective slots in Semester 7 or 8. Semester 7 allows students to apply the course to a related capstone. CS 230, STAT 220, and CS 350 prepare students to model clinical data, evaluate evidence, and test usability.",
+  "electiveLocalPrecedent": "KAU’s public CS overview includes advanced programming, intelligent systems, software engineering and information security, supporting a broad elective portfolio.",
+  "healthElectiveFit": "CS 453 Health Informatics uses one of the three existing 3-credit elective slots in Semester 8. Students can apply it during Capstone II; hospital problems identified during co-op can inform the earlier project proposal. CS 230, STAT 220 and CS 350 prepare students to model clinical data, evaluate evidence and test usability.",
   "healthBenchmarks": [
     {
       "label": "University of Washington · BIME 300",
@@ -3130,11 +3194,11 @@ const curriculum = {
       "name": "King Abdulaziz University",
       "program": "B.Sc. in Computer Science · FCIT",
       "region": "Saudi Arabia",
-      "model": "The updated FCIT guide includes CIS 393 Workplace Skills for Technology Specialists, two senior project courses, and a choice of summer training or two cooperative training courses.",
-      "adopted": "Fakeeh uses a two-course capstone in CS 410 and CS 411 and makes workplace preparation an explicit part of the curriculum.",
-      "difference": "KAU teaches workplace skills in a dedicated course. Fakeeh practices them in COMM 101, CS 250, and other required courses, then assesses them in CS 390. Students apply the skills to technical work before receiving feedback in a workplace.",
-      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science",
-      "note": "Curriculum detail from the FCIT Computer Science Program Guide, 2026, §2-15."
+      "model": "The published Jeddah FCIT plan includes CS 203 Advanced Programming Techniques, CS 396 Web Application Development, CS 490 Mobile Application Development, CS 222 Discrete Structures, CIS 291 Computing Issues and Ethics, and CIS 393 Workplace Skills for Technology Specialists.",
+      "adopted": "Fakeeh combines web and mobile implementation in CS 370, reinforces advanced construction across CS 102, CS 240, CS 250 and CS 320, and makes discrete foundations explicit in CS 103. Workplace and ethics outcomes are assessed across required courses, co-op and capstone.",
+      "difference": "KAU assigns separate courses to web and mobile development and to workplace skills and computing ethics. Fakeeh uses one focused application course and integrated professional practice to preserve the 130-credit limit, with individual practical evidence and a full-time co-op.",
+      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science-280",
+      "note": "Source: KAU Jeddah FCIT public Faculty Requirements, Program Requirements and Course Descriptions tabs, reviewed 19 November 2026. The comparison uses the Jeddah program."
     },
     {
       "name": "King Fahd University of Petroleum & Minerals",
@@ -3159,7 +3223,7 @@ const curriculum = {
       "program": "Bachelor of Software Engineering · Related computing comparator",
       "region": "Saudi Arabia · Private · Riyadh",
       "model": "The published 130-credit Software Engineering degree combines university writing, technical writing, software design, testing, electives, and an internship. The catalogue also offers undergraduate research and special topics electives.",
-      "adopted": "CS 250 and CS 420 develop software construction and delivery. CS 360 makes research preparation explicit, and CS 465 provides a controlled route for emerging topics.",
+      "adopted": "CS 250 and CS 370 develop software construction and delivery. CS 360 makes research preparation explicit, and CS 465 provides a controlled route for emerging topics.",
       "difference": "The proposed CS degree requires algorithms, computation theory, programming languages, and parallel computing, followed by a 24-week co-op and two capstone courses. These choices support the broader CS award and the hospital partnership.",
       "url": "https://catalog.alfaisal.edu/college-of-engineering-and-advanced-computing/bachelor-major-minor-track/bachelor-of-software"
     },
@@ -3200,28 +3264,159 @@ const curriculum = {
   "benchmarkCourses": {
     "CIS 393": {
       "title": "Workplace Skills for Technology Specialists",
-      "summary": "KAU requires this college course to prepare Computer Science students for workplace training.",
+      "summary": "A dedicated compulsory faculty requirement in the published KAU Jeddah CS plan.",
       "facts": [
         [
-          "Institution",
-          "King Abdulaziz University"
+          "University",
+          "King Abdulaziz University · Jeddah FCIT"
+        ],
+        [
+          "Status",
+          "Compulsory"
         ],
         [
           "Credit hours",
-          "3 credits"
+          "3"
         ],
         [
-          "Placement",
-          "Semester 8 in the KAU plan"
-        ],
-        [
-          "Category",
-          "Required college course"
+          "Published prerequisite",
+          "None listed"
         ]
       ],
-      "detail": "The KAU plan lists it as a prerequisite for Summer Training and Cooperative Training I.",
-      "source": "KAU FCIT Computer Science Program Guide, 2026, course and training tables.",
-      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science"
+      "detail": "Fakeeh assesses workplace capabilities in communication, software and application projects, co-op and capstone.",
+      "detailHeading": "Coverage and comparison",
+      "source": "KAU Jeddah public Faculty Requirements, Program Requirements and Course Descriptions tabs, reviewed 19 November 2026. This is a course glance rather than the complete approved specification.",
+      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science-280"
+    },
+    "CS 203": {
+      "title": "Advanced Programming Techniques",
+      "summary": "KAU describes advanced abstraction, modularity, memory management and efficient construction of larger systems.",
+      "facts": [
+        [
+          "University",
+          "King Abdulaziz University · Jeddah FCIT"
+        ],
+        [
+          "Status",
+          "Compulsory"
+        ],
+        [
+          "Credit hours",
+          "4"
+        ],
+        [
+          "Published prerequisite",
+          "CS 202"
+        ]
+      ],
+      "detail": "Fakeeh distributes this depth across CS 102, CS 240, CS 250 and CS 320, with application practice in CS 370.",
+      "detailHeading": "Coverage and comparison",
+      "source": "KAU Jeddah public Faculty Requirements, Program Requirements and Course Descriptions tabs, reviewed 19 November 2026. This is a course glance rather than the complete approved specification.",
+      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science-280"
+    },
+    "CS 396": {
+      "title": "Web Application Development",
+      "summary": "KAU describes dynamic web application development, client-server architecture and database integration.",
+      "facts": [
+        [
+          "University",
+          "King Abdulaziz University · Jeddah FCIT"
+        ],
+        [
+          "Status",
+          "Compulsory"
+        ],
+        [
+          "Credit hours",
+          "3"
+        ],
+        [
+          "Published prerequisite",
+          "CS 341"
+        ]
+      ],
+      "detail": "Fakeeh combines web implementation with cross-platform mobile development in CS 370.",
+      "detailHeading": "Coverage and comparison",
+      "source": "KAU Jeddah public Faculty Requirements, Program Requirements and Course Descriptions tabs, reviewed 19 November 2026. This is a course glance rather than the complete approved specification.",
+      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science-280"
+    },
+    "CS 490": {
+      "title": "Mobile Application Development",
+      "summary": "KAU describes mobile application design and development, interfaces, frameworks and deployment.",
+      "facts": [
+        [
+          "University",
+          "King Abdulaziz University · Jeddah FCIT"
+        ],
+        [
+          "Status",
+          "Compulsory"
+        ],
+        [
+          "Credit hours",
+          "3"
+        ],
+        [
+          "Published prerequisite",
+          "CS 381"
+        ]
+      ],
+      "detail": "Fakeeh guarantees a bounded mobile implementation in CS 370; advanced native development can be a specialist elective.",
+      "detailHeading": "Coverage and comparison",
+      "source": "KAU Jeddah public Faculty Requirements, Program Requirements and Course Descriptions tabs, reviewed 19 November 2026. This is a course glance rather than the complete approved specification.",
+      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science-280"
+    },
+    "CS 222": {
+      "title": "Discrete Structures",
+      "summary": "A compulsory faculty requirement in the published KAU Jeddah CS plan.",
+      "facts": [
+        [
+          "University",
+          "King Abdulaziz University · Jeddah FCIT"
+        ],
+        [
+          "Status",
+          "Compulsory"
+        ],
+        [
+          "Credit hours",
+          "3"
+        ],
+        [
+          "Published prerequisite",
+          "None listed"
+        ]
+      ],
+      "detail": "Fakeeh CS 103 covers discrete reasoning in Semester 1. A matching title does not establish complete syllabus equivalence.",
+      "detailHeading": "Coverage and comparison",
+      "source": "KAU Jeddah public Faculty Requirements, Program Requirements and Course Descriptions tabs, reviewed 19 November 2026. This is a course glance rather than the complete approved specification.",
+      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science-280"
+    },
+    "CIS 291": {
+      "title": "Computing Issues and Ethics",
+      "summary": "A compulsory faculty requirement in the published KAU Jeddah CS plan.",
+      "facts": [
+        [
+          "University",
+          "King Abdulaziz University · Jeddah FCIT"
+        ],
+        [
+          "Status",
+          "Compulsory"
+        ],
+        [
+          "Credit hours",
+          "3"
+        ],
+        [
+          "Published prerequisite",
+          "None listed"
+        ]
+      ],
+      "detail": "Fakeeh integrates computing ethics into ISLM 101, software engineering, research methods, security, AI/ML, co-op and capstone.",
+      "detailHeading": "Coverage and comparison",
+      "source": "KAU Jeddah public Faculty Requirements, Program Requirements and Course Descriptions tabs, reviewed 19 November 2026. This is a course glance rather than the complete approved specification.",
+      "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science-280"
     }
   },
   "workplaceSkills": [
@@ -3284,6 +3479,13 @@ const curriculum = {
       ],
       "Search critically, manage a small investigation, document uncertainty, and defend methodological choices.",
       "Literature synthesis, pilot artifacts, research report, and individual defense."
+    ],
+    [
+      [
+        "CS 370"
+      ],
+      "Coordinate a client-server application project, review code, respond to user feedback and explain individual contributions.",
+      "Individual coding tasks, peer review, a tested web/mobile application and individual demonstration and defense."
     ]
   ],
   "aiEthics": [
@@ -3394,7 +3596,7 @@ const curriculum = {
           9
         ]
       ],
-      "Logic, representation, stored-program architecture, assembly, processors, memory, and I/O. Explain hardware behavior through simulation."
+      "Logic gates and Boolean simplification, circuit and processor construction, representation, assembly, processors, memory and I/O. Verify hardware behavior through simulation."
     ],
     [
       "DM",
@@ -3458,7 +3660,7 @@ const curriculum = {
       55,
       [
         [
-          "MATH 102",
+          "CS 103",
           29
         ],
         [
@@ -3470,7 +3672,7 @@ const curriculum = {
           5
         ]
       ],
-      "Discrete mathematics 29, probability 11, statistics 10, and linear algebra 5. Assess proofs, probability models, inference, and vector and matrix operations."
+      "Discrete mathematics 29, probability 11, statistics 10, and linear algebra 5. Assess proofs, probability models, inference, and vector and matrix operations. CS 103 has a CS prefix but retains mathematical rigor and its mathematics/statistics classification."
     ],
     [
       "NC",
@@ -3582,7 +3784,7 @@ const curriculum = {
           4
         ],
         [
-          "CS 420",
+          "CS 370",
           1
         ],
         [
@@ -3614,7 +3816,7 @@ const curriculum = {
           2
         ]
       ],
-      "Machine and resource models, performance, interfaces, system failures, and security. Trace execution and measure resource behavior."
+      "State machines, system layers, machine and resource models, performance, interfaces, failures and security. Trace execution, verify components and measure resource behavior."
     ],
     [
       "SPD",
@@ -3622,11 +3824,11 @@ const curriculum = {
       4,
       [
         [
-          "CS 420",
+          "CS 370",
           4
         ]
       ],
-      "Web architecture and state, platform APIs and scripting, and mobile, embedded, and other resource constraints. Explain deployment trade-offs across platforms."
+      "Implement web and cross-platform mobile clients using shared APIs and services. Evaluate platform state, resource constraints, security and deployment trade-offs."
     ]
   ],
   "etec": [
@@ -3647,13 +3849,13 @@ const curriculum = {
         "CS 210",
         "CS 240"
       ],
-      "Logic, machine representation, assembly, memory, and interconnection."
+      "Digital circuit design and processor prototyping, machine representation, assembly, memory and interconnection."
     ],
     [
       "Discrete structures",
       "17%",
       [
-        "MATH 102",
+        "CS 103",
         "STAT 220",
         "CS 201",
         "CS 220"
@@ -3704,9 +3906,9 @@ const curriculum = {
         "CS 250",
         "CS 410",
         "CS 411",
-        "CS 420"
+        "CS 370"
       ],
-      "Requirements, process, management, design, construction, verification, and validation."
+      "Requirements, process, management, modular design, web and mobile construction, testing, verification, validation and release."
     ]
   ],
   "etecOutcomes": [
@@ -3719,7 +3921,7 @@ const curriculum = {
         "K3"
       ],
       [
-        "MATH 102",
+        "CS 103",
         "MATH 120",
         "PHYS 101",
         "CS 201",
@@ -3772,7 +3974,8 @@ const curriculum = {
         "CS 350",
         "CS 402",
         "BUS 401",
-        "CS 410"
+        "CS 410",
+        "CS 370"
       ],
       [
         [
@@ -3799,8 +4002,8 @@ const curriculum = {
       ],
       [
         [
-          "CS 420",
-          "Automated release and evaluation of operational trade-offs."
+          "CS 370",
+          "Individual practical and team web/mobile application with API tests, release automation and operational evaluation."
         ],
         [
           "CS 430",
@@ -3885,7 +4088,7 @@ const curriculum = {
         "ISLM 101",
         "CS 340",
         "BUS 401",
-        "CS 420"
+        "CS 370"
       ],
       [
         [
@@ -4057,7 +4260,7 @@ const curriculum = {
   "abetCurriculum": [
     [
       "General Criterion 5",
-      "The required CS core provides 61 credits of fundamental and advanced computing. CS 250 and CS 420 assess professional tools and development practices. CS 402 covers security and privacy. ISLM 101, CS 430, and CS 411 assess ethical reasoning, the effects of computing, and professional judgment. The capstone integrates prior technical work and professional practice."
+      "The required CS core provides 61 credits of fundamental and advanced computing. CS 250 and CS 370 assess professional tools, software construction, web and mobile implementation, testing and release practices. CS 402 covers security and privacy. ISLM 101, CS 430, and CS 411 assess ethical reasoning, the effects of computing, and professional judgment. The capstone integrates prior technical work and professional practice."
     ],
     [
       "CS coursework · 40-credit minimum",
@@ -4065,7 +4268,7 @@ const curriculum = {
     ],
     [
       "Depth in algorithms, theory, language concepts, and software development",
-      "CS 201 and CS 220 assess data structures, algorithm correctness, and complexity. CS 330 assesses formal computation and reductions. CS 320 covers language semantics and paradigms through an interpreter project. CS 101, CS 102, and CS 250 assess software construction, testing, and team development."
+      "CS 201 and CS 220 assess data structures, algorithm correctness, and complexity. CS 330 assesses formal computation and reductions. CS 320 covers language semantics and paradigms through an interpreter project. CS 101, CS 102, and CS 250 assess software construction, testing, and team development. CS 370 adds an integrated web and mobile application project."
     ],
     [
       "Depth in a general-purpose language",
@@ -4077,7 +4280,7 @@ const curriculum = {
     ],
     [
       "Computing systems at multiple abstraction levels",
-      "Students progress from hardware and instruction execution in CS 210 to system calls and resource management in CS 240 and CS 310, then to network protocols in CS 260 and distributed services in CS 401. Lab work connects choices at each level to program behavior."
+      "Students progress from digital circuits, processor construction and instruction execution in CS 210 to system calls and resource management in CS 240 and CS 310, then to network protocols in CS 260 and distributed services in CS 401. Lab work connects choices at each level to program behavior. CS 370 connects application interfaces and APIs to shared backend services."
     ],
     [
       "Major project integrating earlier coursework",
@@ -4085,7 +4288,7 @@ const curriculum = {
     ],
     [
       "Mathematics and statistics · 15-credit minimum",
-      "The plan requires 20 credits. MATH 101 (4), MATH 102 (3), MATH 120 (3), STAT 220 (4), MATH 230 (3), and MATH 340 (3) cover discrete mathematics, probability, statistics, linear algebra, calculus, optimization, and numerical analysis."
+      "The plan requires 20 credits. MATH 101 (4), CS 103 (3), MATH 120 (3), STAT 220 (4), MATH 230 (3), and MATH 340 (3) cover discrete mathematics, probability, statistics, linear algebra, calculus, optimization, and numerical analysis. CS 103 Discrete Structures remains a mathematics course for this allocation and is excluded from the 61-credit CS core total."
     ],
     [
       "Scientific method in non-computing coursework",
@@ -4247,12 +4450,20 @@ const curriculum = {
     },
     {
       "course": "MATH 340",
-      "title": "Essential Knowledge Unit credit allocation",
-      "decision": "Numerical Methods adds three mathematics credits. Mathematics and statistics total 20, and physics and biology total 10. These 30 credits satisfy the current ETEC threshold. Computing Project Management and Finance has its own three-credit allocation.",
+      "title": "Academic purpose and Semester 7 placement",
+      "decision": "Numerical Methods develops reliable approximation, numerical error analysis, and scientific computation, with course-content benchmarks at MIT (18.330) and Carnegie Mellon (15-369). Semester 7 follows the mathematics foundations and precedes Machine Learning and Capstone II. Its three credits bring mathematics and statistics to 20 and basic sciences to 10, meeting ETEC's 30-credit essential allocation. Computing Project Management and Finance remains a separate three-credit allocation.",
       "sources": [
         {
           "label": "ETEC CS standards version 2.1",
           "url": "https://f.etec.gov.sa/j/Computer_Science.pdf"
+        },
+        {
+          "label": "MIT 18.330 numerical analysis benchmark",
+          "url": "https://student.mit.edu/catalog/m18a.html"
+        },
+        {
+          "label": "Carnegie Mellon 15-369 numerical computing benchmark",
+          "url": "https://www.csd.cs.cmu.edu/academics/fall-courses"
         }
       ]
     },
@@ -4264,6 +4475,85 @@ const curriculum = {
         {
           "label": "Alfaisal special topics elective precedent",
           "url": "https://catalog.alfaisal.edu/college-of-engineering-and-advanced-computing/bachelor-major-minor-track/bachelor-of-software"
+        }
+      ]
+    },
+    {
+      "course": "CS 103",
+      "title": "Discrete Structures and content-based credit classification",
+      "decision": "The plural title describes logic, sets, relations, proof, counting, graphs and trees, follows ETEC terminology, and has a national benchmark in KFUPM ICS 253. The CS code identifies the teaching discipline. The three credits remain in mathematics/statistics and the college requirements, with no double counting in the CS core.",
+      "sources": [
+        {
+          "label": "ETEC GKU 3 Discrete Structures",
+          "url": "https://f.etec.gov.sa/j/Computer_Science.pdf"
+        },
+        {
+          "label": "KFUPM ICS 253 Discrete Structures",
+          "url": "https://bulletin.kfupm.edu.sa/course-detail?course_code=ICS253"
+        }
+      ]
+    },
+    {
+      "course": "CS 101",
+      "title": "Early computing foundations",
+      "decision": "A defined introductory unit explains computing, abstraction, data, hardware/software layers, networks, databases, AI and emerging technologies. Programming I retains four credits and substantial supervised programming. Later required courses develop the specialist depth, avoiding a separate introductory survey course.",
+      "sources": [
+        {
+          "label": "ACM/IEEE CS Curricula final report",
+          "url": "https://csed.acm.org/wp-content/uploads/2025/11/CS2023-Report.htm"
+        }
+      ]
+    },
+    {
+      "course": "CS 210",
+      "title": "Digital logic and computer organization with practical evidence",
+      "decision": "The three-credit course includes a laboratory sequence from gates and Boolean expressions through combinational and sequential circuits to a small simulated processor. Explicit CLOs assess circuit design, component construction, correctness and performance. Prince Sultan CS 175 benchmarks the combined title and credit size; ETEC SKU 2.1 supplies the required outcomes.",
+      "sources": [
+        {
+          "label": "Prince Sultan CS 175 course description",
+          "url": "https://psu.edu.sa/en/CCIS/cs-cd"
+        },
+        {
+          "label": "ETEC architecture and organization outcomes",
+          "url": "https://f.etec.gov.sa/j/Computer_Science.pdf"
+        },
+        {
+          "label": "MIT 6.1910 Computation Structures",
+          "url": "https://student.mit.edu/catalog/m6a.html"
+        }
+      ]
+    },
+    {
+      "course": "CS 370",
+      "title": "One compulsory web and mobile application course before co-op",
+      "decision": "A focused three-credit course replaces Software Deployment and Operations. Students build web and cross-platform mobile clients with a shared API and database-backed service, with individual coding and defense. MIT 6.1040 benchmarks application design and web implementation; NUS CS3216/CS3217 benchmark platform projects as elective opportunities, not universal CS requirements. KAU has separate compulsory web and mobile courses. Basic releases remain here; reliability, monitoring and recovery are reinforced in CS 401 and CS 411. CS 350 is concurrent. CS 330 moves to Semester 7 and Elective I moves to Semester 8; all eight semester totals and 130 credits are preserved.",
+      "sources": [
+        {
+          "label": "MIT 6.1040 Software Design",
+          "url": "https://student.mit.edu/catalog/m6a.html"
+        },
+        {
+          "label": "NUS software engineering focus and platform projects",
+          "url": "https://www.comp.nus.edu.sg/programmes/ug/focus/software/"
+        },
+        {
+          "label": "KAU Jeddah compulsory course requirements",
+          "url": "https://kau.edu.sa/en/programs/bachelor-of-science-in-computer-science-280"
+        }
+      ]
+    },
+    {
+      "course": "CS 102",
+      "title": "Advanced programming through the compulsory sequence",
+      "decision": "CS 102 strengthens reusable interfaces, typed collections, functional patterns and unit tests. CS 240 adds C memory safety, test harnesses and profiling; CS 250 adds design patterns, refactoring and automated integration; CS 320 compares typed generic abstractions across languages. CS 370 applies these capabilities before co-op. This avoids adding another overlapping course.",
+      "sources": [
+        {
+          "label": "MIT 6.1020 Software Construction",
+          "url": "https://catalog.mit.edu/subjects/6/"
+        },
+        {
+          "label": "ETEC programming languages outcomes",
+          "url": "https://f.etec.gov.sa/j/Computer_Science.pdf"
         }
       ]
     }
@@ -4286,13 +4576,15 @@ const curriculum = {
       "CS 310",
       "CS 340",
       "CS 401",
-      "CS 420",
+      "CS 370",
       "CS 430"
     ],
     "scienceReplacement": [
       "CHEM 101",
       "BIO 101"
     ],
-    "etecMappedCsCredits": 44
+    "etecMappedCsCredits": 44,
+    "approvedReview": "Web/mobile implementation, computing foundations, digital logic, advanced programming and discrete structures approved for incorporation 19 November 2026.",
+    "creditClassificationNote": "CS 103 Discrete Structures contributes three credits to mathematics/statistics and is excluded from the 61-credit required CS core."
   }
 };
