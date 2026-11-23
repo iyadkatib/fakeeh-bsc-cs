@@ -4,16 +4,17 @@ const curriculum = {
     "totalCredits": 130,
     "creditGroups": [
       [
-        "Institution requirements",
-        6,
+        "College Requirements",
+        9,
         [
           "ARAB 101",
+          "COMM 101",
           "ISLM 101"
         ]
       ],
       [
-        "College requirements",
-        39,
+        "Department Requirements",
+        36,
         [
           "MATH 101",
           "CS 103",
@@ -22,7 +23,6 @@ const curriculum = {
           "MATH 120",
           "PHYS 102",
           "BIO 101",
-          "COMM 101",
           "STAT 220",
           "MATH 230",
           "MATH 340",
@@ -50,7 +50,7 @@ const curriculum = {
         []
       ]
     ],
-    "creditNote": "The 130 credits include one 9-credit co-op registration across Semester 6 and the following summer. CS 103 Discrete Structures is included in mathematics/statistics and college requirements, not in the CS core, despite its CS prefix.",
+    "creditNote": "The 130 credits include one 9-credit co-op registration across Semester 6 and the following summer. CS 103 Discrete Structures is included in mathematics/statistics and Department Requirements, not in the CS core, despite its CS prefix.",
     "sharedCourses": [
       "ARAB 101",
       "COMM 101",
@@ -178,8 +178,8 @@ const curriculum = {
     }
   ],
   "categories": {
-    "institution": "Institution requirements",
-    "college": "College requirements",
+    "college": "College Requirements",
+    "department": "Department Requirements",
     "core": "Computer Science core",
     "elective": "Technical electives",
     "capstone": "Capstone project",
@@ -210,22 +210,56 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "I",
-          "statement": "Explain how data, hardware, operating systems, networks and applications interact in a familiar computing system."
-        },
-        {
-          "plo": "K3",
-          "stage": "I",
-          "statement": "Explain how control flow, abstraction and data representations affect a program."
+          "statement": "Explain the evolution of the five computer generations and relate hardware, software, networks and data to modern computing disciplines.",
+          "etecRefs": [
+            "SKU2.1-SLO1"
+          ],
+          "evidence": "Individual computing-systems explanation",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
           "stage": "I",
-          "statement": "Trace an algorithm and identify an error using a test case."
+          "statement": "Decompose a problem into an algorithm with explicit inputs, outputs and test cases.",
+          "etecRefs": [],
+          "evidence": "Algorithm and trace exercise",
+          "id": "CLO 2"
         },
         {
           "plo": "S2",
           "stage": "I",
-          "statement": "Implement, test and document a modular Python program from a written specification."
+          "statement": "Implement a program using selection, iteration, functions and file input/output.",
+          "etecRefs": [],
+          "evidence": "Supervised individual programming task",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "I",
+          "statement": "Develop and test algorithms that manipulate strings, character encodings and other non-numeric representations.",
+          "etecRefs": [
+            "SKU2.1-SLO7"
+          ],
+          "evidence": "String and encoding implementation",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S4",
+          "stage": "I",
+          "statement": "Locate faults with a debugger and verify a program using normal, boundary and invalid-input tests.",
+          "etecRefs": [
+            "SKU7.1-SLO8"
+          ],
+          "evidence": "Debugging practical and test record",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "V1",
+          "stage": "I",
+          "statement": "Explain and attribute an individually written solution and disclose any AI assistance.",
+          "etecRefs": [],
+          "evidence": "Code explanation and integrity record",
+          "id": "CLO 6"
         }
       ],
       "profile": "lab",
@@ -243,7 +277,24 @@ const curriculum = {
         15,
         12,
         12
-      ]
+      ],
+      "etecTopics": [
+        "SKU2.1-T1",
+        "SKU2.1-T3"
+      ],
+      "etecSLOs": [
+        "SKU2.1-SLO1",
+        "SKU2.1-SLO7",
+        "SKU7.1-SLO8"
+      ],
+      "facilities": {
+        "lab": "General programming lab",
+        "hardware": "Standard workstation; keyboard and assistive-technology access.",
+        "software": "Python 3, VS Code or IDLE, Git, unittest or pytest.",
+        "practice": "Individual programming, strings and encoding, debugger use, tests and version-controlled submissions.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "MATH 101": {
       "id": "MATH 101",
@@ -251,7 +302,7 @@ const curriculum = {
       "title": "Calculus I",
       "term": 1,
       "credits": 4,
-      "category": "college",
+      "category": "department",
       "lecture": 4,
       "practical": 0,
       "prerequisites": [],
@@ -262,23 +313,59 @@ const curriculum = {
         "Differentiation and rates",
         "Optimization in one variable",
         "Definite integrals and the fundamental theorem",
-        "Numerical approximation and interpretation"
+        "Numerical approximation and interpretation",
+        "Sequences, convergence tests, infinite series, Taylor and Maclaurin approximation and error estimates"
       ],
       "clos": [
         {
           "plo": "K1",
           "stage": "I",
-          "statement": "Explain limits, differentiation, and integration in a model."
+          "statement": "Explain functions, limits and continuity using symbolic and graphical representations.",
+          "etecRefs": [],
+          "evidence": "Written conceptual problems",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
           "stage": "I",
-          "statement": "Solve and interpret a calculus-based optimization problem."
+          "statement": "Calculate derivatives and interpret rates of change in a mathematical model.",
+          "etecRefs": [],
+          "evidence": "Differentiation examination tasks",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Solve single-variable optimization problems and justify critical points and boundary choices.",
+          "etecRefs": [],
+          "evidence": "Optimization problem set",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Evaluate definite integrals and use the fundamental theorem of calculus.",
+          "etecRefs": [],
+          "evidence": "Integration examination tasks",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Analyze convergence and Taylor or Maclaurin series expansions to approximate a function with a justified error estimate.",
+          "etecRefs": [
+            "EKU.1-SLO3"
+          ],
+          "evidence": "Series convergence and approximation assignment",
+          "id": "CLO 5"
         },
         {
           "plo": "S4",
           "stage": "I",
-          "statement": "Compare an analytic result with a numerical approximation."
+          "statement": "Compare an analytic result with a numerical or graphical check and explain approximation error.",
+          "etecRefs": [],
+          "evidence": "Individual computational worksheet",
+          "id": "CLO 6"
         }
       ],
       "profile": "lecture",
@@ -287,7 +374,21 @@ const curriculum = {
       "resource": "OpenStax Calculus Volume 1 and problem sets.",
       "name": "Calculus I",
       "placement": "Semester 1",
-      "anchor": "math-101"
+      "anchor": "math-101",
+      "etecTopics": [
+        "EKU.1-T2"
+      ],
+      "etecSLOs": [
+        "EKU.1-SLO3"
+      ],
+      "facilities": {
+        "lab": "Mathematics classroom and computational workspace",
+        "hardware": "No dedicated hardware lab required; shared computer access for approximation investigations.",
+        "software": "Python, Jupyter, NumPy, SymPy and Matplotlib, or GNU Octave.",
+        "practice": "Derivative and integral checks, Taylor approximation and numerical error comparisons.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 103": {
       "id": "CS 103",
@@ -295,7 +396,7 @@ const curriculum = {
       "title": "Discrete Structures",
       "term": 1,
       "credits": 3,
-      "category": "college",
+      "category": "department",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [],
@@ -303,26 +404,98 @@ const curriculum = {
       "topics": [
         "Sets, relations, functions, and cardinality",
         "Propositional and predicate logic, inference, and normal forms",
-        "Proof by induction and contradiction, recursive definitions",
-        "Counting, permutations, combinations, and pigeonhole reasoning",
-        "Modular arithmetic and order notation",
+        "Direct and contradiction proofs; weak and strong induction, well-ordering, recursive definitions and algorithm correctness",
+        "Sum and product rules, inclusion-exclusion, arithmetic/geometric progressions, permutations, combinations and pigeonhole proofs",
+        "Elementary recurrence relations, modular arithmetic and order notation",
         "Graph and tree basics with discrete probability examples"
       ],
       "clos": [
         {
           "plo": "K1",
           "stage": "I",
-          "statement": "Explain how discrete structures represent relationships and processes."
+          "statement": "Illustrate sets, relations and functions and apply their operations to computing examples.",
+          "etecRefs": [
+            "SKU3.1-SLO1",
+            "SKU3.1-SLO2",
+            "EKU.1-SLO1"
+          ],
+          "evidence": "Set and relation modeling problems",
+          "id": "CLO 1"
+        },
+        {
+          "plo": "K1",
+          "stage": "I",
+          "statement": "Explain propositional and predicate logic and translate informal requirements into quantified statements.",
+          "etecRefs": [
+            "SKU3.1-SLO3",
+            "SKU3.1-SLO4"
+          ],
+          "evidence": "Logic translation examination",
+          "id": "CLO 2"
         },
         {
           "plo": "S1",
           "stage": "I",
-          "statement": "Construct a valid proof or counterexample for a discrete problem."
+          "statement": "Use symbolic logic and inference rules to construct valid proofs and model a real situation.",
+          "etecRefs": [
+            "SKU3.1-SLO5",
+            "SKU3.1-SLO6",
+            "SKU3.1-SLO7"
+          ],
+          "evidence": "Formal derivation and scenario model",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Identify and construct direct, contradiction and inductive proofs, explaining weak and strong induction and the well-ordering principle.",
+          "etecRefs": [
+            "SKU3.2-SLO1",
+            "SKU3.2-SLO2",
+            "EKU.1-SLO2"
+          ],
+          "evidence": "Proof portfolio and algorithm-correctness proof",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Apply sum and product rules, inclusion-exclusion, progressions, permutations and combinations to counting problems.",
+          "etecRefs": [
+            "SKU3.2-SLO3",
+            "SKU3.2-SLO5"
+          ],
+          "evidence": "Counting problem set",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Use the pigeonhole principle to prove a discrete claim and perform modular-arithmetic computations.",
+          "etecRefs": [
+            "SKU3.2-SLO4",
+            "SKU3.2-SLO7"
+          ],
+          "evidence": "Pigeonhole proof and modular arithmetic test",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Formulate recursive definitions and solve elementary recurrence relations.",
+          "etecRefs": [
+            "SKU3.2-SLO6"
+          ],
+          "evidence": "Recurrence derivation",
+          "id": "CLO 7"
         },
         {
           "plo": "S4",
           "stage": "I",
-          "statement": "Check a counting or graph solution against a small constructed example."
+          "statement": "Represent a computing problem with graphs or trees and check a solution against a constructed example.",
+          "etecRefs": [],
+          "evidence": "Graph-model worksheet",
+          "id": "CLO 8"
         }
       ],
       "profile": "lecture",
@@ -332,7 +505,43 @@ const curriculum = {
       "name": "Discrete Structures",
       "placement": "Semester 1",
       "anchor": "cs-103",
-      "creditClassification": "Mathematics and statistics"
+      "creditClassification": "Mathematics and statistics",
+      "etecTopics": [
+        "EKU.1-T1",
+        "SKU3.1-T1",
+        "SKU3.1-T2",
+        "SKU3.1-T3",
+        "SKU3.2-T1",
+        "SKU3.2-T2",
+        "SKU3.2-T3",
+        "SKU3.3-T1"
+      ],
+      "etecSLOs": [
+        "EKU.1-SLO1",
+        "EKU.1-SLO2",
+        "SKU3.1-SLO1",
+        "SKU3.1-SLO2",
+        "SKU3.1-SLO3",
+        "SKU3.1-SLO4",
+        "SKU3.1-SLO5",
+        "SKU3.1-SLO6",
+        "SKU3.1-SLO7",
+        "SKU3.2-SLO1",
+        "SKU3.2-SLO2",
+        "SKU3.2-SLO3",
+        "SKU3.2-SLO4",
+        "SKU3.2-SLO5",
+        "SKU3.2-SLO6",
+        "SKU3.2-SLO7"
+      ],
+      "facilities": {
+        "lab": "Mathematics classroom with shared computational workspace",
+        "hardware": "No dedicated hardware lab required; individual computer access for optional verification exercises.",
+        "software": "Python with NetworkX and SymPy, or equivalent graph and symbolic tools.",
+        "practice": "Logic and graph checks supplement individually assessed proofs and mathematical reasoning.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "PHYS 101": {
       "id": "PHYS 101",
@@ -340,7 +549,7 @@ const curriculum = {
       "title": "Physics I with Laboratory",
       "term": 1,
       "credits": 3,
-      "category": "college",
+      "category": "department",
       "lecture": 2,
       "practical": 2,
       "prerequisites": [],
@@ -357,17 +566,50 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "I",
-          "statement": "Explain the physical principles behind a mechanics experiment."
+          "statement": "Explain the physical principles behind a mechanics experiment.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and system analysis"
         },
         {
           "plo": "S4",
           "stage": "I",
-          "statement": "Test a mechanics prediction and report measurements, uncertainty, and conclusions."
+          "statement": "Test a mechanics prediction and report measurements, uncertainty, and conclusions.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "I",
-          "statement": "Apply laboratory safety and data-integrity procedures."
+          "statement": "Apply laboratory safety and data-integrity procedures.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "K1",
+          "stage": "I",
+          "statement": "Apply mechanics, energy and momentum principles to predict measurable outcomes.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied explanation"
+        },
+        {
+          "plo": "S4",
+          "stage": "I",
+          "statement": "Use calibrated motion and force sensors to collect data with documented units and uncertainty.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Present a laboratory conclusion that connects evidence to a physical model.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "lab",
@@ -376,7 +618,17 @@ const curriculum = {
       "resource": "OpenStax University Physics Volume 1 and the physics lab manual.",
       "name": "Physics I with Laboratory",
       "placement": "Semester 1",
-      "anchor": "phys-101"
+      "anchor": "phys-101",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Supervised mechanics teaching laboratory",
+        "hardware": "Motion tracks and carts, motion/force sensors, balances, timers, pendulums, springs and data-acquisition interfaces; accessible benches and laboratory safety equipment.",
+        "software": "Spreadsheet analysis and Python/Matplotlib or equivalent data-acquisition and analysis software.",
+        "practice": "Controlled measurements in mechanics, energy, momentum and oscillations with uncertainty and calibrated instruments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "COMM 101": {
       "id": "COMM 101",
@@ -403,17 +655,50 @@ const curriculum = {
         {
           "plo": "S3",
           "stage": "I",
-          "statement": "Prepare a professional report and deliver a briefing suited to their audiences."
+          "statement": "Prepare a professional report and deliver a briefing suited to their audiences.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "S4",
           "stage": "I",
-          "statement": "Evaluate and cite evidence used in professional communication."
+          "statement": "Evaluate and cite evidence used in professional communication.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "I",
-          "statement": "Apply standards of academic integrity and accessible communication."
+          "statement": "Apply standards of academic integrity and accessible communication.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Write clear workplace correspondence and status reports adapted to audience and purpose.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Design an accessible evidence-based visual explanation and answer audience questions.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
+        },
+        {
+          "plo": "V2",
+          "stage": "I",
+          "statement": "Use peer feedback to revise a team presentation and document individual contributions.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Contribution record, peer or host review and individual reflection"
         }
       ],
       "profile": "project",
@@ -422,7 +707,17 @@ const curriculum = {
       "resource": "Shared business and computing cases and a common report and presentation rubric.",
       "name": "Professional Communication & Presentation",
       "placement": "Semester 2",
-      "anchor": "comm-101"
+      "anchor": "comm-101",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Presentation and communication workshop",
+        "hardware": "Display, microphones, recording capability and small-group rehearsal areas; shared computers.",
+        "software": "Word processor, presentation tools, accessible charting tools, video-conferencing and LMS.",
+        "practice": "Workplace reports, accessible visuals, presentations, peer feedback and revision.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 102": {
       "id": "CS 102",
@@ -449,18 +744,78 @@ const curriculum = {
       "clos": [
         {
           "plo": "K3",
-          "stage": "P",
-          "statement": "Explain composition, dynamic dispatch, typed collections and functional abstraction."
+          "stage": "I",
+          "statement": "Explain abstract data types, contracts, classes, objects and dynamic dispatch.",
+          "etecRefs": [],
+          "evidence": "Conceptual examination and code trace",
+          "id": "CLO 1"
         },
         {
           "plo": "S2",
-          "stage": "P",
-          "statement": "Build, document and test a modular object-oriented program with reusable interfaces and type annotations."
+          "stage": "I",
+          "statement": "Design a reusable class hierarchy using inheritance, subtyping, composition and encapsulation.",
+          "etecRefs": [
+            "SKU7.1-SLO1"
+          ],
+          "evidence": "Class hierarchy and tested implementation",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S2",
+          "stage": "I",
+          "statement": "Apply object-oriented and closure-based functional encapsulation to implement a modular program.",
+          "etecRefs": [
+            "SKU7.1-SLO3"
+          ],
+          "evidence": "Paired implementation with individual defense",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "I",
+          "statement": "Use typed collections, generics and exception handling to implement type-safe reusable components.",
+          "etecRefs": [
+            "SKU7.1-SLO7"
+          ],
+          "evidence": "Typed collection and exception practical",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S2",
+          "stage": "I",
+          "statement": "Implement recursive solutions and iterator-based operations on collections.",
+          "etecRefs": [],
+          "evidence": "Collection-processing practical",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S4",
+          "stage": "I",
+          "statement": "Test, debug and inspect a medium-sized code segment, recording defects and test results.",
+          "etecRefs": [
+            "SKU7.1-SLO8",
+            "SKU8.2-SLO8"
+          ],
+          "evidence": "Individual inspection and debugging record",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Document interfaces and apply consistent code style to make software readable and maintainable.",
+          "etecRefs": [
+            "SKU7.1-SLO9"
+          ],
+          "evidence": "Documentation and style review",
+          "id": "CLO 7"
         },
         {
           "plo": "V2",
           "stage": "I",
-          "statement": "Review a peer contribution, explain individual code and resolve documented defects."
+          "statement": "Contribute reviewed changes to a shared repository and explain individual decisions and contributions.",
+          "etecRefs": [],
+          "evidence": "Repository history and individual explanation",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -469,7 +824,30 @@ const curriculum = {
       "resource": "Python Tutorial and curated object-oriented programming labs.",
       "name": "Programming II",
       "placement": "Semester 2",
-      "anchor": "cs-102"
+      "anchor": "cs-102",
+      "etecTopics": [
+        "SKU7.1-T1",
+        "SKU7.1-T2",
+        "SKU7.1-T4",
+        "SKU7.1-T5",
+        "SKU8.2-T3"
+      ],
+      "etecSLOs": [
+        "SKU7.1-SLO1",
+        "SKU7.1-SLO3",
+        "SKU7.1-SLO7",
+        "SKU7.1-SLO8",
+        "SKU7.1-SLO9",
+        "SKU8.2-SLO8"
+      ],
+      "facilities": {
+        "lab": "General programming lab",
+        "hardware": "Standard workstation and individual repositories.",
+        "software": "Python 3, VS Code, Git, pytest, mypy or Pyright; an object-modeling tool.",
+        "practice": "Object-oriented and functional encapsulation, typed collections, code inspection and unit testing.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "MATH 120": {
       "id": "MATH 120",
@@ -477,7 +855,7 @@ const curriculum = {
       "title": "Linear Algebra",
       "term": 2,
       "credits": 3,
-      "category": "college",
+      "category": "department",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [],
@@ -493,18 +871,53 @@ const curriculum = {
       "clos": [
         {
           "plo": "K1",
-          "stage": "P",
-          "statement": "Explain linear independence and linear transformations."
+          "stage": "I",
+          "statement": "Explain vectors, matrices, linear maps and the geometry of linear systems.",
+          "etecRefs": [],
+          "evidence": "Written conceptual questions",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
-          "stage": "P",
-          "statement": "Solve a system and interpret its rank or stability."
+          "stage": "I",
+          "statement": "Perform matrix operations and solve linear systems using elimination or factorization.",
+          "etecRefs": [
+            "EKU.1-SLO5"
+          ],
+          "evidence": "Matrix and linear-system examination",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Determine bases, dimension, rank and independence for a vector space.",
+          "etecRefs": [],
+          "evidence": "Basis and rank problem set",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Compute eigenvalues and eigenvectors and interpret their role in a computing model.",
+          "etecRefs": [],
+          "evidence": "Eigenvalue application assignment",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S1",
+          "stage": "I",
+          "statement": "Formulate and solve a least-squares approximation problem.",
+          "etecRefs": [],
+          "evidence": "Least-squares derivation and computation",
+          "id": "CLO 5"
         },
         {
           "plo": "S4",
           "stage": "I",
-          "statement": "Evaluate a least-squares approximation and explain the residuals."
+          "statement": "Check numerical linear-algebra results and explain conditioning and residual error.",
+          "etecRefs": [],
+          "evidence": "Reproducible numerical worksheet",
+          "id": "CLO 6"
         }
       ],
       "profile": "lecture",
@@ -513,7 +926,21 @@ const curriculum = {
       "resource": "MIT OpenCourseWare Linear Algebra and selected computational exercises.",
       "name": "Linear Algebra",
       "placement": "Semester 2",
-      "anchor": "math-120"
+      "anchor": "math-120",
+      "etecTopics": [
+        "EKU.1-T3"
+      ],
+      "etecSLOs": [
+        "EKU.1-SLO5"
+      ],
+      "facilities": {
+        "lab": "Mathematics classroom and computational workspace",
+        "hardware": "Standard workstation; no specialist physical equipment.",
+        "software": "Python, Jupyter, NumPy and Matplotlib, or GNU Octave.",
+        "practice": "Matrix operations, linear systems, least squares and residual/conditioning experiments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "PHYS 102": {
       "id": "PHYS 102",
@@ -521,7 +948,7 @@ const curriculum = {
       "title": "Physics II with Laboratory",
       "term": 2,
       "credits": 3,
-      "category": "college",
+      "category": "department",
       "lecture": 2,
       "practical": 2,
       "prerequisites": [
@@ -540,17 +967,50 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "I",
-          "statement": "Explain the physical behavior of a basic circuit."
+          "statement": "Explain the physical behavior of a basic circuit.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and system analysis"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Design and report an experiment testing a circuit prediction."
+          "statement": "Design and report an experiment testing a circuit prediction.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "I",
-          "statement": "Apply electrical safety and document anomalous measurements."
+          "statement": "Apply electrical safety and document anomalous measurements.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "K1",
+          "stage": "I",
+          "statement": "Apply electrostatic, circuit and induction models to predict measurable electrical behavior.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied explanation"
+        },
+        {
+          "plo": "S4",
+          "stage": "I",
+          "statement": "Configure a circuit and use a multimeter and oscilloscope to verify a testable prediction.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Explain a discrepancy between an electromagnetic model and laboratory evidence.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "lab",
@@ -559,7 +1019,17 @@ const curriculum = {
       "resource": "OpenStax University Physics Volume 2 and the physics lab manual.",
       "name": "Physics II with Laboratory",
       "placement": "Semester 2",
-      "anchor": "phys-102"
+      "anchor": "phys-102",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Supervised electricity and magnetism laboratory",
+        "hardware": "Current-limited low-voltage DC supplies, multimeters, oscilloscopes, breadboards, resistors, capacitors, coils and magnetic-field sensors; protected benches and safety equipment.",
+        "software": "Circuit simulation such as LTspice or an equivalent supported tool, plus spreadsheet or Python data analysis.",
+        "practice": "Circuit, field and induction experiments; simulation complements physical measurements.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "ARAB 101": {
       "id": "ARAB 101",
@@ -567,7 +1037,7 @@ const curriculum = {
       "title": "Arabic Language",
       "term": 3,
       "credits": 3,
-      "category": "institution",
+      "category": "college",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [],
@@ -584,17 +1054,50 @@ const curriculum = {
         {
           "plo": "S3",
           "stage": "P",
-          "statement": "Write a coherent Arabic professional report."
+          "statement": "Write a coherent Arabic professional report.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "S3",
           "stage": "P",
-          "statement": "Deliver an Arabic briefing tailored to a specific audience."
+          "statement": "Deliver an Arabic briefing tailored to a specific audience.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "V1",
           "stage": "I",
-          "statement": "Attribute sources and respect professional communication conventions."
+          "statement": "Attribute sources and respect professional communication conventions.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Analyze an Arabic text and produce a concise, accurate summary.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Edit a professional Arabic report for structure, correctness and appropriate terminology.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Deliver an audience-appropriate Arabic presentation and respond to questions.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "project",
@@ -603,7 +1106,17 @@ const curriculum = {
       "resource": null,
       "name": "Arabic Language",
       "placement": "Semester 3",
-      "anchor": "arab-101"
+      "anchor": "arab-101",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Language and writing classroom",
+        "hardware": "Shared computers with Arabic keyboards and right-to-left display support; presentation recording capability.",
+        "software": "Arabic-enabled word processor, presentation tools, approved dictionaries and LMS.",
+        "practice": "Arabic reports, correspondence, editing and oral presentation; no dedicated technical lab required.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 201": {
       "id": "CS 201",
@@ -625,23 +1138,89 @@ const curriculum = {
         "Trees and balanced search",
         "Hashing and maps",
         "Heaps, priority queues, and graphs",
-        "Searching, sorting, traversal, and benchmarking"
+        "Searching, sorting, traversal, and benchmarking",
+        "String matching; record and array layout; spanning trees and graph isomorphism"
       ],
       "clos": [
         {
           "plo": "K1",
           "stage": "P",
-          "statement": "Explain invariants and growth rates for common structures."
+          "statement": "Explain representation invariants and the implementations of lists, stacks, queues, trees and hash tables.",
+          "etecRefs": [
+            "SKU1.2-SLO3"
+          ],
+          "evidence": "Data-structure trace and hash-table explanation",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Compare structures for time and space under an application workload."
+          "statement": "Compare runtime and memory costs and select a data structure for a stated workload.",
+          "etecRefs": [
+            "SKU1.2-SLO2",
+            "SKU1.2-SLO6"
+          ],
+          "evidence": "Justified workload analysis",
+          "id": "CLO 2"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement, test, and benchmark a data structure."
+          "statement": "Implement and test elementary numerical, searching and sorting algorithms.",
+          "etecRefs": [
+            "SKU1.2-SLO1"
+          ],
+          "evidence": "Individual algorithm laboratory",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement a string-matching algorithm and verify correctness on boundary cases.",
+          "etecRefs": [
+            "SKU1.2-SLO7"
+          ],
+          "evidence": "String-matching practical",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "K1",
+          "stage": "P",
+          "statement": "Recognize graph and tree types, representations and traversal methods.",
+          "etecRefs": [
+            "SKU3.3-SLO1"
+          ],
+          "evidence": "Graph and tree examination",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Solve computing problems with graph traversals, spanning trees and graph-isomorphism reasoning.",
+          "etecRefs": [
+            "SKU1.2-SLO4",
+            "SKU3.3-SLO2"
+          ],
+          "evidence": "Graph implementation and isomorphism exercise",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Evaluate array and record layouts for storage efficiency and retrieval cost.",
+          "etecRefs": [
+            "SKU2.1-SLO8"
+          ],
+          "evidence": "Layout and retrieval benchmark",
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Measure algorithm performance reproducibly and interpret time-space trade-offs.",
+          "etecRefs": [],
+          "evidence": "Benchmark report with individual explanation",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -650,7 +1229,32 @@ const curriculum = {
       "resource": "Open Data Structures by Pat Morin and programming labs.",
       "name": "Data Structures",
       "placement": "Semester 3",
-      "anchor": "cs-201"
+      "anchor": "cs-201",
+      "etecTopics": [
+        "SKU1.2-T1",
+        "SKU1.2-T2",
+        "SKU2.1-T3",
+        "SKU3.3-T1"
+      ],
+      "etecSLOs": [
+        "SKU1.2-SLO1",
+        "SKU1.2-SLO2",
+        "SKU1.2-SLO3",
+        "SKU1.2-SLO4",
+        "SKU1.2-SLO6",
+        "SKU1.2-SLO7",
+        "SKU2.1-SLO8",
+        "SKU3.3-SLO1",
+        "SKU3.3-SLO2"
+      ],
+      "facilities": {
+        "lab": "Algorithms and data-structures programming lab",
+        "hardware": "Standard workstation; repeatable timing setup with workload and machine metadata.",
+        "software": "Python 3 and/or a supported C++/Java toolchain, Git, unit-test framework, profiler and graph-visualization tools.",
+        "practice": "Data structures, numerical/search/sort/string algorithms, graph traversal, spanning trees and layout benchmarks.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 210": {
       "id": "CS 210",
@@ -682,22 +1286,86 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain how digital building blocks, processor organization, instruction execution and memory support software."
+          "statement": "Explain stored-program and von Neumann organization and identify processor, memory and I/O interactions.",
+          "etecRefs": [
+            "SKU2.2-SLO1"
+          ],
+          "evidence": "System organization examination",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Analyze data representations and processor or cache performance using justified calculations."
+          "statement": "Convert and verify integer and floating-point representations across numerical formats.",
+          "etecRefs": [
+            "SKU2.1-SLO6"
+          ],
+          "evidence": "Data-representation practical",
+          "id": "CLO 2"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Design and prototype combinational and sequential circuits and a small processor using a logic simulator."
+          "statement": "Simplify Boolean expressions and design optimized combinational and sequential logic circuits.",
+          "etecRefs": [
+            "SKU2.1-SLO3"
+          ],
+          "evidence": "Gate-level circuit design and tests",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Prototype an ALU, registers, control unit and memory and evaluate a small processor for correctness and efficiency.",
+          "etecRefs": [
+            "SKU2.1-SLO4",
+            "SKU2.1-SLO5"
+          ],
+          "evidence": "Processor construction and verification dossier",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Write machine and assembly instruction sequences and subroutine calls for a computing problem.",
+          "etecRefs": [
+            "SKU2.2-SLO3",
+            "SKU2.2-SLO5"
+          ],
+          "evidence": "Individual assembly practical",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Evaluate memory technologies and cache delay and design a memory configuration to improve average access time.",
+          "etecRefs": [
+            "SKU2.3-SLO1",
+            "SKU2.3-SLO2",
+            "SKU2.3-SLO3"
+          ],
+          "evidence": "Cache and memory design investigation",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Justify bus types for a workload and simulate interrupt-driven data transfer and I/O control.",
+          "etecRefs": [
+            "SKU2.3-SLO5",
+            "SKU2.3-SLO6",
+            "SKU2.2-SLO4"
+          ],
+          "evidence": "Bus comparison and interrupt simulation",
+          "id": "CLO 7"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Verify component and processor correctness with test benches and investigate hardware-software performance experimentally."
+          "statement": "Measure processor behavior using a simulator and explain the limitations of a performance comparison.",
+          "etecRefs": [],
+          "evidence": "Reproducible architecture experiment",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -718,7 +1386,41 @@ const curriculum = {
         6,
         6,
         6
-      ]
+      ],
+      "etecTopics": [
+        "SKU2.1-T1",
+        "SKU2.1-T2",
+        "SKU2.1-T3",
+        "SKU2.2-T1",
+        "SKU2.2-T2",
+        "SKU2.2-T3",
+        "SKU2.3-T1",
+        "SKU2.3-T3",
+        "SKU6.2-T3"
+      ],
+      "etecSLOs": [
+        "SKU2.1-SLO3",
+        "SKU2.1-SLO4",
+        "SKU2.1-SLO5",
+        "SKU2.1-SLO6",
+        "SKU2.2-SLO1",
+        "SKU2.2-SLO3",
+        "SKU2.2-SLO4",
+        "SKU2.2-SLO5",
+        "SKU2.3-SLO1",
+        "SKU2.3-SLO2",
+        "SKU2.3-SLO3",
+        "SKU2.3-SLO5",
+        "SKU2.3-SLO6"
+      ],
+      "facilities": {
+        "lab": "Digital logic and architecture simulation laboratory",
+        "hardware": "Standard workstation and simulator access; optional FPGA or logic-trainer kits for enrichment.",
+        "software": "Logisim-evolution, a supported Java runtime, RARS or an equivalent RISC-V assembly simulator, and spreadsheet/Python analysis.",
+        "practice": "Gate and sequential circuit construction, ALU/register/control integration, processor tests, assembly, cache and interrupt-driven I/O simulation.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "STAT 220": {
       "id": "STAT 220",
@@ -726,7 +1428,7 @@ const curriculum = {
       "title": "Probability and Statistics",
       "term": 3,
       "credits": 4,
-      "category": "college",
+      "category": "department",
       "lecture": 3,
       "practical": 2,
       "prerequisites": [
@@ -740,23 +1442,86 @@ const curriculum = {
         "Expectation, variance, and distributions",
         "Sampling and descriptive statistics",
         "Confidence intervals and hypothesis testing",
-        "Regression, experiment design, and data interpretation"
+        "Regression, experiment design, and data interpretation",
+        "Graph-structured event dependencies and combined graph/probability models for real-world scenarios"
       ],
       "clos": [
         {
           "plo": "K1",
           "stage": "P",
-          "statement": "Explain probability models and statistical inference assumptions."
+          "statement": "Explain probability axioms, random variables, sampling and common distributions.",
+          "etecRefs": [],
+          "evidence": "Conceptual examination",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Select a model or test appropriate to a computing problem."
+          "statement": "Apply counting methods to calculate probabilities in discrete scenarios.",
+          "etecRefs": [
+            "EKU.1-SLO6"
+          ],
+          "evidence": "Combinatorial probability problems",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Compute event and conditional probabilities using Bayes theorem and distinguish dependent from independent events.",
+          "etecRefs": [
+            "SKU3.3-SLO3",
+            "SKU3.3-SLO4"
+          ],
+          "evidence": "Conditional-probability examination",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Calculate binomial probabilities, expectations and variance and select probability tools for an application.",
+          "etecRefs": [
+            "SKU3.3-SLO5",
+            "SKU3.3-SLO6"
+          ],
+          "evidence": "Distribution modeling assignment",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Formulate probabilistic models for uncertainty and dependence, including a graph-structured real-world example.",
+          "etecRefs": [
+            "EKU.1-SLO7",
+            "SKU3.3-SLO7"
+          ],
+          "evidence": "Graph and dependency modeling investigation",
+          "id": "CLO 5"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Analyze a dataset and communicate uncertainty and limitations."
+          "statement": "Construct confidence intervals and perform hypothesis tests with stated assumptions and population interpretations.",
+          "etecRefs": [
+            "EKU.1-SLO8"
+          ],
+          "evidence": "Individual inference report",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Fit and diagnose a simple regression model and explain uncertainty and validity threats.",
+          "etecRefs": [],
+          "evidence": "Reproducible statistical notebook",
+          "id": "CLO 7"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Report statistical evidence honestly, distinguishing association from causation and documenting limitations.",
+          "etecRefs": [],
+          "evidence": "Interpretation and reporting rubric",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -765,7 +1530,31 @@ const curriculum = {
       "resource": "OpenStax Introductory Statistics and computing-focused problem sets.",
       "name": "Probability and Statistics",
       "placement": "Semester 3",
-      "anchor": "stat-220"
+      "anchor": "stat-220",
+      "etecTopics": [
+        "EKU.1-T4",
+        "EKU.1-T5",
+        "SKU3.3-T2",
+        "SKU3.3-T3"
+      ],
+      "etecSLOs": [
+        "EKU.1-SLO6",
+        "EKU.1-SLO7",
+        "EKU.1-SLO8",
+        "SKU3.3-SLO3",
+        "SKU3.3-SLO4",
+        "SKU3.3-SLO5",
+        "SKU3.3-SLO6",
+        "SKU3.3-SLO7"
+      ],
+      "facilities": {
+        "lab": "Statistics and data-analysis workspace",
+        "hardware": "Standard workstation; curated datasets and protected individual storage.",
+        "software": "R with RStudio, or Python with Jupyter, pandas, SciPy, statsmodels and Matplotlib.",
+        "practice": "Probability simulations, regression, confidence intervals, tests and reproducible inference reports.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 230": {
       "id": "CS 230",
@@ -788,23 +1577,87 @@ const curriculum = {
         "Indexing, buffering, and query plans",
         "Transactions, concurrency, and recovery",
         "NoSQL and distributed data systems for large or semi-structured datasets",
-        "Access control, provenance, and data governance"
+        "Access control, provenance, and data governance",
+        "Persistent object identity, object-oriented data modeling and database implementation; comparison with object-relational storage"
       ],
       "clos": [
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain data models and transaction properties."
+          "statement": "Identify and explain the roles of query optimization, execution, storage, access methods and transaction processing in a DBMS.",
+          "etecRefs": [
+            "SKU4.1-SLO1",
+            "SKU4.1-SLO2"
+          ],
+          "evidence": "DBMS component analysis",
+          "id": "CLO 1"
+        },
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Explain relational-model concepts, integrity constraints and relational algebra.",
+          "etecRefs": [
+            "SKU4.1-SLO3"
+          ],
+          "evidence": "Relational-model examination",
+          "id": "CLO 2"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Design and test a relational database with representative queries."
+          "statement": "Write and test declarative SQL queries to retrieve, modify and aggregate data.",
+          "etecRefs": [
+            "SKU4.1-SLO4"
+          ],
+          "evidence": "Individual SQL practical",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Compare relational, object-oriented and document data models and justify a choice for a workload.",
+          "etecRefs": [
+            "SKU4.1-SLO5"
+          ],
+          "evidence": "Data-model comparison",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Construct ER and UML class models and derive an implementable database schema.",
+          "etecRefs": [
+            "SKU4.1-SLO6",
+            "SKU8.1-SLO8"
+          ],
+          "evidence": "ER and UML design dossier",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Design and implement an object-oriented data model using persistent objects and object identity, contrasting it with an object-relational implementation.",
+          "etecRefs": [
+            "SKU4.1-SLO7"
+          ],
+          "evidence": "Persistent-object database mini-lab",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Evaluate normalization, query plans, indexes and transaction behavior using a reproducible workload.",
+          "etecRefs": [],
+          "evidence": "Database performance and transaction experiment",
+          "id": "CLO 7"
         },
         {
           "plo": "V1",
           "stage": "P",
-          "statement": "Justify access and handling controls for a dataset."
+          "statement": "Apply access control and provenance rules and justify data-governance decisions.",
+          "etecRefs": [],
+          "evidence": "Security and provenance review",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -813,7 +1666,31 @@ const curriculum = {
       "resource": "PostgreSQL documentation and the database lab manual.",
       "name": "Database Systems",
       "placement": "Semester 3",
-      "anchor": "cs-230"
+      "anchor": "cs-230",
+      "etecTopics": [
+        "SKU4.1-T1",
+        "SKU4.1-T2",
+        "SKU4.1-T3",
+        "SKU8.1-T2"
+      ],
+      "etecSLOs": [
+        "SKU4.1-SLO1",
+        "SKU4.1-SLO2",
+        "SKU4.1-SLO3",
+        "SKU4.1-SLO4",
+        "SKU4.1-SLO5",
+        "SKU4.1-SLO6",
+        "SKU4.1-SLO7",
+        "SKU8.1-SLO8"
+      ],
+      "facilities": {
+        "lab": "Database and data-modeling lab",
+        "hardware": "Standard workstation; isolated local databases or per-student database containers and backed-up project storage.",
+        "software": "PostgreSQL and pgAdmin or DBeaver; ER/UML modeling tool; Python with ZODB or an equivalent persistent-object database for the object-oriented mini-lab.",
+        "practice": "SQL, ER/UML design, query plans, transactions, access control and object-oriented versus object-relational persistence.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "ISLM 101": {
       "id": "ISLM 101",
@@ -821,7 +1698,7 @@ const curriculum = {
       "title": "Islamic Culture and Professional Values",
       "term": 4,
       "credits": 3,
-      "category": "institution",
+      "category": "college",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [],
@@ -838,12 +1715,50 @@ const curriculum = {
         {
           "plo": "S3",
           "stage": "P",
-          "statement": "Communicate a reasoned ethical decision to stakeholders."
+          "statement": "Communicate a reasoned ethical decision to stakeholders.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "V1",
           "stage": "P",
-          "statement": "Compare professional actions using Islamic ethical principles and applicable professional standards."
+          "statement": "Compare professional actions using Islamic ethical principles and applicable professional standards.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Explain the sources and central concepts of Islamic culture relevant to professional conduct.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Analyze a workplace case using integrity, trust, justice and public-interest principles.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify a response to conflicts of interest, confidentiality or misuse of professional authority.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "V2",
+          "stage": "P",
+          "statement": "Participate respectfully in a case discussion and revise a decision in light of reasoned feedback.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Contribution record, peer or host review and individual reflection"
         }
       ],
       "profile": "project",
@@ -852,7 +1767,18 @@ const curriculum = {
       "resource": "Instructor-selected Islamic culture and ethics readings, discipline-specific professional codes, and case materials.",
       "name": "Islamic Culture and Professional Values",
       "placement": "Semester 4",
-      "anchor": "islm-101"
+      "anchor": "islm-101",
+      "textbookStatus": "To be selected.",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Seminar classroom and case-discussion space",
+        "hardware": "Shared presentation and library access; no dedicated technical lab required.",
+        "software": "Browser, LMS, word processor and presentation tools.",
+        "practice": "Reasoned professional case analysis, source review and discussion of Islamic culture and professional values.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 220": {
       "id": "CS 220",
@@ -873,23 +1799,87 @@ const curriculum = {
         "Greedy methods and correctness",
         "Dynamic programming",
         "Graph algorithms and shortest paths",
-        "Reductions, lower bounds, and complexity classes"
+        "Reductions, lower bounds, and complexity classes",
+        "Recursive backtracking and heuristic algorithms; empirical runtime hypotheses and input-size experiments"
       ],
       "clos": [
         {
           "plo": "K1",
-          "stage": "M",
-          "statement": "Explain correctness and complexity of fundamental algorithm families."
+          "stage": "P",
+          "statement": "Explain best, average and worst algorithm behavior and use asymptotic notation to derive time and space bounds.",
+          "etecRefs": [
+            "SKU1.1-SLO1",
+            "SKU1.1-SLO2"
+          ],
+          "evidence": "Algorithm analysis examination",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
-          "stage": "M",
-          "statement": "Select, analyze, and justify an algorithm for a constrained problem."
+          "stage": "P",
+          "statement": "Compare standard complexity classes and justify algorithm choices under workload and resource constraints.",
+          "etecRefs": [
+            "SKU1.1-SLO3",
+            "SKU1.2-SLO5"
+          ],
+          "evidence": "Complexity and selection argument",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Solve recurrences and prove correctness of recursive algorithms.",
+          "etecRefs": [],
+          "evidence": "Recurrence and correctness proof",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement divide-and-conquer algorithms and analyze their correctness and complexity.",
+          "etecRefs": [
+            "SKU1.1-SLO7"
+          ],
+          "evidence": "Divide-and-conquer practical",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Apply greedy, dynamic-programming, recursive-backtracking and heuristic techniques to appropriate problems.",
+          "etecRefs": [
+            "SKU1.1-SLO5"
+          ],
+          "evidence": "Comparative algorithm assignments",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Select and justify an algorithmic method for an unfamiliar computing problem.",
+          "etecRefs": [
+            "SKU1.1-SLO6"
+          ],
+          "evidence": "Individual problem-solving defense",
+          "id": "CLO 6"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Compare measured performance with a complexity prediction."
+          "statement": "Design empirical tests across input sizes to validate runtime hypotheses and compare algorithms.",
+          "etecRefs": [
+            "SKU1.1-SLO4"
+          ],
+          "evidence": "Reproducible benchmark report",
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Use reductions and lower-bound arguments to distinguish feasible solutions from computationally difficult problems.",
+          "etecRefs": [],
+          "evidence": "Reduction examination tasks",
+          "id": "CLO 8"
         }
       ],
       "profile": "lecture",
@@ -898,7 +1888,33 @@ const curriculum = {
       "resource": null,
       "name": "Design and Analysis of Algorithms",
       "placement": "Semester 4",
-      "anchor": "cs-220"
+      "anchor": "cs-220",
+      "etecTopics": [
+        "SKU1.1-T1",
+        "SKU1.1-T2",
+        "SKU1.2-T1",
+        "SKU1.2-T4",
+        "SKU3.2-T1",
+        "SKU3.2-T3"
+      ],
+      "etecSLOs": [
+        "SKU1.1-SLO1",
+        "SKU1.1-SLO2",
+        "SKU1.1-SLO3",
+        "SKU1.1-SLO4",
+        "SKU1.1-SLO5",
+        "SKU1.1-SLO6",
+        "SKU1.1-SLO7",
+        "SKU1.2-SLO5"
+      ],
+      "facilities": {
+        "lab": "Algorithm design and experimental analysis lab",
+        "hardware": "Standard workstation with reproducible benchmark environment.",
+        "software": "Python 3 or supported C++/Java, Git, testing framework, profiler and plotting tools.",
+        "practice": "Divide-and-conquer, greedy, dynamic-programming, backtracking and heuristic implementations with runtime experiments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 240": {
       "id": "CS 240",
@@ -921,23 +1937,84 @@ const curriculum = {
         "Processes, signals, and system calls",
         "File input/output and inter-process communication",
         "Debugging, test harnesses, memory safety, profiling and performance measurement",
-        "Resource measurement, system failures, and defensive design"
+        "Resource measurement, system failures, and defensive design",
+        "Logical layers, APIs and middleware; code/global/heap/stack layout; source-to-assembly trace and memory-leak repair"
       ],
       "clos": [
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain how compilation and operating interfaces support execution."
+          "statement": "Explain the roles of logical layers, system APIs and middleware in the construction of system software.",
+          "etecRefs": [
+            "SKU6.1-SLO3",
+            "SKU6.1-SLO4"
+          ],
+          "evidence": "System-interface design explanation",
+          "id": "CLO 1"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement and test a program using system calls."
+          "statement": "Implement C programs with pointers, dynamic allocation, files and defensible ownership rules.",
+          "etecRefs": [],
+          "evidence": "Supervised C programming practical",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Trace high-level constructs through assembly, compilation, linking and machine execution.",
+          "etecRefs": [
+            "SKU2.2-SLO6"
+          ],
+          "evidence": "Source-to-machine trace",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Analyze code, global data, heap and stack layouts in an executable process.",
+          "etecRefs": [
+            "SKU7.2-SLO6"
+          ],
+          "evidence": "Executable and debugger investigation",
+          "id": "CLO 4"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Diagnose resource or memory behavior using suitable tools."
+          "statement": "Diagnose and repair memory leaks and dangling pointers using memory-checking tools.",
+          "etecRefs": [
+            "SKU7.2-SLO7"
+          ],
+          "evidence": "Memory-safety repair practical",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Develop programs using processes, signals, system calls and inter-process communication.",
+          "etecRefs": [],
+          "evidence": "System-call programming assignment",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Profile application resource use and propose and test a system-software optimization.",
+          "etecRefs": [
+            "SKU6.1-SLO5"
+          ],
+          "evidence": "Profile and before-after experiment",
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Document a reproducible build and explain a system failure and its correction.",
+          "etecRefs": [],
+          "evidence": "Build instructions and individual technical explanation",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -946,7 +2023,30 @@ const curriculum = {
       "resource": null,
       "name": "Systems Programming",
       "placement": "Semester 4",
-      "anchor": "cs-240"
+      "anchor": "cs-240",
+      "etecTopics": [
+        "SKU2.2-T2",
+        "SKU2.2-T3",
+        "SKU6.1-T2",
+        "SKU6.1-T3",
+        "SKU7.2-T3"
+      ],
+      "etecSLOs": [
+        "SKU2.2-SLO6",
+        "SKU6.1-SLO3",
+        "SKU6.1-SLO4",
+        "SKU6.1-SLO5",
+        "SKU7.2-SLO6",
+        "SKU7.2-SLO7"
+      ],
+      "facilities": {
+        "lab": "Linux systems programming lab",
+        "hardware": "Virtualization-capable workstations; isolated Linux VMs or equivalent remote Linux accounts with reset capability.",
+        "software": "Linux, GCC or Clang, Make, GDB, Valgrind and/or sanitizers, strace, perf where available, Git and shell utilities.",
+        "practice": "Source-to-executable tracing, pointers, process memory, system calls, signals, IPC and resource profiling.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 250": {
       "id": "CS 250",
@@ -970,28 +2070,95 @@ const curriculum = {
         "Construction, refactoring, individual code review, automated tests and continuous integration",
         "Verification, validation, and security by design",
         "Maintenance and accessible technical documentation",
-        "Professional codes, software licensing, accountability, and escalation of concerns"
+        "Professional codes, software licensing, accountability, and escalation of concerns",
+        "Lifecycle comparison, testable use cases and requirements models; design paradigms and architecture; verification versus validation; defect tracking"
       ],
       "clos": [
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain how engineering processes support quality and maintenance."
+          "statement": "Explain interactions between software and information-management, embedded, process-control and communication systems.",
+          "etecRefs": [
+            "SKU8.1-SLO1"
+          ],
+          "evidence": "System context comparison",
+          "id": "CLO 1"
+        },
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Compare waterfall, iterative and agile processes and illustrate lifecycle phases and deliverables with a worked example.",
+          "etecRefs": [
+            "SKU8.1-SLO2",
+            "SKU8.1-SLO3"
+          ],
+          "evidence": "Lifecycle and process portfolio",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Analyze a requirements model and write testable functional and non-functional requirements, including use cases.",
+          "etecRefs": [
+            "SKU8.1-SLO5",
+            "SKU8.1-SLO6",
+            "SKU8.1-SLO9"
+          ],
+          "evidence": "Requirements specification and critique",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Select elicitation techniques and explain their limitations and challenges in stakeholder work.",
+          "etecRefs": [
+            "SKU8.1-SLO7"
+          ],
+          "evidence": "Interview plan and elicitation reflection",
+          "id": "CLO 4"
         },
         {
           "plo": "S2",
-          "stage": "M",
-          "statement": "Deliver, refactor and evaluate a tested team software increment using modular design and documented interfaces."
+          "stage": "P",
+          "statement": "Apply coupling, cohesion and encapsulation and use a design paradigm to model a software architecture.",
+          "etecRefs": [
+            "SKU8.2-SLO1",
+            "SKU8.2-SLO2",
+            "SKU8.2-SLO3",
+            "SKU8.2-SLO4"
+          ],
+          "evidence": "Architecture and design-model review",
+          "id": "CLO 5"
         },
         {
-          "plo": "V1",
+          "plo": "S2",
           "stage": "P",
-          "statement": "Justify a software decision using professional responsibilities and licensing obligations."
+          "statement": "Implement design mechanisms for reliability, efficiency and robustness and justify their trade-offs.",
+          "etecRefs": [
+            "SKU8.2-SLO5"
+          ],
+          "evidence": "Implemented design and quality evidence",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Distinguish verification from validation and apply both to trace requirements to acceptance evidence.",
+          "etecRefs": [
+            "SKU8.2-SLO7"
+          ],
+          "evidence": "Verification and validation plan",
+          "id": "CLO 7"
         },
         {
           "plo": "V2",
           "stage": "P",
-          "statement": "Coordinate team roles, give constructive feedback, and document individual contributions."
+          "statement": "Manage reviewed team work with an issue and defect tracker, documenting responsibilities and professional decisions.",
+          "etecRefs": [
+            "SKU8.2-SLO10"
+          ],
+          "evidence": "Issue history and individual contribution defense",
+          "id": "CLO 8"
         }
       ],
       "profile": "project",
@@ -1000,7 +2167,38 @@ const curriculum = {
       "resource": null,
       "name": "Software Engineering",
       "placement": "Semester 4",
-      "anchor": "cs-250"
+      "anchor": "cs-250",
+      "etecTopics": [
+        "SKU8.1-T1",
+        "SKU8.1-T2",
+        "SKU8.1-T3",
+        "SKU8.2-T1",
+        "SKU8.2-T3"
+      ],
+      "etecSLOs": [
+        "SKU8.1-SLO1",
+        "SKU8.1-SLO2",
+        "SKU8.1-SLO3",
+        "SKU8.1-SLO5",
+        "SKU8.1-SLO6",
+        "SKU8.1-SLO7",
+        "SKU8.1-SLO9",
+        "SKU8.2-SLO1",
+        "SKU8.2-SLO2",
+        "SKU8.2-SLO3",
+        "SKU8.2-SLO4",
+        "SKU8.2-SLO5",
+        "SKU8.2-SLO7",
+        "SKU8.2-SLO10"
+      ],
+      "facilities": {
+        "lab": "Collaborative software engineering lab",
+        "hardware": "Team workspaces, individual repositories, CI runner and shared test environment.",
+        "software": "Git with an issue/defect tracker, UML tool, language toolchain, unit-test framework and CI service or local runner.",
+        "practice": "Requirements and architecture models, reviewed implementation, defect tracking and verification/validation evidence.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "MATH 230": {
       "id": "MATH 230",
@@ -1008,7 +2206,7 @@ const curriculum = {
       "title": "Multivariable Calculus and Optimization",
       "term": 4,
       "credits": 3,
-      "category": "college",
+      "category": "department",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [
@@ -1028,17 +2226,52 @@ const curriculum = {
         {
           "plo": "K1",
           "stage": "P",
-          "statement": "Explain gradients and constrained optimization."
+          "statement": "Explain multivariable functions, level sets, gradients and local linear approximation.",
+          "etecRefs": [],
+          "evidence": "Conceptual examination",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Formulate and solve a multivariable optimization problem."
+          "statement": "Calculate partial derivatives and apply the multivariable chain rule.",
+          "etecRefs": [],
+          "evidence": "Differentiation problem set",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Formulate and evaluate selected multiple-integral models.",
+          "etecRefs": [],
+          "evidence": "Integration assignment",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Analyze stationary points, convexity and constraints, using Lagrange multipliers where appropriate.",
+          "etecRefs": [],
+          "evidence": "Constrained-optimization examination",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Calculate gradients and implement gradient-based optimization for a small learning problem.",
+          "etecRefs": [
+            "EKU.1-SLO4"
+          ],
+          "evidence": "Gradient-descent notebook and derivative check",
+          "id": "CLO 5"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Compare an analytic solution with a numerical method."
+          "statement": "Evaluate convergence and sensitivity and explain how mathematical assumptions affect a computed optimum.",
+          "etecRefs": [],
+          "evidence": "Optimization experiment report",
+          "id": "CLO 6"
         }
       ],
       "profile": "lecture",
@@ -1047,7 +2280,21 @@ const curriculum = {
       "resource": null,
       "name": "Multivariable Calculus and Optimization",
       "placement": "Semester 4",
-      "anchor": "math-230"
+      "anchor": "math-230",
+      "etecTopics": [
+        "EKU.1-T2"
+      ],
+      "etecSLOs": [
+        "EKU.1-SLO4"
+      ],
+      "facilities": {
+        "lab": "Mathematics classroom and computational workspace",
+        "hardware": "Standard workstation; no GPU required.",
+        "software": "Python, Jupyter, NumPy, SciPy, SymPy and Matplotlib.",
+        "practice": "Derivative verification, constrained optimization and gradient-descent experiments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 260": {
       "id": "CS 260",
@@ -1069,23 +2316,85 @@ const curriculum = {
         "IP, forwarding, and routing",
         "Transport protocols and congestion",
         "Application protocols and socket programming",
-        "Measurement, reliability, and network security foundations"
+        "Measurement, reliability, and network security foundations",
+        "Internet edge/core complexity, circuit/packet switching, physical network components and naming; reliable protocol construction and optimization"
       ],
       "clos": [
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain end-to-end delivery across protocol layers."
+          "statement": "Describe Internet organization, define network terminology and assess complexity at the edge and core.",
+          "etecRefs": [
+            "SKU5.1-SLO1",
+            "SKU5.1-SLO2",
+            "SKU5.1-SLO3"
+          ],
+          "evidence": "Network architecture examination",
+          "id": "CLO 1"
+        },
+        {
+          "plo": "K2",
+          "stage": "P",
+          "statement": "Explain layering, circuit and packet switching and the roles of physical networking components.",
+          "etecRefs": [
+            "SKU5.1-SLO4"
+          ],
+          "evidence": "Protocol-layer and switching analysis",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Apply addressing and naming schemes and explain resource location and routing decisions.",
+          "etecRefs": [
+            "SKU5.1-SLO5"
+          ],
+          "evidence": "Addressing and DNS practical",
+          "id": "CLO 3"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement and test a networked application."
+          "statement": "Design and implement a client-server socket application against a communication specification.",
+          "etecRefs": [
+            "SKU5.1-SLO6"
+          ],
+          "evidence": "Individual socket application",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Develop and optimize a reliable delivery protocol using error, flow and congestion-control mechanisms.",
+          "etecRefs": [
+            "SKU5.1-SLO7"
+          ],
+          "evidence": "Reliable-protocol simulator and tests",
+          "id": "CLO 5"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Interpret measurements of delay, loss, and throughput."
+          "statement": "Measure delay, throughput and packet loss and interpret capture and simulation evidence.",
+          "etecRefs": [],
+          "evidence": "Controlled network performance investigation",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Explain privacy and security implications of network design and measurement.",
+          "etecRefs": [],
+          "evidence": "Network risk review",
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Document a network experiment so that another student can reproduce and interpret it.",
+          "etecRefs": [],
+          "evidence": "Protocol and experiment report",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -1094,7 +2403,31 @@ const curriculum = {
       "resource": null,
       "name": "Computer Networks",
       "placement": "Semester 4",
-      "anchor": "cs-260"
+      "anchor": "cs-260",
+      "etecTopics": [
+        "SKU5.1-T1",
+        "SKU5.1-T2",
+        "SKU5.1-T3",
+        "SKU5.1-T4",
+        "SKU5.1-T5"
+      ],
+      "etecSLOs": [
+        "SKU5.1-SLO1",
+        "SKU5.1-SLO2",
+        "SKU5.1-SLO3",
+        "SKU5.1-SLO4",
+        "SKU5.1-SLO5",
+        "SKU5.1-SLO6",
+        "SKU5.1-SLO7"
+      ],
+      "facilities": {
+        "lab": "Isolated networking and socket-programming laboratory",
+        "hardware": "Virtual network sandbox; small switches/routers or equivalent emulated network; per-student packet-capture access in the teaching environment.",
+        "software": "Wireshark, ns-3 or an equivalent network simulator, Linux networking tools, Python/C socket libraries and Git.",
+        "practice": "Addressing, DNS, packet analysis, client-server applications and reliable-protocol experiments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 310": {
       "id": "CS 310",
@@ -1115,23 +2448,96 @@ const curriculum = {
         "Deadlocks and concurrent programming",
         "Virtual memory and protection",
         "File systems, storage, and I/O",
-        "Virtualization, access controls, and resource experiments"
+        "Virtualization, access controls, and resource experiments",
+        "OS objectives, kernel/user modes and system types; interrupt handling, device lists, drivers and I/O queues",
+        "Task-state transition models; allocation policies, cache behavior, thrashing, disk-access patterns and cost-performance trade-offs"
       ],
       "clos": [
         {
           "plo": "K2",
-          "stage": "M",
-          "statement": "Explain operating system mechanisms and trade-offs."
+          "stage": "P",
+          "statement": "Explain operating-system objectives and functions and compare kernel and user modes for security and efficiency.",
+          "etecRefs": [
+            "SKU6.1-SLO1",
+            "SKU6.1-SLO6"
+          ],
+          "evidence": "OS architecture examination",
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Analyze interrupt handling and evaluate device lists, drivers and I/O queues.",
+          "etecRefs": [
+            "SKU6.1-SLO7",
+            "SKU6.1-SLO8"
+          ],
+          "evidence": "Interrupt and device-management investigation",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Analyze concurrent tasks, task states and runtime faults using state-transition models.",
+          "etecRefs": [
+            "SKU6.2-SLO1",
+            "SKU6.2-SLO2",
+            "SKU6.2-SLO4"
+          ],
+          "evidence": "Task-state model and concurrency diagnosis",
+          "id": "CLO 3"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement and test a concurrent program using OS primitives."
+          "statement": "Implement and compare synchronization techniques for shared resources.",
+          "etecRefs": [
+            "SKU6.2-SLO3"
+          ],
+          "evidence": "Concurrent-programming practical",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Compare processes, threads and scheduling algorithms for distinct workloads.",
+          "etecRefs": [
+            "SKU6.2-SLO5"
+          ],
+          "evidence": "Scheduling simulation and workload analysis",
+          "id": "CLO 5"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Measure how a systems policy affects a workload."
+          "statement": "Simulate virtual memory and compare allocation policies, cache behavior, thrashing and cost-performance trade-offs.",
+          "etecRefs": [
+            "SKU2.3-SLO4",
+            "SKU6.2-SLO6",
+            "SKU6.2-SLO7"
+          ],
+          "evidence": "Memory-management simulator and report",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Evaluate disk access patterns, file-system storage and I/O scheduling for efficient retrieval.",
+          "etecRefs": [
+            "SKU2.3-SLO7"
+          ],
+          "evidence": "Storage-access experiment",
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Analyze resource access controls and test a resource-use optimization with reproducible evidence.",
+          "etecRefs": [
+            "SKU6.2-SLO8"
+          ],
+          "evidence": "Access-control and resource experiment",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -1140,7 +2546,44 @@ const curriculum = {
       "resource": null,
       "name": "Operating Systems",
       "placement": "Semester 5",
-      "anchor": "cs-310"
+      "anchor": "cs-310",
+      "etecTopics": [
+        "SKU2.3-T1",
+        "SKU2.3-T2",
+        "SKU2.3-T3",
+        "SKU6.1-T1",
+        "SKU6.1-T2",
+        "SKU6.1-T3",
+        "SKU6.1-T4",
+        "SKU6.2-T1",
+        "SKU6.2-T2",
+        "SKU6.2-T3",
+        "SKU6.2-T4"
+      ],
+      "etecSLOs": [
+        "SKU2.3-SLO4",
+        "SKU2.3-SLO7",
+        "SKU6.1-SLO1",
+        "SKU6.1-SLO6",
+        "SKU6.1-SLO7",
+        "SKU6.1-SLO8",
+        "SKU6.2-SLO1",
+        "SKU6.2-SLO2",
+        "SKU6.2-SLO3",
+        "SKU6.2-SLO4",
+        "SKU6.2-SLO5",
+        "SKU6.2-SLO6",
+        "SKU6.2-SLO7",
+        "SKU6.2-SLO8"
+      ],
+      "facilities": {
+        "lab": "Operating systems and concurrency lab",
+        "hardware": "Virtualization-capable workstation and isolated Linux VMs with snapshots; approved access to instrumentation.",
+        "software": "Linux, GCC/Clang, GDB, pthreads or equivalent concurrency APIs, system monitoring and profiling tools, scheduling/memory simulators.",
+        "practice": "Task states, synchronization, scheduling, virtual memory, interrupts, devices, storage and access-control experiments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 320": {
       "id": "CS 320",
@@ -1164,23 +2607,89 @@ const curriculum = {
         "Functional, imperative, object-oriented, and logic paradigms",
         "Exceptions, event-driven programming, and reactive execution",
         "Parsing, compilation, interpretation, and just-in-time execution",
-        "Memory management, concurrency, safety, and liveness"
+        "Memory management, concurrency, safety, and liveness",
+        "Immutable algorithms and higher-order functions; program-as-data, AST analysis, interpreter or optimizer construction and garbage collection"
       ],
       "clos": [
         {
-          "plo": "K1",
-          "stage": "P",
-          "statement": "Explain language constructs and their semantics."
-        },
-        {
           "plo": "K3",
-          "stage": "M",
-          "statement": "Compare paradigms and language implementation strategies."
+          "stage": "P",
+          "statement": "Compare inheritance and subtyping with functional approaches and justify a programming paradigm for a problem.",
+          "etecRefs": [
+            "SKU7.1-SLO2"
+          ],
+          "evidence": "Cross-paradigm comparison",
+          "id": "CLO 1"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement a small interpreter or semantic evaluator and compare type-safe abstractions across programming languages."
+          "statement": "Implement iterator and aggregate operations in Python and a statically typed language.",
+          "etecRefs": [
+            "SKU7.1-SLO4"
+          ],
+          "evidence": "Two-language collection practical",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Construct immutable algorithms and higher-order functions that accept and return functions.",
+          "etecRefs": [
+            "SKU7.1-SLO5",
+            "SKU7.1-SLO6"
+          ],
+          "evidence": "Functional-programming implementation",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Distinguish syntax, parsing, semantics and evaluation using small executable examples.",
+          "etecRefs": [
+            "SKU7.2-SLO4"
+          ],
+          "evidence": "Language-concept examination",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Examine program-as-data representations and evaluate the structure and behavior of an abstract syntax tree.",
+          "etecRefs": [
+            "SKU7.2-SLO1",
+            "SKU7.2-SLO2"
+          ],
+          "evidence": "AST and program-representation analysis",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Build a small interpreter or expression optimizer and test it against specified language behavior.",
+          "etecRefs": [
+            "SKU7.2-SLO3"
+          ],
+          "evidence": "Individual language-processing project",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Construct low-level runtime representations of bindings, closures, calls and core language constructs.",
+          "etecRefs": [
+            "SKU7.2-SLO5"
+          ],
+          "evidence": "Runtime representation and execution trace",
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Compare garbage collection and explicit memory management and evaluate implications for type safety and execution.",
+          "etecRefs": [],
+          "evidence": "Runtime and memory-management investigation",
+          "id": "CLO 8"
         }
       ],
       "profile": "project",
@@ -1189,7 +2698,37 @@ const curriculum = {
       "resource": null,
       "name": "Programming Language Concepts",
       "placement": "Semester 5",
-      "anchor": "cs-320"
+      "anchor": "cs-320",
+      "etecTopics": [
+        "SKU7.1-T1",
+        "SKU7.1-T2",
+        "SKU7.1-T3",
+        "SKU7.1-T4",
+        "SKU7.1-T5",
+        "SKU7.2-T1",
+        "SKU7.2-T2",
+        "SKU7.2-T3",
+        "SKU7.2-T4"
+      ],
+      "etecSLOs": [
+        "SKU7.1-SLO2",
+        "SKU7.1-SLO4",
+        "SKU7.1-SLO5",
+        "SKU7.1-SLO6",
+        "SKU7.2-SLO1",
+        "SKU7.2-SLO2",
+        "SKU7.2-SLO3",
+        "SKU7.2-SLO4",
+        "SKU7.2-SLO5"
+      ],
+      "facilities": {
+        "lab": "Programming languages and runtime lab",
+        "hardware": "Standard workstation with multiple supported language runtimes.",
+        "software": "Python 3 and a supported Java JDK or C#/.NET SDK; Git; parser/AST library or generator; unit testing and runtime tracing tools.",
+        "practice": "Two-language aggregate processing, closures, immutable and higher-order code, ASTs, a small interpreter/optimizer and garbage-collection studies.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 330": {
       "id": "CS 330",
@@ -1215,18 +2754,53 @@ const curriculum = {
       "clos": [
         {
           "plo": "K1",
-          "stage": "M",
-          "statement": "Explain the expressive power and limits of computational models."
+          "stage": "P",
+          "statement": "Distinguish regular, context-free and computably enumerable languages and their recognizing machines.",
+          "etecRefs": [],
+          "evidence": "Formal-language examination",
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Design and test a deterministic finite automaton for a specified language.",
+          "etecRefs": [
+            "SKU1.2-SLO8"
+          ],
+          "evidence": "DFA construction and acceptance tests",
+          "id": "CLO 2"
         },
         {
           "plo": "S1",
-          "stage": "M",
-          "statement": "Use a reduction or proof to classify a problem."
+          "stage": "P",
+          "statement": "Construct regular expressions, grammars and pushdown-automaton models.",
+          "etecRefs": [],
+          "evidence": "Formal model problem set",
+          "id": "CLO 3"
         },
         {
-          "plo": "S3",
+          "plo": "S1",
           "stage": "P",
-          "statement": "Present a rigorous argument with clearly stated assumptions."
+          "statement": "Use closure properties and pumping arguments to establish limits of language classes.",
+          "etecRefs": [],
+          "evidence": "Proof examination",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Analyze decidability using Turing machines and computable reductions.",
+          "etecRefs": [],
+          "evidence": "Decidability proof",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Classify time complexity and justify NP-completeness or tractability claims with suitable reductions.",
+          "etecRefs": [],
+          "evidence": "Complexity analysis and reduction defense",
+          "id": "CLO 6"
         }
       ],
       "profile": "lecture",
@@ -1235,7 +2809,22 @@ const curriculum = {
       "resource": null,
       "name": "Theory of Computation",
       "placement": "Semester 7",
-      "anchor": "cs-330"
+      "anchor": "cs-330",
+      "etecTopics": [
+        "SKU1.2-T3",
+        "SKU1.2-T4"
+      ],
+      "etecSLOs": [
+        "SKU1.2-SLO8"
+      ],
+      "facilities": {
+        "lab": "Theory classroom with formal-model workspace",
+        "hardware": "Standard workstation for automata exercises; no dedicated hardware laboratory.",
+        "software": "JFLAP or an equivalent automata tool, Python and a text/diagram editor.",
+        "practice": "DFA/PDA/Turing-machine construction and testing accompany individually assessed formal proofs.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 340": {
       "id": "CS 340",
@@ -1264,22 +2853,50 @@ const curriculum = {
         {
           "plo": "K3",
           "stage": "M",
-          "statement": "Explain when to use search, reasoning, or learning methods."
+          "statement": "Explain when to use search, reasoning, or learning methods.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied design explanation"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement and compare AI methods on a defined task."
+          "statement": "Implement and compare AI methods on a defined task.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Assess performance and failure modes using a repeatable evaluation."
+          "statement": "Assess performance and failure modes using a repeatable evaluation.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "P",
-          "statement": "Justify a safeguard for an AI failure, taking account of affected users and human oversight."
+          "statement": "Justify a safeguard for an AI failure, taking account of affected users and human oversight.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Formulate a search or constraint-satisfaction problem and justify a solution strategy.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement and compare a search or reasoning method using a stated evaluation protocol.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         }
       ],
       "profile": "lab",
@@ -1288,7 +2905,17 @@ const curriculum = {
       "resource": null,
       "name": "Artificial Intelligence",
       "placement": "Semester 5",
-      "anchor": "cs-340"
+      "anchor": "cs-340",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "AI programming and experimentation lab",
+        "hardware": "Standard workstation; shared accelerator access only for optional larger demonstrations.",
+        "software": "Python, Jupyter, NumPy, scikit-learn, a logic/constraint library and Git.",
+        "practice": "Search, reasoning, constraints and small learning experiments with reproducible baselines.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 350": {
       "id": "CS 350",
@@ -1315,17 +2942,50 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Design and improve an accessible interactive prototype."
+          "statement": "Design and improve an accessible interactive prototype.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S3",
           "stage": "P",
-          "statement": "Present usability findings and explain design trade-offs to stakeholders."
+          "statement": "Present usability findings and explain design trade-offs to stakeholders.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Plan and conduct a usability evaluation with appropriate safeguards."
+          "statement": "Plan and conduct a usability evaluation with appropriate safeguards.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Plan a stakeholder interview or usability study with an explicit research question and participant protections.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Build an accessible interface prototype and revise it using user evidence.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Present a design rationale that connects requirements, evaluation results and limitations.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "project",
@@ -1334,7 +2994,17 @@ const curriculum = {
       "resource": "W3C Web Content Accessibility Guidelines and an instructor-supplied usability protocol.",
       "name": "Human–Computer Interaction",
       "placement": "Semester 5",
-      "anchor": "cs-350"
+      "anchor": "cs-350",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "HCI prototyping and usability laboratory",
+        "hardware": "Accessible workstations, screen/audio recording, representative mobile devices and quiet test space.",
+        "software": "Figma or Penpot, browser developer tools, screen reader such as NVDA, accessibility checker and spreadsheet/statistical analysis tools.",
+        "practice": "Prototype iteration, accessibility checks, consented usability sessions and anonymized study records.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 390": {
       "id": "CS 390",
@@ -1363,27 +3033,50 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Complete a substantive computing assignment and evaluate its result."
+          "statement": "Complete a substantive computing assignment and evaluate its result.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S3",
           "stage": "P",
-          "statement": "Give workplace status updates and present results with appropriate disclosure."
+          "statement": "Give workplace status updates and present results with appropriate disclosure.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "V1",
           "stage": "P",
-          "statement": "Apply workplace ethics, confidentiality, and applicable policies."
+          "statement": "Apply workplace ethics, confidentiality, and applicable policies.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         },
         {
           "plo": "V2",
           "stage": "M",
-          "statement": "Work reliably with colleagues, communicate progress, and act on feedback."
+          "statement": "Work reliably with colleagues, communicate progress, and act on feedback.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Contribution record, peer or host review and individual reflection"
         },
         {
           "plo": "V3",
           "stage": "P",
-          "statement": "Manage work priorities and use feedback to address a professional learning need."
+          "statement": "Manage work priorities and use feedback to address a professional learning need.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Plan or decision record with cost, risk and learning rationale"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Assemble verifiable workplace artifacts and evaluate progress against the approved learning plan.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         }
       ],
       "profile": "coop",
@@ -1392,7 +3085,17 @@ const curriculum = {
       "resource": "College placement handbook, signed learning plan, host induction materials, and reporting templates.",
       "name": "Cooperative Training",
       "placement": "Semester 6 and the following summer",
-      "anchor": "cs-390"
+      "anchor": "cs-390",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Approved host computing workplace with academic remote access",
+        "hardware": "Host-provided workstation, role-appropriate secure accounts, supervision, meeting facilities and college check-in access.",
+        "software": "Host-approved development, data or security tools aligned to the signed learning plan; college LMS and portfolio tools.",
+        "practice": "A host/college resource checklist records tool access and supervised assignments before placement; software is specified for each approved host role.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 401": {
       "id": "CS 401",
@@ -1415,23 +3118,79 @@ const curriculum = {
         "Communication, replication, and consistency",
         "Failures, safety and liveness, and distributed coordination",
         "Scalability, energy use, and resource efficiency",
-        "Service observability, reliability, failure recovery and operational resource trade-offs"
+        "Service observability, reliability, failure recovery and operational resource trade-offs",
+        "Single-core/multicore architecture, instruction-level parallelism and comparison of client-server, distributed and single-user OS designs"
       ],
       "clos": [
         {
           "plo": "K2",
           "stage": "M",
-          "statement": "Explain parallelism, synchronization, and distributed system guarantees."
+          "statement": "Compare single-core and multicore architectures and justify multicore performance and scalability benefits.",
+          "etecRefs": [
+            "SKU2.1-SLO2"
+          ],
+          "evidence": "Architecture and scalability analysis",
+          "id": "CLO 1"
         },
         {
           "plo": "S1",
           "stage": "M",
-          "statement": "Analyze a performance or consistency trade-off."
+          "statement": "Analyze instruction-level parallelism and its effect on execution efficiency.",
+          "etecRefs": [
+            "SKU2.2-SLO2"
+          ],
+          "evidence": "Instruction scheduling and timing exercise",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "K2",
+          "stage": "M",
+          "statement": "Compare client-server, distributed and single-user OS designs, explaining benefits and limitations.",
+          "etecRefs": [
+            "SKU6.1-SLO2"
+          ],
+          "evidence": "Distributed-system design comparison",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "M",
+          "statement": "Implement shared-memory and message-passing solutions with explicit synchronization and dependency handling.",
+          "etecRefs": [],
+          "evidence": "Individual parallel programming practical",
+          "id": "CLO 4"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Evaluate scaling and resource use with controlled experiments."
+          "statement": "Measure speedup, scaling and resource efficiency and diagnose communication or synchronization overhead.",
+          "etecRefs": [],
+          "evidence": "Reproducible scalability experiment",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S1",
+          "stage": "M",
+          "statement": "Analyze replication, consistency, failures, safety and liveness in a distributed system.",
+          "etecRefs": [],
+          "evidence": "Failure and consistency investigation",
+          "id": "CLO 6"
+        },
+        {
+          "plo": "S2",
+          "stage": "M",
+          "statement": "Implement and test a distributed coordination or recovery mechanism.",
+          "etecRefs": [],
+          "evidence": "Distributed prototype and failure-injection tests",
+          "id": "CLO 7"
+        },
+        {
+          "plo": "V1",
+          "stage": "M",
+          "statement": "Justify reliability, energy and resource trade-offs for a distributed workload.",
+          "etecRefs": [],
+          "evidence": "Operational trade-off report",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -1440,7 +3199,25 @@ const curriculum = {
       "resource": null,
       "name": "Parallel and Distributed Computing",
       "placement": "Semester 7",
-      "anchor": "cs-401"
+      "anchor": "cs-401",
+      "etecTopics": [
+        "SKU2.1-T1",
+        "SKU2.2-T2",
+        "SKU6.1-T1"
+      ],
+      "etecSLOs": [
+        "SKU2.1-SLO2",
+        "SKU2.2-SLO2",
+        "SKU6.1-SLO2"
+      ],
+      "facilities": {
+        "lab": "Parallel and distributed systems laboratory",
+        "hardware": "Multicore workstations plus a small cluster or equivalent isolated multi-VM/remote nodes; controlled resource limits.",
+        "software": "Linux, OpenMP, MPI, Docker or Podman, a messaging framework, Git and monitoring/profiling tools.",
+        "practice": "Instruction-level analysis, shared-memory/message-passing code, scaling, replication, coordination and failure-recovery experiments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 402": {
       "id": "CS 402",
@@ -1469,17 +3246,52 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain how controls protect information and systems."
+          "statement": "Explain security goals, assets, threats, cryptographic primitives and trust assumptions.",
+          "etecRefs": [],
+          "evidence": "Security concepts examination",
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Assess a computing system using a documented threat and risk model.",
+          "etecRefs": [],
+          "evidence": "Threat model and risk register",
+          "id": "CLO 2"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Design and test defensive controls against a documented threat model."
+          "statement": "Implement and verify authentication, authorization and least-privilege controls.",
+          "etecRefs": [],
+          "evidence": "Individual defensive control practical",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Assess OS protection and security features, explain their limitations and recommend defensible safeguards.",
+          "etecRefs": [
+            "SKU6.2-SLO9"
+          ],
+          "evidence": "OS protection evaluation",
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Evaluate monitoring and incident-response evidence in an isolated defensive laboratory.",
+          "etecRefs": [],
+          "evidence": "Defensive investigation and response report",
+          "id": "CLO 5"
         },
         {
           "plo": "V1",
-          "stage": "M",
-          "statement": "Justify security and privacy choices considering professional obligations."
+          "stage": "P",
+          "statement": "Justify privacy, anonymity and pseudonymity choices and communicate professional reporting obligations.",
+          "etecRefs": [],
+          "evidence": "Privacy and professional-decision case",
+          "id": "CLO 6"
         }
       ],
       "profile": "lab",
@@ -1488,7 +3300,21 @@ const curriculum = {
       "resource": null,
       "name": "Cybersecurity Fundamentals",
       "placement": "Semester 7",
-      "anchor": "cs-402"
+      "anchor": "cs-402",
+      "etecTopics": [
+        "SKU6.2-T4"
+      ],
+      "etecSLOs": [
+        "SKU6.2-SLO9"
+      ],
+      "facilities": {
+        "lab": "Isolated defensive cybersecurity laboratory",
+        "hardware": "Resettable VMs, segregated virtual networks, benign/curated logs and per-student authorized lab accounts.",
+        "software": "Linux and Windows teaching VMs, Wireshark, OpenSSL, static-analysis tools and a defensive log-analysis platform such as Wazuh.",
+        "practice": "OS protections, least privilege, cryptographic use, defensive monitoring and incident-response evidence on teaching assets.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 403": {
       "id": "CS 403",
@@ -1516,17 +3342,50 @@ const curriculum = {
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain transformations and the graphics pipeline."
+          "statement": "Explain transformations and the graphics pipeline.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied design explanation"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement an interactive visualization or scene."
+          "statement": "Implement an interactive visualization or scene.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Evaluate rendering performance and interpretation."
+          "statement": "Evaluate rendering performance and interpretation.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Explain color models, light, projection and basic shading assumptions.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied design explanation"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Apply geometric transformations and implement interactive input and animation.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify accessible visual encodings and disclose limitations of a graphical representation.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "lab",
@@ -1535,7 +3394,17 @@ const curriculum = {
       "resource": null,
       "name": "Graphics and Interactive Techniques",
       "placement": "Semester 8",
-      "anchor": "cs-403"
+      "anchor": "cs-403",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Graphics and interactive visualization laboratory",
+        "hardware": "Workstations with WebGL/OpenGL-capable graphics; shared GPU workstations if scene complexity requires them.",
+        "software": "Browser WebGL with Three.js or an equivalent graphics API, Blender, image tools and Git.",
+        "practice": "Transformations, projection, shading, interaction, animation and measured rendering performance.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "BUS 401": {
       "id": "BUS 401",
@@ -1543,7 +3412,7 @@ const curriculum = {
       "title": "Computing Project Management and Finance",
       "term": 7,
       "credits": 3,
-      "category": "college",
+      "category": "department",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [
@@ -1562,17 +3431,52 @@ const curriculum = {
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Analyze project scope, constraints, and feasibility."
+          "statement": "Define project scope, stakeholder expectations and measurable success criteria.",
+          "etecRefs": [],
+          "evidence": "Scope and stakeholder charter",
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Estimate effort, dependencies, resources and a defensible delivery schedule.",
+          "etecRefs": [],
+          "evidence": "Work breakdown and schedule",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Analyze software risks and plan, prioritize and monitor risk responses.",
+          "etecRefs": [
+            "SKU8.1-SLO4"
+          ],
+          "evidence": "Software risk register",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "V3",
+          "stage": "P",
+          "statement": "Prepare a computing-project budget and compare cash-flow, cost-benefit and product-viability alternatives.",
+          "etecRefs": [],
+          "evidence": "Costed business case",
+          "id": "CLO 4"
         },
         {
           "plo": "S3",
           "stage": "P",
-          "statement": "Present a defensible costed project case."
+          "statement": "Present project performance, procurement and governance decisions to technical and business stakeholders.",
+          "etecRefs": [],
+          "evidence": "Status brief and decision presentation",
+          "id": "CLO 5"
         },
         {
-          "plo": "V3",
-          "stage": "M",
-          "statement": "Manage a project plan with budget, risks, and decision criteria."
+          "plo": "V2",
+          "stage": "P",
+          "statement": "Coordinate a team plan and explain individual responsibilities, escalation and lessons learned.",
+          "etecRefs": [],
+          "evidence": "Team plan and individual reflection",
+          "id": "CLO 6"
         }
       ],
       "profile": "project",
@@ -1581,7 +3485,19 @@ const curriculum = {
       "resource": null,
       "name": "Computing Project Management and Finance",
       "placement": "Semester 7",
-      "anchor": "bus-401"
+      "anchor": "bus-401",
+      "etecTopics": [],
+      "etecSLOs": [
+        "SKU8.1-SLO4"
+      ],
+      "facilities": {
+        "lab": "Project planning and finance workshop",
+        "hardware": "Shared computers, group planning space and presentation facilities; no dedicated hardware lab.",
+        "software": "Spreadsheet with financial functions, ProjectLibre or equivalent scheduling tool, issue board and presentation software.",
+        "practice": "Estimates, schedules, risk registers, budgets, cash-flow comparisons and costed project cases.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 410": {
       "id": "CS 410",
@@ -1611,22 +3527,50 @@ const curriculum = {
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Formulate and justify a complex project problem and requirements."
+          "statement": "Formulate and justify a complex project problem and requirements.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Develop and verify an initial prototype against selected requirements."
+          "statement": "Develop and verify an initial prototype against selected requirements.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S3",
           "stage": "M",
-          "statement": "Defend technical decisions and the evaluation plan before a panel."
+          "statement": "Defend technical decisions and the evaluation plan before a panel.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "V2",
           "stage": "M",
-          "statement": "Coordinate and evidence individual and collective project work."
+          "statement": "Coordinate and evidence individual and collective project work.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Contribution record, peer or host review and individual reflection"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Design a feasible evaluation protocol with baselines, metrics and validity controls.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Assess ethical, privacy, safety and sustainability risks and propose project safeguards.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "capstone",
@@ -1635,7 +3579,17 @@ const curriculum = {
       "resource": null,
       "name": "Capstone Project I",
       "placement": "Semester 7",
-      "anchor": "cs-410"
+      "anchor": "cs-410",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Supervised capstone development workspace",
+        "hardware": "Team workstations and meeting space, individual accounts and project-specific compute/equipment recorded in the approved resource plan.",
+        "software": "Git, issue tracker, CI/test tools, modeling and prototyping tools plus the approved project stack.",
+        "practice": "A resource and access plan is agreed at proposal review; datasets, test environment and individual contribution evidence are prepared.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "EL-1": {
       "id": "EL-1",
@@ -1683,32 +3637,50 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Integrate skills from earlier coursework in a substantial solution and evaluate it against measurable requirements."
+          "statement": "Integrate skills from earlier coursework in a substantial solution and evaluate it against measurable requirements.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S3",
           "stage": "M",
-          "statement": "Communicate results and limitations in a report and oral defense."
+          "statement": "Communicate results and limitations in a report and oral defense.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Conduct a reproducible evaluation and interpret uncertainty."
+          "statement": "Conduct a reproducible evaluation and interpret uncertainty.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "M",
-          "statement": "Justify professional decisions about impacts and risks."
+          "statement": "Justify professional decisions about impacts and risks.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         },
         {
           "plo": "V2",
           "stage": "M",
-          "statement": "Demonstrate individual contributions and team accountability."
+          "statement": "Demonstrate individual contributions and team accountability.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Contribution record, peer or host review and individual reflection"
         },
         {
           "plo": "V3",
           "stage": "M",
-          "statement": "Review costs, project decisions, and future learning priorities."
+          "statement": "Review costs, project decisions, and future learning priorities.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Plan or decision record with cost, risk and learning rationale"
         }
       ],
       "profile": "capstone",
@@ -1717,7 +3689,17 @@ const curriculum = {
       "resource": null,
       "name": "Capstone Project II",
       "placement": "Semester 8",
-      "anchor": "cs-411"
+      "anchor": "cs-411",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Supervised capstone integration and evaluation lab",
+        "hardware": "Team workstations, isolated staging/deployment environment, test devices and approved project-specific compute/equipment.",
+        "software": "Approved project stack, Git, CI/CD, test automation, monitoring, backup/recovery tools and documentation software.",
+        "practice": "Integration, evaluation, tested release, handover and individual defense; capacity and any project licenses are recorded before implementation.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 370": {
       "id": "CS 370",
@@ -1748,27 +3730,70 @@ const curriculum = {
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain web and mobile architectures, API contracts, application state and platform constraints."
+          "statement": "Explain web and mobile architectures, API contracts, application state and platform constraints.",
+          "etecRefs": [],
+          "evidence": "Architecture and API examination",
+          "id": "CLO 1"
         },
         {
           "plo": "S2",
-          "stage": "M",
-          "statement": "Implement a web client and a cross-platform mobile client connected to a shared API and database-backed service."
+          "stage": "P",
+          "statement": "Implement an accessible responsive web client and a cross-platform mobile client connected to a shared service.",
+          "etecRefs": [],
+          "evidence": "Individual web and mobile practical",
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Build a validated API with database access, authentication and authorization.",
+          "etecRefs": [],
+          "evidence": "API implementation and authorization tests",
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Compare top-down, bottom-up and sandwich integration and choose an integration strategy for the application.",
+          "etecRefs": [
+            "SKU8.2-SLO6"
+          ],
+          "evidence": "Integration strategy and test sequence",
+          "id": "CLO 4"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Test and deploy an application and evaluate correctness, accessibility, security and operational behavior."
+          "statement": "Create and document unit, API and integration tests for a medium-sized code component.",
+          "etecRefs": [
+            "SKU8.2-SLO9"
+          ],
+          "evidence": "Test design, code and results",
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Deploy a tested release and evaluate logging, recovery, accessibility and operational behavior.",
+          "etecRefs": [],
+          "evidence": "Release and recovery demonstration",
+          "id": "CLO 6"
         },
         {
           "plo": "V1",
           "stage": "P",
-          "statement": "Justify privacy, authorization and responsible data-use choices in an application."
+          "statement": "Justify privacy, access and responsible data-use choices for the application.",
+          "etecRefs": [],
+          "evidence": "Application privacy and security review",
+          "id": "CLO 7"
         },
         {
           "plo": "V2",
           "stage": "P",
-          "statement": "Collaborate using version control and demonstrate and explain individual contributions."
+          "statement": "Collaborate with version control and demonstrate and explain individual contributions.",
+          "etecRefs": [],
+          "evidence": "Repository and individual defense",
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
@@ -1790,7 +3815,23 @@ const curriculum = {
         8,
         6,
         6
-      ]
+      ],
+      "etecTopics": [
+        "SKU8.2-T2",
+        "SKU8.2-T3"
+      ],
+      "etecSLOs": [
+        "SKU8.2-SLO6",
+        "SKU8.2-SLO9"
+      ],
+      "facilities": {
+        "lab": "Web and mobile application laboratory",
+        "hardware": "Standard workstations; mobile emulator and shared Android devices; isolated deployment/test server.",
+        "software": "Node.js, TypeScript, a supported web framework, Expo/React Native or equivalent cross-platform SDK, Android emulator, PostgreSQL, Git and automated API/UI test tools.",
+        "practice": "Shared web/mobile API project, authentication, accessibility, integration tests, deployment and recovery demonstrations.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 430": {
       "id": "CS 430",
@@ -1819,22 +3860,50 @@ const curriculum = {
         {
           "plo": "K3",
           "stage": "M",
-          "statement": "Explain the assumptions and limitations of representative learning methods."
+          "statement": "Explain the assumptions and limitations of representative learning methods.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied design explanation"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Train and compare models using a reproducible workflow."
+          "statement": "Train and compare models using a reproducible workflow.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Evaluate generalization and report uncertainty and failure cases."
+          "statement": "Evaluate generalization and report uncertainty and failure cases.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "M",
-          "statement": "Assess subgroup performance and privacy risks, and justify limits and safeguards for deployment."
+          "statement": "Assess subgroup performance and privacy risks, and justify limits and safeguards for deployment.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Prepare a dataset and justify baselines, train-validation-test separation and model-selection criteria.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Communicate model evidence, failure cases and deployment limits to an affected stakeholder.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "lab",
@@ -1843,7 +3912,17 @@ const curriculum = {
       "resource": null,
       "name": "Machine Learning",
       "placement": "Semester 8",
-      "anchor": "cs-430"
+      "anchor": "cs-430",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Machine-learning experimentation laboratory",
+        "hardware": "Standard workstation and shared accelerator server or scheduled GPU notebooks for neural-network exercises; approved dataset storage.",
+        "software": "Python, Jupyter, NumPy, pandas, scikit-learn, PyTorch or an equivalent framework, Git and experiment tracking.",
+        "practice": "Train/validation/test workflows, generalization and subgroup evaluation, privacy and model limitations.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "EL-2": {
       "id": "EL-2",
@@ -1913,17 +3992,50 @@ const curriculum = {
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain pipeline architecture and data quality controls."
+          "statement": "Explain pipeline architecture and data quality controls.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied design explanation"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build a tested data pipeline for an applied workload."
+          "statement": "Build a tested data pipeline for an applied workload.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Evaluate pipeline reliability and throughput."
+          "statement": "Evaluate pipeline reliability and throughput.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Choose batch or streaming architecture for stated latency and governance needs.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement schema, quality and lineage checks in an orchestrated data workflow.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify data-access, retention and privacy controls for a pipeline.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "lab",
@@ -1932,7 +4044,17 @@ const curriculum = {
       "resource": null,
       "name": "Data Engineering",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-451"
+      "anchor": "cs-451",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Data-engineering lab",
+        "hardware": "Workstations plus shared multi-container services or equivalent remote processing environment.",
+        "software": "Python, PostgreSQL, Apache Spark, an orchestrator such as Airflow, Kafka or equivalent streaming tool, Git and containers.",
+        "practice": "Batch/stream pipelines, data quality, lineage, schema tests, observability and throughput measurements.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 452": {
       "id": "CS 452",
@@ -1960,17 +4082,50 @@ const curriculum = {
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Formulate a measurable analytic question."
+          "statement": "Formulate a measurable analytic question.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Analyze data and explain uncertainty and possible bias."
+          "statement": "Analyze data and explain uncertainty and possible bias.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "S3",
           "stage": "M",
-          "statement": "Deliver an evidence-based decision brief."
+          "statement": "Deliver an evidence-based decision brief.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Clean and transform a dataset and retain an auditable preparation record.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Compare alternative analyses and evaluate the effect of missing data and selection bias.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify lawful, privacy-aware and proportionate use of the data.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "project",
@@ -1979,7 +4134,17 @@ const curriculum = {
       "resource": null,
       "name": "Applied Data Analytics",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-452"
+      "anchor": "cs-452",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Data analytics laboratory",
+        "hardware": "Standard workstation, curated datasets and controlled data storage.",
+        "software": "Python/R, Jupyter, pandas, SciPy or statsmodels, visualization libraries and Git.",
+        "practice": "Cleaning, exploratory analysis, statistical comparisons, reproducible visual reports and stakeholder briefs.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 453": {
       "id": "CS 453",
@@ -2008,22 +4173,50 @@ const curriculum = {
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain how EHR data models and interoperability rules support a clinical workflow."
+          "statement": "Explain how EHR data models and interoperability rules support a clinical workflow.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied design explanation"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build and test a FHIR-based prototype with a synthetic health dataset."
+          "statement": "Build and test a FHIR-based prototype with a synthetic health dataset.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Evaluate data quality and workflow usability using defined measures."
+          "statement": "Evaluate data quality and workflow usability using defined measures.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "M",
-          "statement": "Justify privacy, access, and patient-safety safeguards for the prototype."
+          "statement": "Justify privacy, access, and patient-safety safeguards for the prototype.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Map a clinical workflow to EHR data elements and identify interoperability and patient-safety risks.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Demonstrate a synthetic-data health prototype and explain its clinical and technical limitations.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "project",
@@ -2032,7 +4225,17 @@ const curriculum = {
       "resource": "HL7 FHIR specification, the Saudi NPHIES FHIR implementation guide, and synthetic health records for classroom use.",
       "name": "Health Informatics",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-453"
+      "anchor": "cs-453",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Health interoperability teaching sandbox",
+        "hardware": "Standard workstation, local/isolated FHIR server and synthetic clinical datasets; clinical-workflow review access through an agreed hospital liaison.",
+        "software": "HAPI FHIR or equivalent test server, HL7 FHIR validator, Python or Java, REST client, Git and data-analysis tools.",
+        "practice": "FHIR resource mapping, validation, access-control checks and workflow evaluation; synthetic data supports all required assessments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 454": {
       "id": "CS 454",
@@ -2060,17 +4263,50 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Deliver a validated prototype against user and business requirements."
+          "statement": "Deliver a validated prototype against user and business requirements.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S3",
           "stage": "M",
-          "statement": "Defend trade-offs to technical and business audiences."
+          "statement": "Defend trade-offs to technical and business audiences.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "V3",
           "stage": "P",
-          "statement": "Use evidence and cost to prioritize product work."
+          "statement": "Use evidence and cost to prioritize product work.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Plan or decision record with cost, risk and learning rationale"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Formulate a product hypothesis using user research and measurable success criteria.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Design and analyze a prototype experiment and justify an iteration decision.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Evaluate accessibility, privacy and sustainability risks in a proposed product.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "project",
@@ -2079,7 +4315,17 @@ const curriculum = {
       "resource": null,
       "name": "Digital Product Engineering",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-454"
+      "anchor": "cs-454",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Digital product prototyping studio",
+        "hardware": "Team workstations, shared mobile devices and user-feedback space.",
+        "software": "Penpot/Figma, web/mobile development stack, Git, analytics test harness and spreadsheet tools.",
+        "practice": "Discovery, prototype experiments, product metrics, accessibility and product-economics comparisons.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 455": {
       "id": "CS 455",
@@ -2107,17 +4353,50 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "M",
-          "statement": "Explain distributed service trade-offs."
+          "statement": "Explain distributed service trade-offs.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and system analysis"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build and test a cloud application under stated constraints."
+          "statement": "Build and test a cloud application under stated constraints.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Measure resilience, cost, and performance."
+          "statement": "Measure resilience, cost, and performance.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Select consistency, messaging and storage approaches for a distributed workload.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement infrastructure configuration, monitoring and a tested recovery procedure.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify cloud access, data-protection and resource-budget controls.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "lab",
@@ -2126,7 +4405,17 @@ const curriculum = {
       "resource": null,
       "name": "Cloud and Distributed Applications",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-455"
+      "anchor": "cs-455",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Cloud and distributed application sandbox",
+        "hardware": "Virtualization-capable machines or allocated cloud education accounts with bounded quotas and teardown controls.",
+        "software": "Docker/Podman, a local Kubernetes environment, OpenTofu or equivalent IaC tool, messaging, monitoring, Git and CI.",
+        "practice": "Deployment, resilience, scaling, resource-cost measurement and tested recovery.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 456": {
       "id": "CS 456",
@@ -2154,17 +4443,50 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build software with verifiable defensive controls."
+          "statement": "Build software with verifiable defensive controls.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Evaluate control effectiveness using a safe verification plan."
+          "statement": "Evaluate control effectiveness using a safe verification plan.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "M",
-          "statement": "Justify controls in light of user, organizational, and professional obligations."
+          "statement": "Justify controls in light of user, organizational, and professional obligations.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Derive security requirements from assets, threat models and misuse cases.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Apply dependency, code-review and automated security checks to a controlled development pipeline.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Present a security assurance argument with residual risks and remediation priorities.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "project",
@@ -2173,7 +4495,17 @@ const curriculum = {
       "resource": null,
       "name": "Secure Software Engineering",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-456"
+      "anchor": "cs-456",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Secure software assurance lab",
+        "hardware": "Isolated application test environment and resettable containers or VMs.",
+        "software": "Git, CI runner, OWASP ZAP, dependency and secret scanners, static analysis and automated test tools.",
+        "practice": "Threat models, secure implementation, code/dependency checks and a documented assurance case.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 457": {
       "id": "CS 457",
@@ -2201,17 +4533,50 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain how distributed consensus and ledger validation work."
+          "statement": "Explain how distributed consensus and ledger validation work.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and system analysis"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build and test a contract or ledger application in a local sandbox."
+          "statement": "Build and test a contract or ledger application in a local sandbox.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "V1",
           "stage": "M",
-          "statement": "Justify the choice of a ledger architecture using security, privacy, and sustainability evidence."
+          "statement": "Justify the choice of a ledger architecture using security, privacy, and sustainability evidence.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Compare consensus, finality and scalability trade-offs for a specified ledger workload.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Evaluate contract correctness and failure cases using repeatable local tests.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Explain why a ledger is or is not appropriate for an application and document its limitations.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "project",
@@ -2220,7 +4585,17 @@ const curriculum = {
       "resource": "Distributed-ledger protocol documentation, a local ledger simulator, and instructor-provided contract test cases.",
       "name": "Blockchain and Cryptocurrencies",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-457"
+      "anchor": "cs-457",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Local distributed-ledger laboratory",
+        "hardware": "Standard workstation; private local blockchain network and test-only accounts.",
+        "software": "Solidity toolchain with Hardhat or Foundry, local Ethereum-compatible node, Git and contract-test tools.",
+        "practice": "Consensus/ledger demonstrations, smart-contract tests and failure/security cases using local test assets.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 458": {
       "id": "CS 458",
@@ -2248,17 +4623,50 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain the interaction of sensing, planning, and control in a robot."
+          "statement": "Explain the interaction of sensing, planning, and control in a robot.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and system analysis"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Integrate a navigation stack for a simulated mobile robot."
+          "statement": "Integrate a navigation stack for a simulated mobile robot.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Compare navigation performance across controlled scenarios."
+          "statement": "Compare navigation performance across controlled scenarios.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Model coordinate frames, kinematics and sensing assumptions for a mobile robot.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement localization, planning and feedback components in a simulation.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Assess failure modes and justify safe operating constraints and human oversight.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "lab",
@@ -2267,7 +4675,17 @@ const curriculum = {
       "resource": "A robotics simulator, sample maps and sensor recordings, and an accessible computing laboratory.",
       "name": "Robotics and Autonomous Systems",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-458"
+      "anchor": "cs-458",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Robotics simulation and integration lab",
+        "hardware": "Graphics-capable workstations; optional small mobile robots, sensors and controlled indoor test space.",
+        "software": "Supported ROS 2/Gazebo combination, Python/C++, navigation libraries, Git and simulation logging.",
+        "practice": "Localization, perception, planning and feedback integration; simulation provides the assessed baseline.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 459": {
       "id": "CS 459",
@@ -2295,17 +4713,50 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain how flight dynamics and sensing influence autonomous navigation."
+          "statement": "Explain how flight dynamics and sensing influence autonomous navigation.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and system analysis"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Develop and test a simulated inspection or survey mission."
+          "statement": "Develop and test a simulated inspection or survey mission.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Evaluate tracking, safety margins, and recovery from simulated failures."
+          "statement": "Evaluate tracking, safety margins, and recovery from simulated failures.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Plan a simulated mission using state estimates, trajectories and explicit operating constraints.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement telemetry, failure detection and a recovery behavior for a simulated aerial vehicle.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify privacy, safety and operational decisions using a mission risk assessment.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "lab",
@@ -2314,7 +4765,17 @@ const curriculum = {
       "resource": "A software flight simulator, synthetic telemetry, and instructor-provided inspection and survey scenarios.",
       "name": "Aerial Robotics and Drones",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-459"
+      "anchor": "cs-459",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Aerial robotics simulation laboratory",
+        "hardware": "Graphics-capable workstation and telemetry display; optional supervised indoor drone training enclosure and appropriate safety equipment.",
+        "software": "PX4 software-in-the-loop, Gazebo, QGroundControl and Python/MAVSDK or equivalent supported stack.",
+        "practice": "Simulated mission planning, control, telemetry, failure injection and recovery; required work can be completed in simulation.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 460": {
       "id": "CS 460",
@@ -2342,17 +4803,50 @@ const curriculum = {
         {
           "plo": "S1",
           "stage": "M",
-          "statement": "Select a defensible detection method and justify an evaluation metric."
+          "statement": "Select a defensible detection method and justify an evaluation metric.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Evaluate alerts and false positives using controlled security datasets."
+          "statement": "Evaluate alerts and false positives using controlled security datasets.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "M",
-          "statement": "Propose safeguards for an AI-assisted monitoring workflow."
+          "statement": "Propose safeguards for an AI-assisted monitoring workflow.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Build a reproducible defensive detection workflow with documented telemetry and data provenance.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Investigate drift, subgroup effects and model robustness under controlled changes.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Communicate alerts, uncertainty and escalation decisions to a human reviewer.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "lab",
@@ -2361,7 +4855,17 @@ const curriculum = {
       "resource": "Public or synthetic security logs, a supervised analysis environment, and instructor-provided AI assurance cases.",
       "name": "AI for Cybersecurity and AI Assurance",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-460"
+      "anchor": "cs-460",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "AI and defensive security analytics laboratory",
+        "hardware": "Isolated security datasets, standard workstations and scheduled accelerator access if needed.",
+        "software": "Python, Jupyter, pandas, scikit-learn/PyTorch, defensive log-analysis tools, Git and experiment tracking.",
+        "practice": "Defensive detection, drift/robustness studies, false-positive analysis and human-review workflows.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 461": {
       "id": "CS 461",
@@ -2388,17 +4892,50 @@ const curriculum = {
         {
           "plo": "S1",
           "stage": "M",
-          "statement": "Derive and justify an efficient algorithm for an unfamiliar problem."
+          "statement": "Derive and justify an efficient algorithm for an unfamiliar problem.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Implement and test a solution against edge cases and performance limits."
+          "statement": "Implement and test a solution against edge cases and performance limits.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "V2",
           "stage": "P",
-          "statement": "Review a teammate's solution and contribute to a timed team exercise."
+          "statement": "Review a teammate's solution and contribute to a timed team exercise.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Contribution record, peer or host review and individual reflection"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Compare dynamic programming, graph, string and number-theoretic approaches under resource limits.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Generate adversarial test cases and diagnose a wrong answer or timeout.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Explain a correctness proof and complexity argument after a timed programming exercise.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "lab",
@@ -2407,7 +4944,17 @@ const curriculum = {
       "resource": "An online judge or local judging system, curated public problem sets, and code review tools.",
       "name": "Competitive Programming",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-461"
+      "anchor": "cs-461",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Timed algorithm programming laboratory",
+        "hardware": "Standard workstations and isolated local contest/judge server or equivalent teaching service.",
+        "software": "Supported C++/Java/Python toolchains, DOMjudge or equivalent judge, generators, test harnesses and Git.",
+        "practice": "Timed individual/team problems, adversarial tests, complexity limits and solution review.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 462": {
       "id": "CS 462",
@@ -2435,17 +4982,50 @@ const curriculum = {
         {
           "plo": "K1",
           "stage": "M",
-          "statement": "Use linear algebra to reason about quantum states and circuits."
+          "statement": "Use linear algebra to reason about quantum states and circuits.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied explanation"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Implement and test a representative algorithm in a simulator."
+          "statement": "Implement and test a representative algorithm in a simulator.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Compare classical and quantum approaches and explain the limits of the comparison."
+          "statement": "Compare classical and quantum approaches and explain the limits of the comparison.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "K1",
+          "stage": "P",
+          "statement": "Calculate state transformations, entanglement and measurement probabilities in a small quantum circuit.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied explanation"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Analyze a representative search or Fourier-based quantum algorithm and its assumptions.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "V3",
+          "stage": "P",
+          "statement": "Critically assess a quantum-advantage claim using reproducible simulation evidence.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Plan or decision record with cost, risk and learning rationale"
         }
       ],
       "profile": "lab",
@@ -2454,7 +5034,17 @@ const curriculum = {
       "resource": "A quantum circuit simulator, linear-algebra exercises, and reproducible circuit notebooks.",
       "name": "Quantum Computing",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-462"
+      "anchor": "cs-462",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Quantum simulation laboratory",
+        "hardware": "Standard workstation; small-circuit local simulation, with optional allocated cloud quantum access.",
+        "software": "Python, Qiskit and Aer or an equivalent quantum-circuit simulator, Jupyter, NumPy and Git.",
+        "practice": "State/circuit calculations, noise experiments and classical/quantum comparisons; physical quantum hardware is not required.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 463": {
       "id": "CS 463",
@@ -2482,17 +5072,50 @@ const curriculum = {
         {
           "plo": "K2",
           "stage": "P",
-          "statement": "Explain the role of device, edge, and cloud components."
+          "statement": "Explain the role of device, edge, and cloud components.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and system analysis"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Develop and test a networked sensor prototype."
+          "statement": "Develop and test a networked sensor prototype.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Evaluate latency, resource use, and reliability across deployment choices."
+          "statement": "Evaluate latency, resource use, and reliability across deployment choices.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement sensor acquisition, edge processing and a resilient messaging path.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Select a device-edge-cloud partition using latency, energy and connectivity constraints.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify device identity, update, access and privacy controls for the prototype.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "project",
@@ -2501,7 +5124,17 @@ const curriculum = {
       "resource": "Simulated or teaching-board sensors, a local messaging broker, and an accessible computing laboratory.",
       "name": "Internet of Things and Edge Computing",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-463"
+      "anchor": "cs-463",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "IoT and edge-computing laboratory",
+        "hardware": "Per-team microcontroller/sensor kit such as ESP32, safe low-voltage supplies, edge gateway such as Raspberry Pi, and isolated Wi-Fi; accessible simulator alternative.",
+        "software": "Arduino IDE or PlatformIO, MQTT/Mosquitto, Python, Node-RED, containers and logging tools.",
+        "practice": "Sensor-edge-cloud prototype, intermittent connectivity, latency/energy measurements and device security.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 464": {
       "id": "CS 464",
@@ -2529,17 +5162,50 @@ const curriculum = {
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain the components and limitations of a language model."
+          "statement": "Explain the components and limitations of a language model.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied design explanation"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build a retrieval-grounded application with repeatable tests."
+          "statement": "Build a retrieval-grounded application with repeatable tests.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "V1",
           "stage": "M",
-          "statement": "Justify safeguards and document limitations using evaluation evidence."
+          "statement": "Justify safeguards and document limitations using evaluation evidence.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Select a model, adaptation approach and retrieval strategy for a defined task and resource budget.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Measure factuality, retrieval quality, bias and robustness using a documented test set.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Present a reproducible model and application evaluation with costs, failure cases and human-review requirements.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "project",
@@ -2548,7 +5214,17 @@ const curriculum = {
       "resource": "Small language models, public or synthetic text collections, and evaluation notebooks that can run in a teaching lab.",
       "name": "Generative AI and Large Language Models",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-464"
+      "anchor": "cs-464",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Generative AI and retrieval laboratory",
+        "hardware": "Standard workstations with allocated shared GPU or approved hosted inference quota, local vector storage and curated datasets.",
+        "software": "Python, PyTorch/Transformers or equivalent supported model stack, embedding/vector-index libraries, Git and evaluation harness.",
+        "practice": "Retrieval-grounded applications, repeatable evaluation, cost measurement, privacy and human-oversight checks.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "ENG 101": {
       "id": "ENG 101",
@@ -2556,7 +5232,7 @@ const curriculum = {
       "title": "Technical English for Computing",
       "term": 1,
       "credits": 3,
-      "category": "college",
+      "category": "department",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [],
@@ -2573,22 +5249,50 @@ const curriculum = {
         {
           "plo": "S3",
           "stage": "I",
-          "statement": "Explain the main ideas and instructions in an introductory computing text using accurate technical vocabulary."
+          "statement": "Explain the main ideas and instructions in an introductory computing text using accurate technical vocabulary.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "S3",
           "stage": "I",
-          "statement": "Follow a short technical explanation and ask relevant clarification questions."
+          "statement": "Follow a short technical explanation and ask relevant clarification questions.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "S3",
           "stage": "I",
-          "statement": "Write a coherent explanation of a computing process and present it in clear spoken English."
+          "statement": "Write a coherent explanation of a computing process and present it in clear spoken English.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "V3",
           "stage": "I",
-          "statement": "Use feedback and a vocabulary learning record to improve independent language learning."
+          "statement": "Use feedback and a vocabulary learning record to improve independent language learning.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Plan or decision record with cost, risk and learning rationale"
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Define and use computing vocabulary accurately in descriptions, comparisons and instructions.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
+        },
+        {
+          "plo": "S3",
+          "stage": "I",
+          "statement": "Interpret a technical diagram, error message or documentation extract and write a clear explanation.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         }
       ],
       "profile": "project",
@@ -2597,7 +5301,17 @@ const curriculum = {
       "resource": "Computing documentation, recorded introductory explanations, and a diagnostic vocabulary portfolio.",
       "name": "Technical English for Computing",
       "placement": "Semester 1",
-      "anchor": "eng-101"
+      "anchor": "eng-101",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Language classroom and shared language workspace",
+        "hardware": "Headsets and microphones, audio playback and individual recording capability; no specialist computing hardware required.",
+        "software": "Browser, LMS, word processor, presentation and audio-recording software; computing documentation and learner dictionaries.",
+        "practice": "Reading technical documentation, listening and note-taking, vocabulary records and recorded computing explanations.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "BIO 101": {
       "id": "BIO 101",
@@ -2605,7 +5319,7 @@ const curriculum = {
       "title": "Biology for Digital Health with Laboratory",
       "term": 2,
       "credits": 4,
-      "category": "college",
+      "category": "department",
       "lecture": 3,
       "practical": 2,
       "prerequisites": [],
@@ -2622,22 +5336,50 @@ const curriculum = {
         {
           "plo": "S4",
           "stage": "I",
-          "statement": "Use cellular processes and homeostasis to explain a testable biological model and its predicted measurements."
+          "statement": "Use cellular processes and homeostasis to explain a testable biological model and its predicted measurements.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "S4",
           "stage": "I",
-          "statement": "Formulate a testable biological hypothesis and conduct a controlled experiment with safe procedures."
+          "statement": "Formulate a testable biological hypothesis and conduct a controlled experiment with safe procedures.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Interpret biological measurements, uncertainty, and limitations using a reproducible laboratory report."
+          "statement": "Interpret biological measurements, uncertainty, and limitations using a reproducible laboratory report.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V1",
           "stage": "I",
-          "statement": "Apply laboratory safety, research integrity, and responsible handling of biological materials."
+          "statement": "Apply laboratory safety, research integrity, and responsible handling of biological materials.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "K1",
+          "stage": "I",
+          "statement": "Explain how cells, biological molecules, genetics and organ systems contribute to homeostasis.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied explanation"
+        },
+        {
+          "plo": "S4",
+          "stage": "I",
+          "statement": "Use microscopy or physiological measurements to compare observations with a biological prediction.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         }
       ],
       "profile": "lab",
@@ -2646,7 +5388,17 @@ const curriculum = {
       "resource": "Supervised microscopy, osmosis and enzyme experiments, biological models, a laboratory manual, and safe physiological measurements.",
       "name": "Biology for Digital Health with Laboratory",
       "placement": "Semester 2",
-      "anchor": "bio-101"
+      "anchor": "bio-101",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Supervised introductory biology teaching laboratory",
+        "hardware": "Microscopes, prepared slides, pipettes, balances, pH meters, water baths, basic spectrophotometer access and non-invasive physiological sensors; PPE, washing, waste-handling and safe storage facilities.",
+        "software": "Spreadsheet or Python/Jupyter data analysis; image-analysis software such as ImageJ.",
+        "practice": "Microscopy, osmosis, enzyme or safe biological-response investigations and quantitative physiological observation.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 360": {
       "id": "CS 360",
@@ -2675,27 +5427,50 @@ const curriculum = {
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Formulate a focused computing research question supported by a critical synthesis of relevant literature."
+          "statement": "Formulate a focused computing research question supported by a critical synthesis of relevant literature.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Design and conduct a feasible pilot study with suitable baselines, measures, and reproducible artifacts."
+          "statement": "Design and conduct a feasible pilot study with suitable baselines, measures, and reproducible artifacts.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Interpret results and limitations with appropriate statistical reasoning and validity analysis."
+          "statement": "Interpret results and limitations with appropriate statistical reasoning and validity analysis.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "S3",
           "stage": "P",
-          "statement": "Present a research proposal and report and defend methodological choices."
+          "statement": "Present a research proposal and report and defend methodological choices.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Assessed report or presentation and individual responses"
         },
         {
           "plo": "V1",
           "stage": "P",
-          "statement": "Apply research integrity, ethical participant handling, source attribution, and transparent AI disclosure."
+          "statement": "Apply research integrity, ethical participant handling, source attribution, and transparent AI disclosure.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
+        },
+        {
+          "plo": "V3",
+          "stage": "P",
+          "statement": "Prepare a feasible research schedule and data-management plan and identify further methodological learning needs.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Plan or decision record with cost, risk and learning rationale"
         }
       ],
       "profile": "project",
@@ -2704,7 +5479,17 @@ const curriculum = {
       "resource": "ACM Digital Library and IEEE Xplore access, Zotero, a version-controlled experiment repository, and a research ethics protocol.",
       "name": "Research Methods in Computing",
       "placement": "Semester 5",
-      "anchor": "cs-360"
+      "anchor": "cs-360",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Computing research methods workspace",
+        "hardware": "Individual computers, scholarly database access and controlled storage for research artifacts.",
+        "software": "Zotero or equivalent reference manager, Python/R, Jupyter, Git, survey tool and word-processing or LaTeX tools.",
+        "practice": "Literature synthesis, pilot investigations, experimental logs, analysis and reproducible proposals/reports.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "MATH 340": {
       "id": "MATH 340",
@@ -2712,7 +5497,7 @@ const curriculum = {
       "title": "Numerical Methods",
       "term": 7,
       "credits": 3,
-      "category": "college",
+      "category": "department",
       "lecture": 3,
       "practical": 0,
       "prerequisites": [
@@ -2733,17 +5518,50 @@ const curriculum = {
         {
           "plo": "K1",
           "stage": "P",
-          "statement": "Explain convergence, stability, and error in representative numerical methods."
+          "statement": "Explain convergence, stability, and error in representative numerical methods.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied explanation"
         },
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Select and analyze a numerical method for a mathematical model."
+          "statement": "Select and analyze a numerical method for a mathematical model.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Compare numerical results with an analytical solution or convergence study and interpret limitations."
+          "statement": "Compare numerical results with an analytical solution or convergence study and interpret limitations.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement root-finding and linear-system methods with justified stopping criteria.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Derive an interpolation or approximation method and estimate its error.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Compute numerical derivatives, integrals and a simple initial-value solution and check convergence.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         }
       ],
       "profile": "lecture",
@@ -2752,7 +5570,17 @@ const curriculum = {
       "resource": "Instructor-supplied mathematical problem sets and Python or MATLAB demonstrations with error and convergence analyses.",
       "name": "Numerical Methods",
       "placement": "Semester 7",
-      "anchor": "math-340"
+      "anchor": "math-340",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Numerical computing workspace",
+        "hardware": "Standard workstation; local or hosted notebooks with saved environment files.",
+        "software": "Python, Jupyter, NumPy, SciPy and Matplotlib, or GNU Octave.",
+        "practice": "Root finding, numerical linear algebra, approximation, integration, ODE and convergence studies.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     },
     "CS 465": {
       "id": "CS 465",
@@ -2779,22 +5607,50 @@ const curriculum = {
         {
           "plo": "K3",
           "stage": "P",
-          "statement": "Explain the foundations and limitations of the announced computing topic."
+          "statement": "Explain the foundations and limitations of the announced computing topic.",
+          "id": "CLO 1",
+          "etecRefs": [],
+          "evidence": "Individual conceptual examination and applied design explanation"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build a prototype or experimental artifact that applies the topic to a defined problem."
+          "statement": "Build a prototype or experimental artifact that applies the topic to a defined problem.",
+          "id": "CLO 2",
+          "etecRefs": [],
+          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Evaluate the artifact against a suitable baseline and report reproducible evidence."
+          "statement": "Evaluate the artifact against a suitable baseline and report reproducible evidence.",
+          "id": "CLO 3",
+          "etecRefs": [],
+          "evidence": "Reproducible investigation, results and limitations report"
         },
         {
           "plo": "V3",
           "stage": "P",
-          "statement": "Identify learning needs and critically assess an emerging technology using reliable sources."
+          "statement": "Identify learning needs and critically assess an emerging technology using reliable sources.",
+          "id": "CLO 4",
+          "etecRefs": [],
+          "evidence": "Plan or decision record with cost, risk and learning rationale"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Formulate a focused problem and select a defensible baseline for the announced topic.",
+          "id": "CLO 5",
+          "etecRefs": [],
+          "evidence": "Individual problem analysis, model and justified method selection"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Assess ethical, privacy, security and societal implications of the proposed application.",
+          "id": "CLO 6",
+          "etecRefs": [],
+          "evidence": "Professional or ethical decision case with justified safeguards"
         }
       ],
       "profile": "project",
@@ -2803,7 +5659,17 @@ const curriculum = {
       "resource": "Topic-specific textbook, recent peer-reviewed papers, official documentation, and a reproducible project environment.",
       "name": "Selected Topics",
       "placement": "Semester 8 technical elective",
-      "anchor": "cs-465"
+      "anchor": "cs-465",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Topic-specific computing laboratory",
+        "hardware": "Baseline workstations; any accelerator, device or dataset needs specified in the offering plan before registration.",
+        "software": "The course leader publishes a supported toolchain, licenses/access arrangements, datasets and baseline tests for the announced topic.",
+        "practice": "The approved offering brief maps the six CLOs to topic-specific lab exercises, resource capacity and an assessed prototype or investigation.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      }
     }
   },
   "textbooks": {
@@ -2872,11 +5738,7 @@ const curriculum = {
       "citation": "Carlos Coronel and Steven Morris · Cengage · 15th ed. · © 2027 (released 2026)",
       "url": "https://www.cengage.com/c/new-edition/9798214410241/"
     },
-    "ISLM 101": {
-      "title": "Islamic Ethics: Fundamental Aspects of Human Conduct",
-      "citation": "Abdulaziz Sachedina · Oxford University Press · 1st ed. · 2022",
-      "url": "https://academic.oup.com/book/43872"
-    },
+    "ISLM 101": null,
     "CS 220": {
       "title": "Introduction to Algorithms",
       "citation": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, and Clifford Stein · MIT Press · 4th ed. · 2022",
@@ -4481,7 +7343,7 @@ const curriculum = {
     {
       "course": "CS 103",
       "title": "Discrete Structures and content-based credit classification",
-      "decision": "The plural title describes logic, sets, relations, proof, counting, graphs and trees, follows ETEC terminology, and has a national benchmark in KFUPM ICS 253. The CS code identifies the teaching discipline. The three credits remain in mathematics/statistics and the college requirements, with no double counting in the CS core.",
+      "decision": "The plural title describes logic, sets, relations, proof, counting, graphs and trees, follows ETEC terminology, and has a national benchmark in KFUPM ICS 253. The CS code identifies the teaching discipline. The three credits remain in mathematics/statistics and the Department Requirements, with no double counting in the CS core.",
       "sources": [
         {
           "label": "ETEC GKU 3 Discrete Structures",
@@ -4585,6 +7447,2194 @@ const curriculum = {
     ],
     "etecMappedCsCredits": 44,
     "approvedReview": "Web/mobile implementation, computing foundations, digital logic, advanced programming and discrete structures approved for incorporation 19 November 2026.",
-    "creditClassificationNote": "CS 103 Discrete Structures contributes three credits to mathematics/statistics and is excluded from the 61-credit required CS core."
-  }
+    "creditClassificationNote": "CS 103 Discrete Structures contributes three credits to mathematics/statistics and is excluded from the 61-credit required CS core.",
+    "etecReview": "2026-11-23"
+  },
+  "etecStandard": {
+    "title": "Academic Standards for Computer Science Programs",
+    "year": 2025,
+    "version": "2.1",
+    "url": "https://f.etec.gov.sa/j/Computer_Science.pdf",
+    "units": [
+      {
+        "id": "EKU.1",
+        "title": "Essential Knowledge Unit (EKU.1): Mathematics and Statistics",
+        "page": 9,
+        "topics": [
+          {
+            "id": "EKU.1-T1",
+            "text": "Discrete Mathematics",
+            "courses": [
+              "CS 103"
+            ]
+          },
+          {
+            "id": "EKU.1-T2",
+            "text": "Calculus",
+            "courses": [
+              "MATH 101",
+              "MATH 230"
+            ]
+          },
+          {
+            "id": "EKU.1-T3",
+            "text": "Linear Algebra",
+            "courses": [
+              "MATH 120"
+            ]
+          },
+          {
+            "id": "EKU.1-T4",
+            "text": "Probability Theory",
+            "courses": [
+              "STAT 220"
+            ]
+          },
+          {
+            "id": "EKU.1-T5",
+            "text": "Statistical Inference and Modeling",
+            "courses": [
+              "STAT 220"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "EKU.1-SLO1",
+            "number": 1,
+            "text": "Analyze discrete mathematical structures to solve computing-related problems.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 1",
+                "evidence": "Set and relation modeling problems"
+              }
+            ]
+          },
+          {
+            "id": "EKU.1-SLO2",
+            "number": 2,
+            "text": "Apply logic and proof techniques to validate the correctness of algorithms",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 4",
+                "evidence": "Proof portfolio and algorithm-correctness proof"
+              }
+            ]
+          },
+          {
+            "id": "EKU.1-SLO3",
+            "number": 3,
+            "text": "Analyze the properties of infinite series expansions related to function approximation.",
+            "coverage": [
+              {
+                "course": "MATH 101",
+                "clo": "CLO 5",
+                "evidence": "Series convergence and approximation assignment"
+              }
+            ]
+          },
+          {
+            "id": "EKU.1-SLO4",
+            "number": 4,
+            "text": "Calculate partial derivatives and use optimization methods for gradient- based learning.",
+            "coverage": [
+              {
+                "course": "MATH 230",
+                "clo": "CLO 5",
+                "evidence": "Gradient-descent notebook and derivative check"
+              }
+            ]
+          },
+          {
+            "id": "EKU.1-SLO5",
+            "number": 5,
+            "text": "Perform matrix operations and solve systems of linear equations.",
+            "coverage": [
+              {
+                "course": "MATH 120",
+                "clo": "CLO 2",
+                "evidence": "Matrix and linear-system examination"
+              }
+            ]
+          },
+          {
+            "id": "EKU.1-SLO6",
+            "number": 6,
+            "text": "Apply counting techniques to compute probabilities for discrete scenarios.",
+            "coverage": [
+              {
+                "course": "STAT 220",
+                "clo": "CLO 2",
+                "evidence": "Combinatorial probability problems"
+              }
+            ]
+          },
+          {
+            "id": "EKU.1-SLO7",
+            "number": 7,
+            "text": "Formulate probabilistic models for solving problems involving uncertainty and dependence.",
+            "coverage": [
+              {
+                "course": "STAT 220",
+                "clo": "CLO 5",
+                "evidence": "Graph and dependency modeling investigation"
+              }
+            ]
+          },
+          {
+            "id": "EKU.1-SLO8",
+            "number": 8,
+            "text": "Apply hypothesis testing and confidence intervals to draw rigorous inferences about data populations.",
+            "coverage": [
+              {
+                "course": "STAT 220",
+                "clo": "CLO 6",
+                "evidence": "Individual inference report"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU1.1",
+        "title": "Specific Knowledge Unit (SKU) 1.1: Basic analysis and algorithmic methods",
+        "page": 11,
+        "topics": [
+          {
+            "id": "SKU1.1-T1",
+            "text": "Algorithm performance and complexity analysis.",
+            "courses": [
+              "CS 220"
+            ]
+          },
+          {
+            "id": "SKU1.1-T2",
+            "text": "Algorithm design techniques.",
+            "courses": [
+              "CS 220"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU1.1-SLO1",
+            "number": 1,
+            "text": "Explain the case behaviors of an algorithm.",
+            "coverage": [
+              {
+                "course": "CS 220",
+                "clo": "CLO 1",
+                "evidence": "Algorithm analysis examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.1-SLO2",
+            "number": 2,
+            "text": "Use big O notation to determine the complexity of algorithms.",
+            "coverage": [
+              {
+                "course": "CS 220",
+                "clo": "CLO 1",
+                "evidence": "Algorithm analysis examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.1-SLO3",
+            "number": 3,
+            "text": "Contrast standard complexity classes.",
+            "coverage": [
+              {
+                "course": "CS 220",
+                "clo": "CLO 2",
+                "evidence": "Complexity and selection argument"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.1-SLO4",
+            "number": 4,
+            "text": "Perform empirical studies to validate hypotheses about runtime and test algorithms with different input sizes to compare performance.",
+            "coverage": [
+              {
+                "course": "CS 220",
+                "clo": "CLO 7",
+                "evidence": "Reproducible benchmark report"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.1-SLO5",
+            "number": 5,
+            "text": "Use an algorithmic method (greedy, divide-and-conquer, recursive backtracking, dynamic programming, and heuristic approach) to solve an appropriate problem.",
+            "coverage": [
+              {
+                "course": "CS 220",
+                "clo": "CLO 5",
+                "evidence": "Comparative algorithm assignments"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.1-SLO6",
+            "number": 6,
+            "text": "Determine the appropriate algorithmic method to solve a problem.",
+            "coverage": [
+              {
+                "course": "CS 220",
+                "clo": "CLO 6",
+                "evidence": "Individual problem-solving defense"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.1-SLO7",
+            "number": 7,
+            "text": "Implement a divide-and-conquer algorithm for solving a problem.",
+            "coverage": [
+              {
+                "course": "CS 220",
+                "clo": "CLO 4",
+                "evidence": "Divide-and-conquer practical"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU1.2",
+        "title": "Specific Knowledge Unit (SKU) 1.2: Data structures, automata, and computability",
+        "page": 13,
+        "topics": [
+          {
+            "id": "SKU1.2-T1",
+            "text": "Algorithm design and efficiency.",
+            "courses": [
+              "CS 201",
+              "CS 220"
+            ]
+          },
+          {
+            "id": "SKU1.2-T2",
+            "text": "Data structure implementation.",
+            "courses": [
+              "CS 201"
+            ]
+          },
+          {
+            "id": "SKU1.2-T3",
+            "text": "Automata theory and formal languages.",
+            "courses": [
+              "CS 330"
+            ]
+          },
+          {
+            "id": "SKU1.2-T4",
+            "text": "Computational complexity.",
+            "courses": [
+              "CS 220",
+              "CS 330"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU1.2-SLO1",
+            "number": 1,
+            "text": "Implement basic numerical, search, and sorting algorithms.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 3",
+                "evidence": "Individual algorithm laboratory"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.2-SLO2",
+            "number": 2,
+            "text": "Discuss the runtime and memory efficiency of principal algorithms.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 2",
+                "evidence": "Justified workload analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.2-SLO3",
+            "number": 3,
+            "text": "Describe the implementation of hash tables.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 1",
+                "evidence": "Data-structure trace and hash-table explanation"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.2-SLO4",
+            "number": 4,
+            "text": "Solve problems using fundamental graph algorithms.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 6",
+                "evidence": "Graph implementation and isomorphism exercise"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.2-SLO5",
+            "number": 5,
+            "text": "Evaluate an algorithm, justify the selection, and apply the algorithm to a certain problem.",
+            "coverage": [
+              {
+                "course": "CS 220",
+                "clo": "CLO 2",
+                "evidence": "Complexity and selection argument"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.2-SLO6",
+            "number": 6,
+            "text": "Choose the appropriate data structure for modeling a given problem.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 2",
+                "evidence": "Justified workload analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.2-SLO7",
+            "number": 7,
+            "text": "Implement a string-matching algorithm.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 4",
+                "evidence": "String-matching practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU1.2-SLO8",
+            "number": 8,
+            "text": "Design a deterministic finite state automaton to accept a specified language.",
+            "coverage": [
+              {
+                "course": "CS 330",
+                "clo": "CLO 2",
+                "evidence": "DFA construction and acceptance tests"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU2.1",
+        "title": "Specific Knowledge Unit (SKU) 2.1: Digital logic and machine-level data representation",
+        "page": 14,
+        "topics": [
+          {
+            "id": "SKU2.1-T1",
+            "text": "Evolution and architecture of computing systems.",
+            "courses": [
+              "CS 101",
+              "CS 210",
+              "CS 401"
+            ]
+          },
+          {
+            "id": "SKU2.1-T2",
+            "text": "Logical and functional representations.",
+            "courses": [
+              "CS 210"
+            ]
+          },
+          {
+            "id": "SKU2.1-T3",
+            "text": "Data representation and manipulation.",
+            "courses": [
+              "CS 101",
+              "CS 201",
+              "CS 210"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU2.1-SLO1",
+            "number": 1,
+            "text": "Analyze the advancements across the five generations of computers and evaluate their impact on modern computing.",
+            "coverage": [
+              {
+                "course": "CS 101",
+                "clo": "CLO 1",
+                "evidence": "Individual computing-systems explanation"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.1-SLO2",
+            "number": 2,
+            "text": "Compare multi-core and single-core architectures and justify the benefits of multi-core systems for performance and scalability.",
+            "coverage": [
+              {
+                "course": "CS 401",
+                "clo": "CLO 1",
+                "evidence": "Architecture and scalability analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.1-SLO3",
+            "number": 3,
+            "text": "Design logical circuits using expressions and gates for optimized performance.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 3",
+                "evidence": "Gate-level circuit design and tests"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.1-SLO4",
+            "number": 4,
+            "text": "Design and prototype the basic building blocks of a computer: arithmetic-logic unit, registers, central processing unit, and memory.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 4",
+                "evidence": "Processor construction and verification dossier"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.1-SLO5",
+            "number": 5,
+            "text": "Evaluate the correctness and efficiency of a simple processor implemented at the logic circuit level.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 4",
+                "evidence": "Processor construction and verification dossier"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.1-SLO6",
+            "number": 6,
+            "text": "Convert and verify numerical data transformations across formats in practical scenarios.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 2",
+                "evidence": "Data-representation practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.1-SLO7",
+            "number": 7,
+            "text": "Develop algorithms to manipulate non-numeric data representations.",
+            "coverage": [
+              {
+                "course": "CS 101",
+                "clo": "CLO 4",
+                "evidence": "String and encoding implementation"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.1-SLO8",
+            "number": 8,
+            "text": "Evaluate records and arrays for efficient storage and retrieval.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 7",
+                "evidence": "Layout and retrieval benchmark"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU2.2",
+        "title": "Specific Knowledge Unit (SKU) 2.2: Machine organization at the assembly level",
+        "page": 16,
+        "topics": [
+          {
+            "id": "SKU2.2-T1",
+            "text": "Structure and functionality of computing systems.",
+            "courses": [
+              "CS 210"
+            ]
+          },
+          {
+            "id": "SKU2.2-T2",
+            "text": "Instruction representation and execution.",
+            "courses": [
+              "CS 210",
+              "CS 240",
+              "CS 401"
+            ]
+          },
+          {
+            "id": "SKU2.2-T3",
+            "text": "Interrupts, subroutines, and I/O management.",
+            "courses": [
+              "CS 210",
+              "CS 240"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU2.2-SLO1",
+            "number": 1,
+            "text": "Explain the organization and functionality of the von Neumann machine.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 1",
+                "evidence": "System organization examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.2-SLO2",
+            "number": 2,
+            "text": "Analyze the use of instruction-level parallelism and evaluate its impact on program execution efficiency.",
+            "coverage": [
+              {
+                "course": "CS 401",
+                "clo": "CLO 2",
+                "evidence": "Instruction scheduling and timing exercise"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.2-SLO3",
+            "number": 3,
+            "text": "Design machine and assembly-level instruction sequences to solve a given computational problem.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 5",
+                "evidence": "Individual assembly practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.2-SLO4",
+            "number": 4,
+            "text": "Evaluate the role of interrupts and I/O operations in ensuring efficient communication between hardware and software.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 7",
+                "evidence": "Bus comparison and interrupt simulation"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.2-SLO5",
+            "number": 5,
+            "text": "Write simple assembly language program segments with subroutine calls.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 5",
+                "evidence": "Individual assembly practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.2-SLO6",
+            "number": 6,
+            "text": "Show how high-level programs are implemented at the machine- language level.",
+            "coverage": [
+              {
+                "course": "CS 240",
+                "clo": "CLO 3",
+                "evidence": "Source-to-machine trace"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU2.3",
+        "title": "Specific Knowledge Unit (SKU) 2.3: Architecture of memory systems, interfacing, and communication",
+        "page": 17,
+        "topics": [
+          {
+            "id": "SKU2.3-T1",
+            "text": "Memory technologies, management, and performance.",
+            "courses": [
+              "CS 210",
+              "CS 310"
+            ]
+          },
+          {
+            "id": "SKU2.3-T2",
+            "text": "Virtual memory and system functionality.",
+            "courses": [
+              "CS 310"
+            ]
+          },
+          {
+            "id": "SKU2.3-T3",
+            "text": "Data transfers, buses, and storage devices.",
+            "courses": [
+              "CS 210",
+              "CS 310"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU2.3-SLO1",
+            "number": 1,
+            "text": "Evaluate memory technologies and management principles.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 6",
+                "evidence": "Cache and memory design investigation"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.3-SLO2",
+            "number": 2,
+            "text": "Analyze memory delay and propose strategies to improve runtime performance.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 6",
+                "evidence": "Cache and memory design investigation"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.3-SLO3",
+            "number": 3,
+            "text": "Design memory configurations to optimize average access time.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 6",
+                "evidence": "Cache and memory design investigation"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.3-SLO4",
+            "number": 4,
+            "text": "Simulate the functionality of a system using virtual memory management.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 6",
+                "evidence": "Memory-management simulator and report"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.3-SLO5",
+            "number": 5,
+            "text": "Implement data transfers and I/O control using interrupts in a simulation.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 7",
+                "evidence": "Bus comparison and interrupt simulation"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.3-SLO6",
+            "number": 6,
+            "text": "Justify the use of different bus types based on performance requirements.",
+            "coverage": [
+              {
+                "course": "CS 210",
+                "clo": "CLO 7",
+                "evidence": "Bus comparison and interrupt simulation"
+              }
+            ]
+          },
+          {
+            "id": "SKU2.3-SLO7",
+            "number": 7,
+            "text": "Evaluate the use of magnetic disk drives for efficient data access.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 7",
+                "evidence": "Storage-access experiment"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU3.1",
+        "title": "Specific Knowledge Unit (SKU) 3.1: Introductory logic, sets, relations, and functions",
+        "page": 18,
+        "topics": [
+          {
+            "id": "SKU3.1-T1",
+            "text": "Basics of sets, functions, relations, and their operations.",
+            "courses": [
+              "CS 103"
+            ]
+          },
+          {
+            "id": "SKU3.1-T2",
+            "text": "Propositional and predicate logic, conversion of informal statements, and symbolic methods.",
+            "courses": [
+              "CS 103"
+            ]
+          },
+          {
+            "id": "SKU3.1-T3",
+            "text": "Using inference rules for proofs in propositional and predicate logic.",
+            "courses": [
+              "CS 103"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU3.1-SLO1",
+            "number": 1,
+            "text": "Illustrate functions, relations, and sets with appropriate examples.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 1",
+                "evidence": "Set and relation modeling problems"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.1-SLO2",
+            "number": 2,
+            "text": "Apply the operations of sets, functions, and relations to solve problems.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 1",
+                "evidence": "Set and relation modeling problems"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.1-SLO3",
+            "number": 3,
+            "text": "Explain propositional and predicate logic concepts.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 2",
+                "evidence": "Logic translation examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.1-SLO4",
+            "number": 4,
+            "text": "Translate informal logical statements into predicate logic expressions.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 2",
+                "evidence": "Logic translation examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.1-SLO5",
+            "number": 5,
+            "text": "Employ methods of symbolic propositional and predicate logic to solve logical problems.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 3",
+                "evidence": "Formal derivation and scenario model"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.1-SLO6",
+            "number": 6,
+            "text": "Construct valid proofs in propositional and predicate logic using appropriate inference rules.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 3",
+                "evidence": "Formal derivation and scenario model"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.1-SLO7",
+            "number": 7,
+            "text": "Model real-life situations using symbolic logic to represent and analyze scenarios.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 3",
+                "evidence": "Formal derivation and scenario model"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU3.2",
+        "title": "Specific Knowledge Unit (SKU) 3.2: Proof techniques and basics of counting",
+        "page": 20,
+        "topics": [
+          {
+            "id": "SKU3.2-T1",
+            "text": "Proof techniques and induction.",
+            "courses": [
+              "CS 103",
+              "CS 220"
+            ]
+          },
+          {
+            "id": "SKU3.2-T2",
+            "text": "Counting and combinatorics.",
+            "courses": [
+              "CS 103"
+            ]
+          },
+          {
+            "id": "SKU3.2-T3",
+            "text": "Recurrence relations and modular arithmetic.",
+            "courses": [
+              "CS 103",
+              "CS 220"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU3.2-SLO1",
+            "number": 1,
+            "text": "Identify the proof technique used in a given proof (direct proof, proof by contradiction, and induction).",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 4",
+                "evidence": "Proof portfolio and algorithm-correctness proof"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.2-SLO2",
+            "number": 2,
+            "text": "Explain the relationship between weak and robust induction, and the well-ordering principle.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 4",
+                "evidence": "Proof portfolio and algorithm-correctness proof"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.2-SLO3",
+            "number": 3,
+            "text": "Apply counting arguments, including sum and product rules, inclusion- exclusion principle, and arithmetic/geometric progressions.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 5",
+                "evidence": "Counting problem set"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.2-SLO4",
+            "number": 4,
+            "text": "Use the pigeonhole principle effectively in formal proofs in discrete mathematics.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 6",
+                "evidence": "Pigeonhole proof and modular arithmetic test"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.2-SLO5",
+            "number": 5,
+            "text": "Compute permutations and combinations of a set.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 5",
+                "evidence": "Counting problem set"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.2-SLO6",
+            "number": 6,
+            "text": "Solve different fundamental recurrence relations.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 7",
+                "evidence": "Recurrence derivation"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.2-SLO7",
+            "number": 7,
+            "text": "Perform modular arithmetic-based computations.",
+            "coverage": [
+              {
+                "course": "CS 103",
+                "clo": "CLO 6",
+                "evidence": "Pigeonhole proof and modular arithmetic test"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU3.3",
+        "title": "Specific Knowledge Unit (SKU) 3.3: Graphs, trees, and discrete probability",
+        "page": 22,
+        "topics": [
+          {
+            "id": "SKU3.3-T1",
+            "text": "Graph theory and tree concepts.",
+            "courses": [
+              "CS 103",
+              "CS 201"
+            ]
+          },
+          {
+            "id": "SKU3.3-T2",
+            "text": "Probability and probability distributions.",
+            "courses": [
+              "STAT 220"
+            ]
+          },
+          {
+            "id": "SKU3.3-T3",
+            "text": "Bayesian probability.",
+            "courses": [
+              "STAT 220"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU3.3-SLO1",
+            "number": 1,
+            "text": "Recognize graph theory concepts, including types of graphs and trees, and traversal methods for trees and graphs.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 5",
+                "evidence": "Graph and tree examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.3-SLO2",
+            "number": 2,
+            "text": "Apply graph and tree structures to solve real-world computer science problems, including constructing spanning trees and identifying graph isomorphisms.",
+            "coverage": [
+              {
+                "course": "CS 201",
+                "clo": "CLO 6",
+                "evidence": "Graph implementation and isomorphism exercise"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.3-SLO3",
+            "number": 3,
+            "text": "Compute probabilities for basic events and apply Bayes' theorem to calculate conditional probabilities in relevant problems.",
+            "coverage": [
+              {
+                "course": "STAT 220",
+                "clo": "CLO 3",
+                "evidence": "Conditional-probability examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.3-SLO4",
+            "number": 4,
+            "text": "Distinguish between dependent and independent events, providing real- world examples to illustrate the differences.",
+            "coverage": [
+              {
+                "course": "STAT 220",
+                "clo": "CLO 3",
+                "evidence": "Conditional-probability examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.3-SLO5",
+            "number": 5,
+            "text": "Compute probabilities using binomial distributions, including calculating variance and its applications.",
+            "coverage": [
+              {
+                "course": "STAT 220",
+                "clo": "CLO 4",
+                "evidence": "Distribution modeling assignment"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.3-SLO6",
+            "number": 6,
+            "text": "Use probability tools and techniques to solve problems in a variety of contexts.",
+            "coverage": [
+              {
+                "course": "STAT 220",
+                "clo": "CLO 4",
+                "evidence": "Distribution modeling assignment"
+              }
+            ]
+          },
+          {
+            "id": "SKU3.3-SLO7",
+            "number": 7,
+            "text": "Evaluate real-world problems involving event dependencies and graph structures using graph theory and probability.",
+            "coverage": [
+              {
+                "course": "STAT 220",
+                "clo": "CLO 5",
+                "evidence": "Graph and dependency modeling investigation"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU4.1",
+        "title": "Specific Knowledge Unit (SKU) 4.1: Database systems and data modeling",
+        "page": 24,
+        "topics": [
+          {
+            "id": "SKU4.1-T1",
+            "text": "Database system components and functions.",
+            "courses": [
+              "CS 230"
+            ]
+          },
+          {
+            "id": "SKU4.1-T2",
+            "text": "Database models and data modeling techniques.",
+            "courses": [
+              "CS 230"
+            ]
+          },
+          {
+            "id": "SKU4.1-T3",
+            "text": "Relational data models and query languages for object-oriented database modeling.",
+            "courses": [
+              "CS 230"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU4.1-SLO1",
+            "number": 1,
+            "text": "Identify the core components of a database system, including the query optimizer, query executor, storage manager, access methods, and transaction processor, and their roles within the system.",
+            "coverage": [
+              {
+                "course": "CS 230",
+                "clo": "CLO 1",
+                "evidence": "DBMS component analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU4.1-SLO2",
+            "number": 2,
+            "text": "Discuss the functions and responsibilities of key DBMS components, such as data storage, query processing, and transaction management.",
+            "coverage": [
+              {
+                "course": "CS 230",
+                "clo": "CLO 1",
+                "evidence": "DBMS component analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU4.1-SLO3",
+            "number": 3,
+            "text": "Explain the principles of the relational data model, including basic concepts and the use of relational databases.",
+            "coverage": [
+              {
+                "course": "CS 230",
+                "clo": "CLO 2",
+                "evidence": "Relational-model examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU4.1-SLO4",
+            "number": 4,
+            "text": "Apply a declarative query language (e.g., SQL) to retrieve and manipulate data from a database, demonstrating an understanding of query formulation and execution.",
+            "coverage": [
+              {
+                "course": "CS 230",
+                "clo": "CLO 3",
+                "evidence": "Individual SQL practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU4.1-SLO5",
+            "number": 5,
+            "text": "Compare different data models (e.g., relational, object-oriented) and their internal structures, including their application to various data types.",
+            "coverage": [
+              {
+                "course": "CS 230",
+                "clo": "CLO 4",
+                "evidence": "Data-model comparison"
+              }
+            ]
+          },
+          {
+            "id": "SKU4.1-SLO6",
+            "number": 6,
+            "text": "Apply appropriate modeling notations, such as ERDs or UML, to design and describe database structures and relationships.",
+            "coverage": [
+              {
+                "course": "CS 230",
+                "clo": "CLO 5",
+                "evidence": "ER and UML design dossier"
+              }
+            ]
+          },
+          {
+            "id": "SKU4.1-SLO7",
+            "number": 7,
+            "text": "Apply the main concepts and principles of the object-oriented data model to design and implement database.",
+            "coverage": [
+              {
+                "course": "CS 230",
+                "clo": "CLO 6",
+                "evidence": "Persistent-object database mini-lab"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU5.1",
+        "title": "Specific Knowledge Unit (SKU) 5.1: Networking fundamentals and networked applications",
+        "page": 26,
+        "topics": [
+          {
+            "id": "SKU5.1-T1",
+            "text": "Organization and structure of networks.",
+            "courses": [
+              "CS 260"
+            ]
+          },
+          {
+            "id": "SKU5.1-T2",
+            "text": "Switching techniques and layering principles.",
+            "courses": [
+              "CS 260"
+            ]
+          },
+          {
+            "id": "SKU5.1-T3",
+            "text": "Physical components of networking.",
+            "courses": [
+              "CS 260"
+            ]
+          },
+          {
+            "id": "SKU5.1-T4",
+            "text": "Naming, addressing, resource location and flow control.",
+            "courses": [
+              "CS 260"
+            ]
+          },
+          {
+            "id": "SKU5.1-T5",
+            "text": "Distributed applications and communication interfaces.",
+            "courses": [
+              "CS 260"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU5.1-SLO1",
+            "number": 1,
+            "text": "Describe the organization and structure of the internet.",
+            "coverage": [
+              {
+                "course": "CS 260",
+                "clo": "CLO 1",
+                "evidence": "Network architecture examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU5.1-SLO2",
+            "number": 2,
+            "text": "List and define the appropriate network terminology.",
+            "coverage": [
+              {
+                "course": "CS 260",
+                "clo": "CLO 1",
+                "evidence": "Network architecture examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU5.1-SLO3",
+            "number": 3,
+            "text": "Assess different types of network complexity (e.g., edge, core).",
+            "coverage": [
+              {
+                "course": "CS 260",
+                "clo": "CLO 1",
+                "evidence": "Network architecture examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU5.1-SLO4",
+            "number": 4,
+            "text": "Explain the principles and roles of network layering.",
+            "coverage": [
+              {
+                "course": "CS 260",
+                "clo": "CLO 2",
+                "evidence": "Protocol-layer and switching analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU5.1-SLO5",
+            "number": 5,
+            "text": "Explain the basics of naming schemes and resource location.",
+            "coverage": [
+              {
+                "course": "CS 260",
+                "clo": "CLO 3",
+                "evidence": "Addressing and DNS practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU5.1-SLO6",
+            "number": 6,
+            "text": "Design and implement a client-server socket-based application to meet specific requirements.",
+            "coverage": [
+              {
+                "course": "CS 260",
+                "clo": "CLO 4",
+                "evidence": "Individual socket application"
+              }
+            ]
+          },
+          {
+            "id": "SKU5.1-SLO7",
+            "number": 7,
+            "text": "Develop and optimize a reliable protocol for efficient data delivery.",
+            "coverage": [
+              {
+                "course": "CS 260",
+                "clo": "CLO 5",
+                "evidence": "Reliable-protocol simulator and tests"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU6.1",
+        "title": "Specific Knowledge Unit (SKU) 6.1: Principles of operating systems",
+        "page": 28,
+        "topics": [
+          {
+            "id": "SKU6.1-T1",
+            "text": "Objectives, functions, and types of operating systems.",
+            "courses": [
+              "CS 310",
+              "CS 401"
+            ]
+          },
+          {
+            "id": "SKU6.1-T2",
+            "text": "Logical layers, APIs, and middleware.",
+            "courses": [
+              "CS 240",
+              "CS 310"
+            ]
+          },
+          {
+            "id": "SKU6.1-T3",
+            "text": "Resource and process management.",
+            "courses": [
+              "CS 240",
+              "CS 310"
+            ]
+          },
+          {
+            "id": "SKU6.1-T4",
+            "text": "Device and interrupt handling.",
+            "courses": [
+              "CS 310"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU6.1-SLO1",
+            "number": 1,
+            "text": "Explain the objectives and functions of modern operating systems.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 1",
+                "evidence": "OS architecture examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.1-SLO2",
+            "number": 2,
+            "text": "Analyze client-server, distributed, and single-user operating systems and compare their advantages and limitations.",
+            "coverage": [
+              {
+                "course": "CS 401",
+                "clo": "CLO 3",
+                "evidence": "Distributed-system design comparison"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.1-SLO3",
+            "number": 3,
+            "text": "Explain the concept of a logical layer in system-level design.",
+            "coverage": [
+              {
+                "course": "CS 240",
+                "clo": "CLO 1",
+                "evidence": "System-interface design explanation"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.1-SLO4",
+            "number": 4,
+            "text": "Describe the role of APIs and middleware in system development.",
+            "coverage": [
+              {
+                "course": "CS 240",
+                "clo": "CLO 1",
+                "evidence": "System-interface design explanation"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.1-SLO5",
+            "number": 5,
+            "text": "Assess resource utilization by application software and propose strategies to optimize system software.",
+            "coverage": [
+              {
+                "course": "CS 240",
+                "clo": "CLO 7",
+                "evidence": "Profile and before-after experiment"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.1-SLO6",
+            "number": 6,
+            "text": "Compare and evaluate kernel and user modes in operating systems for secure and efficient execution.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 1",
+                "evidence": "OS architecture examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.1-SLO7",
+            "number": 7,
+            "text": "Analyze interrupt processing mechanisms for improved system performance.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 2",
+                "evidence": "Interrupt and device-management investigation"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.1-SLO8",
+            "number": 8,
+            "text": "Evaluate device management strategies, including device lists and driver I/O queues.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 2",
+                "evidence": "Interrupt and device-management investigation"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU6.2",
+        "title": "Specific Knowledge Unit (SKU) 6.2: Concurrency, scheduling, memory management, and OS protection",
+        "page": 30,
+        "topics": [
+          {
+            "id": "SKU6.2-T1",
+            "text": "Concurrency and synchronization.",
+            "courses": [
+              "CS 310"
+            ]
+          },
+          {
+            "id": "SKU6.2-T2",
+            "text": "Task and process management.",
+            "courses": [
+              "CS 310"
+            ]
+          },
+          {
+            "id": "SKU6.2-T3",
+            "text": "Memory management and optimization.",
+            "courses": [
+              "CS 210",
+              "CS 310"
+            ]
+          },
+          {
+            "id": "SKU6.2-T4",
+            "text": "Operating system security.",
+            "courses": [
+              "CS 310",
+              "CS 402"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU6.2-SLO1",
+            "number": 1,
+            "text": "Analyze the concurrent operation of multiple tasks and evaluate the associated runtime problems.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 3",
+                "evidence": "Task-state model and concurrency diagnosis"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.2-SLO2",
+            "number": 2,
+            "text": "Assess the states of a task during the management of multiple tasks.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 3",
+                "evidence": "Task-state model and concurrency diagnosis"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.2-SLO3",
+            "number": 3,
+            "text": "Evaluate techniques for achieving synchronization in an operating system.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 4",
+                "evidence": "Concurrent-programming practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.2-SLO4",
+            "number": 4,
+            "text": "Design state and transition diagrams for specific problem domains, such as task scheduling.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 3",
+                "evidence": "Task-state model and concurrency diagnosis"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.2-SLO5",
+            "number": 5,
+            "text": "Compare and assess processes, threads, and scheduling algorithms in operating systems for different application domains.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 5",
+                "evidence": "Scheduling simulation and workload analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.2-SLO6",
+            "number": 6,
+            "text": "Analyze memory hierarchy, virtual memory, cache memory, thrashing, and cost-performance tradeoffs.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 6",
+                "evidence": "Memory-management simulator and report"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.2-SLO7",
+            "number": 7,
+            "text": "Evaluate various methods for allocating memory to tasks.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 6",
+                "evidence": "Memory-management simulator and report"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.2-SLO8",
+            "number": 8,
+            "text": "Analyze mechanisms in an OS to control access to resources and propose resource optimization enhancements.",
+            "coverage": [
+              {
+                "course": "CS 310",
+                "clo": "CLO 8",
+                "evidence": "Access-control and resource experiment"
+              }
+            ]
+          },
+          {
+            "id": "SKU6.2-SLO9",
+            "number": 9,
+            "text": "Assess the importance, features, and limitations of an OS for protection and security.",
+            "coverage": [
+              {
+                "course": "CS 402",
+                "clo": "CLO 4",
+                "evidence": "OS protection evaluation"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU7.1",
+        "title": "Specific Knowledge Unit (SKU) 7.1: Object-oriented programming and functional programming",
+        "page": 32,
+        "topics": [
+          {
+            "id": "SKU7.1-T1",
+            "text": "Object-oriented concepts.",
+            "courses": [
+              "CS 102",
+              "CS 320"
+            ]
+          },
+          {
+            "id": "SKU7.1-T2",
+            "text": "Functional programming concepts.",
+            "courses": [
+              "CS 102",
+              "CS 320"
+            ]
+          },
+          {
+            "id": "SKU7.1-T3",
+            "text": "Comparing paradigms.",
+            "courses": [
+              "CS 320"
+            ]
+          },
+          {
+            "id": "SKU7.1-T4",
+            "text": "Operations on aggregates.",
+            "courses": [
+              "CS 102",
+              "CS 320"
+            ]
+          },
+          {
+            "id": "SKU7.1-T5",
+            "text": "Type systems.",
+            "courses": [
+              "CS 102",
+              "CS 320"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU7.1-SLO1",
+            "number": 1,
+            "text": "Design a class hierarchy that enables reusability through inheritance, subtyping, and encapsulation.",
+            "coverage": [
+              {
+                "course": "CS 102",
+                "clo": "CLO 2",
+                "evidence": "Class hierarchy and tested implementation"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.1-SLO2",
+            "number": 2,
+            "text": "Compare the relationship between object-oriented inheritance, subtyping, and functional programming approaches.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 1",
+                "evidence": "Cross-paradigm comparison"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.1-SLO3",
+            "number": 3,
+            "text": "Apply object-oriented encapsulation mechanisms and functional encapsulation techniques in writing simple programs.",
+            "coverage": [
+              {
+                "course": "CS 102",
+                "clo": "CLO 3",
+                "evidence": "Paired implementation with individual defense"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.1-SLO4",
+            "number": 4,
+            "text": "Utilize iterators and aggregation operations in multiple programming languages to handle collections.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 2",
+                "evidence": "Two-language collection practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.1-SLO5",
+            "number": 5,
+            "text": "Construct algorithms that avoid mutable state assignment, focusing on immutability and functional approaches.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 3",
+                "evidence": "Functional-programming implementation"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.1-SLO6",
+            "number": 6,
+            "text": "Develop higher-order functions that accept and return other functions to enhance program flexibility.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 3",
+                "evidence": "Functional-programming implementation"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.1-SLO7",
+            "number": 7,
+            "text": "Apply knowledge of types, error handling, and generics to write well- structured, type-safe programs.",
+            "coverage": [
+              {
+                "course": "CS 102",
+                "clo": "CLO 4",
+                "evidence": "Typed collection and exception practical"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.1-SLO8",
+            "number": 8,
+            "text": "Apply various strategies to test and debug simple programs.",
+            "coverage": [
+              {
+                "course": "CS 101",
+                "clo": "CLO 5",
+                "evidence": "Debugging practical and test record"
+              },
+              {
+                "course": "CS 102",
+                "clo": "CLO 6",
+                "evidence": "Individual inspection and debugging record"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.1-SLO9",
+            "number": 9,
+            "text": "Apply the documentation and program style standards for software readability and maintainability.",
+            "coverage": [
+              {
+                "course": "CS 102",
+                "clo": "CLO 7",
+                "evidence": "Documentation and style review"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU7.2",
+        "title": "Specific Knowledge Unit (SKU) 7.2: Program representation, language translation, and execution",
+        "page": 34,
+        "topics": [
+          {
+            "id": "SKU7.2-T1",
+            "text": "Program input and representation.",
+            "courses": [
+              "CS 320"
+            ]
+          },
+          {
+            "id": "SKU7.2-T2",
+            "text": "Language processing concepts.",
+            "courses": [
+              "CS 320"
+            ]
+          },
+          {
+            "id": "SKU7.2-T3",
+            "text": "Memory organization and management.",
+            "courses": [
+              "CS 240",
+              "CS 320"
+            ]
+          },
+          {
+            "id": "SKU7.2-T4",
+            "text": "Garbage collection.",
+            "courses": [
+              "CS 320"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU7.2-SLO1",
+            "number": 1,
+            "text": "Examine programs that use other programs as input data and interpret their representations.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 5",
+                "evidence": "AST and program-representation analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.2-SLO2",
+            "number": 2,
+            "text": "Evaluate the structure and function of an abstract syntax tree for a given language.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 5",
+                "evidence": "AST and program-representation analysis"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.2-SLO3",
+            "number": 3,
+            "text": "Design a program to process and optimize code, such as an interpreter, expression optimizer, or documentation generator.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 6",
+                "evidence": "Individual language-processing project"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.2-SLO4",
+            "number": 4,
+            "text": "Differentiate between syntax, parsing, semantics, and evaluation in programming languages.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 4",
+                "evidence": "Language-concept examination"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.2-SLO5",
+            "number": 5,
+            "text": "Construct the low-level runtime representation of core language constructs.",
+            "coverage": [
+              {
+                "course": "CS 320",
+                "clo": "CLO 7",
+                "evidence": "Runtime representation and execution trace"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.2-SLO6",
+            "number": 6,
+            "text": "Assess programming language implementations that organize memory into global data, text, heap, and stack sections.",
+            "coverage": [
+              {
+                "course": "CS 240",
+                "clo": "CLO 4",
+                "evidence": "Executable and debugger investigation"
+              }
+            ]
+          },
+          {
+            "id": "SKU7.2-SLO7",
+            "number": 7,
+            "text": "Resolve issues related to memory leaks and dangling pointer dereferences.",
+            "coverage": [
+              {
+                "course": "CS 240",
+                "clo": "CLO 5",
+                "evidence": "Memory-safety repair practical"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU8.1",
+        "title": "Specific Knowledge Unit (SKU) 8.1: Software processes, software management, and requirements engineering",
+        "page": 36,
+        "topics": [
+          {
+            "id": "SKU8.1-T1",
+            "text": "Software development processes and lifecycle.",
+            "courses": [
+              "CS 250"
+            ]
+          },
+          {
+            "id": "SKU8.1-T2",
+            "text": "Software system interaction and data modeling.",
+            "courses": [
+              "CS 250",
+              "CS 230"
+            ]
+          },
+          {
+            "id": "SKU8.1-T3",
+            "text": "Software engineering foundations and requirements.",
+            "courses": [
+              "CS 250"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU8.1-SLO1",
+            "number": 1,
+            "text": "Describe how software can interact with various systems, including information management, embedded, process control, and communications systems.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 1",
+                "evidence": "System context comparison"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.1-SLO2",
+            "number": 2,
+            "text": "Illustrate the different process models (e.g., waterfall, iterative, and agile).",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 2",
+                "evidence": "Lifecycle and process portfolio"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.1-SLO3",
+            "number": 3,
+            "text": "Illustrate the phases of a software lifecycle and its deliverables through an example.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 2",
+                "evidence": "Lifecycle and process portfolio"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.1-SLO4",
+            "number": 4,
+            "text": "Analyze several examples of software risks.",
+            "coverage": [
+              {
+                "course": "BUS 401",
+                "clo": "CLO 3",
+                "evidence": "Software risk register"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.1-SLO5",
+            "number": 5,
+            "text": "Define the key components of a use case.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 3",
+                "evidence": "Requirements specification and critique"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.1-SLO6",
+            "number": 6,
+            "text": "Analyze a given requirements model for a simple software system.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 3",
+                "evidence": "Requirements specification and critique"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.1-SLO7",
+            "number": 7,
+            "text": "Describe the common techniques and fundamental challenges for requirements elicitation.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 4",
+                "evidence": "Interview plan and elicitation reflection"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.1-SLO8",
+            "number": 8,
+            "text": "Explain the key components of a data model (e.g., class diagrams or ER diagrams).",
+            "coverage": [
+              {
+                "course": "CS 230",
+                "clo": "CLO 5",
+                "evidence": "ER and UML design dossier"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.1-SLO9",
+            "number": 9,
+            "text": "Write functional and non-functional requirements for a software system.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 3",
+                "evidence": "Requirements specification and critique"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "SKU8.2",
+        "title": "Specific Knowledge Unit (SKU) 8.2: Software design, construction, verification, and validation",
+        "page": 38,
+        "topics": [
+          {
+            "id": "SKU8.2-T1",
+            "text": "Software design principles and architecture.",
+            "courses": [
+              "CS 250"
+            ]
+          },
+          {
+            "id": "SKU8.2-T2",
+            "text": "Software integration strategies and testing methods.",
+            "courses": [
+              "CS 370"
+            ]
+          },
+          {
+            "id": "SKU8.2-T3",
+            "text": "Software analysis and code quality assurance.",
+            "courses": [
+              "CS 102",
+              "CS 250",
+              "CS 370"
+            ]
+          }
+        ],
+        "slos": [
+          {
+            "id": "SKU8.2-SLO1",
+            "number": 1,
+            "text": "Explain design principles such as coupling, cohesion, and encapsulation.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 5",
+                "evidence": "Architecture and design-model review"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO2",
+            "number": 2,
+            "text": "Use a design paradigm to design a simple software system.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 5",
+                "evidence": "Architecture and design-model review"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO3",
+            "number": 3,
+            "text": "Construct models of the design of a simple software system.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 5",
+                "evidence": "Architecture and design-model review"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO4",
+            "number": 4,
+            "text": "Describe the software architecture design of a simple software system.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 5",
+                "evidence": "Architecture and design-model review"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO5",
+            "number": 5,
+            "text": "Describe mechanisms for implementing designs to achieve desired properties such as reliability, efficiency, and robustness.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 6",
+                "evidence": "Implemented design and quality evidence"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO6",
+            "number": 6,
+            "text": "Describe integration strategies, including top-down, bottom-up, and sandwich integration.",
+            "coverage": [
+              {
+                "course": "CS 370",
+                "clo": "CLO 4",
+                "evidence": "Integration strategy and test sequence"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO7",
+            "number": 7,
+            "text": "Distinguish between program validation and verification.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 7",
+                "evidence": "Verification and validation plan"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO8",
+            "number": 8,
+            "text": "Perform an inspection of a medium-sized code segment.",
+            "coverage": [
+              {
+                "course": "CS 102",
+                "clo": "CLO 6",
+                "evidence": "Individual inspection and debugging record"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO9",
+            "number": 9,
+            "text": "Create and document a set of tests for a medium-sized code segment.",
+            "coverage": [
+              {
+                "course": "CS 370",
+                "clo": "CLO 5",
+                "evidence": "Test design, code and results"
+              }
+            ]
+          },
+          {
+            "id": "SKU8.2-SLO10",
+            "number": 10,
+            "text": "Use a defect-tracking tool in a small software project.",
+            "coverage": [
+              {
+                "course": "CS 250",
+                "clo": "CLO 8",
+                "evidence": "Issue history and individual contribution defense"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "facilitiesPolicy": "Facilities and software are planned course-delivery requirements. The college confirms capacity, accessibility, supported releases, software access and technical support before each offering. Computational workshops within lecture-led courses do not add registered lab credits or contact hours."
 };

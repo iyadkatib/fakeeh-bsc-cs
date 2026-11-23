@@ -1,0 +1,61 @@
+﻿ETEC unit,Source page,Topic ID,ETEC topic,Required courses
+EKU.1,9,EKU.1-T1,Discrete Mathematics,CS 103
+EKU.1,9,EKU.1-T2,Calculus,MATH 101; MATH 230
+EKU.1,9,EKU.1-T3,Linear Algebra,MATH 120
+EKU.1,9,EKU.1-T4,Probability Theory,STAT 220
+EKU.1,9,EKU.1-T5,Statistical Inference and Modeling,STAT 220
+SKU1.1,11,SKU1.1-T1,Algorithm performance and complexity analysis.,CS 220
+SKU1.1,11,SKU1.1-T2,Algorithm design techniques.,CS 220
+SKU1.2,13,SKU1.2-T1,Algorithm design and efficiency.,CS 201; CS 220
+SKU1.2,13,SKU1.2-T2,Data structure implementation.,CS 201
+SKU1.2,13,SKU1.2-T3,Automata theory and formal languages.,CS 330
+SKU1.2,13,SKU1.2-T4,Computational complexity.,CS 220; CS 330
+SKU2.1,14,SKU2.1-T1,Evolution and architecture of computing systems.,CS 101; CS 210; CS 401
+SKU2.1,14,SKU2.1-T2,Logical and functional representations.,CS 210
+SKU2.1,14,SKU2.1-T3,Data representation and manipulation.,CS 101; CS 201; CS 210
+SKU2.2,16,SKU2.2-T1,Structure and functionality of computing systems.,CS 210
+SKU2.2,16,SKU2.2-T2,Instruction representation and execution.,CS 210; CS 240; CS 401
+SKU2.2,16,SKU2.2-T3,"Interrupts, subroutines, and I/O management.",CS 210; CS 240
+SKU2.3,17,SKU2.3-T1,"Memory technologies, management, and performance.",CS 210; CS 310
+SKU2.3,17,SKU2.3-T2,Virtual memory and system functionality.,CS 310
+SKU2.3,17,SKU2.3-T3,"Data transfers, buses, and storage devices.",CS 210; CS 310
+SKU3.1,18,SKU3.1-T1,"Basics of sets, functions, relations, and their operations.",CS 103
+SKU3.1,18,SKU3.1-T2,"Propositional and predicate logic, conversion of informal statements, and symbolic methods.",CS 103
+SKU3.1,18,SKU3.1-T3,Using inference rules for proofs in propositional and predicate logic.,CS 103
+SKU3.2,20,SKU3.2-T1,Proof techniques and induction.,CS 103; CS 220
+SKU3.2,20,SKU3.2-T2,Counting and combinatorics.,CS 103
+SKU3.2,20,SKU3.2-T3,Recurrence relations and modular arithmetic.,CS 103; CS 220
+SKU3.3,22,SKU3.3-T1,Graph theory and tree concepts.,CS 103; CS 201
+SKU3.3,22,SKU3.3-T2,Probability and probability distributions.,STAT 220
+SKU3.3,22,SKU3.3-T3,Bayesian probability.,STAT 220
+SKU4.1,24,SKU4.1-T1,Database system components and functions.,CS 230
+SKU4.1,24,SKU4.1-T2,Database models and data modeling techniques.,CS 230
+SKU4.1,24,SKU4.1-T3,Relational data models and query languages for object-oriented database modeling.,CS 230
+SKU5.1,26,SKU5.1-T1,Organization and structure of networks.,CS 260
+SKU5.1,26,SKU5.1-T2,Switching techniques and layering principles.,CS 260
+SKU5.1,26,SKU5.1-T3,Physical components of networking.,CS 260
+SKU5.1,26,SKU5.1-T4,"Naming, addressing, resource location and flow control.",CS 260
+SKU5.1,26,SKU5.1-T5,Distributed applications and communication interfaces.,CS 260
+SKU6.1,28,SKU6.1-T1,"Objectives, functions, and types of operating systems.",CS 310; CS 401
+SKU6.1,28,SKU6.1-T2,"Logical layers, APIs, and middleware.",CS 240; CS 310
+SKU6.1,28,SKU6.1-T3,Resource and process management.,CS 240; CS 310
+SKU6.1,28,SKU6.1-T4,Device and interrupt handling.,CS 310
+SKU6.2,30,SKU6.2-T1,Concurrency and synchronization.,CS 310
+SKU6.2,30,SKU6.2-T2,Task and process management.,CS 310
+SKU6.2,30,SKU6.2-T3,Memory management and optimization.,CS 210; CS 310
+SKU6.2,30,SKU6.2-T4,Operating system security.,CS 310; CS 402
+SKU7.1,32,SKU7.1-T1,Object-oriented concepts.,CS 102; CS 320
+SKU7.1,32,SKU7.1-T2,Functional programming concepts.,CS 102; CS 320
+SKU7.1,32,SKU7.1-T3,Comparing paradigms.,CS 320
+SKU7.1,32,SKU7.1-T4,Operations on aggregates.,CS 102; CS 320
+SKU7.1,32,SKU7.1-T5,Type systems.,CS 102; CS 320
+SKU7.2,34,SKU7.2-T1,Program input and representation.,CS 320
+SKU7.2,34,SKU7.2-T2,Language processing concepts.,CS 320
+SKU7.2,34,SKU7.2-T3,Memory organization and management.,CS 240; CS 320
+SKU7.2,34,SKU7.2-T4,Garbage collection.,CS 320
+SKU8.1,36,SKU8.1-T1,Software development processes and lifecycle.,CS 250
+SKU8.1,36,SKU8.1-T2,Software system interaction and data modeling.,CS 250; CS 230
+SKU8.1,36,SKU8.1-T3,Software engineering foundations and requirements.,CS 250
+SKU8.2,38,SKU8.2-T1,Software design principles and architecture.,CS 250
+SKU8.2,38,SKU8.2-T2,Software integration strategies and testing methods.,CS 370
+SKU8.2,38,SKU8.2-T3,Software analysis and code quality assurance.,CS 102; CS 250; CS 370

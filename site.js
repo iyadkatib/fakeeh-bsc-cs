@@ -112,6 +112,16 @@ function showCourse(id) {
     const list = element("ul");
     course.topics.forEach((topic) => list.append(element("li", null, topic)));
     content.push(element("h3", null, "Course topics"), list);
+    const cloList = element("ol", "dialog-clos");
+    course.clos.forEach((clo) => {
+      const item = element("li", clo.etecRefs?.length ? "etec-aligned" : null, clo.statement);
+      if (clo.etecRefs?.length) item.append(element("small", "etec-trace", "ETEC aligned · " + clo.etecRefs.join(", ")));
+      cloList.append(item);
+    });
+    content.push(element("h3", null, "Course learning outcomes"), cloList);
+    if(course.facilities) {
+      content.push(element("h3", null, "Lab and software requirements"), element("p", null, course.facilities.lab), element("p", null, course.facilities.software));
+    }
     const textbook = textbooks[id];
     if (textbook) {
       const book = externalLink(textbook.url, textbook.title);
@@ -119,6 +129,8 @@ function showCourse(id) {
       const citation = element("p");
       citation.append(book, ` · ${textbook.citation}`);
       content.push(element("h3", null, "Suggested textbook"), citation);
+    } else if (course.textbookStatus) {
+      content.push(element("h3", null, "Suggested textbook"), element("p", null, course.textbookStatus));
     }
     const spec = element("a", "dialog-link", "Open course specification");
     spec.href = `./course-specifications.html#${course.anchor}`;

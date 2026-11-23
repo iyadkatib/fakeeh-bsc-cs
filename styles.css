@@ -8,8 +8,8 @@
   --paper: #fff;
   --line: #cfdee1;
   --accent: #b40f39;
-  --institution: #f0f1f5;
-  --college: #e5eef9;
+  --college: #f0f1f5;
+  --department: #e5eef9;
   --core: #dff2f4;
   --elective: #ece8f5;
   --capstone: #113f53;
@@ -105,8 +105,8 @@ section[id] { scroll-margin-top: 18px; }
 .course-code { font: 710 .73rem "IBM Plex Mono", ui-monospace, monospace; opacity: .91; }
 .course-name { font-size: .9rem; font-weight: 720; line-height: 1.26; margin-top: 3px; }
 .course-tag { font-size: .72rem; margin-top: 5px; }
-[data-category="institution"] { --course-color: var(--institution); }
 [data-category="college"] { --course-color: var(--college); }
+[data-category="department"] { --course-color: var(--department); }
 [data-category="core"] { --course-color: var(--core); }
 [data-category="elective"] { --course-color: var(--elective); }
 [data-category="capstone"] { --course-color: var(--capstone); --course-ink: #fff; }
@@ -283,3 +283,41 @@ dialog ul { margin: 3px 0 8px; padding-left: 20px; }
 
 .course-decision + .course-decision { margin-top: 24px; }
 .course-decision h3 { margin-bottom: 8px; }
+
+/* ETEC items use an explicit label and source ID as well as a distinct color. */
+.etec-aligned, .etec-text, .etec-source, .etec-topic-block { color: #62358b; }
+.etec-aligned a, .etec-source a, .etec-topic-block a { color: #62358b; }
+.clo-table .etec-aligned td { background: #f7f1fc; }
+.etec-legend { padding: 10px 13px; background: #f7f1fc; border-left: 4px solid #62358b; border-radius: 6px; font-size: .87rem; }
+.etec-legend span { color: #62358b; font-weight: 800; margin-right: 7px; }
+.etec-source { margin-block: 14px; padding: 12px 15px; background: #f7f1fc; border: 1px solid #d5c3e7; border-radius: 8px; }
+.etec-source summary { cursor: pointer; font-weight: 750; }
+.etec-source h4 { margin: 17px 0 7px; }
+.etec-outcomes { padding-left: 25px; }
+.etec-outcomes li { margin-block: 11px; }
+.etec-trace { display: block; font-size: .79rem; margin-top: 5px; line-height: 1.45; }
+.etec-topic-block { margin-block: 16px; }
+.clo-table { min-width: 1000px; }
+.clo-table td:nth-child(2) { min-width: 280px; }
+.clo-table td:last-child { min-width: 150px; font-size: .8rem; }
+.facilities-block { padding: 14px 17px; background: #eef6f8; border-left: 4px solid #006980; border-radius: 8px; margin-block: 17px; }
+.facilities-block dt { font-weight: 750; margin-top: 10px; }
+.facilities-block dd { margin: 2px 0 12px; }
+.coverage-stats { display: flex; gap: 12px; flex-wrap: wrap; margin: 22px 0; }
+.coverage-stats strong { color: #62358b; background: #f7f1fc; border: 1px solid #d5c3e7; padding: 13px 17px; border-radius: 8px; }
+.coverage-tools { padding: 17px; background: #fff; border: 1px solid #d5e0e4; border-radius: 9px; margin-block: 25px; }
+.coverage-tools label { display: block; font-weight: 750; margin-bottom: 7px; }
+.coverage-tools input { font: inherit; padding: 10px; border: 1px solid #98b5be; border-radius: 6px; width: min(100%,500px); margin: 0 8px 10px 0; }
+.coverage-tools button { font: inherit; padding: 9px 12px; border: 1px solid #98b5be; border-radius: 6px; background: #eef6f8; margin: 0 7px 8px 0; cursor: pointer; }
+.coverage-unit .coverage-table { min-width: 900px; }
+.coverage-unit .coverage-table td:nth-child(2) { min-width: 300px; }
+.coverage-unit .coverage-table td:nth-child(3) { min-width: 160px; }
+.coverage-unit h2 { font-size: 1.18rem; margin-top: 20px; }
+.coverage-unit span { font-size: .83rem; }
+.coverage-unit .etec-text { font-size: .88rem; }
+.etec-coverage-callout { background: #f7f1fc; border: 1px solid #d5c3e7; padding: 16px; border-radius: 8px; margin: 22px 0; }
+.dialog-clos li { margin-bottom: 13px; }
+.brand { flex-basis: 330px; }
+[hidden] { display: none !important; }
+tr[id] { scroll-margin-top: 130px; }
+@media (max-width: 640px) { .brand { flex-basis: auto; width: 300px; } .coverage-tools button { font-size: .85rem; } }
