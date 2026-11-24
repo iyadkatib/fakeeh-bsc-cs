@@ -55,7 +55,8 @@ const curriculum = {
       "ARAB 101",
       "COMM 101",
       "ISLM 101"
-    ]
+    ],
+    "electiveCount": 19
   },
   "years": [
     "Foundations",
@@ -104,7 +105,7 @@ const curriculum = {
         "CS 230",
         "ARAB 101"
       ],
-      "credits": 17
+      "credits": 16
     },
     {
       "number": 4,
@@ -165,16 +166,16 @@ const curriculum = {
       "number": 8,
       "year": 4,
       "title": "Capstone II and technical depth",
-      "summary": "Complete and evaluate the capstone while developing further depth in machine learning, graphics and three technical electives.",
+      "summary": "Complete Capstone II, build dependable data pipelines and cloud services, and select three technical electives.",
       "courses": [
         "CS 411",
+        "CS 451",
+        "CS 455",
         "EL-1",
-        "CS 430",
-        "CS 403",
         "EL-2",
         "EL-3"
       ],
-      "credits": 17
+      "credits": 18
     }
   ],
   "categories": {
@@ -407,7 +408,7 @@ const curriculum = {
         "Direct and contradiction proofs; weak and strong induction, well-ordering, recursive definitions and algorithm correctness",
         "Sum and product rules, inclusion-exclusion, arithmetic/geometric progressions, permutations, combinations and pigeonhole proofs",
         "Elementary recurrence relations, modular arithmetic and order notation",
-        "Graph and tree basics with discrete probability examples"
+        "Graphs and trees: representations, spanning-tree construction and graph-isomorphism reasoning; discrete probability examples"
       ],
       "clos": [
         {
@@ -492,9 +493,11 @@ const curriculum = {
         {
           "plo": "S4",
           "stage": "I",
-          "statement": "Represent a computing problem with graphs or trees and check a solution against a constructed example.",
-          "etecRefs": [],
-          "evidence": "Graph-model worksheet",
+          "statement": "Model computing problems with graphs and trees, construct spanning trees, and justify whether two small graphs are isomorphic.",
+          "etecRefs": [
+            "SKU3.3-SLO2"
+          ],
+          "evidence": "Individual graph-model, spanning-tree and isomorphism worksheet",
           "id": "CLO 8"
         }
       ],
@@ -517,10 +520,9 @@ const curriculum = {
         "SKU3.3-T1"
       ],
       "etecSLOs": [
-        "EKU.1-SLO1",
-        "EKU.1-SLO2",
         "SKU3.1-SLO1",
         "SKU3.1-SLO2",
+        "EKU.1-SLO1",
         "SKU3.1-SLO3",
         "SKU3.1-SLO4",
         "SKU3.1-SLO5",
@@ -528,11 +530,13 @@ const curriculum = {
         "SKU3.1-SLO7",
         "SKU3.2-SLO1",
         "SKU3.2-SLO2",
+        "EKU.1-SLO2",
         "SKU3.2-SLO3",
-        "SKU3.2-SLO4",
         "SKU3.2-SLO5",
+        "SKU3.2-SLO4",
+        "SKU3.2-SLO7",
         "SKU3.2-SLO6",
-        "SKU3.2-SLO7"
+        "SKU3.3-SLO2"
       ],
       "facilities": {
         "lab": "Mathematics classroom with shared computational workspace",
@@ -541,7 +545,15 @@ const curriculum = {
         "practice": "Logic and graph checks supplement individually assessed proofs and mathematical reasoning.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "topicHours": [
+        6,
+        8,
+        10,
+        8,
+        5,
+        8
+      ]
     },
     "PHYS 101": {
       "id": "PHYS 101",
@@ -837,8 +849,8 @@ const curriculum = {
         "SKU7.1-SLO3",
         "SKU7.1-SLO7",
         "SKU7.1-SLO8",
-        "SKU7.1-SLO9",
-        "SKU8.2-SLO8"
+        "SKU8.2-SLO8",
+        "SKU7.1-SLO9"
       ],
       "facilities": {
         "lab": "General programming lab",
@@ -1123,9 +1135,9 @@ const curriculum = {
       "code": "CS 201",
       "title": "Data Structures",
       "term": 3,
-      "credits": 4,
+      "credits": 3,
       "category": "core",
-      "lecture": 3,
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 102",
@@ -1133,13 +1145,13 @@ const curriculum = {
       ],
       "summary": "Implement data structures and analyze trade-offs among their operations.",
       "topics": [
-        "Asymptotic analysis and invariants",
-        "Lists, stacks, queues, and iterators",
-        "Trees and balanced search",
-        "Hashing and maps",
-        "Heaps, priority queues, and graphs",
-        "Searching, sorting, traversal, and benchmarking",
-        "String matching; record and array layout; spanning trees and graph isomorphism"
+        "Abstract data types, representation invariants and operation complexity",
+        "Lists, stacks, queues and iterators",
+        "Trees and balanced search structures",
+        "Hash tables, heaps and priority queues",
+        "Graph representations, tree traversal, BFS and DFS",
+        "Elementary numerical, search, sort and string-matching implementations",
+        "Record and array layout, workload selection, tests and reproducible benchmarks"
       ],
       "clos": [
         {
@@ -1196,12 +1208,11 @@ const curriculum = {
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Solve computing problems with graph traversals, spanning trees and graph-isomorphism reasoning.",
+          "statement": "Implement graph traversals and apply fundamental graph algorithms to computing problems.",
           "etecRefs": [
-            "SKU1.2-SLO4",
-            "SKU3.3-SLO2"
+            "SKU1.2-SLO4"
           ],
-          "evidence": "Graph implementation and isomorphism exercise",
+          "evidence": "Individual graph implementation and correctness tests",
           "id": "CLO 6"
         },
         {
@@ -1225,7 +1236,7 @@ const curriculum = {
       ],
       "profile": "lab",
       "group": null,
-      "requirement": null,
+      "requirement": "The three-credit design retains two supervised practical hours each week. CS 103 teaches graph isomorphism and mathematical spanning-tree reasoning; CS 220 develops greedy spanning-tree and shortest-path algorithms, proofs and complexity. CS 201 retains individual data-structure, search, sort, string and graph implementation assessments.",
       "resource": "Open Data Structures by Pat Morin and programming labs.",
       "name": "Data Structures",
       "placement": "Semester 3",
@@ -1237,15 +1248,14 @@ const curriculum = {
         "SKU3.3-T1"
       ],
       "etecSLOs": [
-        "SKU1.2-SLO1",
-        "SKU1.2-SLO2",
         "SKU1.2-SLO3",
-        "SKU1.2-SLO4",
+        "SKU1.2-SLO2",
         "SKU1.2-SLO6",
+        "SKU1.2-SLO1",
         "SKU1.2-SLO7",
-        "SKU2.1-SLO8",
         "SKU3.3-SLO1",
-        "SKU3.3-SLO2"
+        "SKU1.2-SLO4",
+        "SKU2.1-SLO8"
       ],
       "facilities": {
         "lab": "Algorithms and data-structures programming lab",
@@ -1254,7 +1264,16 @@ const curriculum = {
         "practice": "Data structures, numerical/search/sort/string algorithms, graph traversal, spanning trees and layout benchmarks.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "topicHours": [
+        6,
+        9,
+        9,
+        9,
+        9,
+        12,
+        6
+      ]
     },
     "CS 210": {
       "id": "CS 210",
@@ -1399,19 +1418,19 @@ const curriculum = {
         "SKU6.2-T3"
       ],
       "etecSLOs": [
+        "SKU2.2-SLO1",
+        "SKU2.1-SLO6",
         "SKU2.1-SLO3",
         "SKU2.1-SLO4",
         "SKU2.1-SLO5",
-        "SKU2.1-SLO6",
-        "SKU2.2-SLO1",
         "SKU2.2-SLO3",
-        "SKU2.2-SLO4",
         "SKU2.2-SLO5",
         "SKU2.3-SLO1",
         "SKU2.3-SLO2",
         "SKU2.3-SLO3",
         "SKU2.3-SLO5",
-        "SKU2.3-SLO6"
+        "SKU2.3-SLO6",
+        "SKU2.2-SLO4"
       ],
       "facilities": {
         "lab": "Digital logic and architecture simulation laboratory",
@@ -1539,13 +1558,13 @@ const curriculum = {
       ],
       "etecSLOs": [
         "EKU.1-SLO6",
-        "EKU.1-SLO7",
-        "EKU.1-SLO8",
         "SKU3.3-SLO3",
         "SKU3.3-SLO4",
         "SKU3.3-SLO5",
         "SKU3.3-SLO6",
-        "SKU3.3-SLO7"
+        "EKU.1-SLO7",
+        "SKU3.3-SLO7",
+        "EKU.1-SLO8"
       ],
       "facilities": {
         "lab": "Statistics and data-analysis workspace",
@@ -1680,8 +1699,8 @@ const curriculum = {
         "SKU4.1-SLO4",
         "SKU4.1-SLO5",
         "SKU4.1-SLO6",
-        "SKU4.1-SLO7",
-        "SKU8.1-SLO8"
+        "SKU8.1-SLO8",
+        "SKU4.1-SLO7"
       ],
       "facilities": {
         "lab": "Database and data-modeling lab",
@@ -1796,9 +1815,9 @@ const curriculum = {
       "topics": [
         "Asymptotic bounds and recurrence analysis",
         "Divide and conquer",
-        "Greedy methods and correctness",
+        "Greedy methods, minimum spanning trees and correctness proofs",
         "Dynamic programming",
-        "Graph algorithms and shortest paths",
+        "Graph algorithms, shortest paths and comparative complexity",
         "Reductions, lower bounds, and complexity classes",
         "Recursive backtracking and heuristic algorithms; empirical runtime hypotheses and input-size experiments"
       ],
@@ -1901,11 +1920,11 @@ const curriculum = {
         "SKU1.1-SLO1",
         "SKU1.1-SLO2",
         "SKU1.1-SLO3",
-        "SKU1.1-SLO4",
+        "SKU1.2-SLO5",
+        "SKU1.1-SLO7",
         "SKU1.1-SLO5",
         "SKU1.1-SLO6",
-        "SKU1.1-SLO7",
-        "SKU1.2-SLO5"
+        "SKU1.1-SLO4"
       ],
       "facilities": {
         "lab": "Algorithm design and experimental analysis lab",
@@ -1914,7 +1933,16 @@ const curriculum = {
         "practice": "Divide-and-conquer, greedy, dynamic-programming, backtracking and heuristic implementations with runtime experiments.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "topicHours": [
+        7,
+        6,
+        7,
+        7,
+        7,
+        6,
+        5
+      ]
     },
     "CS 240": {
       "id": "CS 240",
@@ -2032,12 +2060,12 @@ const curriculum = {
         "SKU7.2-T3"
       ],
       "etecSLOs": [
-        "SKU2.2-SLO6",
         "SKU6.1-SLO3",
         "SKU6.1-SLO4",
-        "SKU6.1-SLO5",
+        "SKU2.2-SLO6",
         "SKU7.2-SLO6",
-        "SKU7.2-SLO7"
+        "SKU7.2-SLO7",
+        "SKU6.1-SLO5"
       ],
       "facilities": {
         "lab": "Linux systems programming lab",
@@ -2181,8 +2209,8 @@ const curriculum = {
         "SKU8.1-SLO3",
         "SKU8.1-SLO5",
         "SKU8.1-SLO6",
-        "SKU8.1-SLO7",
         "SKU8.1-SLO9",
+        "SKU8.1-SLO7",
         "SKU8.2-SLO1",
         "SKU8.2-SLO2",
         "SKU8.2-SLO3",
@@ -2561,19 +2589,19 @@ const curriculum = {
         "SKU6.2-T4"
       ],
       "etecSLOs": [
-        "SKU2.3-SLO4",
-        "SKU2.3-SLO7",
         "SKU6.1-SLO1",
         "SKU6.1-SLO6",
         "SKU6.1-SLO7",
         "SKU6.1-SLO8",
         "SKU6.2-SLO1",
         "SKU6.2-SLO2",
-        "SKU6.2-SLO3",
         "SKU6.2-SLO4",
+        "SKU6.2-SLO3",
         "SKU6.2-SLO5",
+        "SKU2.3-SLO4",
         "SKU6.2-SLO6",
         "SKU6.2-SLO7",
+        "SKU2.3-SLO7",
         "SKU6.2-SLO8"
       ],
       "facilities": {
@@ -2715,10 +2743,10 @@ const curriculum = {
         "SKU7.1-SLO4",
         "SKU7.1-SLO5",
         "SKU7.1-SLO6",
+        "SKU7.2-SLO4",
         "SKU7.2-SLO1",
         "SKU7.2-SLO2",
         "SKU7.2-SLO3",
-        "SKU7.2-SLO4",
         "SKU7.2-SLO5"
       ],
       "facilities": {
@@ -2842,66 +2870,84 @@ const curriculum = {
       ],
       "summary": "Build intelligent problem solvers and evaluate their performance and limitations.",
       "topics": [
-        "Intelligent agents, the Turing test, and problem formulation",
-        "Uninformed, heuristic, and adversarial search",
-        "Constraints, logic, representation, and planning",
+        "Intelligent agents, AI problem formulation and limits of the Turing test",
+        "Uninformed, heuristic and adversarial search",
+        "Constraints, knowledge representation, logic and planning",
         "Reasoning under uncertainty and decision-making",
-        "Supervised, unsupervised, reinforcement, and generative learning concepts",
-        "AI limitations, failure modes, affected users, and human oversight"
+        "Supervised, unsupervised and reinforcement learning; a simple classifier and neural/generative concepts",
+        "Data preparation, train-validation-test separation, metrics, generalization and overfitting",
+        "Dataset and evaluation bias, subgroup performance, privacy, interpretability and model cards",
+        "Societal impacts, AI-assisted work, failure modes, human oversight and justified safeguards"
       ],
       "clos": [
         {
           "plo": "K3",
           "stage": "M",
-          "statement": "Explain when to use search, reasoning, or learning methods.",
-          "id": "CLO 1",
+          "statement": "Explain when search, reasoning or learning methods are appropriate and identify their assumptions.",
+          "evidence": "Individual AI methods comparison",
           "etecRefs": [],
-          "evidence": "Individual conceptual examination and applied design explanation"
+          "id": "CLO 1"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement and compare AI methods on a defined task.",
-          "id": "CLO 2",
+          "statement": "Implement and compare search methods on a defined problem with explicit performance criteria.",
+          "evidence": "Individual search implementation and tests",
           "etecRefs": [],
-          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
-        },
-        {
-          "plo": "S4",
-          "stage": "P",
-          "statement": "Assess performance and failure modes using a repeatable evaluation.",
-          "id": "CLO 3",
-          "etecRefs": [],
-          "evidence": "Reproducible investigation, results and limitations report"
-        },
-        {
-          "plo": "V1",
-          "stage": "P",
-          "statement": "Justify a safeguard for an AI failure, taking account of affected users and human oversight.",
-          "id": "CLO 4",
-          "etecRefs": [],
-          "evidence": "Professional or ethical decision case with justified safeguards"
+          "id": "CLO 2"
         },
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Formulate a search or constraint-satisfaction problem and justify a solution strategy.",
-          "id": "CLO 5",
+          "statement": "Formulate a constraint or knowledge-based problem and justify a representation and reasoning strategy.",
+          "evidence": "Knowledge-model and reasoning examination",
           "etecRefs": [],
-          "evidence": "Individual problem analysis, model and justified method selection"
+          "id": "CLO 3"
+        },
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Distinguish learning paradigms and explain simple supervised models, basic neural networks and generative-model limitations.",
+          "evidence": "Individual ML foundations examination",
+          "etecRefs": [],
+          "id": "CLO 4"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement and compare a search or reasoning method using a stated evaluation protocol.",
-          "id": "CLO 6",
+          "statement": "Prepare a dataset and fit a simple classifier with separate training, validation and test data.",
+          "evidence": "Supervised individual classification practical",
           "etecRefs": [],
-          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Evaluate held-out performance and subgroup results and diagnose overfitting and threats to validity.",
+          "evidence": "Reproducible evaluation and failure-case report",
+          "etecRefs": [],
+          "id": "CLO 6"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify safeguards for bias, privacy and foreseeable AI harms using affected-user analysis and human oversight.",
+          "evidence": "Model card and ethical decision case",
+          "etecRefs": [],
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Communicate an AI method choice, evidence and limitations to a non-specialist stakeholder.",
+          "evidence": "Individual evidence briefing",
+          "etecRefs": [],
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
       "group": null,
-      "requirement": null,
+      "requirement": "Required teaching reserves the 12 AI CS Core instructional hours, including four for Machine Learning, and three additional Society, Ethics and the Profession hours transferred from the former compulsory Machine Learning course. The 3-credit Machine Learning elective adds depth; baseline assessed learning and AI ethics do not depend on choosing it.",
       "resource": null,
       "name": "Artificial Intelligence",
       "placement": "Semester 5",
@@ -2911,11 +2957,21 @@ const curriculum = {
       "facilities": {
         "lab": "AI programming and experimentation lab",
         "hardware": "Standard workstation; shared accelerator access only for optional larger demonstrations.",
-        "software": "Python, Jupyter, NumPy, scikit-learn, a logic/constraint library and Git.",
-        "practice": "Search, reasoning, constraints and small learning experiments with reproducible baselines.",
+        "software": "Python, Jupyter, NumPy, pandas, scikit-learn, a supported neural-network demonstration environment, Git, and model-card/evaluation templates.",
+        "practice": "Individual search and reasoning tasks, a simple classifier with train-validation-test separation, bias and failure analysis, and an assessed model card.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "topicHours": [
+        6,
+        10,
+        8,
+        6,
+        8,
+        8,
+        8,
+        6
+      ]
     },
     "CS 350": {
       "id": "CS 350",
@@ -2931,66 +2987,84 @@ const curriculum = {
       ],
       "summary": "Design and evaluate interactive systems with attention to accessibility and user needs.",
       "topics": [
-        "Human factors and interaction models",
-        "Stakeholder interviews, user research, and requirements",
-        "Prototyping and interface design",
-        "Accessibility, inclusive language, and diverse users and teams",
-        "Usability testing and data interpretation",
-        "Design accountability, participant welfare, and iteration"
+        "Human factors, interaction models and task analysis",
+        "Stakeholder interviews, user research and participant protections",
+        "Prototyping, interface design and iteration",
+        "Accessibility, inclusive interaction and visual perception",
+        "Graphics foundations: digitization and image formats, color, coordinates, spatial transformations and the rendering pipeline",
+        "Interactive visualizations, input events and animation with accessible encodings",
+        "Usability study design, data interpretation and evaluation",
+        "Design accountability, stakeholder communication and documented limitations"
       ],
       "clos": [
         {
-          "plo": "S2",
+          "plo": "K3",
           "stage": "P",
-          "statement": "Design and improve an accessible interactive prototype.",
-          "id": "CLO 1",
+          "statement": "Explain human factors and interaction models and relate them to an interface design.",
+          "evidence": "Individual interaction-model analysis",
           "etecRefs": [],
-          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+          "id": "CLO 1"
         },
         {
-          "plo": "S3",
+          "plo": "S2",
           "stage": "P",
-          "statement": "Present usability findings and explain design trade-offs to stakeholders.",
-          "id": "CLO 2",
+          "statement": "Build and revise an accessible interactive prototype using requirements and user evidence.",
+          "evidence": "Prototype, accessibility checks and revision record",
           "etecRefs": [],
-          "evidence": "Assessed report or presentation and individual responses"
+          "id": "CLO 2"
         },
         {
           "plo": "S4",
           "stage": "P",
-          "statement": "Plan and conduct a usability evaluation with appropriate safeguards.",
-          "id": "CLO 3",
+          "statement": "Plan and conduct a usability evaluation and interpret results and limitations.",
+          "evidence": "Usability protocol, results and individual analysis",
           "etecRefs": [],
-          "evidence": "Reproducible investigation, results and limitations report"
+          "id": "CLO 3"
         },
         {
           "plo": "S1",
           "stage": "P",
-          "statement": "Plan a stakeholder interview or usability study with an explicit research question and participant protections.",
-          "id": "CLO 4",
+          "statement": "Formulate a stakeholder interview or usability study with a defined question and participant protections.",
+          "evidence": "Interview plan and consent safeguards",
           "etecRefs": [],
-          "evidence": "Individual problem analysis, model and justified method selection"
+          "id": "CLO 4"
+        },
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Explain digitization, image formats, color, spatial transformations and the graphics rendering pipeline.",
+          "evidence": "Individual graphics-foundations examination",
+          "etecRefs": [],
+          "id": "CLO 5"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Build an accessible interface prototype and revise it using user evidence.",
-          "id": "CLO 5",
+          "statement": "Implement a simple interactive graphic using coordinate transformations, visual encodings and input events.",
+          "evidence": "Individual graphics programming practical",
           "etecRefs": [],
-          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+          "id": "CLO 6"
         },
         {
           "plo": "S3",
           "stage": "P",
-          "statement": "Present a design rationale that connects requirements, evaluation results and limitations.",
-          "id": "CLO 6",
+          "statement": "Present a design rationale connecting requirements, graphical choices, usability evidence and limitations.",
+          "evidence": "Stakeholder briefing and individual defense",
           "etecRefs": [],
-          "evidence": "Assessed report or presentation and individual responses"
+          "id": "CLO 7"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify accessible design, participant welfare and responsible visual communication.",
+          "evidence": "Accessibility and design-accountability case",
+          "etecRefs": [],
+          "id": "CLO 8"
         }
       ],
       "profile": "project",
       "group": null,
-      "requirement": null,
+      "requirement": "The 60 contact hours include an 18-hour graphics and interactive-visualization strand, with at least four lecture hours allocated to ACM/IEEE Graphics and Interactive Techniques CS Core topics and an individual graphics practical. Eight HCI CS Core hours and two Society, Ethics and the Profession hours remain separately allocated.",
       "resource": "W3C Web Content Accessibility Guidelines and an instructor-supplied usability protocol.",
       "name": "Human–Computer Interaction",
       "placement": "Semester 5",
@@ -3000,11 +3074,21 @@ const curriculum = {
       "facilities": {
         "lab": "HCI prototyping and usability laboratory",
         "hardware": "Accessible workstations, screen/audio recording, representative mobile devices and quiet test space.",
-        "software": "Figma or Penpot, browser developer tools, screen reader such as NVDA, accessibility checker and spreadsheet/statistical analysis tools.",
-        "practice": "Prototype iteration, accessibility checks, consented usability sessions and anonymized study records.",
+        "software": "Figma/Penpot or equivalent prototyping tool, browser developer tools, JavaScript Canvas or p5.js, SVG tools, accessibility checker, consent and usability templates, Git.",
+        "practice": "Stakeholder interviews, accessible prototypes, individual interactive graphics with transformations/color/input, usability evaluation and documented iteration.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "topicHours": [
+        6,
+        6,
+        8,
+        8,
+        12,
+        6,
+        8,
+        6
+      ]
     },
     "CS 390": {
       "id": "CS 390",
@@ -3081,7 +3165,7 @@ const curriculum = {
       ],
       "profile": "coop",
       "group": null,
-      "requirement": "Complete all 86 credits in Semesters 1–5 and secure a college-approved placement and learning plan.",
+      "requirement": "Complete all 85 credits in Semesters 1–5 and secure a college-approved placement and learning plan.",
       "resource": "College placement handbook, signed learning plan, host induction materials, and reporting templates.",
       "name": "Cooperative Training",
       "placement": "Semester 6 and the following summer",
@@ -3320,23 +3404,25 @@ const curriculum = {
       "id": "CS 403",
       "code": "CS 403",
       "title": "Graphics and Interactive Techniques",
-      "term": 8,
-      "credits": 2,
-      "category": "core",
-      "lecture": 1,
+      "term": null,
+      "credits": 3,
+      "category": "elective",
+      "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 240",
-        "MATH 120"
+        "MATH 120",
+        "CS 350"
       ],
-      "summary": "Use graphics and interaction techniques to build and evaluate a small visual application.",
+      "summary": "Develop deeper graphics skills through geometry, rendering, shading and an evaluated interactive scene, building on the compulsory HCI graphics strand.",
       "topics": [
-        "Graphic output, human vision, digitization, and image formats",
-        "Coordinates, geometry, spatialization, and transformations",
-        "Viewing, projection, and rendering pipeline",
-        "Color models, light, and basic shading",
-        "Interactive input, animation, and visualization",
-        "Rendering costs, storage trade-offs, and accessible visual design"
+        "Graphics representations, spatial geometry and transformation composition",
+        "Viewing, projection, clipping and rasterization",
+        "Color, lighting, surface materials and shading",
+        "Geometry, meshes, textures and rendering trade-offs",
+        "Interactive input, animation and visual simulation",
+        "Rendering performance, visual accuracy and accessibility",
+        "Implemented scene or visualization project and individual evaluation"
       ],
       "clos": [
         {
@@ -3389,11 +3475,11 @@ const curriculum = {
         }
       ],
       "profile": "lab",
-      "group": null,
+      "group": "Graphics and interaction",
       "requirement": null,
       "resource": null,
       "name": "Graphics and Interactive Techniques",
-      "placement": "Semester 8",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-403",
       "etecTopics": [],
       "etecSLOs": [],
@@ -3404,7 +3490,16 @@ const curriculum = {
         "practice": "Transformations, projection, shading, interaction, animation and measured rendering performance.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "topicHours": [
+        8,
+        10,
+        10,
+        8,
+        8,
+        8,
+        8
+      ]
     },
     "BUS 401": {
       "id": "BUS 401",
@@ -3610,7 +3705,8 @@ const curriculum = {
       "resource": null,
       "name": "Technical Elective I",
       "placement": "Semester 8",
-      "anchor": "el-1"
+      "anchor": "el-1",
+      "etecSLOs": []
     },
     "CS 411": {
       "id": "CS 411",
@@ -3837,9 +3933,9 @@ const curriculum = {
       "id": "CS 430",
       "code": "CS 430",
       "title": "Machine Learning",
-      "term": 8,
+      "term": null,
       "credits": 3,
-      "category": "core",
+      "category": "elective",
       "lecture": 2,
       "practical": 2,
       "prerequisites": [
@@ -3907,11 +4003,11 @@ const curriculum = {
         }
       ],
       "profile": "lab",
-      "group": null,
+      "group": "Data and AI",
       "requirement": null,
       "resource": null,
       "name": "Machine Learning",
-      "placement": "Semester 8",
+      "placement": "Semester 8 technical elective",
       "anchor": "cs-430",
       "etecTopics": [],
       "etecSLOs": [],
@@ -3943,7 +4039,8 @@ const curriculum = {
       "resource": null,
       "name": "Technical Elective II",
       "placement": "Semester 8",
-      "anchor": "el-2"
+      "anchor": "el-2",
+      "etecSLOs": []
     },
     "EL-3": {
       "id": "EL-3",
@@ -3964,15 +4061,16 @@ const curriculum = {
       "resource": null,
       "name": "Technical Elective III",
       "placement": "Semester 8",
-      "anchor": "el-3"
+      "anchor": "el-3",
+      "etecSLOs": []
     },
     "CS 451": {
       "id": "CS 451",
       "code": "CS 451",
       "title": "Data Engineering",
-      "term": null,
+      "term": 8,
       "credits": 3,
-      "category": "elective",
+      "category": "core",
       "lecture": 2,
       "practical": 2,
       "prerequisites": [
@@ -3981,69 +4079,87 @@ const curriculum = {
       ],
       "summary": "Design reliable pipelines for collecting, transforming, and serving data.",
       "topics": [
-        "Data integration and schema design",
-        "Batch processing and orchestration",
-        "Streaming and event-time concepts",
-        "Data quality, observability, and lineage",
-        "Storage, reproducibility, and governance",
-        "Pipeline testing and performance"
+        "Data-system architecture and the engineering lifecycle; database and analytics interfaces",
+        "Source integration, schemas, formats, data contracts and change management",
+        "Batch ingestion, transformation, orchestration and idempotent recovery",
+        "Streaming, event time, delivery semantics and incremental processing",
+        "Data quality tests, lineage, metadata, observability and reproducibility",
+        "Storage and processing trade-offs, partitioning and distributed execution",
+        "Privacy, access control, retention, governance and resource cost",
+        "Implemented pipeline project, failure injection, benchmarking and individual defense"
       ],
       "clos": [
         {
           "plo": "K3",
-          "stage": "P",
-          "statement": "Explain pipeline architecture and data quality controls.",
-          "id": "CLO 1",
+          "stage": "M",
+          "statement": "Explain the data-engineering lifecycle and justify an architecture for a defined analytical or operational workload.",
+          "evidence": "Individual data-system architecture examination",
           "etecRefs": [],
-          "evidence": "Individual conceptual examination and applied design explanation"
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S1",
+          "stage": "M",
+          "statement": "Compare schema, storage, processing and consistency choices against workload, cost and reliability constraints.",
+          "evidence": "Justified architecture and workload analysis",
+          "etecRefs": [],
+          "id": "CLO 2"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build a tested data pipeline for an applied workload.",
-          "id": "CLO 2",
+          "statement": "Implement an integrated batch pipeline with explicit schemas, orchestration and repeatable recovery.",
+          "evidence": "Individually demonstrated pipeline and recovery tests",
           "etecRefs": [],
-          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
-        },
-        {
-          "plo": "S4",
-          "stage": "P",
-          "statement": "Evaluate pipeline reliability and throughput.",
-          "id": "CLO 3",
-          "etecRefs": [],
-          "evidence": "Reproducible investigation, results and limitations report"
-        },
-        {
-          "plo": "S1",
-          "stage": "P",
-          "statement": "Choose batch or streaming architecture for stated latency and governance needs.",
-          "id": "CLO 4",
-          "etecRefs": [],
-          "evidence": "Individual problem analysis, model and justified method selection"
+          "id": "CLO 3"
         },
         {
           "plo": "S2",
           "stage": "P",
-          "statement": "Implement schema, quality and lineage checks in an orchestrated data workflow.",
-          "id": "CLO 5",
+          "statement": "Implement a small streaming pipeline and explain event-time and delivery-semantics trade-offs.",
+          "evidence": "Streaming practical and duplicate/late-event tests",
           "etecRefs": [],
-          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S4",
+          "stage": "M",
+          "statement": "Design reproducible experiments that measure data quality, throughput, latency and failure recovery against stated baselines.",
+          "evidence": "Reproducible benchmark repository and limitations report",
+          "etecRefs": [],
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S2",
+          "stage": "M",
+          "statement": "Automate data-contract and quality checks and record lineage and versioned transformations.",
+          "evidence": "Automated pipeline tests and lineage record",
+          "etecRefs": [],
+          "id": "CLO 6"
         },
         {
           "plo": "V1",
-          "stage": "P",
-          "statement": "Justify data-access, retention and privacy controls for a pipeline.",
-          "id": "CLO 6",
+          "stage": "M",
+          "statement": "Justify data access, privacy, retention and resource-use controls for the proposed pipeline.",
+          "evidence": "Governance and privacy decision case",
           "etecRefs": [],
-          "evidence": "Professional or ethical decision case with justified safeguards"
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S3",
+          "stage": "M",
+          "statement": "Defend a data-system design and communicate experimental findings and limitations to a stakeholder.",
+          "evidence": "Individual technical report and oral defense",
+          "etecRefs": [],
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
-      "group": "Data and AI",
+      "group": null,
       "requirement": null,
       "resource": null,
       "name": "Data Engineering",
-      "placement": "Semester 8 technical elective",
+      "placement": "Semester 8",
       "anchor": "cs-451",
       "etecTopics": [],
       "etecSLOs": [],
@@ -4054,7 +4170,17 @@ const curriculum = {
         "practice": "Batch/stream pipelines, data quality, lineage, schema tests, observability and throughput measurements.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "topicHours": [
+        6,
+        8,
+        10,
+        8,
+        8,
+        8,
+        6,
+        6
+      ]
     },
     "CS 452": {
       "id": "CS 452",
@@ -4330,81 +4456,99 @@ const curriculum = {
     "CS 455": {
       "id": "CS 455",
       "code": "CS 455",
-      "title": "Cloud and Distributed Applications",
-      "term": null,
+      "title": "Cloud Computing & DevOps",
+      "term": 8,
       "credits": 3,
-      "category": "elective",
+      "category": "core",
       "lecture": 2,
       "practical": 2,
       "prerequisites": [
         "CS 310",
         "CS 260"
       ],
-      "summary": "Engineer an application using managed and distributed computing services.",
+      "summary": "Deploy, secure and operate a cloud application through reproducible infrastructure, automated delivery and measured reliability.",
       "topics": [
-        "Distributed application architecture",
-        "Cloud services and infrastructure as code",
-        "Messaging, data, and consistency",
-        "Reliability, scaling, and observability",
-        "Security, cost, and sustainability",
-        "Resilient service design project"
+        "Cloud service and deployment models, virtualization and workload architecture",
+        "Containers and reproducible infrastructure as code",
+        "Continuous integration, automated tests, delivery gates and deployment rollback",
+        "Container orchestration, service communication and managed storage",
+        "Availability, scaling, observability, service objectives and incident response",
+        "Identity, secrets, least privilege, dependency controls and software supply-chain security",
+        "Performance, cloud cost, sustainability and shared-responsibility decisions",
+        "Resilient service project, recovery exercise, runbook and individual defense"
       ],
       "clos": [
         {
           "plo": "K2",
           "stage": "M",
-          "statement": "Explain distributed service trade-offs.",
-          "id": "CLO 1",
+          "statement": "Explain cloud execution, storage and networking abstractions and distinguish provider and application responsibilities.",
+          "evidence": "Individual cloud architecture examination",
           "etecRefs": [],
-          "evidence": "Individual conceptual examination and system analysis"
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S1",
+          "stage": "M",
+          "statement": "Select a deployment architecture against availability, consistency, security and cost requirements.",
+          "evidence": "Architecture trade-off analysis",
+          "etecRefs": [],
+          "id": "CLO 2"
         },
         {
           "plo": "S2",
           "stage": "M",
-          "statement": "Build and test a cloud application under stated constraints.",
-          "id": "CLO 2",
+          "statement": "Provision a reproducible application environment using containers and infrastructure as code.",
+          "evidence": "Individually demonstrated environment recreation",
           "etecRefs": [],
-          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "M",
+          "statement": "Implement an automated delivery pipeline with tests, release controls and a verified rollback.",
+          "evidence": "Pipeline execution record and rollback practical",
+          "etecRefs": [],
+          "id": "CLO 4"
         },
         {
           "plo": "S4",
           "stage": "M",
-          "statement": "Measure resilience, cost, and performance.",
-          "id": "CLO 3",
+          "statement": "Evaluate service latency, scaling and recovery through controlled load and failure experiments.",
+          "evidence": "Reproducible reliability and cost evaluation",
           "etecRefs": [],
-          "evidence": "Reproducible investigation, results and limitations report"
-        },
-        {
-          "plo": "S1",
-          "stage": "P",
-          "statement": "Select consistency, messaging and storage approaches for a distributed workload.",
-          "id": "CLO 4",
-          "etecRefs": [],
-          "evidence": "Individual problem analysis, model and justified method selection"
-        },
-        {
-          "plo": "S2",
-          "stage": "P",
-          "statement": "Implement infrastructure configuration, monitoring and a tested recovery procedure.",
-          "id": "CLO 5",
-          "etecRefs": [],
-          "evidence": "Individually demonstrated artifact with tests and correctness explanation"
+          "id": "CLO 5"
         },
         {
           "plo": "V1",
-          "stage": "P",
-          "statement": "Justify cloud access, data-protection and resource-budget controls.",
-          "id": "CLO 6",
+          "stage": "M",
+          "statement": "Implement and justify least-privilege access, secrets handling and software supply-chain controls.",
+          "evidence": "Security review and automated control checks",
           "etecRefs": [],
-          "evidence": "Professional or ethical decision case with justified safeguards"
+          "id": "CLO 6"
+        },
+        {
+          "plo": "V3",
+          "stage": "M",
+          "statement": "Manage a bounded cloud budget and justify operational and sustainability trade-offs.",
+          "evidence": "Costed operating plan and resource-use evidence",
+          "etecRefs": [],
+          "id": "CLO 7"
+        },
+        {
+          "plo": "V2",
+          "stage": "M",
+          "statement": "Coordinate a release and incident exercise with documented responsibilities, handover and individual contributions.",
+          "evidence": "Release review, runbook, peer evidence and individual defense",
+          "etecRefs": [],
+          "id": "CLO 8"
         }
       ],
       "profile": "lab",
-      "group": "Systems and security",
-      "requirement": null,
+      "group": null,
+      "requirement": "CS 401 supplies distributed-computing theory; CS 370 introduces application delivery. This course assesses production-style provisioning, automated release, observability, security, cost and recovery through a bounded teaching deployment.",
       "resource": null,
-      "name": "Cloud and Distributed Applications",
-      "placement": "Semester 8 technical elective",
+      "name": "Cloud Computing & DevOps",
+      "placement": "Semester 8",
       "anchor": "cs-455",
       "etecTopics": [],
       "etecSLOs": [],
@@ -4415,7 +4559,17 @@ const curriculum = {
         "practice": "Deployment, resilience, scaling, resource-cost measurement and tested recovery.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "topicHours": [
+        6,
+        10,
+        10,
+        8,
+        8,
+        8,
+        4,
+        6
+      ]
     },
     "CS 456": {
       "id": "CS 456",
@@ -5670,6 +5824,486 @@ const curriculum = {
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
       }
+    },
+    "CS 466": {
+      "id": "CS 466",
+      "code": "CS 466",
+      "title": "Bioinformatics and Computational Biology",
+      "name": "Bioinformatics and Computational Biology",
+      "term": null,
+      "credits": 3,
+      "category": "elective",
+      "lecture": 2,
+      "practical": 2,
+      "prerequisites": [
+        "BIO 101",
+        "CS 220",
+        "STAT 220"
+      ],
+      "summary": "Apply algorithms and reproducible computational methods to biological sequence data, with an undergraduate scope benchmarked against CMU and Prince Sultan University.",
+      "topics": [
+        "Biological questions, molecular foundations and computational representations",
+        "Sequence formats, quality checks, biological databases and provenance",
+        "String matching and dynamic-programming sequence alignment",
+        "Graphs, read overlaps and introductory genome assembly",
+        "Database similarity search and BLAST interpretation",
+        "Statistical evidence, multiple comparisons and limits of biological inference",
+        "Reproducible workflows, genomic privacy and responsible data use",
+        "Implemented biological-data investigation and individual defense"
+      ],
+      "clos": [
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Translate a biological sequence question into a computational problem with explicit assumptions.",
+          "evidence": "Individual problem-formulation examination",
+          "etecRefs": [],
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Parse sequence data and implement quality and provenance checks.",
+          "evidence": "Sequence-data practical",
+          "etecRefs": [],
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement a dynamic-programming sequence-alignment algorithm and verify its correctness.",
+          "evidence": "Alignment implementation and tests",
+          "etecRefs": [],
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Model an introductory genome-assembly problem using graphs and explain algorithmic limitations.",
+          "evidence": "Graph model and assembly analysis",
+          "etecRefs": [],
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Interpret similarity-search results using appropriate statistical evidence and stated limitations.",
+          "evidence": "BLAST analysis and significance report",
+          "etecRefs": [],
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S4",
+          "stage": "M",
+          "statement": "Conduct a reproducible analysis of a public biological dataset with documented methods and uncertainty.",
+          "evidence": "Versioned investigation repository",
+          "etecRefs": [],
+          "id": "CLO 6"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Justify genomic-data privacy, consent, provenance and responsible-use safeguards.",
+          "evidence": "Genomic-data ethics case",
+          "etecRefs": [],
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Defend computational findings and distinguish evidence from biological speculation.",
+          "evidence": "Individual report and oral defense",
+          "etecRefs": [],
+          "id": "CLO 8"
+        }
+      ],
+      "profile": "lab",
+      "group": "Business and health",
+      "requirement": null,
+      "resource": "CMU 02-251 computational biology benchmark; PSU CS 455 local 3-credit precedent (https://psu.edu.sa/en/CCIS/cs-cd); public sequence datasets, BLAST and Biopython documentation.",
+      "placement": "Semester 8 technical elective",
+      "anchor": "cs-466",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Computational biology and sequence-analysis lab",
+        "hardware": "Standard workstation; public or synthetic sequence datasets and allocated shared compute for demonstrations.",
+        "software": "Python, Biopython, Jupyter, BLAST+, Git and a container or reproducible environment manager.",
+        "practice": "Sequence parsing, alignment, assembly exercises and public-data investigation; no patient-identifiable genomic data or wet-lab work is required.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      },
+      "topicHours": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        6,
+        6
+      ]
+    },
+    "CS 467": {
+      "id": "CS 467",
+      "code": "CS 467",
+      "title": "Information Retrieval and Natural Language Processing",
+      "name": "Information Retrieval and Natural Language Processing",
+      "term": null,
+      "credits": 3,
+      "category": "elective",
+      "lecture": 2,
+      "practical": 2,
+      "prerequisites": [
+        "CS 220",
+        "CS 230",
+        "CS 340"
+      ],
+      "summary": "Build and evaluate a text retrieval system, connecting lexical and semantic search with NLP foundations and retrieval-augmented applications.",
+      "topics": [
+        "Text representation, tokenization, normalization and Arabic/English text considerations",
+        "Inverted indexes, index construction and query processing",
+        "Lexical ranking, TF-IDF/BM25 and relevance judgments",
+        "Embeddings, semantic retrieval and vector similarity",
+        "Text classification, language models and structured information extraction",
+        "Retrieval evaluation, ranking metrics, baselines and error analysis",
+        "Retrieval-augmented generation, provenance, privacy and bias",
+        "Search-system project and individual comparative evaluation"
+      ],
+      "clos": [
+        {
+          "plo": "K3",
+          "stage": "P",
+          "statement": "Explain lexical and semantic text representations and their retrieval trade-offs.",
+          "evidence": "Individual representation and ranking examination",
+          "etecRefs": [],
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement tokenization, indexing and query processing for a text collection.",
+          "evidence": "Indexing and query-processing practical",
+          "etecRefs": [],
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Select lexical or embedding-based retrieval for a defined information need.",
+          "evidence": "Justified retrieval design",
+          "etecRefs": [],
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Apply an NLP method to classify text or extract structured information.",
+          "evidence": "NLP implementation and tests",
+          "etecRefs": [],
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S4",
+          "stage": "M",
+          "statement": "Design a reproducible retrieval evaluation with relevance judgments, baselines and ranking metrics.",
+          "evidence": "Comparative retrieval evaluation",
+          "etecRefs": [],
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Analyze retrieval-augmented answers for evidence support, retrieval failures and generation errors.",
+          "evidence": "Grounding and error-analysis report",
+          "etecRefs": [],
+          "id": "CLO 6"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Evaluate privacy, copyright and language or demographic bias in a retrieval application.",
+          "evidence": "Responsible retrieval decision case",
+          "etecRefs": [],
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Defend system choices and communicate evaluation limitations.",
+          "evidence": "Individual technical report and defense",
+          "etecRefs": [],
+          "id": "CLO 8"
+        }
+      ],
+      "profile": "lab",
+      "group": "Data and AI",
+      "requirement": null,
+      "resource": "Current Jurafsky–Martin online manuscript (explicitly a draft), CMU 11-442 retrieval benchmark, public Arabic/English text collections and reproducible relevance judgments.",
+      "placement": "Semester 8 technical elective",
+      "anchor": "cs-467",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Text analytics and retrieval lab",
+        "hardware": "Standard workstation; small Arabic/English public corpora and optional shared GPU or bounded embedding API access.",
+        "software": "Python, a supported NLP toolkit, scikit-learn, a local text-search engine or equivalent index, sentence-transformer embeddings, Git and evaluation scripts.",
+        "practice": "Lexical and semantic retrieval, NLP baselines, relevance evaluation and grounded-answer analysis with reproducible local datasets.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      },
+      "topicHours": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        6,
+        6
+      ]
+    },
+    "CS 468": {
+      "id": "CS 468",
+      "code": "CS 468",
+      "title": "Machine Learning Systems and MLOps",
+      "name": "Machine Learning Systems and MLOps",
+      "term": null,
+      "credits": 3,
+      "category": "elective",
+      "lecture": 2,
+      "practical": 2,
+      "prerequisites": [
+        "CS 340",
+        "CS 250",
+        "CS 230"
+      ],
+      "summary": "Engineer and evaluate an operating ML service through reproducible training, deployment, monitoring and responsible lifecycle controls.",
+      "topics": [
+        "ML system requirements, baselines and production failure modes",
+        "Versioned data, features, experiments and reproducible training",
+        "Model packaging, registries and batch/online serving",
+        "Automated data/model tests, deployment gates and rollback",
+        "Monitoring, drift, performance decay and retraining decisions",
+        "Latency, resource cost, robustness and reliability experiments",
+        "Security, privacy, subgroup performance and human oversight",
+        "Operating ML service, incident exercise and individual defense"
+      ],
+      "clos": [
+        {
+          "plo": "K3",
+          "stage": "M",
+          "statement": "Explain ML lifecycle stages and distinguish model accuracy from operational system quality.",
+          "evidence": "Individual ML-system analysis",
+          "etecRefs": [],
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S2",
+          "stage": "M",
+          "statement": "Create a reproducible training workflow with versioned data, features and experiments.",
+          "evidence": "Recreated training and provenance practical",
+          "etecRefs": [],
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S2",
+          "stage": "M",
+          "statement": "Package and deploy a model service with explicit interfaces and automated tests.",
+          "evidence": "Deployed service and test evidence",
+          "etecRefs": [],
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement release gates and verify model rollback under a stated failure condition.",
+          "evidence": "Release and rollback exercise",
+          "etecRefs": [],
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S4",
+          "stage": "M",
+          "statement": "Evaluate model and service performance using baselines, resource measurements and drift scenarios.",
+          "evidence": "Reproducible monitoring and failure investigation",
+          "etecRefs": [],
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S1",
+          "stage": "M",
+          "statement": "Justify retraining, monitoring and deployment choices under quality, cost and risk constraints.",
+          "evidence": "Lifecycle decision record",
+          "etecRefs": [],
+          "id": "CLO 6"
+        },
+        {
+          "plo": "V1",
+          "stage": "M",
+          "statement": "Assess security, privacy and subgroup risks and implement a human-oversight safeguard.",
+          "evidence": "Assurance report and safeguard demonstration",
+          "etecRefs": [],
+          "id": "CLO 7"
+        },
+        {
+          "plo": "V2",
+          "stage": "M",
+          "statement": "Coordinate an ML service handover with a runbook and individually evidenced responsibilities.",
+          "evidence": "Team handover, contribution record and individual defense",
+          "etecRefs": [],
+          "id": "CLO 8"
+        }
+      ],
+      "profile": "lab",
+      "group": "Data and AI",
+      "requirement": "CS 430 Machine Learning and CS 455 Cloud Computing & DevOps must be completed before or taken concurrently. Students choosing CS 468 in Semester 8 normally use a second elective slot for CS 430; the taught sequence schedules model preparation before service deployment.",
+      "resource": "CMU 17-445 Machine Learning in Production benchmark, current tracking/serving documentation and small-model datasets. Prior or concurrent CS 430 is required.",
+      "placement": "Semester 8 technical elective",
+      "anchor": "cs-468",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "ML service engineering sandbox",
+        "hardware": "Standard workstation; bounded CPU training datasets, container runtime and allocated cloud/remote lab capacity.",
+        "software": "Python, scikit-learn, MLflow or equivalent tracking/registry, FastAPI or equivalent serving, Docker/Podman, Git, CI and monitoring tools.",
+        "practice": "Versioned model pipeline, tested service, drift simulation and rollback; small models support all required assessments.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      },
+      "corequisites": [
+        "CS 430",
+        "CS 455"
+      ],
+      "topicHours": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        6,
+        6
+      ]
+    },
+    "CS 469": {
+      "id": "CS 469",
+      "code": "CS 469",
+      "title": "Compiler Construction",
+      "name": "Compiler Construction",
+      "term": null,
+      "credits": 3,
+      "category": "elective",
+      "lecture": 2,
+      "practical": 2,
+      "prerequisites": [
+        "CS 320",
+        "CS 330",
+        "CS 240"
+      ],
+      "summary": "Implement a compiler for a small language, extending compulsory translation and interpreter foundations into code generation and optimization.",
+      "topics": [
+        "Compiler architecture and source-language specification",
+        "Lexical analysis, grammars and parsing",
+        "Abstract syntax, name resolution and type checking",
+        "Intermediate representations and control-flow graphs",
+        "Runtime organization and code generation",
+        "Data-flow analysis and selected optimizations",
+        "Diagnostics, correctness, testing and performance",
+        "Small-language compiler project and individual defense"
+      ],
+      "clos": [
+        {
+          "plo": "K1",
+          "stage": "P",
+          "statement": "Explain compiler phases and connect them to formal-language and programming-language concepts.",
+          "evidence": "Individual compiler architecture examination",
+          "etecRefs": [],
+          "id": "CLO 1"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Implement a lexer and parser for a specified small language.",
+          "evidence": "Front-end implementation and tests",
+          "etecRefs": [],
+          "id": "CLO 2"
+        },
+        {
+          "plo": "S2",
+          "stage": "P",
+          "statement": "Perform name resolution and type checking and construct an intermediate representation.",
+          "evidence": "Semantic-analysis practical",
+          "etecRefs": [],
+          "id": "CLO 3"
+        },
+        {
+          "plo": "S2",
+          "stage": "M",
+          "statement": "Generate executable or virtual-machine code with a documented runtime model.",
+          "evidence": "Code-generation project demonstration",
+          "etecRefs": [],
+          "id": "CLO 4"
+        },
+        {
+          "plo": "S1",
+          "stage": "P",
+          "statement": "Apply a data-flow analysis and justify a semantics-preserving optimization.",
+          "evidence": "Optimization and correctness argument",
+          "etecRefs": [],
+          "id": "CLO 5"
+        },
+        {
+          "plo": "S4",
+          "stage": "P",
+          "statement": "Evaluate correctness and performance with systematic and differential tests.",
+          "evidence": "Reproducible compiler test and benchmark suite",
+          "etecRefs": [],
+          "id": "CLO 6"
+        },
+        {
+          "plo": "V1",
+          "stage": "P",
+          "statement": "Identify unsafe translation behavior and justify diagnostic and implementation safeguards.",
+          "evidence": "Compiler robustness case",
+          "etecRefs": [],
+          "id": "CLO 7"
+        },
+        {
+          "plo": "S3",
+          "stage": "P",
+          "statement": "Defend compiler design choices and communicate implementation limitations.",
+          "evidence": "Individual technical report and defense",
+          "etecRefs": [],
+          "id": "CLO 8"
+        }
+      ],
+      "profile": "lab",
+      "group": "Algorithms and quantum",
+      "requirement": null,
+      "resource": null,
+      "placement": "Semester 8 technical elective",
+      "anchor": "cs-469",
+      "etecTopics": [],
+      "etecSLOs": [],
+      "facilities": {
+        "lab": "Language implementation and compiler lab",
+        "hardware": "Standard Linux-capable workstation and sandboxed test execution.",
+        "software": "Supported Python/C++/Java toolchain, lexer/parser generator where appropriate, LLVM or a small virtual-machine target, Git and automated test tools.",
+        "practice": "Implement and test a small compiler with staged front end, semantic checks, code generation and a limited optimization.",
+        "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
+        "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
+      },
+      "topicHours": [
+        8,
+        8,
+        8,
+        8,
+        8,
+        8,
+        6,
+        6
+      ]
     }
   },
   "textbooks": {
@@ -5928,20 +6562,42 @@ const curriculum = {
       "title": "AI Engineering: Building Applications with Foundation Models",
       "citation": "Chip Huyen · O'Reilly · 1st ed. · 2025 · Illustrative offering on agentic computing and evaluation",
       "url": "https://www.oreilly.com/library/view/ai-engineering/9781098166298/"
+    },
+    "CS 466": {
+      "title": "Bioinformatics Algorithms: An Active Learning Approach",
+      "citation": "Phillip Compeau and Pavel Pevzner · Active Learning Publishers · 3rd ed.",
+      "url": "https://www.bioinformaticsalgorithms.org/product-page/bioinformatics-algorithms-3rd-edition"
+    },
+    "CS 467": {
+      "title": "Speech and Language Processing",
+      "citation": "Daniel Jurafsky and James H. Martin · 3rd ed. online draft · 19 August 2026",
+      "url": "https://web.stanford.edu/~jurafsky/slp3/"
+    },
+    "CS 468": {
+      "title": "Designing Machine Learning Systems",
+      "citation": "Chip Huyen · O’Reilly · 1st ed. · 2022",
+      "url": "https://www.oreilly.com/library/view/designing-machine-learning/9781098107956/"
+    },
+    "CS 469": {
+      "title": "Engineering a Compiler",
+      "citation": "Keith D. Cooper and Linda Torczon · Morgan Kaufmann · 3rd ed. · 2022",
+      "url": "https://shop.elsevier.com/books/engineering-a-compiler/cooper/978-0-12-815412-0"
     }
   },
   "electiveAreas": {
     "Data and AI": [
-      "CS 451",
+      "CS 430",
       "CS 452",
-      "CS 464"
+      "CS 464",
+      "CS 467",
+      "CS 468"
     ],
     "Business and health": [
       "CS 453",
-      "CS 454"
+      "CS 454",
+      "CS 466"
     ],
     "Systems and security": [
-      "CS 455",
       "CS 456",
       "CS 457",
       "CS 460"
@@ -5953,7 +6609,11 @@ const curriculum = {
     ],
     "Algorithms and quantum": [
       "CS 461",
-      "CS 462"
+      "CS 462",
+      "CS 469"
+    ],
+    "Graphics and interaction": [
+      "CS 403"
     ],
     "Selected topics": [
       "CS 465"
@@ -5999,6 +6659,36 @@ const curriculum = {
       "label": "Stanford CS 336 · Language Modeling from Scratch",
       "url": "https://bulletin.stanford.edu/courses/2255541/tab-aoYks",
       "rationale": "Adapts the language-model lifecycle to small models, retrieval, and evidence-based evaluation in an undergraduate lab."
+    },
+    "CS 403": {
+      "label": "CMU 15-462 Computer Graphics",
+      "url": "https://15462.courses.cs.cmu.edu/",
+      "rationale": "A deeper elective rendering and geometry project follows the required HCI graphics strand; no required core coverage depends on this elective."
+    },
+    "CS 430": {
+      "label": "Stanford CS 229 Machine Learning",
+      "url": "https://cs229.stanford.edu/",
+      "rationale": "Adds mathematical and experimental depth beyond the required AI course; all students retain assessed ML foundations and AI ethics in CS 340."
+    },
+    "CS 466": {
+      "label": "CMU 02-251 and PSU CS 455 Computational Bioinformatics",
+      "url": "https://www.cmu.edu/cbd/education/courses-offered/02-251-great-ideas-in-comp-bio.html",
+      "rationale": "Adopts algorithmic biological-data problems and an implemented investigation. PSU provides a local three-credit CS precedent. Fakeeh uses BIO 101, Algorithms and Statistics preparation and a bounded sequence-analysis project."
+    },
+    "CS 467": {
+      "label": "CMU 11-442 Search Engines",
+      "url": "https://boston.lti.cs.cmu.edu/classes/11-642/description.html",
+      "rationale": "Adopts indexing, lexical/semantic retrieval and measured relevance; adds selected NLP and Arabic/English examples within one undergraduate course."
+    },
+    "CS 468": {
+      "label": "CMU 17-445 Machine Learning in Production",
+      "url": "https://mlip-cmu.github.io/f2026/",
+      "rationale": "Adopts reproducible lifecycle, serving, monitoring and assurance. Fakeeh uses small models and permits prior or concurrent ML and cloud study in the final semester."
+    },
+    "CS 469": {
+      "label": "CMU 15-411 Compiler Design",
+      "url": "https://www.cs.cmu.edu/~15411/",
+      "rationale": "Extends compulsory CS 320/CS 330 foundations through a small-language compiler. Advanced optimization is limited to an achievable three-credit project."
     }
   },
   "electiveLocalPrecedent": "KAU’s public CS overview includes advanced programming, intelligent systems, software engineering and information security, supporting a broad elective portfolio.",
@@ -6348,6 +7038,14 @@ const curriculum = {
       ],
       "Coordinate a client-server application project, review code, respond to user feedback and explain individual contributions.",
       "Individual coding tasks, peer review, a tested web/mobile application and individual demonstration and defense."
+    ],
+    [
+      [
+        "CS 451",
+        "CS 455"
+      ],
+      "Defend data and infrastructure choices, coordinate releases, communicate incidents, document operations and hand over a working service.",
+      "Individual defenses, release and incident exercises, runbooks, contribution records and reproducible evaluation reports."
     ]
   ],
   "aiEthics": [
@@ -6362,15 +7060,16 @@ const curriculum = {
       [
         "CS 340"
       ],
-      "Recognizing how AI systems can fail, identifying who could be affected, and deciding when human review is needed.",
-      "A failure-mode lab and a short memo justifying safeguards and human oversight."
+      "Required ML and AI teaching covers data and evaluation bias, subgroup performance, privacy, model limitations, affected users and human oversight.",
+      "A simple classifier evaluation, model card and justified ethical safeguards; these assessments apply to every student."
     ],
     [
       [
-        "CS 430"
+        "CS 451",
+        "CS 455"
       ],
-      "Testing for bias, interpreting subgroup results, identifying privacy risks, and deciding where a model can be used responsibly.",
-      "A model audit and model card documenting subgroup performance, limitations, and deployment safeguards."
+      "Data provenance and access controls, responsible cloud operation, secure delivery and limits of automated decisions.",
+      "A pipeline governance case and a cloud security, cost and recovery review."
     ],
     [
       [
@@ -6402,7 +7101,7 @@ const curriculum = {
       "label": "Global employer outlook",
       "metric": "2025–2030",
       "finding": "The World Economic Forum survey identifies software and applications developers among the fastest-growing roles and AI, big data, networks, and cybersecurity among the fastest-growing skill areas.",
-      "decision": "Keep programming and software development central. Require AI, machine learning, and cybersecurity and provide further depth through electives.",
+      "decision": "Keep programming and software development central. Require AI with assessed ML foundations, cybersecurity, data engineering and cloud delivery; use Machine Learning and other electives for specialist depth.",
       "source": "World Economic Forum Future of Jobs Report 2025",
       "url": "https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf"
     },
@@ -6413,6 +7112,14 @@ const curriculum = {
       "decision": "Launch a broad CS degree with optional digital product and health informatics applications. Validate cohort size separately through enrollment and placement planning.",
       "source": "Colliers FCMS Strategic Whitepaper, 2025, pp. 4 and 38–40",
       "url": null
+    },
+    {
+      "label": "Saudi technology investment priorities",
+      "metric": "2026 survey",
+      "finding": "KPMG’s Saudi Arabia Tech Report 2026 reports surveyed organizations prioritizing modern delivery (91%), data and analytics (84%) and cloud platforms (77%). These are investment priorities, not counts of graduate vacancies.",
+      "decision": "Require Data Engineering and Cloud Computing & DevOps with implemented, individually assessed projects.",
+      "source": "KPMG Saudi Arabia Tech Report 2026, p. 15",
+      "url": "https://assets.kpmg.com/content/dam/kpmgsites/sa/pdf/2026/kpmg-saudi-arabia-tech-report-2026.pdf"
     }
   ],
   "cs2023": [
@@ -6426,7 +7133,7 @@ const curriculum = {
           12
         ]
       ],
-      "Agents, search, knowledge representation, reasoning, and learning paradigms. Compare AI approaches and document failure modes."
+      "Required CS 340 includes all 12 AI core hours, including four ML instructional hours: simple learning methods, evaluation, neural/generative concepts and societal impacts. Assess a held-out classifier experiment and model card."
     ],
     [
       "AL",
@@ -6435,11 +7142,11 @@ const curriculum = {
       [
         [
           "CS 201",
-          12
+          10
         ],
         [
           "CS 220",
-          14
+          16
         ],
         [
           "CS 330",
@@ -6498,11 +7205,11 @@ const curriculum = {
       4,
       [
         [
-          "CS 403",
+          "CS 350",
           4
         ]
       ],
-      "Visual representation, digitization, color, rendering, spatialization, animation, and accessibility. Develop an interactive visual example."
+      "Required HCI graphics strand: visual representation, digitization, color, spatial transformations, rendering and accessible interactive graphics. Assess an individual graphic and concepts examination."
     ],
     [
       "HCI",
@@ -6650,11 +7357,11 @@ const curriculum = {
           1
         ],
         [
-          "CS 430",
+          "CS 340",
           3
         ]
       ],
-      "Ethical reasoning, computing history, professional codes, licensing, stakeholder communication, privacy, social impacts, accessibility, and sustainability. Assess cases, reports, and design decisions."
+      "Ethical reasoning, computing history, professional codes, licensing, stakeholder communication, privacy, social impacts, accessibility, and sustainability. Assess cases, reports, and design decisions. The three hours formerly assigned to Machine Learning are compulsory in CS 340: bias, privacy, model limitations and human oversight."
     ],
     [
       "SF",
@@ -6788,7 +7495,8 @@ const curriculum = {
         "PHYS 101",
         "CS 201",
         "CS 310",
-        "CS 340"
+        "CS 340",
+        "CS 451"
       ],
       [
         [
@@ -6796,8 +7504,8 @@ const curriculum = {
           "Algorithm correctness and complexity exam."
         ],
         [
-          "CS 430",
-          "Model selection and interpretation for an applied problem."
+          "CS 451",
+          "Data-system architecture examination and defended workload design."
         ]
       ]
     ],
@@ -6860,7 +7568,9 @@ const curriculum = {
       [
         "CS 210",
         "CS 240",
-        "CS 401"
+        "CS 401",
+        "CS 451",
+        "CS 455"
       ],
       [
         [
@@ -6868,8 +7578,8 @@ const curriculum = {
           "Individual practical and team web/mobile application with API tests, release automation and operational evaluation."
         ],
         [
-          "CS 430",
-          "Reproducible model comparison documenting uncertainty and failure cases."
+          "CS 455",
+          "Reproducible cloud load, reliability and recovery experiment."
         ]
       ]
     ],
@@ -6903,7 +7613,8 @@ const curriculum = {
       ],
       [
         "CS 250",
-        "CS 410"
+        "CS 410",
+        "CS 455"
       ],
       [
         [
@@ -7122,11 +7833,11 @@ const curriculum = {
   "abetCurriculum": [
     [
       "General Criterion 5",
-      "The required CS core provides 61 credits of fundamental and advanced computing. CS 250 and CS 370 assess professional tools, software construction, web and mobile implementation, testing and release practices. CS 402 covers security and privacy. ISLM 101, CS 430, and CS 411 assess ethical reasoning, the effects of computing, and professional judgment. The capstone integrates prior technical work and professional practice."
+      "The required CS core provides 61 credits of fundamental and advanced computing. CS 250 and CS 370 assess software construction, tools and testing; CS 451 adds reliable data pipelines and CS 455 automated deployment, monitoring and recovery. CS 402 covers security and privacy. ISLM 101, CS 340 and CS 411 assess ethics and societal impacts. Required coverage and assessment do not depend on elective choices."
     ],
     [
       "CS coursework · 40-credit minimum",
-      "The required CS core provides 61 credits, including CS 360. The remaining required CS courses provide 58 credits before research methods, capstone, training, or electives are counted."
+      "The required CS core provides 61 credits, including three in Research Methods in Computing. It provides 58 computing credits without research methods, capstones, co-op or electives. CS 103 remains within the separate mathematics/statistics allocation."
     ],
     [
       "Depth in algorithms, theory, language concepts, and software development",
@@ -7142,7 +7853,7 @@ const curriculum = {
     ],
     [
       "Computing systems at multiple abstraction levels",
-      "Students progress from digital circuits, processor construction and instruction execution in CS 210 to system calls and resource management in CS 240 and CS 310, then to network protocols in CS 260 and distributed services in CS 401. Lab work connects choices at each level to program behavior. CS 370 connects application interfaces and APIs to shared backend services."
+      "Students progress from digital circuits, processor construction and instruction execution in CS 210 to system calls and resource management in CS 240 and CS 310, then to network protocols in CS 260 and distributed services in CS 401. Lab work connects choices at each level to program behavior. CS 370 connects application interfaces and APIs to shared backend services. CS 451 and CS 455 connect data pipelines, containers, infrastructure and operational services to these abstraction levels."
     ],
     [
       "Major project integrating earlier coursework",
@@ -7215,9 +7926,9 @@ const curriculum = {
     ],
     "K3": [
       "CS 340",
-      "AI methods comparison",
-      "CS 430",
-      "Model selection and interpretation"
+      "AI methods comparison and ML foundations examination",
+      "CS 451",
+      "Data-system architecture examination and defended design"
     ],
     "S1": [
       "CS 220",
@@ -7240,8 +7951,8 @@ const curriculum = {
     "S4": [
       "CS 360",
       "Reproducible pilot study and validity analysis",
-      "CS 430",
-      "Reproducible model evaluation"
+      "CS 451",
+      "Reproducible pipeline quality, performance and recovery investigation"
     ],
     "V1": [
       "CS 402",
@@ -7313,7 +8024,7 @@ const curriculum = {
     {
       "course": "MATH 340",
       "title": "Academic purpose and Semester 7 placement",
-      "decision": "Numerical Methods develops reliable approximation, numerical error analysis, and scientific computation, with course-content benchmarks at MIT (18.330) and Carnegie Mellon (15-369). Semester 7 follows the mathematics foundations and precedes Machine Learning and Capstone II. Its three credits bring mathematics and statistics to 20 and basic sciences to 10, meeting ETEC's 30-credit essential allocation. Computing Project Management and Finance remains a separate three-credit allocation.",
+      "decision": "Numerical Methods develops reliable approximation, numerical error analysis, and scientific computation, with course-content benchmarks at MIT (18.330) and Carnegie Mellon (15-369). Semester 7 follows the mathematics foundations and supports final-year data/AI electives and Capstone II. Its three credits bring mathematics and statistics to 20 and basic sciences to 10, meeting ETEC's 30-credit essential allocation. Computing Project Management and Finance remains a separate three-credit allocation.",
       "sources": [
         {
           "label": "ETEC CS standards version 2.1",
@@ -7388,7 +8099,7 @@ const curriculum = {
     {
       "course": "CS 370",
       "title": "One compulsory web and mobile application course before co-op",
-      "decision": "A focused three-credit course replaces Software Deployment and Operations. Students build web and cross-platform mobile clients with a shared API and database-backed service, with individual coding and defense. MIT 6.1040 benchmarks application design and web implementation; NUS CS3216/CS3217 benchmark platform projects as elective opportunities, not universal CS requirements. KAU has separate compulsory web and mobile courses. Basic releases remain here; reliability, monitoring and recovery are reinforced in CS 401 and CS 411. CS 350 is concurrent. CS 330 moves to Semester 7 and Elective I moves to Semester 8; all eight semester totals and 130 credits are preserved.",
+      "decision": "A focused three-credit course replaces Software Deployment and Operations. Students build web and cross-platform mobile clients with a shared API and database-backed service, with individual coding and defense. MIT 6.1040 benchmarks application design and web implementation; NUS CS3216/CS3217 benchmark platform projects as elective opportunities, not universal CS requirements. KAU has separate compulsory web and mobile courses. Basic releases remain here; reliability, monitoring and recovery are reinforced in CS 401 and CS 411. CS 350 is concurrent. CS 330 moves to Semester 7 and Elective I moves to Semester 8; the required pre-co-op application sequence is retained in the current 130-credit plan.",
       "sources": [
         {
           "label": "MIT 6.1040 Software Design",
@@ -7418,10 +8129,99 @@ const curriculum = {
           "url": "https://f.etec.gov.sa/j/Computer_Science.pdf"
         }
       ]
+    },
+    {
+      "course": "CS 201",
+      "title": "Three-credit Data Structures with preserved outcomes",
+      "decision": "The three-credit design retains two supervised practical hours each week. CS 103 teaches graph isomorphism and mathematical spanning-tree reasoning; CS 220 develops greedy spanning-tree and shortest-path algorithms, proofs and complexity. CS 201 retains individual data-structure, search, sort, string and graph implementation assessments.",
+      "sources": [
+        {
+          "label": "PSU CS 210 three-credit benchmark",
+          "url": "https://psu.edu.sa/en/CCIS/cs-program-structure"
+        },
+        {
+          "label": "ETEC required outcomes",
+          "url": "https://f.etec.gov.sa/j/Computer_Science.pdf"
+        }
+      ]
+    },
+    {
+      "course": "CS 451",
+      "title": "Required Data Engineering",
+      "decision": "Promote the existing three-credit elective to Semester 8. The course extends CS 230 database foundations into tested, reproducible data pipelines, quality, lineage, streaming and failure recovery. It also supplies required K3 and S4 program-assessment evidence.",
+      "sources": [
+        {
+          "label": "KPMG Saudi Arabia Tech Report 2026",
+          "url": "https://assets.kpmg.com/content/dam/kpmgsites/sa/pdf/2026/kpmg-saudi-arabia-tech-report-2026.pdf"
+        },
+        {
+          "label": "CMU cloud data-processing benchmark",
+          "url": "https://www.cs.cmu.edu/~msakr/15619-f26/index.html"
+        }
+      ]
+    },
+    {
+      "course": "CS 455",
+      "title": "Required Cloud Computing and DevOps",
+      "decision": "Promote and refine the existing three-credit Cloud and Distributed Applications elective in Semester 8. CS 401 retains parallel/distributed theory; CS 455 assesses provisioning, CI/CD, container orchestration, operational security, observability, cloud cost and recovery.",
+      "sources": [
+        {
+          "label": "CMU 15-319 Cloud Computing",
+          "url": "https://www.cs.cmu.edu/~msakr/15619-f26/index.html"
+        }
+      ]
+    },
+    {
+      "course": "CS 350",
+      "title": "Required HCI with graphics foundations",
+      "decision": "The 60 contact hours include an 18-hour graphics and interactive-visualization strand, with at least four lecture hours allocated to ACM/IEEE Graphics and Interactive Techniques CS Core topics and an individual graphics practical. Eight HCI CS Core hours and two Society, Ethics and the Profession hours remain separately allocated. CS 403 becomes a three-credit depth elective rather than the sole owner of required graphics coverage.",
+      "sources": [
+        {
+          "label": "ACM/IEEE CS Curricula body of knowledge",
+          "url": "https://csed.acm.org/wp-content/uploads/2024/04/3.1-Body-of-Knowledge-1.pdf"
+        }
+      ]
+    },
+    {
+      "course": "CS 340",
+      "title": "Required ML foundations and AI ethics",
+      "decision": "Required teaching reserves the 12 AI CS Core instructional hours, including four for Machine Learning, and three additional Society, Ethics and the Profession hours transferred from the former compulsory Machine Learning course. The 3-credit Machine Learning elective adds depth; baseline assessed learning and AI ethics do not depend on choosing it.",
+      "sources": [
+        {
+          "label": "ACM/IEEE CS Curricula AI knowledge area",
+          "url": "https://csed.acm.org/wp-content/uploads/2024/04/3.1-Body-of-Knowledge-1.pdf"
+        }
+      ]
+    },
+    {
+      "course": "CS 466",
+      "title": "Bioinformatics as computing depth",
+      "decision": "An elective connects biological questions to algorithms, sequence analysis and reproducible evidence. CMU 02-251 supplies the international model and PSU CS 455 the local three-credit precedent. BIO 101, CS 220 and STAT 220 provide preparation. Hospital informatics remains a separate elective focused on clinical systems.",
+      "sources": [
+        {
+          "label": "CMU 02-251",
+          "url": "https://www.cmu.edu/cbd/education/courses-offered/02-251-great-ideas-in-comp-bio.html"
+        },
+        {
+          "label": "PSU CS 455",
+          "url": "https://psu.edu.sa/en/CCIS/cs-cd"
+        }
+      ]
+    },
+    {
+      "course": "CS 468",
+      "title": "Reachable final-semester MLOps elective",
+      "decision": "CS 430 Machine Learning and CS 455 Cloud Computing & DevOps must be completed before or taken concurrently. Students choosing CS 468 in Semester 8 normally use a second elective slot for CS 430; the taught sequence schedules model preparation before service deployment.",
+      "sources": [
+        {
+          "label": "CMU 17-445 Machine Learning in Production",
+          "url": "https://mlip-cmu.github.io/f2026/"
+        }
+      ]
     }
   ],
   "revision": {
-    "date": "19 November 2026",
+    "date": "24 November 2026",
     "college": "College of Business, Technology & Innovation",
     "university": "Soliman Fakeeh University",
     "collegeArabic": "كلية الأعمال والتقنية والابتكار",
@@ -7439,16 +8239,28 @@ const curriculum = {
       "CS 340",
       "CS 401",
       "CS 370",
-      "CS 430"
+      "CS 430",
+      "CS 201"
     ],
     "scienceReplacement": [
       "CHEM 101",
       "BIO 101"
     ],
-    "etecMappedCsCredits": 44,
-    "approvedReview": "Web/mobile implementation, computing foundations, digital logic, advanced programming and discrete structures approved for incorporation 19 November 2026.",
+    "etecMappedCsCredits": 43,
+    "approvedReview": "Data Engineering and Cloud Computing & DevOps required; Machine Learning and Graphics elective; 19-course elective pool; required ETEC/ACM/ABET evidence refreshed.",
     "creditClassificationNote": "CS 103 Discrete Structures contributes three credits to mathematics/statistics and is excluded from the 61-credit required CS core.",
-    "etecReview": "2026-11-23"
+    "etecReview": "2026-11-24",
+    "releasedCompulsoryCredits": 6,
+    "semesterCredits": [
+      17,
+      16,
+      16,
+      18,
+      18,
+      9,
+      18,
+      18
+    ]
   },
   "etecStandard": {
     "title": "Academic Standards for Computer Science Programs",
@@ -7785,7 +8597,7 @@ const curriculum = {
               {
                 "course": "CS 201",
                 "clo": "CLO 6",
-                "evidence": "Graph implementation and isomorphism exercise"
+                "evidence": "Individual graph implementation and correctness tests"
               }
             ]
           },
@@ -8467,9 +9279,9 @@ const curriculum = {
             "text": "Apply graph and tree structures to solve real-world computer science problems, including constructing spanning trees and identifying graph isomorphisms.",
             "coverage": [
               {
-                "course": "CS 201",
-                "clo": "CLO 6",
-                "evidence": "Graph implementation and isomorphism exercise"
+                "course": "CS 103",
+                "clo": "CLO 8",
+                "evidence": "Individual graph-model, spanning-tree and isomorphism worksheet"
               }
             ]
           },
@@ -9636,5 +10448,132 @@ const curriculum = {
       }
     ]
   },
-  "facilitiesPolicy": "Facilities and software are planned course-delivery requirements. The college confirms capacity, accessibility, supported releases, software access and technical support before each offering. Computational workshops within lecture-led courses do not add registered lab credits or contact hours."
+  "facilitiesPolicy": "Facilities and software are planned course-delivery requirements. The college confirms capacity, accessibility, supported releases, software access and technical support before each offering. Computational workshops within lecture-led courses do not add registered lab credits or contact hours.",
+  "supplementaryUpdates": {
+    "CS 350": [
+      {
+        "title": "Fundamentals of Computer Graphics",
+        "citation": "Steve Marschner and Peter Shirley (eds.) · CRC Press · 5th ed. · © 2021",
+        "url": "https://www.routledge.com/Fundamentals-of-Computer-Graphics/Marschner-Shirley/p/book/9780367505035",
+        "fit": "Selected representation, color, transformation and rendering chapters support the required graphics strand and individual interactive-graphics practical."
+      }
+    ],
+    "CS 455": [
+      {
+        "title": "The DevOps Handbook",
+        "citation": "Gene Kim, Jez Humble, Patrick Debois and John Willis · IT Revolution · 2nd ed. · 2021",
+        "url": "https://itrevolution.com/product/the-devops-handbook-second-edition/",
+        "fit": "Use the delivery pipeline, feedback, reliability and integrated-security chapters for CLOs 3–8; current official tool documentation supports the practical work."
+      }
+    ],
+    "CS 466": [
+      {
+        "title": "Biopython Tutorial and Cookbook",
+        "citation": "Biopython project · current official documentation",
+        "url": "https://biopython.org/docs/latest/Tutorial/",
+        "fit": "Sequence parsing, database access and reproducible Python exercises support CLOs 2–6."
+      }
+    ],
+    "CS 467": [
+      {
+        "title": "Introduction to Information Retrieval",
+        "citation": "Christopher D. Manning, Prabhakar Raghavan and Hinrich Schütze · Cambridge University Press · 2008",
+        "url": "https://nlp.stanford.edu/IR-book/",
+        "fit": "Foundational indexing, lexical ranking and evaluation chapters support CLOs 1–3 and 5. The primary NLP text supplies current neural methods."
+      }
+    ],
+    "CS 468": [
+      {
+        "title": "AI Engineering: Building Applications with Foundation Models",
+        "citation": "Chip Huyen · O’Reilly · 1st ed. · 2025",
+        "url": "https://www.oreilly.com/library/view/ai-engineering/9781098166298/",
+        "fit": "Selected production evaluation and foundation-model application chapters extend the model lifecycle and assurance outcomes. The primary text remains Designing Machine Learning Systems."
+      }
+    ],
+    "CS 469": [
+      {
+        "title": "LLVM Language Reference and Tutorial",
+        "citation": "LLVM project · current official documentation",
+        "url": "https://llvm.org/docs/tutorial/",
+        "fit": "A constrained target-language tutorial supports intermediate representation, code generation and testing; the primary textbook supplies theory."
+      }
+    ]
+  },
+  "complianceChecks": [
+    [
+      "Degree structure",
+      "130 credits over four years and eight regular semesters",
+      "Semester totals: 17, 16, 16, 18, 18, 9, 18, 18; co-op continues into summer."
+    ],
+    [
+      "College and department",
+      "9 college + 36 department credits",
+      "ARAB 101, COMM 101 and ISLM 101 remain shared college courses; one Arabic and one Islamic course."
+    ],
+    [
+      "Computing core",
+      "61 required credits; 58 excluding Research Methods",
+      "Capstones, co-op and electives are not needed to reach the ETEC/ABET 40-credit computing minimum."
+    ],
+    [
+      "ETEC essential allocation",
+      "30 credits",
+      "20 mathematics/statistics + 10 laboratory sciences; CS 103 counted only as mathematics."
+    ],
+    [
+      "ABET mathematics/statistics",
+      "20 credits against a 15-credit minimum",
+      "Discrete structures, probability, statistics and calculus-level rigor retained."
+    ],
+    [
+      "ABET non-computing science",
+      "10 laboratory-science credits",
+      "PHYS 101, PHYS 102 and BIO 101 retain scientific-method investigations."
+    ],
+    [
+      "ETEC specific outcomes",
+      "131 of 131 mapped to required courses",
+      "All 60 source topics retained; graph isomorphism/spanning-tree reasoning moves to CS 103 CLO 8."
+    ],
+    [
+      "ACM/IEEE CS Curricula",
+      "270 instructional hours across 17 CS Core areas",
+      "All allocations use required courses; four graphics hours in CS 350; four ML hours within CS 340; three ethics hours move from CS 430 to CS 340."
+    ],
+    [
+      "Program assessment",
+      "Two required-course points for every PLO",
+      "K3 and S4 second assessment points move from elective CS 430 to required CS 451."
+    ],
+    [
+      "ABET outcomes",
+      "All six outcome mappings retained",
+      "General Criterion 5 and CS-specific algorithms, theory, languages, software, systems and major-project coverage remain explicit."
+    ],
+    [
+      "Cooperative training",
+      "9 credits, 24 weeks, Semester 6 and summer",
+      "Sole Semester 6 registration; entry requires all 85 credits from Semesters 1–5; grade posted before Semester 7."
+    ],
+    [
+      "Capstone sequence",
+      "CS 410 + CS 411, 6 credits",
+      "Semester 7 proposal/prototype and Semester 8 integration/evaluation; prerequisites remain reachable."
+    ],
+    [
+      "Elective progression",
+      "19 options; choose three at 3 credits each",
+      "CS 468 requires prior or concurrent CS 430 and CS 455. No compulsory course or mandatory outcome requires an elective."
+    ],
+    [
+      "Course specifications",
+      "56 specifications, each with 6–8 CLOs",
+      "Topics, assessment activities, PLO mapping, textbook fit and course-specific labs/software are specified."
+    ],
+    [
+      "Resource and approval evidence",
+      "Planned provision retained and updated",
+      "Institutional approval, qualified staff, lab/cloud capacity, moderated assessments and delivered attainment must be evidenced before/across delivery."
+    ]
+  ]
 };

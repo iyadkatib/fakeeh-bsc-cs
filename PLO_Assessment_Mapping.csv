@@ -1,0 +1,11 @@
+﻿PLO,Program learning outcome,First required course,First direct evidence,Second required course,Second direct evidence
+K1,"Explain the mathematical, algorithmic, and theoretical foundations of computing.",CS 220,Algorithm analysis and correctness exam,CS 330,Computability and complexity proof
+K2,"Explain the organization, operation, and interaction of computer systems at multiple levels of abstraction.",CS 310,OS design and performance analysis,CS 401,Distributed systems design review
+K3,"Explain the principles of software development, data management, and intelligent computing.",CS 340,AI methods comparison and ML foundations examination,CS 451,Data-system architecture examination and defended design
+S1,"Analyze complex computing problems and justify suitable models, algorithms, and performance trade-offs.",CS 220,Constrained algorithm design problem,CS 401,Performance and consistency analysis
+S2,"Design, implement, and evaluate computing solutions using computer science theory and software engineering practices.",CS 250,Tested software increment,CS 411,Evaluated capstone solution
+S3,Communicate technical decisions and results effectively to specialist and non-specialist audiences.,CS 410,Design report and panel defense,CS 411,Final report and panel defense
+S4,Plan and conduct investigations using appropriate tools and interpret the evidence and its limitations.,CS 360,Reproducible pilot study and validity analysis,CS 451,"Reproducible pipeline quality, performance and recovery investigation"
+V1,"Make and justify professional decisions using ethical, legal, security, privacy, and sustainability considerations.",CS 402,Security and privacy decision case,CS 411,Project impact and ethics review
+V2,"Contribute effectively as a member and leader of diverse teams, demonstrating accountability for agreed work.",CS 390,Host appraisal and contribution evidence,CS 410,Team role and individual contribution review
+V3,"Manage computing work with attention to scope, cost, and risk, and identify and address gaps in professional knowledge.",BUS 401,Costed project plan and risk register,CS 411,Project closeout and learning reflection

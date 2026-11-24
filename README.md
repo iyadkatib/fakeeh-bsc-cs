@@ -1,35 +1,23 @@
-# Soliman Fakeeh University BSc Computer Science
+# BSc Computer Science website
 
-This static site presents the proposed four-year Bachelor of Science in Computer Science at College of Business, Technology & Innovation, Soliman Fakeeh University. It contains the study plan, prerequisite map, benchmark comparisons, standards mappings, editable TP-151 specification, and 52 draft course specifications.
+College of Business, Technology & Innovation, Soliman Fakeeh University
 
-## Open locally
+Revision: 24 November 2026
 
-Extract the complete ZIP into a folder, then open `index.html` in your browser. Keep the CSS, JavaScript, Word file, and logo PNG beside the HTML files. The course specification catalog works locally. The Word document's course links open the GitHub Pages course catalogue.
+## Upload to GitHub Pages
 
-## Publish with GitHub Pages
+Extract this ZIP and upload its contents to the existing repository root, replacing the previous files. Keep index.html at the root. Upload all files together, including program-data.js, site.js, course-specifications.html, both ETEC mapping CSVs, curriculum-review.html, styles.css, the logo and the Word specification. Allow GitHub Pages to rebuild, then refresh the browser.
 
-1. Create or select a repository for the program. The ZIP contains draft program materials. Confirm they are ready for the repository's intended audience before uploading.
-2. Upload the extracted files to the repository root, with `index.html`, `course-specifications.html`, and `fakeeh-college-logo.png` beside one another. Include `.nojekyll` if your upload method displays hidden files.
-3. In **Settings → Pages → Build and deployment**, set **Source** to **Deploy from a branch**. Select the branch holding the files, usually `main`, and **/ (root)**. Select **Save**.
-4. Open the GitHub Pages URL shown in Settings. Open **Browse course specifications** on the site to use the catalog on the same host.
+## Current curriculum
 
-The site uses relative links for its files and needs no build step or server. The [GitHub Pages publishing guide](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site) documents branch and folder settings.
+130 credits, four years and eight regular semesters. Semester totals: 17, 16, 16, 18, 18, 9, 18, 18. College Requirements: 9; Department Requirements: 36; required CS core: 61; technical electives: 9; capstones: 6; co-op: 9.
 
+CS 451 Data Engineering and CS 455 Cloud Computing & DevOps are compulsory in Semester 8. CS 201 Data Structures is three credits with two supervised practical hours weekly. CS 430 Machine Learning and CS 403 Graphics and Interactive Techniques are three-credit electives. Required AI and HCI retain assessed ML, AI ethics and graphics foundations. The elective pool has 19 three-credit options, including Bioinformatics and Computational Biology, Information Retrieval and Natural Language Processing, Machine Learning Systems and MLOps, and Compiler Construction. Secure Software Engineering and Health Informatics remain electives.
 
-## Approved curriculum revision 19 November 2026
+CS 468 requires prior or concurrent CS 430 and CS 455. Students normally choose CS 430 in another elective slot. Co-op is the sole Semester 6 registration and continues through summer, with all 85 credits from Semesters 1–5 completed before entry. The two capstones remain in Semesters 7 and 8.
 
-CS 103 Discrete Structures replaces MATH 102 and retains three mathematics/statistics credits. CS 210 is Digital Logic and Computer Organization with explicit circuit and processor laboratories. CS 370 Web and Mobile Application Development replaces CS 420, moves to Semester 5, and uses a shared web/mobile application project. CS 330 moves to Semester 7; all three elective slots are in Semester 8. Computing foundations and advanced programming are reinforced in the required sequence. The eight semester totals remain 17, 16, 17, 18, 18, 9, 18 and 17, for 130 credits. Upload all site files, including the updated program-data.js, site.js, course-specifications.html and course-specifications.js. Legacy course anchors remain supported.
+## Coverage and assessment
 
+All 131 ETEC specific outcomes and 60 topics are allocated to required courses. CS 103 CLO 8 owns graph isomorphism and spanning-tree reasoning; CS 201 retains implementation and CS 220 develops advanced graph algorithms. All 17 ACM/IEEE CS Curricula CS Core areas retain 270 instructional hours allocated to compulsory courses. K3 and S4 second assessment points use required Data Engineering, so no program assessment depends on elective Machine Learning. The math/statistics allocation remains 20 credits and laboratory sciences 10, meeting ETEC's 30-credit essential allocation.
 
-## ETEC course review 23 November 2026
-
-The college logo is English-only. All 52 course and elective specifications contain 6–8 assessable CLOs. Purple text, labels and source IDs distinguish ETEC-aligned CLOs and topics. Relevant specifications reproduce allocated ETEC specific learning outcomes, with course-CLO and assessment links. Facilities now specify lab/teaching space, hardware/equipment, software and practical use for every course.
-
-Open `etec-coverage.html` for the searchable register. It maps all 131 specific outcomes (8 mathematics/statistics EKU outcomes and 123 computing SKU outcomes) and all 60 required topics in ETEC Academic Standards for Computer Science Programs 2025 version 2.1, Appendix B. Every outcome has required-course coverage; the register records planned teaching and assessment, with attainment established through delivery and student evidence. `ETEC_SLO_Course_Mapping.csv` and `ETEC_Topic_Course_Mapping.csv` provide editable copies of the mappings.
-
-Upload all extracted files, including the new ETEC HTML, JavaScript and CSV files, to the repository root. Replace the existing logo, course catalogue, scripts, stylesheet and Word specification together. The study plan remains 130 credits; the Islamic Culture primary textbook remains pending selection.
-
-
-## Requirement groups
-
-College Requirements comprise ARAB 101, COMM 101 and ISLM 101 for 9 credits. The former College requirements are now Department Requirements, totaling 36 credits after moving COMM 101. All course placements, prerequisites, CLOs, ETEC mappings, lab/software requirements and the 130-credit total remain unchanged.
+The curriculum-review.html page records the change and requirements review. The mappings describe planned coverage; approved resources, actual delivery, moderated assessment and attainment remain implementation evidence. The programme is a proposal and does not claim accreditation.

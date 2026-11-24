@@ -1,0 +1,57 @@
+﻿Course,Title,Requirement,K1,K2,K3,S1,S2,S3,S4,V1,V2,V3
+CS 101,Programming I,Required,,I,,I,I,,I,I,,
+MATH 101,Calculus I,Required,I,,,I,,,I,,,
+CS 103,Discrete Structures,Required,I,,,I,,,I,,,
+PHYS 101,Physics I with Laboratory,Required,I,I,,,,I,I,I,,
+ENG 101,Technical English for Computing,Required,,,,,,I,,,,I
+CS 102,Programming II,Required,,,I,,I,I,I,,I,
+MATH 120,Linear Algebra,Required,I,,,I,,,I,,,
+PHYS 102,Physics II with Laboratory,Required,I,I,,,,I,P,I,,
+BIO 101,Biology for Digital Health with Laboratory,Required,I,,,,,,P,I,,
+COMM 101,Professional Communication & Presentation,Required,,,,,,I,I,I,I,
+CS 201,Data Structures,Required,P,,,P,P,,P,,,
+CS 210,Digital Logic and Computer Organization,Required,,P,,P,P,,P,,,
+STAT 220,Probability and Statistics,Required,P,,,P,,,P,P,,
+CS 230,Database Systems,Required,,,P,P,P,,P,P,,
+ARAB 101,Arabic Language,Required,,,,,,P,,I,,
+CS 220,Design and Analysis of Algorithms,Required,P,,,P,P,,P,,,
+CS 240,Systems Programming,Required,,P,,P,P,P,P,,,
+CS 250,Software Engineering,Required,,,P,P,P,,P,,P,
+MATH 230,Multivariable Calculus and Optimization,Required,P,,,P,P,,P,,,
+CS 260,Computer Networks,Required,,P,,P,P,P,P,P,,
+ISLM 101,Islamic Culture and Professional Values,Required,,,,,,P,,P,P,
+CS 310,Operating Systems,Required,,P,,P,P,,P,,,
+CS 320,Programming Language Concepts,Required,,,P,P,P,,P,,,
+CS 370,Web and Mobile Application Development,Required,,,P,P,P,,P,P,P,
+CS 340,Artificial Intelligence,Required,,,M,P,P,P,P,P,,
+CS 350,Human–Computer Interaction,Required,,,P,P,P,P,P,P,,
+CS 360,Research Methods in Computing,Required,,,,P,,P,P,P,,P
+CS 390,Cooperative Training,Required,,,,,P,P,P,P,M,P
+CS 401,Parallel and Distributed Computing,Required,,M,,M,M,,M,M,,
+CS 402,Cybersecurity Fundamentals,Required,,P,,P,P,,P,P,,
+MATH 340,Numerical Methods,Required,P,,,P,P,,P,,,
+BUS 401,Computing Project Management and Finance,Required,,,,P,,P,,,P,P
+CS 410,Capstone Project I,Required,,,,P,P,M,P,P,M,
+CS 330,Theory of Computation,Required,P,,,P,P,,,,,
+CS 411,Capstone Project II,Required,,,,,M,M,M,M,M,M
+CS 451,Data Engineering,Required,,,M,M,M,M,M,M,,
+CS 455,Cloud Computing & DevOps,Required,,M,,M,M,,M,M,M,M
+CS 430,Machine Learning,Elective,,,M,P,M,P,M,M,,
+CS 452,Applied Data Analytics,Elective,,,,P,P,M,M,P,,
+CS 464,Generative AI and Large Language Models,Elective,,,P,P,M,P,P,M,,
+CS 467,Information Retrieval and Natural Language Processing,Elective,,,P,P,P,P,M,P,,
+CS 468,Machine Learning Systems and MLOps,Elective,,,M,M,M,,M,M,M,
+CS 453,Health Informatics,Elective,,,P,P,M,P,P,M,,
+CS 454,Digital Product Engineering,Elective,,,,P,M,M,P,P,,P
+CS 466,Bioinformatics and Computational Biology,Elective,,,P,P,P,P,M,P,,
+CS 456,Secure Software Engineering,Elective,,,,P,M,P,P,M,,
+CS 457,Blockchain and Cryptocurrencies,Elective,,P,,P,M,P,P,M,,
+CS 460,AI for Cybersecurity and AI Assurance,Elective,,,,M,P,P,M,M,,
+CS 458,Robotics and Autonomous Systems,Elective,,P,,P,M,,M,P,,
+CS 459,Aerial Robotics and Drones,Elective,,P,,P,M,,M,P,,
+CS 463,Internet of Things and Edge Computing,Elective,,P,,P,M,,M,P,,
+CS 461,Competitive Programming,Elective,,,,M,M,P,P,,P,
+CS 462,Quantum Computing,Elective,M,,,P,M,,P,,,P
+CS 469,Compiler Construction,Elective,P,,,P,M,P,P,P,,
+CS 403,Graphics and Interactive Techniques,Elective,,,P,,P,,P,P,,
+CS 465,Selected Topics,Elective,,,P,P,M,,P,P,,P
