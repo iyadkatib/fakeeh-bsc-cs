@@ -125,14 +125,14 @@ const curriculum = {
     {
       "number": 5,
       "year": 3,
-      "title": "Systems, applications and research",
-      "summary": "Build web and mobile applications while studying operating systems, programming languages, AI, interaction and research before the full-time placement.",
+      "title": "Theory, systems, applications and research",
+      "summary": "Study computation theory, operating systems, programming languages and AI, and build web/mobile applications and research skills before the full-time placement.",
       "courses": [
         "CS 310",
         "CS 320",
         "CS 370",
         "CS 340",
-        "CS 350",
+        "CS 330",
         "CS 360"
       ],
       "credits": 18
@@ -150,15 +150,15 @@ const curriculum = {
     {
       "number": 7,
       "year": 4,
-      "title": "Theory, advanced systems and Capstone I",
-      "summary": "Deepen theory, distributed computing and security, apply numerical methods, and define and prototype the capstone project.",
+      "title": "Advanced systems, interaction and Capstone I",
+      "summary": "Deepen distributed computing and security, study HCI and graphics foundations, apply numerical methods, and define and prototype the capstone project.",
       "courses": [
         "CS 401",
         "CS 402",
         "MATH 340",
         "BUS 401",
         "CS 410",
-        "CS 330"
+        "CS 350"
       ],
       "credits": 18
     },
@@ -2762,7 +2762,7 @@ const curriculum = {
       "id": "CS 330",
       "code": "CS 330",
       "title": "Theory of Computation",
-      "term": 7,
+      "term": 5,
       "credits": 3,
       "category": "core",
       "lecture": 3,
@@ -2836,7 +2836,7 @@ const curriculum = {
       "requirement": null,
       "resource": null,
       "name": "Theory of Computation",
-      "placement": "Semester 7",
+      "placement": "Semester 5",
       "anchor": "cs-330",
       "etecTopics": [
         "SKU1.2-T3",
@@ -2977,7 +2977,7 @@ const curriculum = {
       "id": "CS 350",
       "code": "CS 350",
       "title": "Human–Computer Interaction",
-      "term": 5,
+      "term": 7,
       "credits": 3,
       "category": "core",
       "lecture": 2,
@@ -3067,7 +3067,7 @@ const curriculum = {
       "requirement": "The 60 contact hours include an 18-hour graphics and interactive-visualization strand, with at least four lecture hours allocated to ACM/IEEE Graphics and Interactive Techniques CS Core topics and an individual graphics practical. Eight HCI CS Core hours and two Society, Ethics and the Profession hours remain separately allocated.",
       "resource": "W3C Web Content Accessibility Guidelines and an instructor-supplied usability protocol.",
       "name": "Human–Computer Interaction",
-      "placement": "Semester 5",
+      "placement": "Semester 7",
       "anchor": "cs-350",
       "etecTopics": [],
       "etecSLOs": [],
@@ -3606,7 +3606,6 @@ const curriculum = {
       "prerequisites": [
         "CS 390",
         "CS 340",
-        "CS 350",
         "CS 360"
       ],
       "summary": "Define a substantial computing problem, develop a design, and defend a tested prototype and evaluation plan.",
@@ -3670,7 +3669,7 @@ const curriculum = {
       ],
       "profile": "capstone",
       "group": null,
-      "requirement": null,
+      "requirement": "Complete the approved co-op before Semester 7. Take CS 350 before or concurrently with Capstone I; coordinate stakeholder research, interface design and usability milestones with the relevant HCI teaching.",
       "resource": null,
       "name": "Capstone Project I",
       "placement": "Semester 7",
@@ -3684,7 +3683,10 @@ const curriculum = {
         "practice": "A resource and access plan is agreed at proposal review; datasets, test environment and individual contribution evidence are prepared.",
         "baseline": "Accessible teaching room with display and whiteboard; LMS and library access. Practical work uses one account and workstation per student, normally a multicore CPU, 16 GB RAM and SSD storage, or an equivalent remotely accessible lab image; shared demonstrations do not replace individual assessed access.",
         "provision": "A supported, course-tested software image, repository access and reproducible environment instructions are provided before teaching. Tools below are the planned teaching stack; equivalent supported tools may be approved if they support the same assessed tasks."
-      }
+      },
+      "corequisites": [
+        "CS 350"
+      ]
     },
     "EL-1": {
       "id": "EL-1",
@@ -3894,14 +3896,11 @@ const curriculum = {
       ],
       "profile": "lab",
       "group": null,
-      "requirement": "CS 350 Human–Computer Interaction must be completed previously or taken concurrently. The course uses one bounded application and a shared backend; advanced native mobile development and extensive cloud operations remain specialist study.",
+      "requirement": "This Semester 5 course provides the interface-design, accessibility and user-feedback guidance needed for its bounded web/mobile application. Formal HCI and graphics foundations follow in CS 350 in Semester 7. A shared backend keeps the project achievable; advanced native mobile development remains specialist study.",
       "resource": "Current React, React Native, TypeScript and server-framework documentation; API and database exercises; individual coding tasks and a team application using synthetic data.",
       "name": "Web and Mobile Application Development",
       "placement": "Semester 5",
       "anchor": "cs-370",
-      "corequisites": [
-        "CS 350"
-      ],
       "topicHours": [
         4,
         8,
@@ -8099,7 +8098,7 @@ const curriculum = {
     {
       "course": "CS 370",
       "title": "One compulsory web and mobile application course before co-op",
-      "decision": "A focused three-credit course replaces Software Deployment and Operations. Students build web and cross-platform mobile clients with a shared API and database-backed service, with individual coding and defense. MIT 6.1040 benchmarks application design and web implementation; NUS CS3216/CS3217 benchmark platform projects as elective opportunities, not universal CS requirements. KAU has separate compulsory web and mobile courses. Basic releases remain here; reliability, monitoring and recovery are reinforced in CS 401 and CS 411. CS 350 is concurrent. CS 330 moves to Semester 7 and Elective I moves to Semester 8; the required pre-co-op application sequence is retained in the current 130-credit plan.",
+      "decision": "CS 370 remains a three-credit Semester 5 course with web and cross-platform mobile clients, a shared backend, individual implementation and defense. MIT 6.1040 and NUS platform projects inform the implementation scope; KAU has separate required web and mobile courses. Basic interface design and accessibility are taught within CS 370. CS 330 Theory of Computation now follows Algorithms in Semester 5. CS 350 HCI moves to Semester 7 and is a prior-or-concurrent requirement for CS 410 Capstone I. CS 401 and CS 455 develop advanced systems and deployment; all three electives remain in Semester 8.",
       "sources": [
         {
           "label": "MIT 6.1040 Software Design",
@@ -8218,10 +8217,16 @@ const curriculum = {
           "url": "https://mlip-cmu.github.io/f2026/"
         }
       ]
+    },
+    {
+      "course": "CS 330",
+      "title": "Theory before placement and HCI alongside Capstone I",
+      "decision": "Theory of Computation moves from Semester 7 to Semester 5, following CS 220 Algorithms. HCI moves from Semester 5 to Semester 7, following CS 250 Software Engineering. CS 370 supplies its own introductory interface-design preparation, and CS 350 is prior or concurrent with Capstone I. Course credits, CLOs, standards coverage and the 130-credit total are retained.",
+      "sources": []
     }
   ],
   "revision": {
-    "date": "24 November 2026",
+    "date": "25 November 2026",
     "college": "College of Business, Technology & Innovation",
     "university": "Soliman Fakeeh University",
     "collegeArabic": "كلية الأعمال والتقنية والابتكار",
@@ -8260,7 +8265,8 @@ const curriculum = {
       9,
       18,
       18
-    ]
+    ],
+    "sequenceReview": "Theory of Computation in Semester 5; HCI in Semester 7; HCI prior or concurrent with Capstone I; introductory interface preparation retained in Semester 5 Web and Mobile Development."
   },
   "etecStandard": {
     "title": "Academic Standards for Computer Science Programs",
@@ -10558,7 +10564,7 @@ const curriculum = {
     [
       "Capstone sequence",
       "CS 410 + CS 411, 6 credits",
-      "Semester 7 proposal/prototype and Semester 8 integration/evaluation; prerequisites remain reachable."
+      "Semester 7 proposal/prototype with prior or concurrent CS 350 HCI; Semester 8 integration/evaluation. CS 330 Theory of Computation is completed in Semester 5."
     ],
     [
       "Elective progression",

@@ -24,7 +24,7 @@ CS 310,Operating Systems,Required,,P,,P,P,,P,,,
 CS 320,Programming Language Concepts,Required,,,P,P,P,,P,,,
 CS 370,Web and Mobile Application Development,Required,,,P,P,P,,P,P,P,
 CS 340,Artificial Intelligence,Required,,,M,P,P,P,P,P,,
-CS 350,Human–Computer Interaction,Required,,,P,P,P,P,P,P,,
+CS 330,Theory of Computation,Required,P,,,P,P,,,,,
 CS 360,Research Methods in Computing,Required,,,,P,,P,P,P,,P
 CS 390,Cooperative Training,Required,,,,,P,P,P,P,M,P
 CS 401,Parallel and Distributed Computing,Required,,M,,M,M,,M,M,,
@@ -32,7 +32,7 @@ CS 402,Cybersecurity Fundamentals,Required,,P,,P,P,,P,P,,
 MATH 340,Numerical Methods,Required,P,,,P,P,,P,,,
 BUS 401,Computing Project Management and Finance,Required,,,,P,,P,,,P,P
 CS 410,Capstone Project I,Required,,,,P,P,M,P,P,M,
-CS 330,Theory of Computation,Required,P,,,P,P,,,,,
+CS 350,Human–Computer Interaction,Required,,,P,P,P,P,P,P,,
 CS 411,Capstone Project II,Required,,,,,M,M,M,M,M,M
 CS 451,Data Engineering,Required,,,M,M,M,M,M,M,,
 CS 455,Cloud Computing & DevOps,Required,,M,,M,M,,M,M,M,M

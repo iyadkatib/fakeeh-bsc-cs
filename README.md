@@ -2,7 +2,7 @@
 
 College of Business, Technology & Innovation, Soliman Fakeeh University
 
-Revision: 24 November 2026
+Revision: 25 November 2026
 
 ## Upload to GitHub Pages
 
@@ -21,3 +21,7 @@ CS 468 requires prior or concurrent CS 430 and CS 455. Students normally choose 
 All 131 ETEC specific outcomes and 60 topics are allocated to required courses. CS 103 CLO 8 owns graph isomorphism and spanning-tree reasoning; CS 201 retains implementation and CS 220 develops advanced graph algorithms. All 17 ACM/IEEE CS Curricula CS Core areas retain 270 instructional hours allocated to compulsory courses. K3 and S4 second assessment points use required Data Engineering, so no program assessment depends on elective Machine Learning. The math/statistics allocation remains 20 credits and laboratory sciences 10, meeting ETEC's 30-credit essential allocation.
 
 The curriculum-review.html page records the change and requirements review. The mappings describe planned coverage; approved resources, actual delivery, moderated assessment and attainment remain implementation evidence. The programme is a proposal and does not claim accreditation.
+
+## Course sequence update 25 November 2026
+
+CS 330 Theory of Computation moves to Semester 5, after Algorithms. CS 350 Human–Computer Interaction moves to Semester 7. CS 370 no longer requires prior or concurrent HCI; its existing interface-design and accessibility instruction supports the application project. CS 410 requires prior or concurrent CS 350, with relevant HCI teaching coordinated with project milestones. The course catalogue, prerequisite diagram, program specification and mapping order reflect the swap. All credit totals, 56 course CLO sets, 19 electives, ETEC coverage and ACM/IEEE CS Core allocations are unchanged.
