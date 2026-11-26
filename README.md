@@ -1,12 +1,23 @@
-# BSc Computer Science website
+# College programs website
 
 College of Business, Technology & Innovation, Soliman Fakeeh University
 
-Revision: 25 November 2026
+Website revision: 26 November 2026
+CS curriculum revision: 25 November 2026
 
 ## Upload to GitHub Pages
 
-Extract this ZIP and upload its contents to the existing repository root, replacing the previous files. Keep index.html at the root. Upload all files together, including program-data.js, site.js, course-specifications.html, both ETEC mapping CSVs, curriculum-review.html, styles.css, the logo and the Word specification. Allow GitHub Pages to rebuild, then refresh the browser.
+Extract this ZIP and upload **all its contents** to the existing GitHub repository root, replacing previous files. Keep `index.html` at the root. It is now the college programs home page. Upload the new HTML, CSS and JavaScript files together with all existing CS files, mapping CSVs, the logo and the Word specification. Allow GitHub Pages to rebuild, then refresh the browser.
+
+## Program pages
+
+- `index.html`: college programs home, with four selectable programs.
+- `computer-science.html`: the complete existing Computer Science program.
+- `cybersecurity.html`: Under development.
+- `information-systems.html`: Under development.
+- `health-informatics.html`: Under development.
+
+Each program links back to the programs home. Existing CS section URLs such as `index.html#study` continue to open the matching section in `computer-science.html`. CS course specifications, ETEC coverage, curriculum review, mapping files and download filenames retain their existing addresses. The CS curriculum data and Word specification are unchanged by this website navigation update.
 
 ## Current curriculum
 

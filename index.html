@@ -3,290 +3,43 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore the proposed four-year BSc Computer Science at College of Business, Technology &amp; Innovation, Soliman Fakeeh University in Jeddah.">
+  <meta name="description" content="Explore Computer Science, Cybersecurity, Information Systems, and Health Informatics at the College of Business, Technology &amp; Innovation, Soliman Fakeeh University.">
   <meta name="robots" content="noindex">
-  <meta name="theme-color" content="#006980">
-  <title>BSc Computer Science | Soliman Fakeeh University</title>
-  <link rel="stylesheet" href="./styles.css?v=20261125-theory-hci">
-  <script src="./program-data.js?v=20261125-theory-hci" defer></script>
-  <script src="./site.js?v=20261125-theory-hci" defer></script>
-</head>
-<body id="top">
-  <a href="#main" class="skip-link">Skip to content</a>
-  <header class="site-header">
-    <div class="wrap masthead">
-      <a href="#top" class="brand"><img src="./fakeeh-college-logo.png?v=20261125-theory-hci" alt="College of Business, Technology &amp; Innovation, Soliman Fakeeh University, Jeddah" width="330" height="110"></a>
-      <nav aria-label="Program navigation">
-        <a href="#study">Study plan</a>
-        <a href="#placement">Co-op and capstone</a>
-        <a href="#workplace-and-ai">Workplace skills and AI ethics</a>
-        <a href="#benchmarks">Benchmarks</a>
-        <a href="#standards">Standards</a>
-        <a href="#specification" class="nav-spec">Specification</a>
-      </nav>
-    </div>
-  </header>
-  <main id="main">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-content">
-          <p class="eyebrow">Proposed founding program · Jeddah</p>
-          <h1>BSc Computer<br class="desktop-break"> Science</h1>
-          <p class="hero-lead">Study how computing systems work. Apply that knowledge during a full-time co-op and a two-semester capstone.</p>
-          <div class="hero-actions">
-            <a class="button primary" href="#study">Explore the study plan <span aria-hidden="true">↓</span></a>
-            <a class="button secondary" href="#specification">View the specification</a>
-          </div>
-          <dl class="hero-stats">
-            <div><dt>4</dt><dd>Years</dd></div>
-            <div><dt>8</dt><dd>Semesters</dd></div>
-            <div><dt>130</dt><dd>Credit hours</dd></div>
-          </dl>
-        </div>
-        <div class="hero-plan" aria-label="Four-year curriculum progression">
-          <div class="hero-plan-top"><h2>Program at a glance</h2><span>Direct Admission</span></div>
-          <ol class="hero-steps">
-            <li><span>Year 1</span><strong>Programming, mathematics, and science</strong></li>
-            <li><span>Year 2</span><strong>Algorithms, software, and systems</strong></li>
-            <li><span>Year 3</span><strong>Advanced CS and full-time co-op</strong><small>Semester 6 + following summer</small></li>
-            <li><span>Year 4</span><strong>Specialization and two capstone courses</strong></li>
-          </ol>
-          <div class="hero-plan-foot">Bachelor’s degree · Saudi NQF Level 6</div>
-        </div>
-      </div>
-    </section>
-
-    <div class="wrap">
-      <section class="section" id="rationale">
-        <div class="section-heading">
-          <p class="eyebrow">Program rationale</p>
-          <h2>Why Computer Science at Fakeeh</h2>
-          <p id="program-mission"></p>
-        </div>
-        <div class="evidence-grid" id="evidence-grid"></div>
-      </section>
-
-      <section class="section" id="study">
-        <div class="section-heading with-action">
-          <div>
-            <p class="eyebrow">Curriculum</p>
-            <h2>Explore the four-year study plan</h2>
-            <p>Students enter Computer Science in Semester 1.</p>
-            <p id="shared-general-education"></p>
-          </div>
-          <button type="button" class="button secondary" id="credits-button" aria-haspopup="dialog">Credit breakdown</button>
-        </div>
-        <div class="year-list" id="year-list" role="group" aria-label="Select a year"></div>
-        <div class="panel journey-panel" id="journey-panel">
-          <div class="semester-list" id="semester-list" role="group" aria-label="Select a semester"></div>
-          <div class="semester-heading"><div><p class="label" id="semester-label"></p><h3 id="semester-title"></h3></div><span id="semester-credits" class="tag"></span></div>
-          <p id="semester-summary"></p>
-          <div class="course-grid" id="journey-courses"></div>
-        </div>
-        <details class="panel disclosure" id="full-plan">
-          <summary>Full semester table</summary>
-          <div class="detail-body">
-            <div class="table-scroll" tabindex="0" role="region" aria-label="Semester study plan">
-              <table><thead><tr><th scope="col">Semester</th><th scope="col">Courses</th><th scope="col">Credits</th></tr></thead><tbody id="plan-body"></tbody></table>
-            </div>
-          </div>
-        </details>
-        <details class="panel disclosure" id="electives">
-          <summary>Technical electives <span>Choose three</span></summary>
-          <div class="detail-body">
-            <p class="section-note">Choose three different three-credit electives from the <span id="elective-count">19</span>-course pool in Semester 8. CS 468 requires prior or concurrent CS 430 and CS 455; students normally select CS 430 in another elective slot. Elective availability and topic-specific prerequisites are confirmed before registration.</p><div class="semester-list" id="elective-filter" role="group" aria-label="Filter elective courses"></div>
-            <div id="elective-courses" class="course-grid"></div>
-          </div>
-        </details>
-        <details class="panel disclosure" id="elective-research">
-          <summary>University references for new electives</summary>
-          <div class="detail-body">
-            <div class="table-scroll" role="region" aria-label="University references for new electives" tabindex="0">
-              <table class="elective-reference-table"><thead><tr><th scope="col">Proposed elective</th><th scope="col">University reference</th><th scope="col">Fit in the Fakeeh curriculum</th></tr></thead><tbody id="elective-reference-body"></tbody></table>
-            </div>
-            <p class="section-note elective-precedent" id="elective-local-precedent"></p>
-          </div>
-        </details>
-        <details class="panel disclosure" id="health-informatics">
-          <summary>Health Informatics course benchmarks</summary>
-          <div class="detail-body">
-            <p class="section-note" id="health-elective-fit"></p>
-            <div class="table-scroll" role="region" aria-label="Health Informatics benchmarks" tabindex="0">
-              <table class="elective-reference-table"><thead><tr><th scope="col">University course</th><th scope="col">Their model</th><th scope="col">What Fakeeh adopts</th><th scope="col">Where Fakeeh differs and why</th></tr></thead><tbody id="health-benchmark-body"></tbody></table>
-            </div>
-            <p class="section-note elective-precedent" id="health-saudi-context"></p>
-          </div>
-        </details>
-      </section>
-
-      <section class="section" id="course-map">
-        <div class="section-heading">
-          <p class="eyebrow">Prerequisites</p>
-          <h2>See how courses connect</h2>
-          <p>Arrows point from each prerequisite to the course that follows it. Select a card to see course details, or use the selector to highlight its connections.</p>
-        </div>
-        <div class="panel map-panel">
-          <div class="map-toolbar">
-            <div class="map-tools" role="group" aria-label="Course map zoom">
-              <button type="button" id="zoom-out" aria-label="Zoom out">−</button>
-              <output id="zoom-value" aria-live="polite">100%</output>
-              <button type="button" id="zoom-in" aria-label="Zoom in">+</button>
-              <button type="button" id="zoom-fit">Fit width</button>
-            </div>
-            <div class="map-search"><label for="map-select">Find a course</label><select id="map-select"><option value="">Choose a course</option></select></div>
-          </div>
-          <div class="map-legend" id="map-legend"></div>
-          <div id="map-viewport" class="map-viewport" role="region" aria-label="Scrollable prerequisite map" tabindex="0">
-            <div id="map-space"><div id="map-canvas"></div></div>
-          </div>
-          <div class="map-footer"><p id="map-focus" aria-live="polite">Select a course to highlight its connections.</p><button id="map-clear" type="button" class="text-button" hidden>Clear selection</button></div>
-        </div>
-      </section>
-
-      <section class="section" id="placement">
-        <div class="section-heading"><p class="eyebrow">Applied learning</p><h2>From a workplace assignment to a capstone</h2></div>
-        <div class="practice-grid">
-          <article class="practice-card coop-card">
-            <p class="label">CS 390 · 9 credits</p>
-            <h3>One full-time cooperative placement</h3>
-            <p id="coop-description"></p>
-            <p>Assessment combines supervisor appraisal, progress logs, an evidence portfolio, and a college presentation.</p>
-            <div class="inline-courses" data-courses="CS 390"></div>
-          </article>
-          <article class="practice-card">
-            <p class="label">CS 410 + CS 411 · 6 credits</p>
-            <h3>Two consecutive capstone courses</h3>
-            <p>In Semester 7, teams define a problem, apply techniques from earlier courses, and test a prototype. In Semester 8, they integrate, evaluate, and defend the completed solution.</p>
-            <p>Each student documents their own contribution and explains the project’s professional and technical decisions.</p>
-            <div class="inline-courses" data-courses="CS 410|CS 411"></div>
-          </article>
-        </div>
-        <details class="panel disclosure">
-          <summary>Example capstone · Appointment coordination</summary>
-          <div class="detail-body example-body">
-            <p>Use synthetic appointment records to design a scheduling service for a clinic. In Capstone I, interview representative users, model constraints, and prototype the workflow. In Capstone II, test the service against a baseline and report wait times, scheduling conflicts, accessibility, and data-handling decisions.</p>
-            <div class="inline-courses" data-courses="CS 220|CS 230|CS 350|CS 402|CS 453"></div>
-          </div>
-        </details>
-      </section>
-
-      <section class="section" id="workplace-and-ai">
-        <div class="section-heading">
-          <p class="eyebrow">Professional practice</p>
-          <h2>Workplace skills and AI ethics</h2>
-        </div>
-        <details class="panel disclosure">
-          <summary>Workplace soft skills</summary>
-          <div class="detail-body">
-            <div class="table-scroll" role="region" aria-label="Workplace soft skills by course" tabindex="0">
-              <table class="coverage-table"><thead><tr><th scope="col">Required courses</th><th scope="col">What students practice</th><th scope="col">How it is assessed</th></tr></thead><tbody id="workplace-skills-body"></tbody></table>
-            </div>
-          </div>
-        </details>
-        <details class="panel disclosure">
-          <summary>AI ethics</summary>
-          <div class="detail-body">
-            <div class="table-scroll" role="region" aria-label="AI ethics by course" tabindex="0">
-              <table class="coverage-table"><thead><tr><th scope="col">Required courses</th><th scope="col">What students practice</th><th scope="col">How it is assessed</th></tr></thead><tbody id="ai-ethics-body"></tbody></table>
-            </div>
-          </div>
-        </details>
-      </section>
-
-      <section class="section" id="benchmarks">
-        <div class="section-heading">
-          <p class="eyebrow">Benchmarking</p>
-          <h2>Nine programs that informed the design</h2>
-          <p>The comparisons include three international programs and six Saudi institutions. Alfaisal and UBT provide related Software Engineering comparisons, alongside the CS programs at KAU, KFUPM, Effat, and Prince Sultan.</p>
-        </div>
-        <div class="panel table-scroll" role="region" aria-label="Benchmark comparison" tabindex="0">
-          <table class="benchmark-table"><thead><tr id="benchmark-header"><th scope="col">Program</th></tr></thead><tbody id="benchmark-body"></tbody></table>
-        </div>
-      </section>
-
-      <section class="section" id="standards">
-        <div class="section-heading">
-          <p class="eyebrow">Standards and assessment</p>
-          <h2>Curriculum alignment</h2>
-          <p>The draft maps courses and assessment evidence to the national Computer Science standards, ABET CAC criteria, and the ACM/IEEE CS Curricula.</p>
-        </div>
-        <div class="standard-grid">
-          <article><h3>Saudi ETEC</h3><p><strong>30</strong> essential knowledge credits · minimum 30</p><p><strong>61</strong> required CS core credits · minimum 40</p><a href="https://f.etec.gov.sa/j/Computer_Science.pdf" target="_blank" rel="noopener noreferrer">CS standards version 2.1</a></article>
-          <article><h3>ABET CAC</h3><p><strong>61</strong> CS core credits · minimum 40</p><p><strong>20</strong> mathematics and statistics credits · minimum 15</p><a href="https://www.abet.org/accreditation/accreditation-criteria/criteria-for-accrediting-computing-programs-2026-2027/" target="_blank" rel="noopener noreferrer">2026–2027 criteria</a></article>
-          <article><h3>ACM/IEEE CS Curricula</h3><p><strong>17</strong> knowledge areas</p><p><strong>270</strong> planned CS Core instructional hours</p><a href="https://csed.acm.org/" target="_blank" rel="noopener noreferrer">Curriculum guidelines</a></article>
-        </div>
-        <details class="panel disclosure" id="course-decisions">
-          <summary>Course choices and curriculum decisions</summary>
-          <div class="detail-body"><div class="etec-coverage-callout"><h3>Curriculum revision and requirements review</h3><p>Data Engineering and Cloud Computing &amp; DevOps are compulsory. The 130-credit plan retains 30 essential credits, 61 CS core credits, a full-time co-op and two capstones. Specialist depth is available through 19 electives.</p><a class="button secondary" href="./curriculum-review.html">Review the changes and compliance checks</a></div><div id="course-decision-content"></div></div>
-        </details>
-        <details class="panel disclosure">
-          <summary>ACM/IEEE CS Curricula knowledge areas and planned hours</summary>
-          <div class="detail-body">
-            <p class="section-note">These planned instructional hours cover all 17 CS Core areas in required courses. The approved teaching plans will document the individual topics, skill levels, and assessment evidence. <a href="https://csed.acm.org/wp-content/uploads/2025/11/CS2023-Report.htm" target="_blank" rel="noopener noreferrer">ACM/IEEE CS Curricula final report</a></p>
-            <div class="table-scroll" role="region" aria-label="ACM/IEEE CS Curricula coverage" tabindex="0">
-              <table><thead><tr><th scope="col">Knowledge area</th><th scope="col">Core hours</th><th scope="col">Course allocation</th><th scope="col">Coverage and assessment</th></tr></thead><tbody id="cs2023-body"></tbody></table>
-            </div>
-          </div>
-        </details>
-        <details class="panel disclosure">
-          <summary>ETEC essential and general knowledge units</summary>
-          <div class="detail-body">
-            <p class="section-note">ETEC 2025 version 2.1 requires 30 credits in mathematics, statistics and basic sciences. The plan allocates 20 to mathematics and statistics, 6 to physics, and 4 to biology. Computing Project Management and Finance has a separate three-credit allocation. The required CS core totals 61 credits.</p>
-            <p class="section-note">The current 130-credit plan requires CS 451 Data Engineering and CS 455 Cloud Computing &amp; DevOps in Semester 8. CS 201 Data Structures is three credits with two practical hours weekly and coordinated coverage in CS 103 and CS 220. Machine Learning and Graphics are three-credit electives. All students retain assessed ML foundations and AI ethics in CS 340 and graphics foundations in CS 350. Semester totals are 17, 16, 16, 18, 18, 9, 18 and 18. Theory of Computation is in Semester 5; HCI is in Semester 7 and can be taken concurrently with Capstone I.</p><p class="section-note">Courses in the map below account for 43 distinct required CS core credits. CS 103 contributes three of the 20 mathematics/statistics credits within the 30-credit Essential Knowledge Units allocation; its CS prefix does not add it to the 61-credit CS core. Every required ETEC outcome has a required-course owner.</p><div class="table-scroll" role="region" aria-label="ETEC knowledge areas" tabindex="0">
-              <table><thead><tr><th scope="col">General knowledge unit</th><th scope="col">ETEC weight</th><th scope="col">Courses</th><th scope="col">Topics</th></tr></thead><tbody id="etec-body"></tbody></table>
-            </div>
-            <div class="etec-coverage-callout"><h3>Detailed ETEC topic and outcome coverage</h3><p><strong>131 of 131 specific learning outcomes</strong> and <strong>60 of 60 required topics</strong> have required-course allocations, named CLOs and planned evidence. Every course specification has 6–8 CLOs and a dedicated lab and software section.</p><a class="button secondary" href="./etec-coverage.html">Open the complete ETEC coverage register</a></div><h3 class="klo-heading" id="etec-klo-heading">ETEC Key Learning Outcomes course mapping</h3>
-            <p class="section-note">The table maps the ten ETEC Key Learning Outcomes to program outcomes and selected required courses. The final column shows how students are expected to demonstrate each outcome. Technical electives provide further depth for KLO 1. <a href="https://f.etec.gov.sa/j/Computer_Science.pdf#page=4" target="_blank" rel="noopener noreferrer">ETEC Computer Science standards (2025 version 2.1), pp. 4–5</a></p>
-            <div class="table-scroll" role="region" aria-labelledby="etec-klo-heading" tabindex="0">
-              <table class="klo-table"><thead><tr><th scope="col">ETEC outcome</th><th scope="col">Program outcomes</th><th scope="col">Supporting courses</th><th scope="col">Planned direct assessment</th></tr></thead><tbody id="etec-klo-body"></tbody></table>
-            </div>
-          </div>
-        </details>
-        <details class="panel disclosure">
-          <summary>ABET Computer Science curriculum requirements</summary>
-          <div class="detail-body">
-            <p class="section-note" id="abet-curriculum-scope"></p>
-            <div class="table-scroll" role="region" aria-label="ABET curriculum requirements and course evidence" tabindex="0">
-              <table><thead><tr><th scope="col">Curriculum requirement</th><th scope="col">Required courses and assessment evidence</th></tr></thead><tbody id="abet-curriculum-body"></tbody></table>
-            </div>
-          </div>
-        </details>
-        <details class="panel disclosure">
-          <summary>ABET student outcomes and assessment evidence</summary>
-          <div class="detail-body">
-            <p class="section-note"><span id="abet-outcome-scope"></span> <a href="https://www.abet.org/accreditation/accreditation-criteria/criteria-for-accrediting-computing-programs-2026-2027/" target="_blank" rel="noopener noreferrer">ABET CAC criteria, 2026–2027</a></p>
-            <div class="table-scroll" role="region" aria-label="ABET outcome mapping" tabindex="0">
-              <table class="abet-outcome-table"><thead><tr><th scope="col">ABET outcome</th><th scope="col">Mapped PLOs</th><th scope="col">How students demonstrate it</th><th scope="col">Planned direct assessment</th></tr></thead><tbody id="abet-body"></tbody></table>
-            </div>
-          </div>
-        </details>
-        <details class="panel disclosure">
-          <summary>Program learning outcomes and assessment points</summary>
-          <div class="detail-body">
-            <p class="section-note">Each learning outcome has two direct assessments during the degree. The program specification sets out the rubrics, reporting, and review cycle.</p>
-            <div class="table-scroll" role="region" aria-label="Program learning outcomes" tabindex="0">
-              <table><thead><tr><th scope="col">Outcome</th><th scope="col">First assessment</th><th scope="col">Second assessment</th></tr></thead><tbody id="outcomes-body"></tbody></table>
-            </div>
-          </div>
-        </details>
-      </section>
-
-      <section class="section specification" id="specification">
-        <div><p class="eyebrow">NCAAA TP-151</p><h2>Program specification</h2><p>Review the draft specification, including the curriculum, learning outcomes, admission and support, resources, staffing plan, and quality assurance.</p></div>
-        <div class="spec-actions">
-          <a class="button primary" href="./Fakeeh_BSc_Computer_Science_Program_Specification.docx" target="_blank" rel="noopener noreferrer" download>Download Word specification</a>
-          <a class="button secondary" href="./course-specifications.html">Browse course specifications</a>
-        </div>
-      </section>
-    </div>
-    <noscript><p class="wrap section-note">Enable JavaScript to use the interactive study plan. The Word program specification and course specifications are also available from the links above.</p></noscript>
-  </main>
-  <footer class="wrap footer"><strong>College of Business, Technology &amp; Innovation, Soliman Fakeeh University</strong><span>Proposed program for academic review · Jeddah, Saudi Arabia</span></footer>
-
-  <dialog id="detail-dialog" aria-labelledby="dialog-title">
-    <div class="dialog-top"><p class="label" id="dialog-kicker"></p><form method="dialog"><button class="dialog-close" type="submit" aria-label="Close details" autofocus>×</button></form></div>
-    <h2 id="dialog-title"></h2>
-    <div id="dialog-content"></div>
-  </dialog>
-</body>
-</html>
+  <meta name="theme-color" content="#006c82">
+  <title>College programs | Soliman Fakeeh University</title>
+  <link rel="stylesheet" href="./styles.css?v=20261126-programs">
+  <link rel="stylesheet" href="./programs.css?v=20261126-programs">
+  <script src="./programs.js?v=20261126-programs"></script>
+</head><body class="programs-page" id="top"><a href="#main" class="skip-link">Skip to content</a>
+<header class="site-header"><div class="wrap masthead">
+  <a href="./index.html" class="brand" aria-label="College programs home"><img src="./fakeeh-college-logo.png?v=20261126-programs" alt="College of Business, Technology &amp; Innovation, Soliman Fakeeh University" width="330" height="110"></a>
+  <nav aria-label="College program navigation"><a href="./index.html#programs" aria-current="page">Programs</a><a href="./computer-science.html">Computer Science</a></nav>
+</div></header><main id="main">
+  <section class="programs-hero"><div class="wrap programs-hero-grid">
+    <div><p class="programs-kicker">Soliman Fakeeh University</p><h1>Explore our<br>programs.</h1></div>
+    <div class="programs-intro"><h2>College of Business,<br>Technology &amp; Innovation</h2><p>Select a program to view its details or development status.</p><p class="planning-note">The Computer Science draft is available for review. Three additional programs are under development.</p></div>
+  </div></section>
+  <section class="wrap program-directory" id="programs" aria-labelledby="programs-title">
+    <div class="directory-heading"><h2 id="programs-title">Choose a program</h2><p>Program plans and specifications</p></div>
+    <div class="programs-grid"><a class="program-card program-ready" href="./computer-science.html" aria-labelledby="computer-science-title" aria-describedby="computer-science-status">
+      <div class="program-card-top"><span class="program-symbol"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="7" width="38" height="28" rx="3"/><path d="M16 42h16M24 35v7M19 16l-5 5 5 5m10-10l5 5-5 5"/></svg></span><span class="program-status" id="computer-science-status">Draft available</span></div>
+      <div class="program-card-content"><h3 id="computer-science-title">Computer Science</h3><p>Explore the proposed study plan, courses, benchmarks, and academic standards.</p></div>
+      <span class="program-card-action">View program details</span>
+    </a>
+<a class="program-card program-cyber" href="./cybersecurity.html" aria-labelledby="cybersecurity-title" aria-describedby="cybersecurity-status">
+      <div class="program-card-top"><span class="program-symbol"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 4L40 11v12c0 10-9 17-16 21C17 40 8 33 8 23V11L24 4Z"/><rect x="17" y="21" width="14" height="11" rx="2"/><path d="M20 21v-4a4 4 0 0 1 8 0v4"/></svg></span><span class="program-status" id="cybersecurity-status">Under development</span></div>
+      <div class="program-card-content"><h3 id="cybersecurity-title">Cybersecurity</h3><p>The study plan and program details are under development.</p></div>
+      <span class="program-card-action">View program status</span>
+    </a>
+<a class="program-card program-systems" href="./information-systems.html" aria-labelledby="information-systems-title" aria-describedby="information-systems-status">
+      <div class="program-card-top"><span class="program-symbol"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="18" y="4" width="12" height="12" rx="2"/><rect x="3" y="31" width="12" height="12" rx="2"/><rect x="18" y="31" width="12" height="12" rx="2"/><rect x="33" y="31" width="12" height="12" rx="2"/><path d="M24 16v15M9 31v-7h30v7"/></svg></span><span class="program-status" id="information-systems-status">Under development</span></div>
+      <div class="program-card-content"><h3 id="information-systems-title">Information Systems</h3><p>The study plan and program details are under development.</p></div>
+      <span class="program-card-action">View program status</span>
+    </a>
+<a class="program-card program-health" href="./health-informatics.html" aria-labelledby="health-informatics-title" aria-describedby="health-informatics-status">
+      <div class="program-card-top"><span class="program-symbol"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="5" width="38" height="38" rx="6"/><path d="M24 12v10m-5-5h10M10 31h8l4-6 5 12 4-6h7"/></svg></span><span class="program-status" id="health-informatics-status">Under development</span></div>
+      <div class="program-card-content"><h3 id="health-informatics-title">Health Informatics</h3><p>The study plan and program details are under development.</p></div>
+      <span class="program-card-action">View program status</span>
+    </a></div>
+  </section>
+</main><footer class="wrap footer programs-footer"><strong>College of Business, Technology &amp; Innovation<br><span>Soliman Fakeeh University</span></strong><p>Proposed programs · Academic planning and review<br>Jeddah, Saudi Arabia</p></footer></body></html>

@@ -1,0 +1,69 @@
+.programs-page { background: #f7fafb; }
+.programs-page .masthead { min-height: 112px; }
+.programs-page .brand { flex-basis: 310px; }
+.programs-page .masthead nav a { font-size: 1rem; }
+.programs-page .masthead nav a[aria-current="page"] { color: var(--teal); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: .45em; }
+.programs-hero { background: var(--deep); color: #fff; border-bottom: 5px solid var(--teal); }
+.programs-hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 64px; align-items: center; padding-block: 62px 68px; }
+.programs-kicker { font-size: .875rem; font-weight: 720; letter-spacing: .075em; text-transform: uppercase; color: var(--teal); }
+.programs-hero .programs-kicker { color: #addfe5; }
+.programs-hero h1 { margin-top: 18px; font-size: clamp(3rem, 6vw, 5rem); font-weight: 760; line-height: 1.02; letter-spacing: -.055em; }
+.programs-intro { border-left: 1px solid #4c7079; padding-left: 38px; }
+.programs-intro h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); line-height: 1.3; font-weight: 620; letter-spacing: -.025em; }
+.programs-intro > p { font-size: 1.0625rem; color: #e1f0f2; margin-top: 18px; max-width: 40ch; }
+.programs-intro .planning-note { font-size: .9375rem; color: #bad5dc; margin-top: 16px; }
+.program-directory { padding-block: 42px 52px; }
+.directory-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; margin-bottom: 20px; }
+.directory-heading h2 { font-size: 1.625rem; letter-spacing: -.035em; }
+.directory-heading p { color: var(--muted); font-size: .9375rem; }
+.programs-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.program-card, .development-panel { --program-accent: #006c82; --program-light: #e2f1f4; }
+.program-cyber { --program-accent: #524584; --program-light: #edeaf6; }
+.program-systems { --program-accent: #245a88; --program-light: #e8f0f8; }
+.program-health { --program-accent: #1d6b5c; --program-light: #e5f3ed; }
+.program-card { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 270px; padding: 26px 28px 23px; background: #fff; border: 1px solid #cbdbe0; border-top: 4px solid var(--program-accent); border-radius: 12px; text-decoration: none; color: var(--ink); transition: border-color .16s, box-shadow .16s, transform .16s; }
+.program-card:hover { transform: translateY(-3px); border-color: var(--program-accent); box-shadow: 0 8px 24px #12394612; }
+.program-card:focus-visible { outline-offset: 5px; }
+.program-card-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.program-symbol { display: flex; align-items: center; justify-content: center; width: 54px; height: 54px; border-radius: 12px; color: var(--program-accent); background: var(--program-light); }
+.program-symbol svg { width: 34px; height: 34px; }
+.program-status { padding: 5px 11px; color: #455964; background: #eff3f5; font-size: .875rem; line-height: 1.4; font-weight: 640; border-radius: 5px; }
+.program-ready .program-status { color: #00596b; background: #e2f1f4; }
+.program-card-content { margin-top: 20px; }
+.program-card h3 { font-size: clamp(1.5rem, 2.3vw, 1.875rem); letter-spacing: -.035em; line-height: 1.2; }
+.program-card-content p { margin-top: 10px; color: var(--muted); font-size: 1rem; max-width: 47ch; }
+.program-card-action { align-self: flex-start; color: var(--program-accent); font-size: .9375rem; font-weight: 720; border-bottom: 1px solid currentColor; margin-top: auto; padding-top: 20px; }
+.programs-footer { margin-top: 0; padding-block: 26px 32px; }
+.programs-footer strong { font-size: 1rem; }
+.programs-footer strong span { font-size: .9375rem; font-weight: 550; }
+.programs-footer p { font-size: .875rem; color: var(--muted); }
+.program-breadcrumb { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; padding-block: 16px; font-size: .9375rem; color: var(--muted); }
+.program-breadcrumb a { font-weight: 650; }
+.placeholder-main { padding-bottom: 54px; }
+.placeholder-main > .program-breadcrumb { padding-block: 24px; }
+.development-panel { display: grid; grid-template-columns: 1.5fr .7fr; gap: 40px; align-items: center; background: white; border: 1px solid var(--line); border-top: 5px solid var(--program-accent); border-radius: 15px; padding: clamp(28px, 5vw, 64px); min-height: 460px; }
+.development-copy h1 { font-size: clamp(2.5rem, 4.5vw, 4rem); line-height: 1.08; letter-spacing: -.05em; margin-top: 16px; overflow-wrap: break-word; }
+.development-status { display: inline-block; padding: 7px 12px; font-size: .9375rem; background: var(--program-light); color: var(--program-accent); border-radius: 6px; font-weight: 720; margin-top: 22px; }
+.development-lead { color: var(--muted); font-size: 1.0625rem; max-width: 53ch; margin-top: 20px; }
+.development-copy .button { margin-top: 28px; font-size: 1rem; min-height: 46px; }
+.development-visual { text-align: center; color: var(--program-accent); background: var(--program-light); border-radius: 22px; padding: 44px 24px 32px; }
+.development-visual svg { width: min(140px, 100%); height: auto; }
+.development-visual p { margin-top: 18px; font-size: 1rem; font-weight: 700; letter-spacing: .15em; }
+@media (max-width: 760px) {
+  .programs-hero-grid { grid-template-columns: 1fr; gap: 28px; padding-block: 38px; }
+  .programs-intro { border-left: 0; border-top: 1px solid #4c7079; padding: 24px 0 0; }
+  .programs-intro h2 br { display: none; }
+  .programs-intro > p { max-width: 55ch; }
+  .programs-grid { grid-template-columns: 1fr; gap: 16px; }
+  .directory-heading { display: block; }
+  .directory-heading p { margin-top: 4px; }
+  .program-card { min-height: 264px; padding: 22px; }
+  .development-panel { grid-template-columns: 1fr; gap: 28px; min-height: 0; }
+  .development-visual { display: none; }
+  .programs-page .masthead { padding-block: 16px; }
+  .programs-page .brand { flex-basis: auto; width: min(310px, 100%); }
+  .programs-page .masthead nav { gap: 12px 18px; }
+  .programs-footer { display: block; }
+  .programs-footer p { margin-top: 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .program-card { transition: none; } .program-card:hover { transform: none; } }
